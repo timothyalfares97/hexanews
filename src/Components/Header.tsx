@@ -53,19 +53,6 @@ class Header extends React.Component<IProps> {
               </ul>
             </Typography>
             <Button color='inherit'>Login</Button>
-      <div>
-        <AppBar position="static">
-          <Toolbar>
-            <Typography variant="title" color="inherit">
-              <ul>
-                <li>
-                  <Link to="/">Hexanews</Link>
-                </li>
-                <li>
-                  <Link to="/profile">Profile</Link>
-                </li>
-              </ul>
-            </Typography>
           </Toolbar>
         </AppBar>
       </div>
