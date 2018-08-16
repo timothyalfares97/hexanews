@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Header from './Components/Header'
-import Main from './Containers/Main'
+import Header from './components/Header'
+import Main from './containers/Main'
 
 class App extends React.Component {
   public render() {
