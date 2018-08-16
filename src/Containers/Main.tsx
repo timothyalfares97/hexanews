@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import Home from './Home'
@@ -11,8 +11,8 @@ class Main extends React.Component {
         <Route exact={true} path='/' component={Home}/>
         <Route path='/profile' component={Profile}/>
       </Switch>
-    );
+    )
   }
 }
 
-export default Main;
+export default Main
