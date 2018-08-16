@@ -9,8 +9,8 @@ class App extends React.Component {
         <Header />
         <Main />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
