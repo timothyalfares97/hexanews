@@ -9,8 +9,8 @@ import placeholder from '../assets/placeholder.png'
 
 type Props = {
   title: string,
-  description: string
-  history: History
+  description: string,
+  history: History,
 }
 
 const styles = {
