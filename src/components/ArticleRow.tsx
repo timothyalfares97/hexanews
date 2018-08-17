@@ -39,8 +39,8 @@ const ArticleRow: React.StatelessComponent<Props> = ({
       <Card style={styles.card as any}>
         <div style={styles.details as any}>
           <CardContent style={styles.content}>
-            <Typography variant='headline'>{title}</Typography>
-            <Typography variant='subheading' color='textSecondary'>
+            <Typography variant='headline' style={{marginBottom: 8}}>{title}</Typography>
+            <Typography component='p'>
               {description}
             </Typography>
           </CardContent>

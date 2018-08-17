@@ -3,17 +3,20 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
+import { History } from 'history'
 
 import placeholder from '../assets/placeholder.png'
 
 type Props = {
   title: string,
   description: string
+  history: History
 }
 
 const styles = {
   root: {
     flexGrow: 1,
+    cursor: 'pointer'
   },
   card: {
     maxWidth: 385,
@@ -26,11 +29,12 @@ const styles = {
 }
 
 const ArticleCard: React.StatelessComponent<Props> = ({
+  history,
   title,
   description
 }) => {
   return (
-    <div style={styles.root as any}>
+    <div style={styles.root} onClick={() => history.push('/postDetail')}>
       <Card style={styles.card}>
         <CardMedia
           style={styles.media}

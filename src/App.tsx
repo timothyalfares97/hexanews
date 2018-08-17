@@ -1,13 +1,19 @@
 import * as React from 'react'
+import { History } from 'history'
+
 import Header from './components/Header'
 import Main from './containers/Main'
 
-class App extends React.Component {
+type Props = {
+  history: History
+}
+
+class App extends React.Component<Props> {
   public render() {
     return (
       <div>
         <Header />
-        <Main />
+        <Main {...this.props}/>
       </div>
     )
   }

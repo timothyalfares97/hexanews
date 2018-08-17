@@ -2,18 +2,25 @@ import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
+import { History } from 'history'
 
 import ArticleCard from '../components/ArticleCard'
 import ArticleRow from '../components/ArticleRow'
 import PopularArticleRow from '../components/PopularArticleRow'
 
-class Home extends React.Component {
+type Props = {
+  history: History
+}
+
+class Home extends React.Component<Props> {
+
   public render() {
     return (
       <div style={{ padding: '5%', paddingLeft: '7%' }}>
         <Grid container spacing={24}>
           <Grid item xs={4}>
             <ArticleCard
+              history={this.props.history}
               title='Adjustable sidebar using Angular'
               description='Also for this tutorial I din’t put accent on CSS,
                 I assume that you already created a sidebar which you need to make draggable.'
@@ -21,6 +28,7 @@ class Home extends React.Component {
           </Grid>
           <Grid item xs={4}>
             <ArticleCard
+              history={this.props.history}
               title='Implement Google Analytics for React Native'
               description='For almost every product that is built or launched in the market, the business and development
                teams testing there'
@@ -28,6 +36,7 @@ class Home extends React.Component {
           </Grid>
           <Grid item xs={4}>
             <ArticleCard
+              history={this.props.history}
               title='One Book at The Time —A Short Story'
               description='There had been times she had almost given up. All the lying, the sneaking around.
                 But today she once more managed to continue'
