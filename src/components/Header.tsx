@@ -52,13 +52,6 @@ class Header extends React.Component<Props> {
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
           <Toolbar>
-            <IconButton
-              style={styles.menuButton}
-              color='inherit'
-              aria-label='Menu'
-            >
-              <MenuIcon />
-            </IconButton>
             <Typography
               variant='title'
               color='inherit'
@@ -72,6 +65,13 @@ class Header extends React.Component<Props> {
             >
               <Link to='/profile' style={styles.profileLink}>Profile</Link>
             </Typography>
+            <IconButton
+              style={styles.menuButton}
+              color='default'
+              aria-label='Menu'
+            >
+              <MenuIcon />
+            </IconButton>
           </Toolbar>
         </AppBar>
       </div>
