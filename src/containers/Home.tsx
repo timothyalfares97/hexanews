@@ -12,11 +12,36 @@ type Props = {
   history: History
 }
 
-class Home extends React.Component<Props> {
+const styles = {
+  articleDivider: {
+    marginTop: 20,
+    marginLeft: 24,
+  },
+  container: {
+    padding: '5%',
+    paddingLeft: '7%',
+  },
+  divider: {
+    marginTop: 64,
+    marginRight: 18,
+  },
+  latestPostContainer: {
+    marginRight: 24,
+  },
+  popularArticles: {
+    marginLeft: 36,
+  },
+  topStory: {
+    marginTop: 32,
+    marginLeft: 24,
+  },
+}
+
+export default class Home extends React.Component<Props> {
 
   public render() {
     return (
-      <div style={{ padding: '5%', paddingLeft: '7%' }}>
+      <div style={styles.container}>
         <Grid container spacing={24}>
           <Grid item xs={4}>
             <ArticleCard
@@ -43,9 +68,9 @@ class Home extends React.Component<Props> {
             />
           </Grid>
         </Grid>
-        <Divider style={{marginTop: 64, marginRight: 18 }}/>
+        <Divider style={styles.divider}/>
         <Grid container spacing={24}>
-          <Grid item xs={8} style={{ marginRight: 24 }}>
+          <Grid item xs={8} style={styles.latestPostContainer}>
             <ArticleRow
               title='We Still Don’t Know Whether Uber Is a Real Business'
               description='It has never had to live on the cash it generates.'
@@ -60,11 +85,11 @@ class Home extends React.Component<Props> {
             />
           </Grid>
           <Grid item xs={3}>
-            <Typography variant='headline' component='h2' style={{ marginTop: 32, marginLeft: 24 }}>
+            <Typography variant='headline' component='h2' style={styles.topStory}>
               Top story in Hexanews
             </Typography>
-            <Divider style={{ marginTop: 20, marginLeft: 24 }}/>
-            <div style={{ marginLeft: 36 }}>
+            <Divider style={styles.articleDivider}/>
+            <div style={styles.popularArticles}>
               <PopularArticleRow
                 author={'Daniel Wu'}
                 title={'The software engineer’s guide'}
@@ -84,5 +109,3 @@ class Home extends React.Component<Props> {
     )
   }
 }
-
-export default Home

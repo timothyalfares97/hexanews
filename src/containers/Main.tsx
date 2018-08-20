@@ -14,9 +14,9 @@ class Main extends React.Component<Props> {
   public render() {
     return (
       <Switch>
-        <Route exact={true} path='/' component={Home} {...this.props.history}/>
-        <Route path='/profile' component={Profile} {...this.props.history} />
-        <Route path='/postDetail' component={PostDetail} {...this.props.history} />
+        <Route exact={true} path='/' component={Home} {...this.props}/>
+        <Route path='/profile' component={Profile} {...this.props} />
+        <Route path='/postDetail' component={PostDetail} {...this.props} />
       </Switch>
     )
   }

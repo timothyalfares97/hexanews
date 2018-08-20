@@ -41,11 +41,15 @@ const ArticleCard: React.StatelessComponent<Props> = ({
           image={placeholder}
         />
         <CardContent>
-          <Typography gutterBottom variant='headline' component='h2'>
-            { title }
+          <Typography
+            component='h2'
+            gutterBottom
+            variant='headline'
+          >
+            {title}
           </Typography>
           <Typography component='p'>
-            { description }
+            {description}
           </Typography>
         </CardContent>
       </Card>

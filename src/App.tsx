@@ -8,7 +8,7 @@ type Props = {
   history: History
 }
 
-class App extends React.Component<Props> {
+export default class App extends React.Component<Props> {
   public render() {
     return (
       <div>
@@ -18,5 +18,3 @@ class App extends React.Component<Props> {
     )
   }
 }
-
-export default App

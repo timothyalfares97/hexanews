@@ -1,12 +1,11 @@
-import * as React from 'react'
-import Grid from '@material-ui/core/Grid'
-import Divider from '@material-ui/core/Divider'
 import { History } from 'history'
-
+import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardHeader from '@material-ui/core/CardHeader'
+import Divider from '@material-ui/core/Divider'
+import Grid from '@material-ui/core/Grid'
 import ProfileCard from '../components/ProfileCard'
 import Typography from '@material-ui/core/Typography'
 
@@ -36,10 +35,20 @@ const styles = {
   card: {
     boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
     marginTop: 36,
+  },
+  profileDivider: {
+    marginTop: 20,
+  },
+  postContainer: {
+    marginRight: 24,
   }
 }
 
 class Profile extends React.Component<Props> {
+
+  renderAvatar = () => {
+    return <Avatar style={styles.avatar}>HC</Avatar>
+  }
 
   public render() {
     return (
@@ -49,12 +58,12 @@ class Profile extends React.Component<Props> {
           description='A politician, writer and philanthropist.'
           image={avatarPlaceholder}
         />
-        <Divider style={{ marginTop: 20 }} />
+        <Divider style={styles.profileDivider} />
         <Grid container spacing={24}>
-          <Grid item xs={12} style={{ marginRight: 24 }}>
+          <Grid item xs={12} style={styles.postContainer}>
             <Card style={styles.card}>
               <CardHeader
-                avatar={<Avatar style={styles.avatar}>HC</Avatar>}
+                avatar={this.renderAvatar()}
                 title='Hillary Clinton'
                 subheader='20 August 2018'
               />
@@ -69,12 +78,16 @@ class Profile extends React.Component<Props> {
             </Card>
             <Card style={styles.card}>
               <CardHeader
-                avatar={<Avatar style={styles.avatar}>HC</Avatar>}
+                avatar={this.renderAvatar()}
                 title='Hillary Clinton'
                 subheader='11 July 2018'
               />
               <CardContent>
-                <Typography gutterBottom variant='headline' component='h2'>
+                <Typography
+                  gutterBottom
+                  variant='headline'
+                  component='h2'
+                >
                   {'One Book at The Time —A Short Story'}
                 </Typography>
                 <Typography component='p'>
@@ -84,12 +97,16 @@ class Profile extends React.Component<Props> {
             </Card>
             <Card style={styles.card}>
               <CardHeader
-                avatar={<Avatar style={styles.avatar}>HC</Avatar>}
+                avatar={this.renderAvatar()}
                 title='Hillary Clinton'
                 subheader='8 June 2018'
               />
               <CardContent>
-                <Typography gutterBottom variant='headline' component='h2'>
+                <Typography
+                  gutterBottom
+                  variant='headline'
+                  component='h2'
+                >
                   {'Adjustable sidebar using Angular'}
                 </Typography>
                 <Typography component='p'>

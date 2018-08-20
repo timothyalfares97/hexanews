@@ -35,6 +35,13 @@ const styles = {
     marginTop: 24,
     lineHeight: 1.75,
   },
+  detailContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  footerDivider: {
+    marginTop: 32,
+  },
   placeholderImage: {
     width: '100%',
     height: '80%',
@@ -43,6 +50,9 @@ const styles = {
   profileContainer: {
     display: 'flex',
     marginBottom: '3%',
+  },
+  profileName: {
+    marginTop: 12,
   }
 }
 
@@ -62,22 +72,33 @@ class PostDetail extends React.Component<Props> {
     return (
       <div style={styles.container}>
         <div style={styles.profileContainer}>
-          <Avatar style={styles.avatar}>HC</Avatar>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography variant='subheading' style={{ marginTop: 12}}>
+          <Avatar style={styles.avatar}>
+            HC
+          </Avatar>
+          <div style={styles.detailContainer as any}>
+            <Typography
+              variant='subheading'
+              style={styles.profileName}
+            >
               {'Henry Connor'}
             </Typography>
-            <Typography variant='body1' color='textSecondary'>
+            <Typography
+              variant='body1'
+              color='textSecondary'
+            >
               {'20 August 2018'}
             </Typography>
           </div>
         </div>
-        <Typography variant='display1' component='h1'>
-            { 'Adjustable sidebar using Angular' }
+        <Typography
+          variant='display1'
+          component='h1'
+        >
+          { 'Adjustable sidebar using Angular' }
         </Typography>
         <img src={placeholder} style={styles.placeholderImage}/>
         {this.renderMultilineText()}
-        <Divider style={{ marginTop: 32}}/>
+        <Divider style={styles.footerDivider}/>
       </div>
     )
   }

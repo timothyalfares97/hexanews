@@ -6,16 +6,29 @@ type Props = {
   title: string,
 }
 
+const styles = {
+  author: {
+    marginTop: 4
+  },
+  container: {
+    marginTop: 24
+  },
+}
+
 const PopularArticleRow: React.StatelessComponent<Props> = ({
   author,
   title,
 }) => {
   return (
-    <div style={{marginTop: 24}}>
+    <div style={styles.container}>
       <Typography variant='subheading'>
         {title}
       </Typography>
-      <Typography variant='body1' color='textSecondary' style={{ marginTop: 4}}>
+      <Typography
+        variant='body1'
+        color='textSecondary'
+        style={styles.author}
+      >
         {author}
       </Typography>
     </div>

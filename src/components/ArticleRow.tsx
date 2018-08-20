@@ -24,9 +24,20 @@ const styles = {
   content: {
     flex: '1 0 auto',
   },
+  container: {
+    marginTop: 24,
+  },
   cover: {
     width: 151,
     height: 151,
+  },
+  imageContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    display: 'flex',
+  },
+  title: {
+    marginBottom: 8
   },
 }
 
@@ -35,21 +46,25 @@ const ArticleRow: React.StatelessComponent<Props> = ({
   description
 }) => {
   return (
-    <div style={{marginTop: 24}}>
-      <Card style={styles.card as any}>
+    <div style={styles.container}>
+      <Card style={styles.card}>
         <div style={styles.details as any}>
           <CardContent style={styles.content}>
-            <Typography variant='headline' style={{marginBottom: 8}}>{title}</Typography>
+            <Typography
+              variant='headline'
+              style={styles.title}
+            >
+              {title}
+            </Typography>
             <Typography component='p'>
               {description}
             </Typography>
           </CardContent>
         </div>
-        <div style={{ flex: 1, justifyContent: 'flex-end', display: 'flex'}}>
+        <div style={styles.imageContainer}>
           <CardMedia
             style={styles.cover}
             image={placeholder}
-            title='Live from space album cover'
           />
         </div>
       </Card>
