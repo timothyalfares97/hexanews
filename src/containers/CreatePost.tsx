@@ -13,6 +13,10 @@ type Post = {
   input: string
 }
 
+interface ComponentState {
+  title: string
+}
+
 const styles = {
   avatar: {
     margin: 10,
@@ -36,9 +40,21 @@ const styles = {
   }
 }
 
-class CreatePost extends React.Component<Props> {
+class CreatePost extends React.Component<Props, ComponentState> {
+
+  constructor(props: Props) {
+    super(props)
+    this.state = {
+      title: ''
+    }
+  }
+
+  handleChange = (event: any) => {
+    this.setState({ title: event.target.value })
+  }
 
   public render() {
+    const { title } = this.state
     return (
       <div style={styles.container}>
         <div style={styles.profileContainer}>
@@ -61,8 +77,9 @@ class CreatePost extends React.Component<Props> {
           <TextField
             id='title'
             label='Title'
-            value=''
-            // style={styles.textField}
+            value={title}
+            onChange={this.handleChange}
+            style={styles.textField}
             // InputProps={{
             //   classes: {
             //     input: styles.textField,
