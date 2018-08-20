@@ -32,6 +32,10 @@ const styles = {
   profileContainer: {
     display: 'flex',
     marginBottom: '3%',
+  },
+  card: {
+    boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
+    marginTop: 36,
   }
 }
 
@@ -39,21 +43,19 @@ class Profile extends React.Component<Props> {
 
   public render() {
     return (
-      <div style={{ padding: '5%', paddingLeft: '7% ' }}>
-        <Grid container justify='center'>
-          <ProfileCard
-            name='Hillary Clinton'
-            description='A politician, writer and philanthropist.'
-            image={avatarPlaceholder}
-          />
-        </Grid>
-        <Divider style={{ marginTop: 20, marginLeft: 410, marginRight: 440 }} />
-        <Grid container spacing={24} justify='center'>
-          <Grid item xs={6} style={{ marginRight: 24 }}>
-            <Card style={{ marginTop: 24 }}>
+      <div style={styles.container}>
+        <ProfileCard
+          name='Hillary Clinton'
+          description='A politician, writer and philanthropist.'
+          image={avatarPlaceholder}
+        />
+        <Divider style={{ marginTop: 20 }} />
+        <Grid container spacing={24}>
+          <Grid item xs={12} style={{ marginRight: 24 }}>
+            <Card style={styles.card}>
               <CardHeader
                 avatar={<Avatar style={styles.avatar}>HC</Avatar>}
-                title='Henry Connor'
+                title='Hillary Clinton'
                 subheader='20 August 2018'
               />
               <CardContent>
@@ -65,10 +67,10 @@ class Profile extends React.Component<Props> {
                 </Typography>
               </CardContent>
             </Card>
-            <Card style={{ marginTop: 24 }}>
+            <Card style={styles.card}>
               <CardHeader
-                avatar={<Avatar style={styles.avatar}>DW</Avatar>}
-                title='Daniel Wu'
+                avatar={<Avatar style={styles.avatar}>HC</Avatar>}
+                title='Hillary Clinton'
                 subheader='11 July 2018'
               />
               <CardContent>
@@ -80,10 +82,10 @@ class Profile extends React.Component<Props> {
                 </Typography>
               </CardContent>
             </Card>
-            <Card style={{ marginTop: 24 }}>
+            <Card style={styles.card}>
               <CardHeader
-                avatar={<Avatar style={styles.avatar}>DW</Avatar>}
-                title='Mohammed Aladdin'
+                avatar={<Avatar style={styles.avatar}>HC</Avatar>}
+                title='Hillary Clinton'
                 subheader='8 June 2018'
               />
               <CardContent>

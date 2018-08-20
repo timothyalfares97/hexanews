@@ -24,8 +24,8 @@ const styles = {
     flex: '1 0 auto',
   },
   avatar: {
-    width: 125,
-    height: 125,
+    width: 100,
+    height: 100,
     borderRadius: '50%',
   },
 }
@@ -43,12 +43,15 @@ const ProfileCard: React.StatelessComponent<Props> = ({
             <Typography variant='display1' component='h1'>
               {name}
             </Typography>
-            <Typography component='p'>
+            <Typography component='p' style={{ marginTop: 4 }}>
               {description}
+            </Typography>
+            <Typography component='p' style={{ marginTop: 12, fontSize: 12, color: 'gray' }}>
+              {'Hexanews member since 20 August 2018'}
             </Typography>
           </CardContent>
         </div>
-        <div style={{ flex: 1, justifyContent: 'flex-end', display: 'flex' }}>
+        <div style={{ flex: 1, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
           <img style={styles.avatar} src={image} alt='avatar' />
         </div>
       </Card>
