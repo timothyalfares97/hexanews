@@ -1,20 +1,23 @@
 import * as React from 'react'
-
-import Typography from '@material-ui/core/Typography'
 import Avatar from '@material-ui/core/Avatar'
+import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
+import Typography from '@material-ui/core/Typography'
+import { History } from 'history'
 
 type Props = {
-  post: Post
+  post: Post,
+  history: History,
 }
 
 type Post = {
   title: string,
-  input: string
+  description: string
 }
 
 interface ComponentState {
   title: string
+  description: string
 }
 
 const styles = {
@@ -36,7 +39,12 @@ const styles = {
     marginBottom: '3%',
   },
   textField: {
-    fontSize: 50,
+    width: '100%',
+    // fontSize: 50,
+  },
+  button: {
+    marginTop: 30,
+    marginRight: 10,
   }
 }
 
@@ -45,16 +53,23 @@ class CreatePost extends React.Component<Props, ComponentState> {
   constructor(props: Props) {
     super(props)
     this.state = {
-      title: ''
+      title: '',
+      description: ''
     }
   }
 
-  handleChange = (event: any) => {
+  handleTitleChange = (event: any) => {
     this.setState({ title: event.target.value })
   }
 
+  handleDescriptionChange = (event: any) => {
+    this.setState({ description: event.target.value })
+  }
+
   public render() {
+    const { history } = this.props
     const { title } = this.state
+    const { description } = this.state
     return (
       <div style={styles.container}>
         <div style={styles.profileContainer}>
@@ -74,30 +89,40 @@ class CreatePost extends React.Component<Props, ComponentState> {
 
         <div>
           <form>
-          <TextField
-            id='title'
-            label='Title'
-            value={title}
-            onChange={this.handleChange}
-            style={styles.textField}
-            // InputProps={{
-            //   classes: {
-            //     input: styles.textField,
-            //   },
-            // }}
-            margin='normal'
-          />
+            <TextField
+              id='title'
+              label='Title'
+              value={title}
+              onChange={this.handleTitleChange}
+              style={styles.textField}
+              // InputProps={{
+              //   classes: {
+              //     input: styles.textField,
+              //   },
+              // }}
+              margin='normal'
+            />
+            <TextField
+              id='multiline-flexible'
+              label='Description'
+              multiline
+              rowsMax='20'
+              style={styles.textField}
+              value={description}
+              onChange={this.handleDescriptionChange}
+              margin='normal'
+            />
           </form>
         </div>
         <div>
-          <TextField
-            id='multiline-flexible'
-            label='Body'
-            multiline
-            rowsMax='4'
-            value=''
-            margin='normal'
-          />
+          <Button variant='contained' component='button' style={styles.button}
+            onClick={() => history.push('/postDetail')}>
+            Publish
+          </Button>
+          <Button variant='contained' component='button' style={styles.button}
+            onClick={() => history.push('/')}>
+            Cancel
+          </Button>
         </div>
       </div>
     )
