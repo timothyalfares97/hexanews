@@ -4,7 +4,6 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
 import CreateIcon from '@material-ui/icons/Create'
 
 type Props = {
@@ -29,7 +28,7 @@ const styles = {
   profileLink: {
     textDecoration: 'none',
     color: '#333',
-    marginRight: 64,
+    marginRight: 32,
   },
   createLink: {
     textDecoration: 'none',
@@ -74,13 +73,6 @@ class Header extends React.Component<Props> {
               aria-label='Create'
             >
               <Link to='/createPost' style={styles.createLink}><CreateIcon /></Link>
-            </IconButton>
-            <IconButton
-              style={styles.menuButton}
-              color='default'
-              aria-label='Menu'
-            >
-              <MenuIcon />
             </IconButton>
           </Toolbar>
         </AppBar>

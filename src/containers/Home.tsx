@@ -80,7 +80,7 @@ export default class Home extends React.Component<Props> {
               description='As biometric tracking takes over the modern workplace'
             />
             <ArticleRow
-              title='If you’re a developer, you should start blogging — and here’s why'
+              title='If you’re a developer, you should start blogging'
               description='My blogging journey and skills I’ve acquired along the way'
             />
           </Grid>

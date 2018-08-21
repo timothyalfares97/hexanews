@@ -12,9 +12,15 @@ type Props = {
 }
 
 const styles = {
+  author: {
+    marginTop: 28
+  },
   card: {
     display: 'flex',
     boxShadow: '0px 0.5px 0px 0px rgba(0, 0, 0, 0.2)'
+  },
+  date: {
+    marginTop: 2,
   },
   details: {
     display: 'flex',
@@ -58,6 +64,19 @@ const ArticleRow: React.StatelessComponent<Props> = ({
             </Typography>
             <Typography component='p'>
               {description}
+            </Typography>
+            <Typography
+              variant='body1'
+              style={styles.author}
+            >
+              {'Hillary Clinton'}
+            </Typography>
+            <Typography
+              variant='body1'
+              color='textSecondary'
+              style={styles.date}
+            >
+              {'22 August 2018'}
             </Typography>
           </CardContent>
         </div>

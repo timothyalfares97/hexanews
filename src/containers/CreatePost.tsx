@@ -40,7 +40,6 @@ const styles = {
   },
   textField: {
     width: '100%',
-    // fontSize: 50,
   },
   button: {
     marginTop: 30,
@@ -95,11 +94,6 @@ class CreatePost extends React.Component<Props, ComponentState> {
               value={title}
               onChange={this.handleTitleChange}
               style={styles.textField}
-              // InputProps={{
-              //   classes: {
-              //     input: styles.textField,
-              //   },
-              // }}
               margin='normal'
             />
             <TextField
