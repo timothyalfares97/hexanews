@@ -6,41 +6,9 @@ import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import CreateIcon from '@material-ui/icons/Create'
 
-type Props = {
-}
+import styles from './styles'
 
-const styles = {
-  flex: {
-    flexGrow: 1,
-  },
-  appBar: {
-    backgroundColor: 'white',
-    boxShadow: 'none',
-    borderBottomWidth: 1,
-    borderStyle: 'solid',
-    borderBottomColor: '#DDD',
-  },
-  titleLink: {
-    textDecoration: 'none',
-    color: '#333',
-    marginLeft: 24,
-  },
-  profileLink: {
-    textDecoration: 'none',
-    color: '#333',
-    marginRight: 32,
-  },
-  createLink: {
-    textDecoration: 'none',
-    color: '#333',
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
-  root: {
-    flexGrow: 1,
-  },
+type Props = {
 }
 
 class Header extends React.Component<Props> {

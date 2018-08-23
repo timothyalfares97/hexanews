@@ -1,18 +1,11 @@
 import * as React from 'react'
 import Typography from '@material-ui/core/Typography'
 
+import styles from './styles'
+
 type Props = {
   author: string,
   title: string,
-}
-
-const styles = {
-  author: {
-    marginTop: 4
-  },
-  container: {
-    marginTop: 24
-  },
 }
 
 const PopularArticleRow: React.StatelessComponent<Props> = ({

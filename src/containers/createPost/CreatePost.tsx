@@ -5,6 +5,8 @@ import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import { History } from 'history'
 
+import styles from './styles'
+
 type Props = {
   post: Post,
   history: History,
@@ -18,33 +20,6 @@ type Post = {
 interface ComponentState {
   title: string
   description: string
-}
-
-const styles = {
-  avatar: {
-    margin: 10,
-    width: 50,
-    height: 50,
-    backgroundColor: 'green',
-    alignSelf: 'center'
-  },
-  container: {
-    marginLeft: '25%',
-    marginRight: '25%',
-    marginTop: '4%',
-    paddingBottom: '5%'
-  },
-  profileContainer: {
-    display: 'flex',
-    marginBottom: '3%',
-  },
-  textField: {
-    width: '100%',
-  },
-  button: {
-    marginTop: 30,
-    marginRight: 10,
-  }
 }
 
 class CreatePost extends React.Component<Props, ComponentState> {
@@ -73,8 +48,8 @@ class CreatePost extends React.Component<Props, ComponentState> {
       <div style={styles.container}>
         <div style={styles.profileContainer}>
           <Avatar style={styles.avatar}>HC</Avatar>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography variant='subheading' style={{ marginTop: 12 }}>
+          <div style={styles.profile as any}>
+            <Typography variant='subheading' style={styles.title}>
               {'Hillary Clinton'}
             </Typography>
             <Typography variant='body1' color='textSecondary'>

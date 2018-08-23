@@ -4,37 +4,13 @@ import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
 import { History } from 'history'
 
-import ArticleCard from '../components/ArticleCard'
-import ArticleRow from '../components/ArticleRow'
-import PopularArticleRow from '../components/PopularArticleRow'
+import ArticleCard from '../../components/articleCard/ArticleCard'
+import ArticleRow from '../../components/articleRow/ArticleRow'
+import PopularArticleRow from '../../components/popularArticleRow/PopularArticleRow'
+import styles from './styles'
 
 type Props = {
   history: History
-}
-
-const styles = {
-  articleDivider: {
-    marginTop: 20,
-    marginLeft: 24,
-  },
-  container: {
-    padding: '5%',
-    paddingLeft: '7%',
-  },
-  divider: {
-    marginTop: 64,
-    marginRight: 18,
-  },
-  latestPostContainer: {
-    marginRight: 24,
-  },
-  popularArticles: {
-    marginLeft: 36,
-  },
-  topStory: {
-    marginTop: 32,
-    marginLeft: 24,
-  },
 }
 
 export default class Home extends React.Component<Props> {

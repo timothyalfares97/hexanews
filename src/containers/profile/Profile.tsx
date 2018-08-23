@@ -1,4 +1,3 @@
-import { History } from 'history'
 import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
@@ -6,42 +5,15 @@ import CardContent from '@material-ui/core/CardContent'
 import CardHeader from '@material-ui/core/CardHeader'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
-import ProfileCard from '../components/ProfileCard'
 import Typography from '@material-ui/core/Typography'
+import { History } from 'history'
 
-import avatarPlaceholder from '../assets/avatar_placeholder.png'
+import avatarPlaceholder from '../../assets/avatar_placeholder.png'
+import ProfileCard from '../../components/profileCard/ProfileCard'
+import styles from './styles'
 
 type Props = {
   history: History
-}
-
-const styles = {
-  avatar: {
-    width: 50,
-    height: 50,
-    backgroundColor: 'green',
-    alignSelf: 'center'
-  },
-  container: {
-    marginLeft: '25%',
-    marginRight: '25%',
-    marginTop: '4%',
-    paddingBottom: '5%'
-  },
-  profileContainer: {
-    display: 'flex',
-    marginBottom: '3%',
-  },
-  card: {
-    boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
-    marginTop: 36,
-  },
-  profileDivider: {
-    marginTop: 20,
-  },
-  postContainer: {
-    marginRight: 24,
-  }
 }
 
 class Profile extends React.Component<Props> {
