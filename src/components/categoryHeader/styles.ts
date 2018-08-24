@@ -6,6 +6,7 @@ export default {
     alignItems: 'center',
     backgroundColor: 'white',
     boxShadow: 'none',
+    paddingRight: 18,
   },
   category: {
     textDecoration: 'none',

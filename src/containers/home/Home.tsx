@@ -8,6 +8,7 @@ import ArticleCard from '../../components/articleCard/ArticleCard'
 import ArticleRow from '../../components/articleRow/ArticleRow'
 import PopularArticleRow from '../../components/popularArticleRow/PopularArticleRow'
 import styles from './styles'
+import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 
 type Props = {
   history: History
@@ -18,7 +19,8 @@ export default class Home extends React.Component<Props> {
   public render() {
     return (
       <div style={styles.container}>
-        <Grid container spacing={24}>
+        <CategoryHeader />
+        <Grid container spacing={24} style={{ paddingTop: '2%'}}>
           <Grid item xs={4}>
             <ArticleCard
               history={this.props.history}

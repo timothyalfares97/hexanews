@@ -16,12 +16,14 @@ class CategoryHeader extends React.Component<Props> {
   }
 
   renderCategoriesList = () => {
-    let categories = ['tech', 'science', 'art', 'design', 'culture',
+    const categories = ['tech', 'science', 'art', 'design', 'culture',
       'photography', 'leadership', 'math', 'economy', 'music', 'more']
     return categories.map((item, i) => {
-      return <Typography variant='button' color='primary' style={styles.flex}>
-        <Link to='/' style={styles.category}>{item.toUpperCase()}</Link>
-      </Typography>
+      return (
+        <Typography variant='button' color='primary' style={styles.flex}>
+          <Link to='/' style={styles.category}>{item.toUpperCase()}</Link>
+        </Typography>
+      )
     })
   }
 

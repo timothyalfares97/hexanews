@@ -5,7 +5,6 @@ import { createBrowserHistory, History } from 'history'
 
 import './index.css'
 import Header from './components/header/Header'
-import CategoryHeader from './components/categoryHeader/CategoryHeader'
 import Main from './containers/main/Main'
 import registerServiceWorker from './registerServiceWorker'
 
@@ -18,7 +17,6 @@ export default class Hexanews extends React.Component {
       <BrowserRouter>
         <div>
           <Header />
-          <CategoryHeader />
           <Main history={this.history}/>
         </div>
       </BrowserRouter>

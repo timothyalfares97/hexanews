@@ -1,23 +1,22 @@
 export default {
   flex: {
-    flexGrow: 1,
+    flex: 2,
   },
   appBar: {
     backgroundColor: 'white',
     boxShadow: 'none',
-    borderBottomWidth: 1,
-    borderStyle: 'solid',
-    borderBottomColor: '#DDD',
+    marginTop: '1%',
   },
   titleLink: {
     textDecoration: 'none',
     color: '#333',
-    marginLeft: 24,
+    fontWeight: 600,
   },
   profileLink: {
     textDecoration: 'none',
     color: '#333',
     marginRight: 32,
+    alignSelf: 'center',
   },
   createLink: {
     textDecoration: 'none',
@@ -30,4 +29,22 @@ export default {
   root: {
     flexGrow: 1,
   },
+  leftContainer: {
+    flex: 1,
+  },
+  titleContainer: {
+    flex: 2
+  },
+  rightContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    display: 'flex',
+  },
+  profileTypography: {
+    alignSelf: 'center',
+    marginLeft: 48
+  },
+  titleTypography: {
+    textAlign: 'center',
+  }
 }

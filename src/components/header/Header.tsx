@@ -22,26 +22,32 @@ class Header extends React.Component<Props> {
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
           <Toolbar>
-            <Typography
-              variant='title'
-              color='inherit'
-              style={styles.flex}
-            >
-              <Link to='/' style={styles.titleLink}>Hexanews</Link>
-            </Typography>
-            <Typography
-              variant='title'
-              color='inherit'
-            >
-              <Link to='/profile' style={styles.profileLink}>Profile</Link>
-            </Typography>
-            <IconButton
-              style={styles.menuButton}
-              color='default'
-              aria-label='Create'
-            >
-              <Link to='/createPost' style={styles.createLink}><CreateIcon /></Link>
-            </IconButton>
+            <div style={styles.leftContainer}/>
+            <div style={styles.titleContainer}>
+              <Typography
+                variant='display1'
+                color='inherit'
+                style={styles.titleTypography as any}
+              >
+                <Link to='/' style={styles.titleLink}>Hexanews</Link>
+              </Typography>
+            </div>
+            <div style={styles.rightContainer as any}>
+              <Typography
+                variant='title'
+                color='inherit'
+                style={styles.profileTypography}
+              >
+                <Link to='/profile' style={styles.profileLink}>Profile</Link>
+              </Typography>
+              <IconButton
+                style={styles.menuButton}
+                color='default'
+                aria-label='Create'
+              >
+                <Link to='/createPost' style={styles.createLink}><CreateIcon /></Link>
+              </IconButton>
+            </div>
           </Toolbar>
         </AppBar>
       </div>
