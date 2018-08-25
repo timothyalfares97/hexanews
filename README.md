@@ -21,7 +21,7 @@ npm run start
 - Do not abbreviate variable name
 - Always use braces for all control structures
 - Use two spaces for indentation
-- Column limit of 120 characters per line
+- Column limit of 150 characters per line
 - One statement per line
 - Do not add any trailing whitespaces
 - Put all function arguments on the same line as the function name. If they exceed the column limit, the arguments must be line-wrapped for readibility

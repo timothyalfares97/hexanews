@@ -1,5 +1,4 @@
 import * as React from 'react'
-// import { filter } from 'lodash'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -8,6 +7,7 @@ import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import { History } from 'history'
+import { map, filter } from 'lodash'
 
 import styles from './styles'
 
@@ -45,9 +45,7 @@ class SearchArticle extends React.Component<Props, ComponentState> {
     let query = this.state.query.trim().toLowerCase()
 
     if (query.length > 0) {
-      articles = articles.filter(function (i) {
-        return i.title.toLowerCase().match(query)
-      })
+      articles = filter(articles, (article: any) => article.title.toLowerCase().indexOf(query) !== -1)
     }
 
     return (
@@ -64,7 +62,7 @@ class SearchArticle extends React.Component<Props, ComponentState> {
         </form>
         <Grid container spacing={24}>
           <Grid item xs={12} style={styles.postContainer}>
-            {articles.map(function (i) {
+            {map(articles, (article: any) => {
               if (query.length > 0) {
                 return (
                   <Card style={styles.card}>
@@ -75,19 +73,17 @@ class SearchArticle extends React.Component<Props, ComponentState> {
                     />
                     <CardContent>
                       <Typography gutterBottom variant='headline' component='h2'>
-                        {i.title}
+                        {article.title}
                       </Typography>
                       <Typography component='p'>
-                        {i.description}
+                        {article.description}
                       </Typography>
                     </CardContent>
                   </Card>
                 )
-              } else {
-                return
               }
+              return
             })}
-
           </Grid>
         </Grid>
       </div >
