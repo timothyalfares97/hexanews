@@ -1,10 +1,15 @@
 import * as React from 'react'
-const ReactQuill = require('react-quill')
 import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
+import InputLabel from '@material-ui/core/InputLabel'
+import MenuItem from '@material-ui/core/MenuItem'
+import FormHelperText from '@material-ui/core/FormHelperText'
+import FormControl from '@material-ui/core/FormControl'
+import Select from '@material-ui/core/Select'
 import { History } from 'history'
+const ReactQuill = require('react-quill')
 
 import styles from './styles'
 
@@ -14,13 +19,14 @@ type Props = {
 }
 
 type Article = {
-  title: string,
   description: string
+  title: string,
 }
 
 interface ComponentState {
-  title: string
+  category: string
   description: string
+  title: string
 }
 
 class CreateArticle extends React.Component<Props, ComponentState> {
@@ -28,9 +34,14 @@ class CreateArticle extends React.Component<Props, ComponentState> {
   constructor(props: Props) {
     super(props)
     this.state = {
+      category: '',
+      description: '',
       title: '',
-      description: ''
     }
+  }
+
+  handleCategoryChange = (event: any) => {
+    this.setState({ category: event.target.value })
   }
 
   handleTitleChange = (event: any) => {
@@ -65,8 +76,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
 
   public render() {
     const { history } = this.props
-    const { title } = this.state
-    const { description } = this.state
+    const { title, category, description } = this.state
     return (
       <div style={styles.container}>
         <div style={styles.profileContainer}>
@@ -93,6 +103,26 @@ class CreateArticle extends React.Component<Props, ComponentState> {
               style={styles.textField}
               margin='normal'
             />
+            <FormControl required style={styles.categoryTextField}>
+              <InputLabel htmlFor='category-required'>Category</InputLabel>
+              <Select
+                value={category}
+                onChange={this.handleCategoryChange}
+                name='category'
+              >
+                <MenuItem value='technology'>Technology</MenuItem>
+                <MenuItem value='science'>Science</MenuItem>
+                <MenuItem value='art'>Art</MenuItem>
+                <MenuItem value='design'>Design</MenuItem>
+                <MenuItem value='culture'>Culture</MenuItem>
+                <MenuItem value='photography'>Photography</MenuItem>
+                <MenuItem value='leadership'>Leadership</MenuItem>
+                <MenuItem value='math'>Math</MenuItem>
+                <MenuItem value='economy'>Economy</MenuItem>
+                <MenuItem value='music'>Music</MenuItem>
+              </Select>
+              <FormHelperText>Required</FormHelperText>
+            </FormControl>
             <ReactQuill
               value={description}
               onChange={this.handleDescriptionChange}
@@ -104,7 +134,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
             />
           </form>
         </div>
-        <div>
+        <div style={{ marginTop: '10%'}}>
           <Button
             variant='outlined'
             component='button'
