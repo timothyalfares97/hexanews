@@ -62,27 +62,30 @@ class SearchArticle extends React.Component<Props, ComponentState> {
             margin='normal'
           />
         </form>
-
         <Grid container spacing={24}>
           <Grid item xs={12} style={styles.postContainer}>
             {articles.map(function (i) {
-              return (
-                <Card style={styles.card}>
-                  <CardHeader
-                    avatar={<Avatar style={styles.avatar}>HC</Avatar>}
-                    title='Hillary Clinton'
-                    subheader='20 August 2018'
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant='headline' component='h2'>
-                      {i.title}
-                    </Typography>
-                    <Typography component='p'>
-                      {i.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              )
+              if (query.length > 0) {
+                return (
+                  <Card style={styles.card}>
+                    <CardHeader
+                      avatar={<Avatar style={styles.avatar}>HC</Avatar>}
+                      title='Hillary Clinton'
+                      subheader='20 August 2018'
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant='headline' component='h2'>
+                        {i.title}
+                      </Typography>
+                      <Typography component='p'>
+                        {i.description}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                )
+              } else {
+                return
+              }
             })}
 
           </Grid>
