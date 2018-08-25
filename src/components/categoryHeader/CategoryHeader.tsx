@@ -19,7 +19,7 @@ class CategoryHeader extends React.Component<Props> {
     const categories = ['tech', 'science', 'art', 'design', 'culture',
       'photography', 'leadership', 'math', 'economy', 'music', 'more']
     return categories.map((item, i) => {
-      const link = item === 'more' ? '/categories' : `/categories/${item}`
+      const link = item === 'more' ? '/categories' : `/category/${item}`
       return (
         <Typography variant='button' color='primary' style={styles.flex}>
           <Link to={link} style={styles.category}>{item.toUpperCase()}</Link>
