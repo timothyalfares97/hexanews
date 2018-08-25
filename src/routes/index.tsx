@@ -8,6 +8,7 @@ import PostDetail from '../containers/postDetail/PostDetail'
 import SearchArticle from '../containers/searchArticle/SearchArticle'
 import CreatePost from '../containers/createPost/CreatePost'
 import Categories from '../containers/categories/Categories'
+import Category from '../containers/category/Category'
 
 type Props = {
   history: History
@@ -23,6 +24,8 @@ export default class Routes extends React.Component<Props> {
         <Route path='/searchArticle' component={SearchArticle} {...this.props} />
         <Route path='/createPost' component={CreatePost} {...this.props} />
         <Route path='/categories' component={Categories} {...this.props} />
+        {/* <Route path='/categories/:categoryName' component={CategoryName} {...this.props} /> */}
+        <Route path='/category' component={Category} {...this.props} />
       </Switch>
     )
   }

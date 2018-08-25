@@ -56,13 +56,6 @@ class Header extends React.Component<Props, ComponentState> {
                 color='inherit'
                 style={styles.profileTypography}
               >
-                <Link to='/categories' style={styles.profileLink}>Categories</Link>
-              </Typography>
-              <Typography
-                variant='title'
-                color='inherit'
-                style={styles.profileTypography}
-              >
                 <span style={styles.signLink} onClick={this.handleShowDialog}>Sign in</span>
               </Typography>
               <Typography

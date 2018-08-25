@@ -19,7 +19,7 @@ const CategoryCard: React.StatelessComponent<Props> = ({
 }) => {
   return (
     <div style={styles.root}>
-      <Card style={styles.card} onClick={() => history.push('/categories')}>
+      <Card style={styles.card} onClick={() => history.push('/category')}>
         <CardMedia
           style={styles.media}
           image={placeholder}
