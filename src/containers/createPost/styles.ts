@@ -29,5 +29,8 @@ export default {
   },
   title: {
     marginTop: 12,
+  },
+  descTextField: {
+    marginTop: 32,
   }
 }

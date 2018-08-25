@@ -1,4 +1,5 @@
 import * as React from 'react'
+const ReactQuill = require('react-quill')
 import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
@@ -36,9 +37,31 @@ class CreatePost extends React.Component<Props, ComponentState> {
     this.setState({ title: event.target.value })
   }
 
-  handleDescriptionChange = (event: any) => {
-    this.setState({ description: event.target.value })
+  handleDescriptionChange = (html: any) => {
+    this.setState({ description: html })
   }
+
+  modules = {
+    toolbar: [
+      [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
+      [{size: []}],
+      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+      [{'list': 'ordered'}, {'list': 'bullet'},
+      {'indent': '-1'}, {'indent': '+1'}],
+      ['link', 'image', 'video'],
+      ['clean']
+    ],
+    clipboard: {
+      matchVisual: false,
+    }
+  }
+
+  formats = [
+    'header', 'font', 'size',
+    'bold', 'italic', 'underline', 'strike', 'blockquote',
+    'list', 'bullet', 'indent',
+    'link', 'image', 'video'
+  ]
 
   public render() {
     const { history } = this.props
@@ -71,15 +94,14 @@ class CreatePost extends React.Component<Props, ComponentState> {
               style={styles.textField}
               margin='normal'
             />
-            <TextField
-              id='multiline-flexible'
-              label='Description'
-              multiline
-              rowsMax='20'
-              style={styles.textField}
+            <ReactQuill
               value={description}
               onChange={this.handleDescriptionChange}
-              margin='normal'
+              formats={this.formats}
+              modules={this.modules}
+              placeholder='Tell your story in here...'
+              theme='snow'
+              style={styles.descTextField}
             />
           </form>
         </div>
