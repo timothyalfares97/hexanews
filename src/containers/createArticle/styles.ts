@@ -32,5 +32,10 @@ export default {
   },
   descTextField: {
     marginTop: 32,
+    height: 300,
+  },
+  categoryTextField: {
+    width: '100%',
+    marginTop: 24,
   }
 }
