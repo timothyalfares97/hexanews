@@ -18,6 +18,13 @@ export default {
     marginRight: 32,
     alignSelf: 'center',
   },
+  signLink: {
+    textDecoration: 'none',
+    color: '#333',
+    marginRight: 24,
+    alignSelf: 'center',
+    cursor: 'pointer',
+  },
   createLink: {
     textDecoration: 'none',
     color: '#333',
@@ -42,7 +49,7 @@ export default {
   },
   profileTypography: {
     alignSelf: 'center',
-    marginLeft: 48
+    marginLeft: 8
   },
   titleTypography: {
     textAlign: 'center',

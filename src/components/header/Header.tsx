@@ -7,17 +7,34 @@ import IconButton from '@material-ui/core/IconButton'
 import CreateIcon from '@material-ui/icons/Create'
 
 import styles from './styles'
+import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
 
 type Props = {
 }
 
-class Header extends React.Component<Props> {
+interface ComponentState {
+  showDialog: boolean
+}
+
+class Header extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)
+    this.state = {
+      showDialog: false,
+    }
+  }
+
+  handleShowDialog = () => {
+    this.setState({ showDialog: true })
+  }
+
+  handleCloseDialog = () => {
+    this.setState({ showDialog: false })
   }
 
   public render() {
+    const { showDialog } = this.state
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
@@ -38,6 +55,13 @@ class Header extends React.Component<Props> {
                 color='inherit'
                 style={styles.profileTypography}
               >
+                <span style={styles.signLink} onClick={this.handleShowDialog}>Sign in</span>
+              </Typography>
+              <Typography
+                variant='title'
+                color='inherit'
+                style={styles.profileTypography}
+              >
                 <Link to='/profile' style={styles.profileLink}>Profile</Link>
               </Typography>
               <IconButton
@@ -50,6 +74,10 @@ class Header extends React.Component<Props> {
             </div>
           </Toolbar>
         </AppBar>
+        <AuthenticationDialog
+          showDialog={showDialog}
+          handleCloseDialog={this.handleCloseDialog}
+        />
       </div>
     )
   }
