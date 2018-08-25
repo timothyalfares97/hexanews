@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import CreateIcon from '@material-ui/icons/Create'
+import SearchIcon from '@material-ui/icons/Search'
 
 import styles from './styles'
 import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
@@ -64,6 +65,13 @@ class Header extends React.Component<Props, ComponentState> {
               >
                 <Link to='/profile' style={styles.profileLink}>Profile</Link>
               </Typography>
+              <IconButton
+                style={styles.menuButton}
+                color='default'
+                aria-label='Search'
+              >
+                <Link to='/searchArticle' style={styles.createLink}><SearchIcon /></Link>
+              </IconButton>
               <IconButton
                 style={styles.menuButton}
                 color='default'
