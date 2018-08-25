@@ -19,14 +19,14 @@ const CategoryCard: React.StatelessComponent<Props> = ({
 }) => {
   return (
     <div style={styles.root}>
-      <Card style={styles.card} onClick={() => history.push('/category')}>
+      <Card style={styles.card} onClick={() => history.push(`/categories/${category}`)}>
         <CardMedia
           style={styles.media}
           image={placeholder}
         />
         <CardContent>
           <Typography variant='title'>
-            {category}
+            {category.charAt(0).toUpperCase() + category.slice(1)}
           </Typography>
         </CardContent>
       </Card>

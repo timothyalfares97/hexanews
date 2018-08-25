@@ -4,4 +4,7 @@ export default {
     paddingTop: '0%',
     paddingLeft: '7%',
   },
+  latestArticleContainer: {
+    marginRight: 24,
+  },
 }

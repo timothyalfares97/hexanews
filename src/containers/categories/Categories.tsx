@@ -14,14 +14,14 @@ type Props = {
 export default class Categories extends React.Component<Props> {
 
   renderCategoriesCard = () => {
-    const categories = ['art', 'comics', 'culture', 'film', 'food',
-      'gaming', 'humor', 'lit', 'music', 'photography', 'sports']
+    const categories = ['tech', 'science', 'art', 'design', 'culture',
+      'photography', 'leadership', 'math', 'economy', 'music']
     return categories.map((item, i) => {
       return (
         <Grid item xs={3}>
           <CategoryCard
             history={this.props.history}
-            category={item.charAt(0).toUpperCase() + item.slice(1)}
+            category={item}
           />
         </Grid>
       )
