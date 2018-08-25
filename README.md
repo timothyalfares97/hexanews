@@ -18,3 +18,14 @@ npm run start
 - Use single quote (') for string import, variable instead of double quote (")
 - Always put code into component class when it is reusable
 - Do not put a duplicate variable name that can confuse the usage
+- Do not abbreviate variable name
+- Always use braces for all control structures
+- Use two spaces for indentation
+- Column limit of 120 characters per line
+- One statement per line
+- Put all function arguments on the same line as the function name. If they exceed the column limit, the arguments must be line-wrapped for readibility
+- Use Javadoc comment for every class, function and method
+
+## Authors
+- **Timothy Alfares**
+- **Audwin Oyong**
