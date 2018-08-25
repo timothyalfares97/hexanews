@@ -32,8 +32,13 @@ class Profile extends React.Component<Props> {
           description='A politician, writer and philanthropist.'
           image={avatarPlaceholder}
         />
-        <Button variant='outlined' size='small' component='button' style={styles.button}
-          onClick={() => history.push('/editProfile')}>
+        <Button
+          variant='outlined'
+          size='small'
+          component='button'
+          style={styles.button}
+          onClick={() => history.push('/editProfile')}
+        >
           Edit Profile
         </Button>
         <Divider style={styles.profileDivider} />

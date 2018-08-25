@@ -83,7 +83,6 @@ class CreateArticle extends React.Component<Props, ComponentState> {
             </Typography>
           </div>
         </div>
-
         <div>
           <form>
             <TextField
@@ -106,12 +105,20 @@ class CreateArticle extends React.Component<Props, ComponentState> {
           </form>
         </div>
         <div>
-          <Button variant='contained' component='button' style={styles.button}
-            onClick={() => history.push('/articleDetail')}>
+          <Button
+            variant='outlined'
+            component='button'
+            style={styles.button}
+            onClick={() => history.push('/articleDetail')}
+          >
             Publish
           </Button>
-          <Button variant='contained' component='button' style={styles.button}
-            onClick={() => history.push('/')}>
+          <Button
+            variant='outlined'
+            component='button'
+            style={styles.button}
+            onClick={() => history.push('/')}
+          >
             Cancel
           </Button>
         </div>
