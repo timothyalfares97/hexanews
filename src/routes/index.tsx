@@ -27,9 +27,6 @@ export default class Routes extends React.Component<Props> {
         <Route path='/createArticle' component={CreateArticle} {...this.props} />
         <Route path='/categories' component={Categories} {...this.props} />
         <Route path='/category/:category' component={Category} {...this.props} />
-
-        {/* to be deleted */}
-        {/* <Route path='/category' component={Category} {...this.props} /> */}
       </Switch>
     )
   }
