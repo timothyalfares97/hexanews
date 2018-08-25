@@ -77,7 +77,7 @@ class Header extends React.Component<Props, ComponentState> {
                 color='default'
                 aria-label='Create'
               >
-                <Link to='/createPost' style={styles.createLink}><CreateIcon /></Link>
+                <Link to='/createArticle' style={styles.createLink}><CreateIcon /></Link>
               </IconButton>
             </div>
           </Toolbar>

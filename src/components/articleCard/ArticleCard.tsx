@@ -20,7 +20,7 @@ const ArticleCard: React.StatelessComponent<Props> = ({
   description
 }) => {
   return (
-    <div style={styles.root} onClick={() => history.push('/postDetail')}>
+    <div style={styles.root} onClick={() => history.push('/articleDetail')}>
       <Card style={styles.card}>
         <CardMedia
           style={styles.media}

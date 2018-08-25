@@ -7,15 +7,15 @@ import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 
 type Props = {
-  post: Post
+  article: Article
 }
 
-type Post = {
+type Article = {
   title: string,
   description: string
 }
 
-class PostDetail extends React.Component<Props> {
+class ArticleDetail extends React.Component<Props> {
 
   renderMultilineText = () => {
     // tslint:disable:max-line-length
@@ -63,4 +63,4 @@ class PostDetail extends React.Component<Props> {
   }
 }
 
-export default PostDetail
+export default ArticleDetail

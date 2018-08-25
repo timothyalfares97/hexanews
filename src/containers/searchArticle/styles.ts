@@ -11,14 +11,14 @@ export default {
     marginTop: '4%',
     paddingBottom: '5%'
   },
+  articleContainer: {
+    marginRight: 24,
+  },
   card: {
     boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
     marginTop: 36,
   },
-  postContainer: {
-    marginRight: 24,
-  },
   textField: {
     width: '100%',
-  },
+  }
 }

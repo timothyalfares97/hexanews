@@ -9,11 +9,11 @@ import { History } from 'history'
 import styles from './styles'
 
 type Props = {
-  post: Post,
+  article: Article,
   history: History,
 }
 
-type Post = {
+type Article = {
   title: string,
   description: string
 }
@@ -23,7 +23,7 @@ interface ComponentState {
   description: string
 }
 
-class CreatePost extends React.Component<Props, ComponentState> {
+class CreateArticle extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)
@@ -107,7 +107,7 @@ class CreatePost extends React.Component<Props, ComponentState> {
         </div>
         <div>
           <Button variant='contained' component='button' style={styles.button}
-            onClick={() => history.push('/postDetail')}>
+            onClick={() => history.push('/articleDetail')}>
             Publish
           </Button>
           <Button variant='contained' component='button' style={styles.button}
@@ -120,4 +120,4 @@ class CreatePost extends React.Component<Props, ComponentState> {
   }
 }
 
-export default CreatePost
+export default CreateArticle

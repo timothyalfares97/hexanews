@@ -11,6 +11,9 @@ export default {
     marginTop: '4%',
     paddingBottom: '5%'
   },
+  articleContainer: {
+    marginRight: 24,
+  },
   profileContainer: {
     display: 'flex',
     marginBottom: '3%',
@@ -21,8 +24,5 @@ export default {
   },
   profileDivider: {
     marginTop: 20,
-  },
-  postContainer: {
-    marginRight: 24,
   }
 }

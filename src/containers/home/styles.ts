@@ -12,7 +12,7 @@ export default {
     marginTop: 64,
     marginRight: 18,
   },
-  latestPostContainer: {
+  latestArticleContainer: {
     marginRight: 24,
   },
   popularArticles: {

@@ -32,7 +32,7 @@ class Profile extends React.Component<Props> {
         />
         <Divider style={styles.profileDivider} />
         <Grid container spacing={24}>
-          <Grid item xs={12} style={styles.postContainer}>
+          <Grid item xs={12} style={styles.articleContainer}>
             <Card style={styles.card}>
               <CardHeader
                 avatar={this.renderAvatar()}

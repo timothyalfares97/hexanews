@@ -48,7 +48,7 @@ export default class Home extends React.Component<Props> {
         </Grid>
         <Divider style={styles.divider}/>
         <Grid container spacing={24}>
-          <Grid item xs={8} style={styles.latestPostContainer}>
+          <Grid item xs={8} style={styles.latestArticleContainer}>
             <ArticleRow
               title='We Still Don’t Know Whether Uber Is a Real Business'
               description='It has never had to live on the cash it generates.'

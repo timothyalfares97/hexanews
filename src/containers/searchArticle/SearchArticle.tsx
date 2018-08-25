@@ -61,7 +61,7 @@ class SearchArticle extends React.Component<Props, ComponentState> {
           />
         </form>
         <Grid container spacing={24}>
-          <Grid item xs={12} style={styles.postContainer}>
+          <Grid item xs={12} style={styles.articleContainer}>
             {map(articles, (article: any) => {
               if (query.length > 0) {
                 return (
