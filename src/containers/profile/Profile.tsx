@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
+import Button from '@material-ui/core/Button'
 import CardContent from '@material-ui/core/CardContent'
 import CardHeader from '@material-ui/core/CardHeader'
 import Divider from '@material-ui/core/Divider'
@@ -23,6 +24,7 @@ class Profile extends React.Component<Props> {
   }
 
   public render() {
+    const { history } = this.props
     return (
       <div style={styles.container}>
         <ProfileCard
@@ -30,6 +32,10 @@ class Profile extends React.Component<Props> {
           description='A politician, writer and philanthropist.'
           image={avatarPlaceholder}
         />
+        <Button variant='outlined' size='small' component='button' style={styles.button}
+          onClick={() => history.push('/editProfile')}>
+          Edit Profile
+        </Button>
         <Divider style={styles.profileDivider} />
         <Grid container spacing={24}>
           <Grid item xs={12} style={styles.articleContainer}>

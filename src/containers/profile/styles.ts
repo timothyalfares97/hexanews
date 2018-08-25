@@ -8,7 +8,7 @@ export default {
   container: {
     marginLeft: '25%',
     marginRight: '25%',
-    marginTop: '4%',
+    marginTop: '2%',
     paddingBottom: '5%'
   },
   articleContainer: {
@@ -24,5 +24,11 @@ export default {
   },
   profileDivider: {
     marginTop: 20,
-  }
+  },
+  postContainer: {
+    marginRight: 24,
+  },
+  button: {
+    marginLeft: 20,
+  },
 }
