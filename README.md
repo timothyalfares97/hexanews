@@ -23,7 +23,7 @@ npm run start
 - Use two spaces for indentation
 - Column limit of 150 characters per line
 - One statement per line
-- Do not add any trailing whitespaces
+- Do not add any trailing whitespace
 - Put all function arguments on the same line as the function name. If they exceed the column limit, the arguments must be line-wrapped for readibility
 - Use Javadoc comment for every class, function and method
 

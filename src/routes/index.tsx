@@ -7,6 +7,7 @@ import Profile from '../containers/profile/Profile'
 import PostDetail from '../containers/postDetail/PostDetail'
 import SearchArticle from '../containers/searchArticle/SearchArticle'
 import CreatePost from '../containers/createPost/CreatePost'
+import Categories from '../containers/categories/Categories'
 
 type Props = {
   history: History
@@ -21,6 +22,7 @@ export default class Routes extends React.Component<Props> {
         <Route path='/postDetail' component={PostDetail} {...this.props} />
         <Route path='/searchArticle' component={SearchArticle} {...this.props} />
         <Route path='/createPost' component={CreatePost} {...this.props} />
+        <Route path='/categories' component={Categories} {...this.props} />
       </Switch>
     )
   }
