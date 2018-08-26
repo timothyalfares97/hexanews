@@ -130,7 +130,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
             />
           </form>
         </div>
-        <div style={{ marginTop: '10%'}}>
+        <div style={styles.buttonContainer}>
           <Button
             variant='outlined'
             component='button'

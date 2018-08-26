@@ -20,7 +20,7 @@ export default class Home extends React.Component<Props> {
     return (
       <div style={styles.container}>
         <CategoryHeader />
-        <Grid container spacing={24} style={{ paddingTop: '2%'}}>
+        <Grid container spacing={24} style={styles.gridContainer}>
           <Grid item xs={4}>
             <ArticleCard
               history={this.props.history}

@@ -5,6 +5,9 @@ export default {
     marginTop: '4%',
     paddingBottom: '5%'
   },
+  textFieldContainer: {
+    marginTop: 24,
+  },
   textField: {
     width: '100%',
   },

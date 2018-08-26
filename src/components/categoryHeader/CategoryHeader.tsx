@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
+import { map } from 'lodash'
 
 import styles from './styles'
+import categories from './mockCategories'
 
 type Props = {
 }
@@ -15,10 +17,8 @@ class CategoryHeader extends React.Component<Props> {
     super(props)
   }
 
-  renderCategoriesList = () => {
-    const categories = ['tech', 'science', 'art', 'design', 'culture',
-      'photography', 'leadership', 'math', 'economy', 'music', 'more']
-    return categories.map((item, i) => {
+  renderCategoriesList = () => (
+    map(categories, (item) => {
       const link = item === 'more' ? '/categories' : `/category/${item}`
       return (
         <Typography variant='button' color='primary' style={styles.flex}>
@@ -26,10 +26,9 @@ class CategoryHeader extends React.Component<Props> {
         </Typography>
       )
     })
-  }
+  )
 
   public render() {
-
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>

@@ -37,5 +37,8 @@ export default {
   categoryTextField: {
     width: '100%',
     marginTop: 24,
-  }
+  },
+  buttonContainer: {
+    marginTop: '10%'
+  },
 }

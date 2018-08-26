@@ -2,10 +2,12 @@ import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { History } from 'history'
+import { map } from 'lodash'
 
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 import CategoryCard from '../../components/categoryCard/CategoryCard'
 import styles from './styles'
+import categories from './mockCategories'
 
 type Props = {
   history: History
@@ -13,20 +15,17 @@ type Props = {
 
 export default class Categories extends React.Component<Props> {
 
-  renderCategoriesCard = () => {
-    const categories = ['tech', 'science', 'art', 'design', 'culture',
-      'photography', 'leadership', 'math', 'economy', 'music']
-    return categories.map((item, i) => {
-      return (
-        <Grid item xs={3}>
-          <CategoryCard
-            history={this.props.history}
-            category={item}
-          />
-        </Grid>
-      )
-    })
-  }
+  renderCategoriesCard = () => (
+    map(categories, (item) => (
+      <Grid item xs={3}>
+        <CategoryCard
+          history={this.props.history}
+          category={item}
+        />
+      </Grid>
+    ))
+  )
+
   public render() {
     return (
       <div style={styles.container}>
@@ -38,7 +37,7 @@ export default class Categories extends React.Component<Props> {
         >
           Explore categories
         </Typography>
-        <Grid container spacing={24} style={{ paddingTop: '2%' }}>
+        <Grid container spacing={24} style={styles.gridContainer}>
           {this.renderCategoriesCard()}
         </Grid>
       </div>

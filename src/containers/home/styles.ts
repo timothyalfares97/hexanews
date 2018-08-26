@@ -22,4 +22,7 @@ export default {
     marginTop: 32,
     marginLeft: 24,
   },
+  gridContainer: {
+    paddingTop: '2%',
+  },
 }

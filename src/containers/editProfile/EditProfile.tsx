@@ -40,7 +40,7 @@ class EditProfile extends React.Component<Props, ComponentState> {
         >
           {'Edit Profile'}
         </Typography>
-        <div style={{ marginTop: 24 }}>
+        <div style={styles.textFieldContainer}>
           <TextField
             id='email'
             label='Email'
