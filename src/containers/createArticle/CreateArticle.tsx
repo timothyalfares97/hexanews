@@ -12,15 +12,11 @@ import { History } from 'history'
 const ReactQuill = require('react-quill')
 
 import styles from './styles'
+import { Article } from '../../domain/model/Article'
 
 type Props = {
   article: Article,
   history: History,
-}
-
-type Article = {
-  description: string
-  title: string,
 }
 
 interface ComponentState {

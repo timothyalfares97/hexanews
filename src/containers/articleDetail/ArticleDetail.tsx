@@ -5,14 +5,10 @@ import Divider from '@material-ui/core/Divider'
 
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
+import { Article } from '../../domain/model/Article'
 
 type Props = {
   article: Article
-}
-
-type Article = {
-  title: string,
-  description: string
 }
 
 class ArticleDetail extends React.Component<Props> {
