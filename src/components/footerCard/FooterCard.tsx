@@ -25,7 +25,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
           style={styles.media}
           image={placeholder}
         />
-        <CardContent>
+        <CardContent style={styles.cardContent}>
           <Typography
             component='h2'
             gutterBottom
@@ -36,7 +36,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
           <Typography
             component='h2'
             gutterBottom
-            variant='headline'
+            variant='subheading'
           >
             {title}
           </Typography>

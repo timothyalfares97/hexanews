@@ -4,6 +4,7 @@ import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { History } from 'history'
+import { map } from 'lodash'
 
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
@@ -27,50 +28,51 @@ class ArticleDetail extends React.Component<Props> {
   }
 
   renderFooterCards = () => {
+    const { history } = this.props
     const titles = ['React vs Angular vs Vue.js', 'New Features in Angular 2.0', 'React Native at Airbnb: The Technology']
-    return titles.map((item, i) => {
-      return (
-        <Grid item xs={4}>
-          <FooterCard
-            title={item}
-            history={this.props.history}
-          />
-        </Grid>
-      )
-    })
+    return map(titles, (title) => (
+      <Grid item xs={4}>
+        <FooterCard
+          title={title}
+          history={history}
+        />
+      </Grid>
+    ))
   }
 
   public render() {
 
     return (
       <div style={styles.container}>
-        <div style={styles.profileContainer}>
-          <Avatar style={styles.avatar}>
-            HC
-          </Avatar>
-          <div style={styles.detailContainer as any}>
-            <Typography
-              variant='subheading'
-              style={styles.profileName}
-            >
-              {'Henry Connor'}
-            </Typography>
-            <Typography
-              variant='body1'
-              color='textSecondary'
-            >
-              {'20 August 2018'}
-            </Typography>
+        <div style={styles.contentContainer}>
+          <div style={styles.profileContainer}>
+            <Avatar style={styles.avatar}>
+              HC
+            </Avatar>
+            <div style={styles.detailContainer as any}>
+              <Typography
+                variant='subheading'
+                style={styles.profileName}
+              >
+                {'Henry Connor'}
+              </Typography>
+              <Typography
+                variant='body1'
+                color='textSecondary'
+              >
+                {'20 August 2018'}
+              </Typography>
+            </div>
           </div>
+          <Typography
+            variant='display1'
+            component='h1'
+          >
+            {'Adjustable sidebar using Angular'}
+          </Typography>
+          <img src={placeholder} style={styles.placeholderImage} />
+          {this.renderMultilineText()}
         </div>
-        <Typography
-          variant='display1'
-          component='h1'
-        >
-          {'Adjustable sidebar using Angular'}
-        </Typography>
-        <img src={placeholder} style={styles.placeholderImage} />
-        {this.renderMultilineText()}
         <Divider style={styles.footerDivider} />
         <Grid container spacing={24}>
           {this.renderFooterCards()}

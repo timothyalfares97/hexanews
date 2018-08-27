@@ -42,7 +42,8 @@ class SearchArticle extends React.Component<Props, ComponentState> {
       { title: 'One Book at The Time', description: 'There had been times she had almost given up' },
       { title: 'Artificial Intelligence', description: 'Robots are getting smarter' }
     ]
-    let query = this.state.query.trim().toLowerCase()
+
+    const query = this.state.query.trim().toLowerCase()
 
     if (query.length > 0) {
       articles = filter(articles, (article: any) => article.title.toLowerCase().indexOf(query) !== -1)

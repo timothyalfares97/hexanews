@@ -13,6 +13,9 @@ export default {
     maxWidth: 385,
     boxShadow: '0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)'
   },
+  cardContent: {
+    paddingRight: '2%'
+  },
   date: {
     marginTop: 2,
   },

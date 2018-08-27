@@ -7,10 +7,15 @@ export default {
     alignSelf: 'center'
   },
   container: {
-    marginLeft: '25%',
-    marginRight: '25%',
+    marginLeft: '15%',
+    marginRight: '15%',
     marginTop: '4%',
     paddingBottom: '5%'
+  },
+  contentContainer: {
+    marginLeft: '10%',
+    marginRight: '10%',
+    marginBottom: '2%',
   },
   description: {
     fontFamily: 'Helvetica',
