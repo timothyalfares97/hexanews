@@ -25,6 +25,7 @@ export default {
   },
   footerDivider: {
     marginTop: 32,
+    marginBottom: 32
   },
   placeholderImage: {
     width: '100%',

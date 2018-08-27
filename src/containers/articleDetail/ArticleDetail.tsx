@@ -1,14 +1,18 @@
 import * as React from 'react'
-import Typography from '@material-ui/core/Typography'
 import Avatar from '@material-ui/core/Avatar'
 import Divider from '@material-ui/core/Divider'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
+import { History } from 'history'
 
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
+import FooterCard from '../../components/footerCard/FooterCard'
 
 type Props = {
   article: Article
+  history: History
 }
 
 class ArticleDetail extends React.Component<Props> {
@@ -19,6 +23,20 @@ class ArticleDetail extends React.Component<Props> {
     But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that`
     return text.split('\n').map((item, i) => {
       return <Typography style={styles.description}>{item}</Typography>
+    })
+  }
+
+  renderFooterCards = () => {
+    const titles = ['React vs Angular vs Vue.js', 'New Features in Angular 2.0', 'React Native at Airbnb: The Technology']
+    return titles.map((item, i) => {
+      return (
+        <Grid item xs={4}>
+          <FooterCard
+            title={item}
+            history={this.props.history}
+          />
+        </Grid>
+      )
     })
   }
 
@@ -49,11 +67,14 @@ class ArticleDetail extends React.Component<Props> {
           variant='display1'
           component='h1'
         >
-          { 'Adjustable sidebar using Angular' }
+          {'Adjustable sidebar using Angular'}
         </Typography>
-        <img src={placeholder} style={styles.placeholderImage}/>
+        <img src={placeholder} style={styles.placeholderImage} />
         {this.renderMultilineText()}
-        <Divider style={styles.footerDivider}/>
+        <Divider style={styles.footerDivider} />
+        <Grid container spacing={24}>
+          {this.renderFooterCards()}
+        </Grid>
       </div>
     )
   }
