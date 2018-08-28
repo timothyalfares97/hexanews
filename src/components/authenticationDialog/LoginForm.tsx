@@ -42,7 +42,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
           </DialogContentText>
           <TextField
             margin='dense'
-            id='name'
+            id='loginEmail'
             label='Email Address'
             type='email'
             fullWidth
@@ -50,7 +50,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
           />
           <TextField
             margin='dense'
-            id='password'
+            id='loginPassword'
             label='Password'
             type='password'
             fullWidth

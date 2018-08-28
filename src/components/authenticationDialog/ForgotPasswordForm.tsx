@@ -39,7 +39,7 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
           </DialogContentText>
           <TextField
             margin='dense'
-            id='name'
+            id='forgotPasswordEmail'
             label='Email Address'
             type='email'
             fullWidth

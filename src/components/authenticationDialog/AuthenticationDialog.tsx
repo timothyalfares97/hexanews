@@ -1,10 +1,13 @@
 import * as React from 'react'
 import Dialog from '@material-ui/core/Dialog'
+import { Dispatch } from 'redux'
+
 import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
 import ForgotPasswordForm from './ForgotPasswordForm'
 
 type Props = {
+  dispatch: Dispatch<any>
   showDialog: boolean
   handleCloseDialog: () => void
 }
@@ -32,7 +35,7 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
 
   renderAuthenticationForm = () => {
     const { authenticationState } = this.state
-    const { handleCloseDialog } = this.props
+    const { handleCloseDialog, dispatch } = this.props
 
     switch (authenticationState) {
       case 'login':
@@ -46,6 +49,7 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
       case 'register':
         return (
           <RegisterForm
+            dispatch={dispatch}
             onChangeAuthenticationState={() => this.onChangeAuthenticationState('login')}
             handleCloseDialog={handleCloseDialog}
           />

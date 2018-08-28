@@ -6,11 +6,14 @@ import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import CreateIcon from '@material-ui/icons/Create'
 import SearchIcon from '@material-ui/icons/Search'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
 
 import styles from './styles'
 import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
 
 type Props = {
+  dispatch: Dispatch<any>
 }
 
 interface ComponentState {
@@ -36,6 +39,7 @@ class Header extends React.Component<Props, ComponentState> {
 
   public render() {
     const { showDialog } = this.state
+    const { dispatch } = this.props
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
@@ -83,6 +87,7 @@ class Header extends React.Component<Props, ComponentState> {
           </Toolbar>
         </AppBar>
         <AuthenticationDialog
+          dispatch={dispatch}
           showDialog={showDialog}
           handleCloseDialog={this.handleCloseDialog}
         />
@@ -91,4 +96,4 @@ class Header extends React.Component<Props, ComponentState> {
   }
 }
 
-export default Header
+export default connect()(Header)

@@ -5,10 +5,13 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import Button from '@material-ui/core/Button'
+import { Dispatch } from 'redux'
 
+import * as actions from './actions'
 import styles from './styles'
 
 type Props = {
+  dispatch: Dispatch<any>
   handleCloseDialog: () => void
   onChangeAuthenticationState: () => void
 }
@@ -30,8 +33,17 @@ class RegisterForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  onRegister = async () => {
+    const { email, password, name } = this.state
+    const { dispatch, handleCloseDialog } = this.props
+
+    await dispatch(actions.registerUser(email, password, name))
+    handleCloseDialog()
+  }
+
   public render() {
     const { handleCloseDialog, onChangeAuthenticationState } = this.props
+    const { email, password, name } = this.state
     return (
       <div>
         <DialogTitle>
@@ -43,23 +55,29 @@ class RegisterForm extends React.Component<Props, ComponentState> {
           </DialogContentText>
           <TextField
             margin='dense'
-            id='name'
+            id='registerEmail'
             label='Email Address'
             type='email'
+            onChange={(event: any) => this.setState({ email: event.target.value })}
+            value={email}
             fullWidth
             style={styles.descriptionContainer}
           />
           <TextField
             margin='dense'
-            id='password'
+            id='registerPassword'
             label='Password'
             type='password'
+            onChange={(event: any) => this.setState({ password: event.target.value })}
+            value={password}
             fullWidth
           />
           <TextField
             margin='dense'
-            id='name'
-            label='full name'
+            id='registerName'
+            label='name'
+            onChange={(event: any) => this.setState({ name: event.target.value })}
+            value={name}
             fullWidth
           />
           <DialogContentText style={styles.footerContainer}>
@@ -76,7 +94,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
           <Button onClick={handleCloseDialog} color='primary'>
             {'Cancel'}
           </Button>
-          <Button onClick={handleCloseDialog} color='primary'>
+          <Button onClick={this.onRegister} color='primary'>
             {'Register'}
           </Button>
         </DialogActions>
