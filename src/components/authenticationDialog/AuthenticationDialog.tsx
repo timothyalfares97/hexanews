@@ -1,13 +1,8 @@
 import * as React from 'react'
-import TextField from '@material-ui/core/TextField'
 import Dialog from '@material-ui/core/Dialog'
-import DialogActions from '@material-ui/core/DialogActions'
-import DialogContent from '@material-ui/core/DialogContent'
-import DialogContentText from '@material-ui/core/DialogContentText'
-import DialogTitle from '@material-ui/core/DialogTitle'
-import Button from '@material-ui/core/Button'
-
-import styles from './styles'
+import LoginForm from './LoginForm'
+import RegisterForm from './RegisterForm'
+import ForgotPasswordForm from './ForgotPasswordForm'
 
 type Props = {
   showDialog: boolean
@@ -17,7 +12,7 @@ type Props = {
 interface ComponentState {
   email: string
   password: string
-  authenticationForm: string
+  authenticationState: string
 }
 
 class AuthenticationDialog extends React.Component<Props, ComponentState> {
@@ -27,70 +22,51 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
     this.state = {
       email: '',
       password: '',
-      authenticationForm: 'login'
+      authenticationState: 'login'
     }
   }
 
   onChangeAuthenticationState = (value: string) => {
-    this.setState({ authenticationForm: value })
+    this.setState({ authenticationState: value })
   }
 
-  renderFooterDialog = () => {
-    const { authenticationForm } = this.state
-    const authenticationTitle = authenticationForm === 'login' ? 'Register' : 'Sign in'
-    const authenticationState = authenticationForm === 'login' ? 'register' : 'login'
-    const authenticationContent = authenticationForm === 'login' ? 'Have no account? ' : 'Have account? '
-    return (
-      <DialogContentText style={styles.footerContainer}>
-        {authenticationContent}
-        <span
-          onClick={() => this.onChangeAuthenticationState(authenticationState)}
-          style={styles.footerLink}
-        >
-          {authenticationTitle} here
-        </span>
-      </DialogContentText>
-    )
+  renderAuthenticationForm = () => {
+    const { authenticationState } = this.state
+    const { handleCloseDialog } = this.props
+
+    switch (authenticationState) {
+      case 'login':
+        return (
+          <LoginForm
+            onChangeForgotPassword={() => this.onChangeAuthenticationState('forgotPassword')}
+            onChangeAuthenticationState={() => this.onChangeAuthenticationState('register')}
+            handleCloseDialog={handleCloseDialog}
+          />
+        )
+      case 'register':
+        return (
+          <RegisterForm
+            onChangeAuthenticationState={() => this.onChangeAuthenticationState('login')}
+            handleCloseDialog={handleCloseDialog}
+          />
+        )
+      case 'forgotPassword':
+        return (
+          <ForgotPasswordForm
+            onChangeAuthenticationState={() => this.onChangeAuthenticationState('login')}
+            handleCloseDialog={handleCloseDialog}
+          />
+        )
+      default:
+        return
+    }
   }
 
   public render() {
-    const { showDialog, handleCloseDialog } = this.props
-    const { authenticationForm } = this.state
-    const authenticationTitle = authenticationForm === 'login' ? 'Sign in' : 'Register'
+    const { showDialog } = this.props
     return (
       <Dialog open={showDialog}>
-        <DialogTitle>
-          {authenticationTitle}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText style={styles.descriptionContainer}>
-            {`${authenticationTitle } to access your personalized homepage. Please enter your email address and password.`}
-          </DialogContentText>
-          <TextField
-            margin='dense'
-            id='name'
-            label='Email Address'
-            type='email'
-            fullWidth
-            style={styles.descriptionContainer}
-          />
-          <TextField
-            margin='dense'
-            id='password'
-            label='Password'
-            type='password'
-            fullWidth
-          />
-          {this.renderFooterDialog()}
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseDialog} color='primary'>
-            Cancel
-          </Button>
-          <Button onClick={handleCloseDialog} color='primary'>
-            {authenticationTitle}
-          </Button>
-        </DialogActions>
+        {this.renderAuthenticationForm()}
       </Dialog>
     )
   }

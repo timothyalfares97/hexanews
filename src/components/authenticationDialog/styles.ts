@@ -5,6 +5,12 @@ export default {
   footerContainer: {
     marginTop: 8
   },
+  forgotPasswordContainer: {
+    marginTop: 8,
+    display: 'flex',
+    justifyContent: 'flex-end',
+    marginBottom: 4,
+  },
   footerLink: {
     cursor: 'pointer',
     color: '#03a87c',
