@@ -1,3 +1,7 @@
+/**
+ * Create Article containers for users to create article
+ */
+
 import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
@@ -12,6 +16,7 @@ import { History } from 'history'
 const ReactQuill = require('react-quill')
 
 import styles from './styles'
+import { createArticleString } from '../../constants/string'
 import { Article } from '../../domain/model/Article'
 
 type Props = {
@@ -137,7 +142,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
             style={styles.button}
             onClick={() => history.push('/articleDetail')}
           >
-            Publish
+            {createArticleString.publishButton}
           </Button>
           <Button
             variant='outlined'
@@ -145,7 +150,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
             style={styles.button}
             onClick={() => history.push('/')}
           >
-            Cancel
+            {createArticleString.cancelButton}
           </Button>
         </div>
       </div>

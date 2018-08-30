@@ -6,8 +6,10 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import { History } from 'history'
 
+import * as Config from '../../constants/config'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
+import { footerCardString } from '../../constants/string'
 
 type Props = {
   title: string,
@@ -19,7 +21,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
   history,
 }) => {
   return (
-    <div style={styles.root} onClick={() => history.push('/articleDetail')}>
+    <div style={styles.root} onClick={() => history.push(Config.HEADER_LINK.articleDetail)}>
       <Card style={styles.card}>
         <CardMedia
           style={styles.media}
@@ -31,7 +33,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
             gutterBottom
             variant='caption'
           >
-            Related reads
+            {footerCardString.relatedRead}
           </Typography>
           <Typography
             component='h2'

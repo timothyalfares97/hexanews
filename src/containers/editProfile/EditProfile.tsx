@@ -1,3 +1,7 @@
+/**
+ * Edit profile container for user to edit their profile
+ */
+
 import * as React from 'react'
 import Button from '@material-ui/core/Button'
 import { Typography } from '@material-ui/core'
@@ -5,6 +9,7 @@ import TextField from '@material-ui/core/TextField'
 import { History } from 'history'
 
 import styles from './styles'
+import { editProfileString } from '../../constants/string'
 
 type Props = {
   email: string,
@@ -38,7 +43,7 @@ class EditProfile extends React.Component<Props, ComponentState> {
           component='h1'
           color='textPrimary'
         >
-          {'Edit Profile'}
+          {editProfileString.editProfile}
         </Typography>
         <div style={styles.textFieldContainer}>
           <TextField
@@ -66,7 +71,7 @@ class EditProfile extends React.Component<Props, ComponentState> {
             style={styles.button}
             onClick={() => history.push('/profile')}
           >
-            Save Profile
+            {editProfileString.saveButton}
           </Button>
           <Button
             variant='outlined'
@@ -74,7 +79,7 @@ class EditProfile extends React.Component<Props, ComponentState> {
             component='button'
             style={styles.button}
             onClick={() => history.push('/profile')}>
-            Cancel
+            {editProfileString.cancelButton}
           </Button>
         </div>
       </div>

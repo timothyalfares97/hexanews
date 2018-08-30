@@ -6,6 +6,7 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import Button from '@material-ui/core/Button'
 
+import { forgetPasswordFormString } from '../../constants/string'
 import styles from './styles'
 
 type Props = {
@@ -31,11 +32,11 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
     return (
       <div>
         <DialogTitle>
-          {'Forgot Password'}
+          {forgetPasswordFormString.dialogTitle}
         </DialogTitle>
         <DialogContent>
           <DialogContentText style={styles.descriptionContainer}>
-            {`Put your email here, we will send a confirmation to reset your password`}
+            {forgetPasswordFormString.dialogDescription}
           </DialogContentText>
           <TextField
             margin='dense'
@@ -50,16 +51,16 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
               onClick={onChangeAuthenticationState}
               style={styles.footerLink}
             >
-              {'Back to login'}
+              {forgetPasswordFormString.backLogin}
             </span>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDialog} color='primary'>
-            {'Cancel'}
+            {forgetPasswordFormString.cancelButton}
           </Button>
           <Button onClick={handleCloseDialog} color='primary'>
-            {'Submit'}
+            {forgetPasswordFormString.submitButton}
           </Button>
         </DialogActions>
       </div>

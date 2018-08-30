@@ -1,3 +1,7 @@
+/**
+ * Style file for searchArticle containers
+ */
+
 export default {
   avatar: {
     width: 50,

@@ -1,3 +1,7 @@
+/**
+ * Display Article Detail screen containing the article description
+ */
+
 import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Divider from '@material-ui/core/Divider'

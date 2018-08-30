@@ -1,3 +1,7 @@
+/**
+ * Style file for editProfile containers
+ */
+
 export default {
   container: {
     marginLeft: '25%',

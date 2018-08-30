@@ -1,3 +1,7 @@
+/**
+ * Style file for categories containers
+ */
+
 export default {
   container: {
     padding: '5%',

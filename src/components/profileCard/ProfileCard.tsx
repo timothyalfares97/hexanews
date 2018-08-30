@@ -4,6 +4,7 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 
 import styles from './styles'
+import { profileCardString } from '../../constants/string'
 
 type Props = {
   name: string,
@@ -37,7 +38,7 @@ const ProfileCard: React.StatelessComponent<Props> = ({
               component='p'
               style={styles.memberText}
             >
-              {'Hexanews member since 20 August 2018'}
+              {`${profileCardString.memberSince} 20 August 2018`}
             </Typography>
           </CardContent>
         </div>

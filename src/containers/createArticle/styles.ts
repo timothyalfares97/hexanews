@@ -1,3 +1,7 @@
+/**
+ * Style file for createArticle containers
+ */
+
 export default {
   avatar: {
     margin: 10,

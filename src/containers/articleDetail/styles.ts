@@ -1,3 +1,7 @@
+/**
+ * Style file for articleDetail containers
+ */
+
 export default {
   avatar: {
     margin: 10,

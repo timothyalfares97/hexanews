@@ -9,6 +9,7 @@ import { Dispatch } from 'redux'
 
 import * as actions from './actions'
 import styles from './styles'
+import { registerFormString } from '../../constants/string'
 
 type Props = {
   dispatch: Dispatch<any>
@@ -47,11 +48,11 @@ class RegisterForm extends React.Component<Props, ComponentState> {
     return (
       <div>
         <DialogTitle>
-          {'Register'}
+          {registerFormString.dialogTitle}
         </DialogTitle>
         <DialogContent>
           <DialogContentText style={styles.descriptionContainer}>
-            {`Register to access your personalized homepage. Please enter your email address and password.`}
+            {registerFormString.dialogDescription}
           </DialogContentText>
           <TextField
             margin='dense'
@@ -81,21 +82,21 @@ class RegisterForm extends React.Component<Props, ComponentState> {
             fullWidth
           />
           <DialogContentText style={styles.footerContainer}>
-            {'Have an account? '}
+            {registerFormString.haveAccountLabel}
             <span
               onClick={onChangeAuthenticationState}
               style={styles.footerLink}
             >
-              {'Login here'}
+              {registerFormString.loginHereLabel}
             </span>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDialog} color='primary'>
-            {'Cancel'}
+            {registerFormString.cancelButton}
           </Button>
           <Button onClick={this.onRegister} color='primary'>
-            {'Register'}
+            {registerFormString.submitButton}
           </Button>
         </DialogActions>
       </div>

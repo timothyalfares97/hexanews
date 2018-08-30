@@ -1,3 +1,7 @@
+/**
+ * Home container for displaying all articles and featured articles
+ */
+
 import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
@@ -9,6 +13,7 @@ import ArticleRow from '../../components/articleRow/ArticleRow'
 import PopularArticleRow from '../../components/popularArticleRow/PopularArticleRow'
 import styles from './styles'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
+import { homeString } from '../../constants/string'
 
 type Props = {
   history: History
@@ -64,7 +69,7 @@ export default class Home extends React.Component<Props> {
           </Grid>
           <Grid item xs={3}>
             <Typography variant='headline' component='h2' style={styles.topStory}>
-              Top story in Hexanews
+              {homeString.topStory}
             </Typography>
             <Divider style={styles.articleDivider}/>
             <div style={styles.popularArticles}>

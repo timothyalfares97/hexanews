@@ -1,3 +1,7 @@
+/**
+ * Mock file for categories
+ */
+
 export default [
   'tech',
   'science',

@@ -9,6 +9,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 
+import * as Config from '../../constants/config'
 import styles from './styles'
 import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
 
@@ -67,21 +68,21 @@ class Header extends React.Component<Props, ComponentState> {
                 color='inherit'
                 style={styles.profileTypography}
               >
-                <Link to='/profile' style={styles.profileLink}>Profile</Link>
+                <Link to={Config.HEADER_LINK.profile} style={styles.profileLink}>Profile</Link>
               </Typography>
               <IconButton
                 style={styles.menuButton}
                 color='default'
                 aria-label='Search'
               >
-                <Link to='/searchArticle' style={styles.createLink}><SearchIcon /></Link>
+                <Link to={Config.HEADER_LINK.searchArticle} style={styles.createLink}><SearchIcon /></Link>
               </IconButton>
               <IconButton
                 style={styles.menuButton}
                 color='default'
                 aria-label='Create'
               >
-                <Link to='/createArticle' style={styles.createLink}><CreateIcon /></Link>
+                <Link to={Config.HEADER_LINK.createArticle} style={styles.createLink}><CreateIcon /></Link>
               </IconButton>
             </div>
           </Toolbar>

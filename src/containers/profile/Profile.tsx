@@ -1,3 +1,7 @@
+/**
+ * Profile container contains all description of current user
+ */
+
 import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
@@ -12,6 +16,7 @@ import { History } from 'history'
 import avatarPlaceholder from '../../assets/avatar_placeholder.png'
 import ProfileCard from '../../components/profileCard/ProfileCard'
 import styles from './styles'
+import { profileString } from '../../constants/string'
 
 type Props = {
   history: History
@@ -39,7 +44,7 @@ class Profile extends React.Component<Props> {
           style={styles.button}
           onClick={() => history.push('/editProfile')}
         >
-          Edit Profile
+          {profileString.editProfile}
         </Button>
         <Divider style={styles.profileDivider} />
         <Grid container spacing={24}>

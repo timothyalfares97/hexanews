@@ -1,3 +1,7 @@
+/**
+ * Display Categories screen containing all Category component
+ */
+
 import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
@@ -8,6 +12,7 @@ import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 import CategoryCard from '../../components/categoryCard/CategoryCard'
 import styles from './styles'
 import categories from './mockCategories'
+import { categoriesString } from '../../constants/string'
 
 type Props = {
   history: History
@@ -35,7 +40,7 @@ export default class Categories extends React.Component<Props> {
           gutterBottom
           variant='headline'
         >
-          Explore categories
+          {categoriesString.exploreCategory}
         </Typography>
         <Grid container spacing={24} style={styles.gridContainer}>
           {this.renderCategoriesCard()}

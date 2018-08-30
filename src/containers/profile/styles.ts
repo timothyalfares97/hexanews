@@ -1,3 +1,7 @@
+/**
+ * Style file for profile containers
+ */
+
 export default {
   avatar: {
     width: 50,

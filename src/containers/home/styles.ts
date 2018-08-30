@@ -1,3 +1,7 @@
+/**
+ * Style file for home containers
+ */
+
 export default {
   articleDivider: {
     marginTop: 20,

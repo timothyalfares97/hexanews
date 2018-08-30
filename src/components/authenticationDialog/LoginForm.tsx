@@ -7,6 +7,7 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import Button from '@material-ui/core/Button'
 
 import styles from './styles'
+import { loginFormString } from '../../constants/string'
 
 type Props = {
   handleCloseDialog: () => void
@@ -34,11 +35,11 @@ class LoginForm extends React.Component<Props, ComponentState> {
     return (
       <div>
         <DialogTitle>
-          {'Sign In'}
+          {loginFormString.dialogTitle}
         </DialogTitle>
         <DialogContent>
           <DialogContentText style={styles.descriptionContainer}>
-            {`login to access your personalized homepage. Please enter your email address and password.`}
+            {loginFormString.dialogDescription}
           </DialogContentText>
           <TextField
             margin='dense'
@@ -60,25 +61,25 @@ class LoginForm extends React.Component<Props, ComponentState> {
               onClick={onChangeForgotPassword}
               style={styles.footerLink}
             >
-              {'Forgot Password? '}
+              {loginFormString.forgotPasswordLabel}
             </span>
           </DialogContentText>
           <DialogContentText style={styles.footerContainer}>
-            {'Have no account? '}
+            {loginFormString.noAccountLabel}
             <span
               onClick={onChangeAuthenticationState}
               style={styles.footerLink}
             >
-              {'Register here'}
+              {loginFormString.registerHereLabel}
             </span>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDialog} color='primary'>
-            {'Cancel'}
+            {loginFormString.cancelButton}
           </Button>
           <Button onClick={handleCloseDialog} color='primary'>
-            {'Sign In'}
+            {loginFormString.submitButton}
           </Button>
         </DialogActions>
       </div>
