@@ -1,3 +1,6 @@
+/**
+ * Style file for profile card component.
+ */
 export default {
   card: {
     display: 'flex',

@@ -1,3 +1,6 @@
+/**
+ * Style file for article card component.
+ */
 export default {
   root: {
     flexGrow: 1,

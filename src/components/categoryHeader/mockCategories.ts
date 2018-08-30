@@ -1,3 +1,6 @@
+/**
+ * Mock data for categories.
+ */
 export default [
   'tech',
   'science',
