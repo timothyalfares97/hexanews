@@ -1,3 +1,6 @@
+/**
+ * Redux reducer for the main application.
+ */
 import { combineReducers } from 'redux'
 
 import user, { UserContainer } from './user'

@@ -1,3 +1,6 @@
+/**
+ * Style file for authentication dialog component.
+ */
 export default {
   descriptionContainer: {
     marginBottom: 8

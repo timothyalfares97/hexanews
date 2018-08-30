@@ -1,3 +1,6 @@
+/**
+ * Style file for footer card component.
+ */
 export default {
   root: {
     flexGrow: 1,

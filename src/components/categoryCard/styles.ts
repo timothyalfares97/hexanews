@@ -1,3 +1,6 @@
+/**
+ * Style file for category card component.
+ */
 export default {
   root: {
     flexGrow: 1,

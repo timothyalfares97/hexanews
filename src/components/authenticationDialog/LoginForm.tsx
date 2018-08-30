@@ -1,3 +1,6 @@
+/**
+ * Display login form component.
+ */
 import * as React from 'react'
 import TextField from '@material-ui/core/TextField'
 import DialogActions from '@material-ui/core/DialogActions'

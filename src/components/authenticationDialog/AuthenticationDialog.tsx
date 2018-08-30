@@ -1,3 +1,6 @@
+/**
+ * Display authentication dialog component.
+ */
 import * as React from 'react'
 import Dialog from '@material-ui/core/Dialog'
 import { Dispatch } from 'redux'

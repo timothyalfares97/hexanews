@@ -1,3 +1,6 @@
+/**
+ * Style file for article row component.
+ */
 export default {
   author: {
     marginTop: 28

@@ -1,3 +1,6 @@
+/**
+ * Redux reducer for the user.
+ */
 import { combineReducers } from 'redux'
 
 import { ActionTypes } from '../actions/ActionTypes'

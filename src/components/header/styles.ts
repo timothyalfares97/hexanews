@@ -1,3 +1,6 @@
+/**
+ * Style file for header component.
+ */
 export default {
   flex: {
     flex: 2,

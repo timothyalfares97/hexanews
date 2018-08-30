@@ -1,3 +1,6 @@
+/**
+ * Redux action class for authentication dialog.
+ */
 import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
