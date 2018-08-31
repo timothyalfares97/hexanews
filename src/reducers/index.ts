@@ -3,12 +3,12 @@
  */
 import { combineReducers } from 'redux'
 
-import user, { UserContainer } from './user'
+import entities, { Entities } from './entities'
 
 export interface State {
-  user: UserContainer
+  entities: Entities
 }
 
 export default combineReducers<State>({
-  user
+  entities
 })
