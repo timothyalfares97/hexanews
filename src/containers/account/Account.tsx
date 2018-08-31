@@ -115,14 +115,6 @@ class Account extends React.Component<Props, ComponentState> {
           >
             {accountString.saveButton}
           </Button>
-          <Button
-            variant='outlined'
-            size='small'
-            component='button'
-            style={styles.button}
-            onClick={() => history.push('/profile')}>
-            {accountString.cancelButton}
-          </Button>
         </div>
         <Divider style={styles.sectionDivider} />
         <div style={styles.sectionContainer}>

@@ -6,7 +6,8 @@ export default {
   container: {
     marginLeft: '25%',
     marginRight: '25%',
-    marginTop: '4%'
+    marginTop: '4%',
+    marginBottom: '4%',
   },
   sectionContainer: {
     marginTop: 24,
