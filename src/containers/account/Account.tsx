@@ -60,7 +60,7 @@ class Account extends React.Component<Props, ComponentState> {
 
   public render() {
     const { history } = this.props
-    const { name, description, currentPassword, newPassword } = this.state
+    const { name, description, currentPassword, newPassword, confirmNewPassword } = this.state
     return (
       <div style={styles.container}>
         <Typography
@@ -144,8 +144,8 @@ class Account extends React.Component<Props, ComponentState> {
           <TextField
             id='confirmNewPassword'
             label='Confirm New Password'
-            value={newPassword}
-            onChange={this.handleNewPasswordChange}
+            value={confirmNewPassword}
+            onChange={this.handleConfirmNewPasswordChange}
             style={styles.textField}
             margin='normal'
           />
