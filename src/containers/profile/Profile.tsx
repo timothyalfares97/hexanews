@@ -42,9 +42,9 @@ class Profile extends React.Component<Props> {
           size='small'
           component='button'
           style={styles.button}
-          onClick={() => history.push('/editProfile')}
+          onClick={() => history.push('/account')}
         >
-          {profileString.editProfile}
+          {profileString.myAccount}
         </Button>
         <Divider style={styles.profileDivider} />
         <Grid container spacing={24}>

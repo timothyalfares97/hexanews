@@ -6,11 +6,13 @@ export default {
   container: {
     marginLeft: '25%',
     marginRight: '25%',
-    marginTop: '4%',
-    paddingBottom: '5%'
+    marginTop: '4%'
   },
-  textFieldContainer: {
+  sectionContainer: {
     marginTop: 24,
+  },
+  sectionDivider: {
+    marginTop: 50,
   },
   textField: {
     width: '100%',

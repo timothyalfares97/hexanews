@@ -12,7 +12,7 @@ import SearchArticle from '../containers/searchArticle/SearchArticle'
 import CreateArticle from '../containers/createArticle/CreateArticle'
 import Categories from '../containers/categories/Categories'
 import Category from '../containers/category/Category'
-import EditProfile from '../containers/editProfile/EditProfile'
+import Account from '../containers/account/Account'
 
 type Props = {
   history: History
@@ -24,7 +24,7 @@ export default class Routes extends React.Component<Props> {
       <Switch>
         <Route exact={true} path='/' component={Home} {...this.props}/>
         <Route path='/profile' component={Profile} {...this.props} />
-        <Route path='/editProfile' component={EditProfile} {...this.props} />
+        <Route path='/account' component={Account} {...this.props} />
         <Route path='/articleDetail' component={ArticleDetail} {...this.props} />
         <Route path='/searchArticle' component={SearchArticle} {...this.props} />
         <Route path='/createArticle' component={CreateArticle} {...this.props} />

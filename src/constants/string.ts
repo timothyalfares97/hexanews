@@ -46,10 +46,12 @@ export const createArticleString = {
   publishButton: 'Publish'
 }
 
-export const editProfileString = {
+export const accountString = {
+  myAccount: 'My Account',
   editProfile: 'Edit Profile',
+  saveButton: 'Save Profile',
   cancelButton: 'Cancel',
-  saveButton: 'Save Profile'
+  changePassword: 'Change Password'
 }
 
 export const homeString = {
@@ -57,5 +59,5 @@ export const homeString = {
 }
 
 export const profileString = {
-  editProfile: 'Edit Profile',
+  myAccount: 'My Account',
 }
