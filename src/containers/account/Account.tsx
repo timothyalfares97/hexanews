@@ -11,15 +11,15 @@ import TextField from '@material-ui/core/TextField'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
 
+import * as actions from './actions'
 import styles from './styles'
 import { User } from '../../domain/model/User'
 import { accountString } from '../../constants/string'
 import selector, { StateProps } from './selector'
 
 type Props = {
-  user: User
+  user: User,
   dispatch: Dispatch<any>,
-  changeName: (newName: string) => void
 } & StateProps
 
 interface ComponentState {
@@ -119,7 +119,7 @@ class Account extends React.Component<Props, ComponentState> {
             size='small'
             component='button'
             style={styles.button}
-            onClick={() => dispatch(push('/profile'))}
+            onClick={() => dispatch(actions.changeName(name))}
           >
             {accountString.saveButton}
           </Button>
