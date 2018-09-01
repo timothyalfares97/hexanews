@@ -12,19 +12,24 @@ import Header from './components/header/Header'
 import Routes from './routes'
 import registerServiceWorker from './registerServiceWorker'
 import configureStore from './store/configureStore'
+import { ActionTypes } from './actions/ActionTypes'
 
 export default class Hexanews extends React.Component {
 
   history: History = createBrowserHistory()
   store: any = configureStore()
 
+  componentWillMount() {
+    this.store.dispatch({ type: ActionTypes.RECEIVED_HISTORY_OBJECT, history: this.history })
+  }
+
   render() {
     return (
       <BrowserRouter>
         <Provider store={this.store}>
           <div>
-            <Header history={this.history}/>
-            <Routes history={this.history}/>
+            <Header/>
+            <Routes/>
           </div>
         </Provider>
       </BrowserRouter>

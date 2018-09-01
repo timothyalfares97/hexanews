@@ -17,9 +17,10 @@ export enum ActionTypes {
 
   // article
   CREATE_ARTICLE_REQUESTED = 'hexanews/article/CREATE_ARTICLE_REQUESTED',
-  CREATE_ARTICLE_SUCCESS = 'hexanews/user/CREATE_ARTICLE_SUCCESS',
-  CREATE_ARTICLE_FAILED = 'hexanews/user/CREATE_ARTICLE_FAILED',
+  CREATE_ARTICLE_SUCCESS = 'hexanews/article/CREATE_ARTICLE_SUCCESS',
+  CREATE_ARTICLE_FAILED = 'hexanews/article/CREATE_ARTICLE_FAILED',
 
   // shared
   LOGOUT = 'hexanews/shared/LOGOUT',
+  RECEIVED_HISTORY_OBJECT = 'hexanews/shared/RECEIVED_HISTORY_OBJECT',
 }

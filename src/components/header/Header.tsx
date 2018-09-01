@@ -12,7 +12,6 @@ import SearchIcon from '@material-ui/icons/Search'
 import ExitIcon from '@material-ui/icons/ExitToApp'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
-import { History } from 'history'
 
 import * as actions from './actions'
 import * as Config from '../../constants/config'
@@ -21,7 +20,6 @@ import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
 import selector, { StateProps } from './selector'
 
 type Props = {
-  history: History,
   dispatch: Dispatch<any>
 } & StateProps
 

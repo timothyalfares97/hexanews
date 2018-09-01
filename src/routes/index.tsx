@@ -3,7 +3,6 @@
  */
 import * as React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { History } from 'history'
 
 import Home from '../containers/home/Home'
 import Profile from '../containers/profile/Profile'
@@ -15,14 +14,13 @@ import Category from '../containers/category/Category'
 import Account from '../containers/account/Account'
 
 type Props = {
-  history: History
 }
 
 export default class Routes extends React.Component<Props> {
   public render() {
     return (
       <Switch>
-        <Route exact={true} path='/' component={Home} {...this.props}/>
+        <Route exact={true} path='/' component={Home}/>
         <Route path='/profile' component={Profile} {...this.props} />
         <Route path='/account' component={Account} {...this.props} />
         <Route path='/articleDetail' component={ArticleDetail} {...this.props} />
