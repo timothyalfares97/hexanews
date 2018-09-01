@@ -22,5 +22,14 @@ export default {
     const response = await axios.get(`${Config.USER_ENDPOINT}/${id}`)
 
     return response
-  }
+  },
+
+  changeName: async (id: string, newName: string) => {
+
+    const response = await axios.put(`${Config.USER_ENDPOINT}/${id}`, {
+      name: newName,
+    }, Config.HEADER)
+
+    return response
+  },
 }

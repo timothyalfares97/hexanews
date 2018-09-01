@@ -12,14 +12,18 @@ import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
 
 import styles from './styles'
+import { User } from '../../domain/model/User'
 import { accountString } from '../../constants/string'
+import selector, { StateProps } from './selector'
 
 type Props = {
-  email: string,
+  user: User
   dispatch: Dispatch<any>,
-}
+  changeName: (newName: string) => void
+} & StateProps
 
 interface ComponentState {
+  email: string,
   name: string,
   description: string,
   currentPassword: string,
@@ -31,8 +35,10 @@ class Account extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)
+    const { user } = this.props
     this.state = {
-      name: 'Hillary Clinton',
+      email: user.email,
+      name: user.name,
       description: 'A politician, writer and philanthropist.',
       currentPassword: '',
       newPassword: '',
@@ -62,7 +68,7 @@ class Account extends React.Component<Props, ComponentState> {
 
   public render() {
     const { dispatch } = this.props
-    const { name, description, currentPassword, newPassword, confirmNewPassword } = this.state
+    const { email, name, description, currentPassword, newPassword, confirmNewPassword } = this.state
     return (
       <div style={styles.container}>
         <Typography
@@ -85,7 +91,7 @@ class Account extends React.Component<Props, ComponentState> {
           <TextField
             id='email'
             label='Email'
-            value={'HillaryClinton@gmail.com'}
+            value={email}
             disabled
             style={styles.textField}
             margin='normal'
@@ -168,4 +174,4 @@ class Account extends React.Component<Props, ComponentState> {
   }
 }
 
-export default connect()(Account)
+export default connect(selector)(Account)
