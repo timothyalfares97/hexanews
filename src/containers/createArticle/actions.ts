@@ -11,7 +11,7 @@ import { Article } from '../../domain/model/Article'
 export const createArticle = (article: Article) => (dispatch: Dispatch<any>) => (async () => {
   dispatch({ type: ActionTypes.CREATE_ARTICLE_REQUESTED })
   try {
-    const response = await ArticleRepository.createArticle(article)
+    const response = await ArticleRepository.create(article)
     if (response.data) {
       dispatch({ type: ActionTypes.CREATE_ARTICLE_SUCCESS })
     }

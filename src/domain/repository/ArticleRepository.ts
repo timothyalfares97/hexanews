@@ -9,10 +9,17 @@ import * as Config from '../../constants/config'
 
 export default {
 
-  createArticle: async (article: Article): Promise<any> => {
+  create: async (article: Article): Promise<any> => {
 
     const response = await axios.post(Config.ARTICLE_ENDPOINT, article)
 
     return response
-  }
+  },
+
+  getAll: async (): Promise<any> => {
+
+    const response = await axios.get(Config.ARTICLE_ENDPOINT)
+
+    return response
+  },
 }
