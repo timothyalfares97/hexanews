@@ -4,6 +4,7 @@
 import * as React from 'react'
 import TextField from '@material-ui/core/TextField'
 import DialogActions from '@material-ui/core/DialogActions'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
@@ -16,6 +17,7 @@ import { registerFormString } from '../../constants/string'
 
 type Props = {
   dispatch: Dispatch<any>
+  isLoadingRegister: boolean,
   handleCloseDialog: () => void
   onChangeAuthenticationState: () => void
 }
@@ -46,7 +48,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const { handleCloseDialog, onChangeAuthenticationState } = this.props
+    const { handleCloseDialog, onChangeAuthenticationState, isLoadingRegister } = this.props
     const { email, password, name } = this.state
     return (
       <div>
@@ -99,7 +101,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
             {registerFormString.cancelButton}
           </Button>
           <Button onClick={this.onRegister} color='primary'>
-            {registerFormString.submitButton}
+            {isLoadingRegister ? <CircularProgress size={22}/> : registerFormString.submitButton}
           </Button>
         </DialogActions>
       </div>

@@ -15,10 +15,11 @@ import { Dispatch } from 'redux'
 import * as Config from '../../constants/config'
 import styles from './styles'
 import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
+import selector, { StateProps } from './selector'
 
 type Props = {
   dispatch: Dispatch<any>
-}
+} & StateProps
 
 interface ComponentState {
   showDialog: boolean
@@ -43,7 +44,7 @@ class Header extends React.Component<Props, ComponentState> {
 
   public render() {
     const { showDialog } = this.state
-    const { dispatch } = this.props
+    const { dispatch, isLoadingLogin, isLoadingRegister } = this.props
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
@@ -94,10 +95,12 @@ class Header extends React.Component<Props, ComponentState> {
           dispatch={dispatch}
           showDialog={showDialog}
           handleCloseDialog={this.handleCloseDialog}
+          isLoadingRegister={isLoadingRegister}
+          isLoadingLogin={isLoadingLogin}
         />
       </div>
     )
   }
 }
 
-export default connect()(Header)
+export default connect(selector)(Header)

@@ -22,7 +22,7 @@ export const loginFormString = {
   dialogTitle: 'Sign In',
   dialogDescription: 'login to access your personalized homepage. Please enter your email address and password.',
   forgotPasswordLabel: 'Forgot Password? ',
-  noAccountLabel: 'Have no account?',
+  noAccountLabel: 'Have no account? ',
   registerHereLabel: 'Register here',
   cancelButton: 'Cancel',
   submitButton: 'Sign In',

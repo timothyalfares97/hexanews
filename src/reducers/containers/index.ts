@@ -5,10 +5,10 @@ import { combineReducers } from 'redux'
 
 import header, { HeaderContainer } from './header'
 
-export type Entities = {
+export type Containers = {
   header: HeaderContainer,
 }
 
-export default combineReducers<Entities>({
+export default combineReducers<Containers>({
   header,
 })

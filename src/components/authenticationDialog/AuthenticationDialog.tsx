@@ -12,6 +12,8 @@ import ForgotPasswordForm from './ForgotPasswordForm'
 type Props = {
   dispatch: Dispatch<any>
   showDialog: boolean
+  isLoadingRegister: boolean
+  isLoadingLogin: boolean
   handleCloseDialog: () => void
 }
 
@@ -38,12 +40,14 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
 
   renderAuthenticationForm = () => {
     const { authenticationState } = this.state
-    const { handleCloseDialog, dispatch } = this.props
+    const { handleCloseDialog, dispatch, isLoadingLogin, isLoadingRegister } = this.props
 
     switch (authenticationState) {
       case 'login':
         return (
           <LoginForm
+            dispatch={dispatch}
+            isLoadingLogin={isLoadingLogin}
             onChangeForgotPassword={() => this.onChangeAuthenticationState('forgotPassword')}
             onChangeAuthenticationState={() => this.onChangeAuthenticationState('register')}
             handleCloseDialog={handleCloseDialog}
@@ -53,6 +57,7 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
         return (
           <RegisterForm
             dispatch={dispatch}
+            isLoadingRegister={isLoadingRegister}
             onChangeAuthenticationState={() => this.onChangeAuthenticationState('login')}
             handleCloseDialog={handleCloseDialog}
           />

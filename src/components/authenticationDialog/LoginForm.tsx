@@ -1,7 +1,9 @@
 /**
  * Display login form component.
  */
+
 import * as React from 'react'
+import { Dispatch } from 'redux'
 import TextField from '@material-ui/core/TextField'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
@@ -13,9 +15,11 @@ import styles from './styles'
 import { loginFormString } from '../../constants/string'
 
 type Props = {
-  handleCloseDialog: () => void
-  onChangeForgotPassword: () => void
-  onChangeAuthenticationState: () => void
+  dispatch: Dispatch<any>,
+  isLoadingLogin: boolean,
+  handleCloseDialog: () => void,
+  onChangeForgotPassword: () => void,
+  onChangeAuthenticationState: () => void,
 }
 
 interface ComponentState {
