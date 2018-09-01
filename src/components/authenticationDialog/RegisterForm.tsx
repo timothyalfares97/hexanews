@@ -41,10 +41,10 @@ class RegisterForm extends React.Component<Props, ComponentState> {
 
   onRegister = async () => {
     const { email, password, name } = this.state
-    const { dispatch, handleCloseDialog } = this.props
+    const { dispatch, onChangeAuthenticationState } = this.props
 
     await dispatch(actions.registerUser(email, password, name))
-    handleCloseDialog()
+    onChangeAuthenticationState()
   }
 
   public render() {

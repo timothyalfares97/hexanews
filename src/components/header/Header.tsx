@@ -45,6 +45,7 @@ class Header extends React.Component<Props, ComponentState> {
   public render() {
     const { showDialog } = this.state
     const { dispatch, isLoadingLogin, isLoadingRegister } = this.props
+    const isLoggedIn = !!localStorage.getItem('token')
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
@@ -60,20 +61,24 @@ class Header extends React.Component<Props, ComponentState> {
               </Typography>
             </div>
             <div style={styles.rightContainer as any}>
-              <Typography
-                variant='title'
-                color='inherit'
-                style={styles.profileTypography}
-              >
-                <span style={styles.signLink} onClick={this.handleShowDialog}>Sign in</span>
-              </Typography>
-              <Typography
-                variant='title'
-                color='inherit'
-                style={styles.profileTypography}
-              >
-                <Link to={Config.HEADER_LINK.profile} style={styles.profileLink}>Profile</Link>
-              </Typography>
+              {!isLoggedIn &&
+                <Typography
+                  variant='title'
+                  color='inherit'
+                  style={styles.profileTypography}
+                >
+                  <span style={styles.signLink} onClick={this.handleShowDialog}>Sign in</span>
+                </Typography>
+              }
+              {isLoggedIn &&
+                <Typography
+                  variant='title'
+                  color='inherit'
+                  style={styles.profileTypography}
+                >
+                  <Link to={Config.HEADER_LINK.profile} style={styles.profileLink}>Profile</Link>
+                </Typography>
+              }
               <IconButton
                 style={styles.menuButton}
                 color='default'
@@ -81,13 +86,15 @@ class Header extends React.Component<Props, ComponentState> {
               >
                 <Link to={Config.HEADER_LINK.searchArticle} style={styles.createLink}><SearchIcon /></Link>
               </IconButton>
-              <IconButton
-                style={styles.menuButton}
-                color='default'
-                aria-label='Create'
-              >
-                <Link to={Config.HEADER_LINK.createArticle} style={styles.createLink}><CreateIcon /></Link>
-              </IconButton>
+              {isLoggedIn &&
+                <IconButton
+                  style={styles.menuButton}
+                  color='default'
+                  aria-label='Create'
+                >
+                  <Link to={Config.HEADER_LINK.createArticle} style={styles.createLink}><CreateIcon /></Link>
+                </IconButton>
+              }
             </div>
           </Toolbar>
         </AppBar>

@@ -15,5 +15,12 @@ export default {
     })
 
     return response
+  },
+
+  getUser: async (id: string) => {
+
+    const response = await axios.get(`${Config.USER_ENDPOINT}/${id}`)
+
+    return response
   }
 }

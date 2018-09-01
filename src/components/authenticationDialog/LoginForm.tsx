@@ -11,6 +11,7 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import Button from '@material-ui/core/Button'
 
+import * as actions from './actions'
 import styles from './styles'
 import { loginFormString } from '../../constants/string'
 
@@ -37,7 +38,15 @@ class LoginForm extends React.Component<Props, ComponentState> {
     }
   }
 
-  public render() {
+  onLogin = async () => {
+    const { email, password } = this.state
+    const { dispatch, handleCloseDialog } = this.props
+
+    await dispatch(actions.loginUser(email, password))
+    handleCloseDialog()
+  }
+
+  render() {
     const { handleCloseDialog, onChangeAuthenticationState, onChangeForgotPassword } = this.props
     return (
       <div>
@@ -53,6 +62,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
             id='loginEmail'
             label='Email Address'
             type='email'
+            onChange={(event: any) => this.setState({ email: event.target.value })}
             fullWidth
             style={styles.descriptionContainer}
           />
@@ -60,6 +70,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
             margin='dense'
             id='loginPassword'
             label='Password'
+            onChange={(event: any) => this.setState({ password: event.target.value })}
             type='password'
             fullWidth
           />
@@ -85,7 +96,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
           <Button onClick={handleCloseDialog} color='primary'>
             {loginFormString.cancelButton}
           </Button>
-          <Button onClick={handleCloseDialog} color='primary'>
+          <Button onClick={() => this.onLogin()} color='primary'>
             {loginFormString.submitButton}
           </Button>
         </DialogActions>

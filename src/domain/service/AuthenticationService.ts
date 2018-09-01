@@ -6,11 +6,15 @@ import * as Config from '../../constants/config'
 
 export default {
 
-  login: (email: string, password: string): Promise<any> => (
-    axios.post(Config.LOGIN_ENDPOINT, {
+  login: (email: string, password: string): Promise<any> => {
+
+    const response = axios.post(Config.LOGIN_ENDPOINT, {
       email: email,
       password: password,
     })
-  )
+
+    return response
+
+  }
 
 }
