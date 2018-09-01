@@ -10,6 +10,7 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import Button from '@material-ui/core/Button'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 import * as actions from './actions'
 import styles from './styles'
@@ -47,7 +48,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
   }
 
   render() {
-    const { handleCloseDialog, onChangeAuthenticationState, onChangeForgotPassword } = this.props
+    const { handleCloseDialog, onChangeAuthenticationState, onChangeForgotPassword, isLoadingLogin } = this.props
     return (
       <div>
         <DialogTitle>
@@ -97,7 +98,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
             {loginFormString.cancelButton}
           </Button>
           <Button onClick={() => this.onLogin()} color='primary'>
-            {loginFormString.submitButton}
+            {isLoadingLogin ? <CircularProgress size={22}/> : loginFormString.submitButton}
           </Button>
         </DialogActions>
       </div>

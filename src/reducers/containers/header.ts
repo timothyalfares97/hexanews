@@ -12,6 +12,7 @@ const isLoadingRegister = (state: boolean = false, action: any) => {
       return true
     case ActionTypes.REGISTER_USER_SUCCESS:
     case ActionTypes.REGISTER_USER_FAILED:
+    case ActionTypes.LOGOUT:
       return false
     default:
       return state
@@ -24,6 +25,7 @@ const isLoadingLogin = (state: boolean = false, action: any) => {
       return true
     case ActionTypes.LOGIN_USER_SUCCESS:
     case ActionTypes.LOGIN_USER_FAILED:
+    case ActionTypes.LOGOUT:
       return false
     default:
       return state

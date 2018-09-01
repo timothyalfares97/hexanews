@@ -23,7 +23,7 @@ export default class Hexanews extends React.Component {
       <BrowserRouter>
         <Provider store={this.store}>
           <div>
-            <Header />
+            <Header history={this.history}/>
             <Routes history={this.history}/>
           </div>
         </Provider>

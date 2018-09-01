@@ -9,19 +9,24 @@ import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import CreateIcon from '@material-ui/icons/Create'
 import SearchIcon from '@material-ui/icons/Search'
+import ExitIcon from '@material-ui/icons/ExitToApp'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
+import { History } from 'history'
 
+import * as actions from './actions'
 import * as Config from '../../constants/config'
 import styles from './styles'
 import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
 import selector, { StateProps } from './selector'
 
 type Props = {
+  history: History,
   dispatch: Dispatch<any>
 } & StateProps
 
 interface ComponentState {
+  isLoggedIn: boolean
   showDialog: boolean
 }
 
@@ -30,8 +35,19 @@ class Header extends React.Component<Props, ComponentState> {
   constructor(props: Props) {
     super(props)
     this.state = {
+      isLoggedIn: false,
       showDialog: false,
     }
+  }
+
+  componentWillReceiveProps() {
+    this.setState({ isLoggedIn: !!localStorage.getItem('token') })
+  }
+
+  onLogoutClick = async () => {
+    const { dispatch, history } = this.props
+    await dispatch(actions.logout(history))
+    this.setState({ isLoggedIn: !!localStorage.getItem('token') })
   }
 
   handleShowDialog = () => {
@@ -43,9 +59,8 @@ class Header extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const { showDialog } = this.state
+    const { showDialog, isLoggedIn } = this.state
     const { dispatch, isLoadingLogin, isLoadingRegister } = this.props
-    const isLoggedIn = !!localStorage.getItem('token')
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
@@ -93,6 +108,16 @@ class Header extends React.Component<Props, ComponentState> {
                   aria-label='Create'
                 >
                   <Link to={Config.HEADER_LINK.createArticle} style={styles.createLink}><CreateIcon /></Link>
+                </IconButton>
+              }
+              {isLoggedIn &&
+                <IconButton
+                  style={styles.menuButton}
+                  color='default'
+                  aria-label='Logout'
+                  onClick={this.onLogoutClick}
+                >
+                  <ExitIcon />
                 </IconButton>
               }
             </div>
