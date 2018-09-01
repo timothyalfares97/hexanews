@@ -25,8 +25,9 @@ export const loginUser = (email: string, password: string) => (dispatch: Dispatc
     const response = await AuthenticationService.login(email, password)
     if (!!response.data.token) {
       localStorage.setItem('token', response.data.token)
+      localStorage.setItem('id', response.data.id)
       const user = await UserRepository.getUser(response.data.id)
-      dispatch({ type: ActionTypes.LOGIN_USER_SUCCESS, user })
+      dispatch({ type: ActionTypes.LOGIN_USER_SUCCESS, user: user.data })
     }
   } catch (error) {
     dispatch({ type: ActionTypes.LOGIN_USER_FAILED })

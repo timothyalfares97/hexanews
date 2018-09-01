@@ -13,16 +13,19 @@ import FormHelperText from '@material-ui/core/FormHelperText'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
 import { History } from 'history'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
 const ReactQuill = require('react-quill')
 
+import * as actions from './actions'
 import styles from './styles'
 import { createArticleString } from '../../constants/string'
-import { Article } from '../../domain/model/Article'
+import selector, { StateProps } from './selector'
 
 type Props = {
-  article: Article,
   history: History,
-}
+  dispatch: Dispatch<any>
+} & StateProps
 
 interface ComponentState {
   category: string
@@ -51,6 +54,17 @@ class CreateArticle extends React.Component<Props, ComponentState> {
 
   handleDescriptionChange = (html: any) => {
     this.setState({ description: html })
+  }
+
+  onCreateArticle = async () => {
+    const { dispatch, history } = this.props
+    const { title, category, description } = this.state
+    const authorId = localStorage.getItem('id') || ''
+
+    const newArticle = { title, category, description, authorId }
+    await dispatch(actions.createArticle(newArticle))
+
+    history.push('/articleDetail')
   }
 
   modules = {
@@ -140,7 +154,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
             variant='outlined'
             component='button'
             style={styles.button}
-            onClick={() => history.push('/articleDetail')}
+            onClick={this.onCreateArticle}
           >
             {createArticleString.publishButton}
           </Button>
@@ -158,4 +172,4 @@ class CreateArticle extends React.Component<Props, ComponentState> {
   }
 }
 
-export default CreateArticle
+export default connect(selector)(CreateArticle)

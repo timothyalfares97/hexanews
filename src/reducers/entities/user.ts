@@ -1,7 +1,6 @@
 /**
  * Redux reducer for the user.
  */
-import { combineReducers } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 import { User } from '../../domain/model/User'
@@ -30,10 +29,6 @@ const user = (state: User = initialUser, action: UserAction) => {
   }
 }
 
-export type UserEntities = {
-  user: User,
-}
+export type UserEntities = User
 
-export default combineReducers<UserEntities>({
-  user,
-})
+export default user
