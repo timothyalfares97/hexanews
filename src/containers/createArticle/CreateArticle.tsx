@@ -12,9 +12,9 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
-import { History } from 'history'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
+import { push } from 'connected-react-router'
 const ReactQuill = require('react-quill')
 
 import * as actions from './actions'
@@ -23,7 +23,6 @@ import { createArticleString } from '../../constants/string'
 import selector, { StateProps } from './selector'
 
 type Props = {
-  history: History,
   dispatch: Dispatch<any>
 } & StateProps
 
@@ -57,14 +56,14 @@ class CreateArticle extends React.Component<Props, ComponentState> {
   }
 
   onCreateArticle = async () => {
-    const { dispatch, history } = this.props
+    const { dispatch } = this.props
     const { title, category, description } = this.state
     const authorId = localStorage.getItem('id') || ''
 
     const newArticle = { title, category, description, authorId }
     await dispatch(actions.createArticle(newArticle))
 
-    history.push('/articleDetail')
+    dispatch(push('/articleDetail'))
   }
 
   modules = {
@@ -90,7 +89,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
   ]
 
   public render() {
-    const { history } = this.props
+    const { dispatch } = this.props
     const { title, category, description } = this.state
     return (
       <div style={styles.container}>
@@ -162,7 +161,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
             variant='outlined'
             component='button'
             style={styles.button}
-            onClick={() => history.push('/')}
+            onClick={() => dispatch(push('/'))}
           >
             {createArticleString.cancelButton}
           </Button>

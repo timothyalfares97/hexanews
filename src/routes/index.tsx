@@ -21,13 +21,13 @@ export default class Routes extends React.Component<Props> {
     return (
       <Switch>
         <Route exact={true} path='/' component={Home}/>
-        <Route path='/profile' component={Profile} {...this.props} />
-        <Route path='/account' component={Account} {...this.props} />
-        <Route path='/articleDetail' component={ArticleDetail} {...this.props} />
-        <Route path='/searchArticle' component={SearchArticle} {...this.props} />
-        <Route path='/createArticle' component={CreateArticle} {...this.props} />
-        <Route path='/categories' component={Categories} {...this.props} />
-        <Route path='/category/:category' component={Category} {...this.props} />
+        <Route path='/profile' component={Profile}/>
+        <Route path='/account' component={Account}/>
+        <Route path='/articleDetail' component={ArticleDetail}/>
+        <Route path='/searchArticle' component={SearchArticle}/>
+        <Route path='/createArticle' component={CreateArticle}/>
+        <Route path='/categories' component={Categories}/>
+        <Route path='/category/:category' component={Category}/>
       </Switch>
     )
   }

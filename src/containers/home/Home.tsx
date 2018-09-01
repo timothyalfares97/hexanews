@@ -3,10 +3,11 @@
  */
 
 import * as React from 'react'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
-import { History } from 'history'
 
 import ArticleCard from '../../components/articleCard/ArticleCard'
 import ArticleRow from '../../components/articleRow/ArticleRow'
@@ -16,19 +17,20 @@ import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 import { homeString } from '../../constants/string'
 
 type Props = {
-  history: History
+  dispatch: Dispatch<any>
 }
 
-export default class Home extends React.Component<Props> {
+class Home extends React.Component<Props> {
 
   public render() {
+    const { dispatch } = this.props
     return (
       <div style={styles.container}>
         <CategoryHeader />
         <Grid container spacing={24} style={styles.gridContainer}>
           <Grid item xs={4}>
             <ArticleCard
-              history={this.props.history}
+              dispatch={dispatch}
               title='Adjustable sidebar using Angular'
               description='Also for this tutorial I din’t put accent on CSS,
                 I assume that you already created a sidebar which you need to make draggable.'
@@ -36,7 +38,7 @@ export default class Home extends React.Component<Props> {
           </Grid>
           <Grid item xs={4}>
             <ArticleCard
-              history={this.props.history}
+              dispatch={dispatch}
               title='Implement Google Analytics for React Native'
               description='For almost every product that is built or launched in the market, the business and development
                teams testing there'
@@ -44,7 +46,7 @@ export default class Home extends React.Component<Props> {
           </Grid>
           <Grid item xs={4}>
             <ArticleCard
-              history={this.props.history}
+              dispatch={dispatch}
               title='One Book at The Time —A Short Story'
               description='There had been times she had almost given up. All the lying, the sneaking around.
                 But today she once more managed to continue'
@@ -92,3 +94,5 @@ export default class Home extends React.Component<Props> {
     )
   }
 }
+
+export default connect()(Home)

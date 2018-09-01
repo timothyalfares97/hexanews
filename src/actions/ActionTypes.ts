@@ -22,5 +22,4 @@ export enum ActionTypes {
 
   // shared
   LOGOUT = 'hexanews/shared/LOGOUT',
-  RECEIVED_HISTORY_OBJECT = 'hexanews/shared/RECEIVED_HISTORY_OBJECT',
 }

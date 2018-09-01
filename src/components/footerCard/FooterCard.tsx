@@ -7,7 +7,8 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
-import { History } from 'history'
+import { Dispatch } from 'redux'
+import { push } from 'connected-react-router'
 
 import * as Config from '../../constants/config'
 import placeholder from '../../assets/placeholder.png'
@@ -15,16 +16,16 @@ import styles from './styles'
 import { footerCardString } from '../../constants/string'
 
 type Props = {
+  dispatch: Dispatch<any>,
   title: string,
-  history: History,
 }
 
 const FooterCard: React.StatelessComponent<Props> = ({
   title,
-  history,
+  dispatch,
 }) => {
   return (
-    <div style={styles.root} onClick={() => history.push(Config.HEADER_LINK.articleDetail)}>
+    <div style={styles.root} onClick={() => dispatch(push(Config.HEADER_LINK.articleDetail))}>
       <Card style={styles.card}>
         <CardMedia
           style={styles.media}

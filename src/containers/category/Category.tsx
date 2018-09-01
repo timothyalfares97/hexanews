@@ -5,14 +5,12 @@
 import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { History } from 'history'
 
 import ArticleRow from '../../components/articleRow/ArticleRow'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 import styles from './styles'
 
 type Props = {
-  history: History
 }
 
 export default class Category extends React.Component<Props> {

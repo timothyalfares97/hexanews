@@ -7,8 +7,9 @@ import Avatar from '@material-ui/core/Avatar'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { History } from 'history'
 import { map } from 'lodash'
+import { Dispatch } from 'redux'
+import { connect } from 'react-redux'
 
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
@@ -16,8 +17,8 @@ import { Article } from '../../domain/model/Article'
 import FooterCard from '../../components/footerCard/FooterCard'
 
 type Props = {
+  dispatch: Dispatch<any>
   article: Article
-  history: History
 }
 
 class ArticleDetail extends React.Component<Props> {
@@ -32,13 +33,13 @@ class ArticleDetail extends React.Component<Props> {
   }
 
   renderFooterCards = () => {
-    const { history } = this.props
+    const { dispatch } = this.props
     const titles = ['React vs Angular vs Vue.js', 'New Features in Angular 2.0', 'React Native at Airbnb: The Technology']
     return map(titles, (title) => (
       <Grid item xs={4}>
         <FooterCard
           title={title}
-          history={history}
+          dispatch={dispatch}
         />
       </Grid>
     ))
@@ -86,4 +87,4 @@ class ArticleDetail extends React.Component<Props> {
   }
 }
 
-export default ArticleDetail
+export default connect()(ArticleDetail)

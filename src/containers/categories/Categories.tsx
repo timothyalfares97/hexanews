@@ -5,8 +5,9 @@
 import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { History } from 'history'
+import { Dispatch } from 'redux'
 import { map } from 'lodash'
+import { connect } from 'react-redux'
 
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 import CategoryCard from '../../components/categoryCard/CategoryCard'
@@ -15,16 +16,16 @@ import categories from './mockCategories'
 import { categoriesString } from '../../constants/string'
 
 type Props = {
-  history: History
+  dispatch: Dispatch<any>
 }
 
-export default class Categories extends React.Component<Props> {
+class Categories extends React.Component<Props> {
 
   renderCategoriesCard = () => (
     map(categories, (item) => (
       <Grid item xs={3}>
         <CategoryCard
-          history={this.props.history}
+          dispatch={this.props.dispatch}
           category={item}
         />
       </Grid>
@@ -49,3 +50,5 @@ export default class Categories extends React.Component<Props> {
     )
   }
 }
+
+export default connect()(Categories)

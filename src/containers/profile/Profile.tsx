@@ -11,7 +11,9 @@ import CardHeader from '@material-ui/core/CardHeader'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { History } from 'history'
+import { Dispatch } from 'redux'
+import { connect } from 'react-redux'
+import { push } from 'connected-react-router'
 
 import avatarPlaceholder from '../../assets/avatar_placeholder.png'
 import ProfileCard from '../../components/profileCard/ProfileCard'
@@ -19,7 +21,7 @@ import styles from './styles'
 import { profileString } from '../../constants/string'
 
 type Props = {
-  history: History
+  dispatch: Dispatch<any>
 }
 
 class Profile extends React.Component<Props> {
@@ -29,7 +31,7 @@ class Profile extends React.Component<Props> {
   }
 
   public render() {
-    const { history } = this.props
+    const { dispatch } = this.props
     return (
       <div style={styles.container}>
         <ProfileCard
@@ -42,7 +44,7 @@ class Profile extends React.Component<Props> {
           size='small'
           component='button'
           style={styles.button}
-          onClick={() => history.push('/account')}
+          onClick={() => dispatch(push('/account'))}
         >
           {profileString.myAccount}
         </Button>
@@ -109,4 +111,4 @@ class Profile extends React.Component<Props> {
   }
 }
 
-export default Profile
+export default connect()(Profile)

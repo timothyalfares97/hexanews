@@ -10,13 +10,11 @@ import CardHeader from '@material-ui/core/CardHeader'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
-import { History } from 'history'
 import { map, filter } from 'lodash'
 
 import styles from './styles'
 
 type Props = {
-  history: History
 }
 
 interface ComponentState {

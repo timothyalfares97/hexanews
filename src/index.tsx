@@ -6,31 +6,29 @@ import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { createBrowserHistory, History } from 'history'
+import { ConnectedRouter } from 'connected-react-router'
 
 import './index.css'
 import Header from './components/header/Header'
 import Routes from './routes'
 import registerServiceWorker from './registerServiceWorker'
 import configureStore from './store/configureStore'
-import { ActionTypes } from './actions/ActionTypes'
 
 export default class Hexanews extends React.Component {
 
   history: History = createBrowserHistory()
-  store: any = configureStore()
-
-  componentWillMount() {
-    this.store.dispatch({ type: ActionTypes.RECEIVED_HISTORY_OBJECT, history: this.history })
-  }
+  store: any = configureStore({}, this.history)
 
   render() {
     return (
       <BrowserRouter>
         <Provider store={this.store}>
-          <div>
-            <Header/>
-            <Routes/>
-          </div>
+          <ConnectedRouter history={this.history}>
+            <div>
+              <Header/>
+              <Routes/>
+            </div>
+          </ConnectedRouter>
         </Provider>
       </BrowserRouter>
     )

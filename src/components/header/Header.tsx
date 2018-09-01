@@ -43,8 +43,8 @@ class Header extends React.Component<Props, ComponentState> {
   }
 
   onLogoutClick = async () => {
-    const { dispatch, history } = this.props
-    await dispatch(actions.logout(history))
+    const { dispatch } = this.props
+    await dispatch(actions.logout())
     this.setState({ isLoggedIn: !!localStorage.getItem('token') })
   }
 

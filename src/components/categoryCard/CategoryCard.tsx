@@ -6,23 +6,24 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
-import { History } from 'history'
+import { Dispatch } from 'redux'
+import { push } from 'connected-react-router'
 
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 
 type Props = {
   category: string,
-  history: History,
+  dispatch: Dispatch<any>,
 }
 
 const CategoryCard: React.StatelessComponent<Props> = ({
   category,
-  history
+  dispatch
 }) => {
   return (
     <div style={styles.root}>
-      <Card style={styles.card} onClick={() => history.push(`/category/${category}`)}>
+      <Card style={styles.card} onClick={() => dispatch(push(`/category/${category}`))}>
         <CardMedia
           style={styles.media}
           image={placeholder}

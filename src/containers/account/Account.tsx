@@ -3,18 +3,20 @@
  */
 
 import * as React from 'react'
+import { connect } from 'react-redux'
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
 import { Typography } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
-import { History } from 'history'
+import { Dispatch } from 'redux'
+import { push } from 'connected-react-router'
 
 import styles from './styles'
 import { accountString } from '../../constants/string'
 
 type Props = {
   email: string,
-  history: History,
+  dispatch: Dispatch<any>,
 }
 
 interface ComponentState {
@@ -59,7 +61,7 @@ class Account extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const { history } = this.props
+    const { dispatch } = this.props
     const { name, description, currentPassword, newPassword, confirmNewPassword } = this.state
     return (
       <div style={styles.container}>
@@ -111,7 +113,7 @@ class Account extends React.Component<Props, ComponentState> {
             size='small'
             component='button'
             style={styles.button}
-            onClick={() => history.push('/profile')}
+            onClick={() => dispatch(push('/profile'))}
           >
             {accountString.saveButton}
           </Button>
@@ -156,7 +158,7 @@ class Account extends React.Component<Props, ComponentState> {
             size='small'
             component='button'
             style={styles.button}
-            onClick={() => history.push('/profile')}
+            onClick={() => dispatch(push('/profile'))}
           >
             {accountString.changePassword}
           </Button>
@@ -166,4 +168,4 @@ class Account extends React.Component<Props, ComponentState> {
   }
 }
 
-export default Account
+export default connect()(Account)
