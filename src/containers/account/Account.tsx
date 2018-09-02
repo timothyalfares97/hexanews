@@ -10,7 +10,6 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import { Typography } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
 import { Dispatch } from 'redux'
-import { push } from 'connected-react-router'
 
 import * as actions from './actions'
 import styles from './styles'
@@ -22,6 +21,7 @@ type Props = {
   user: User,
   dispatch: Dispatch<any>,
   isEditingUser: boolean,
+  isChangingPassword: boolean,
 } & StateProps
 
 interface ComponentState {
@@ -78,8 +78,15 @@ class Account extends React.Component<Props, ComponentState> {
     await dispatch(actions.editUser(edittedUser))
   }
 
+  onChangePassword = async () => {
+    const { dispatch } = this.props
+    const { email, currentPassword, newPassword } = this.state
+
+    await dispatch(actions.changePassword(email, currentPassword, newPassword))
+  }
+
   public render() {
-    const { dispatch, isEditingUser } = this.props
+    const { isEditingUser, isChangingPassword } = this.props
     const { email, name, description, currentPassword, newPassword, confirmNewPassword } = this.state
     return (
       <div style={styles.container}>
@@ -152,6 +159,7 @@ class Account extends React.Component<Props, ComponentState> {
             onChange={this.handleCurrentPasswordChange}
             style={styles.textField}
             margin='normal'
+            type='password'
           />
           <TextField
             id='newPassword'
@@ -160,6 +168,7 @@ class Account extends React.Component<Props, ComponentState> {
             onChange={this.handleNewPasswordChange}
             style={styles.textField}
             margin='normal'
+            type='password'
           />
           <TextField
             id='confirmNewPassword'
@@ -168,6 +177,7 @@ class Account extends React.Component<Props, ComponentState> {
             onChange={this.handleConfirmNewPasswordChange}
             style={styles.textField}
             margin='normal'
+            type='password'
           />
         </div>
         <div>
@@ -176,9 +186,9 @@ class Account extends React.Component<Props, ComponentState> {
             size='small'
             component='button'
             style={styles.button}
-            onClick={() => dispatch(push('/profile'))}
+            onClick={this.onChangePassword}
           >
-            {accountString.changePassword}
+            {isChangingPassword ? <CircularProgress size={22} /> : accountString.changePassword}
           </Button>
         </div>
       </div>

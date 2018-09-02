@@ -12,6 +12,8 @@ const AUTH_ENDPOINT = `${API_ENDPOINT}/auth`
 
 export const LOGIN_ENDPOINT = `${AUTH_ENDPOINT}/login`
 
+export const CHANGE_PASSWORD_ENDPOINT = `${AUTH_ENDPOINT}/changePassword`
+
 export const ARTICLE_ENDPOINT = `${API_ENDPOINT}/articles`
 
 export const HEADER = {

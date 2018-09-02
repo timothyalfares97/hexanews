@@ -15,6 +15,17 @@ export default {
 
     return response
 
-  }
+  },
 
+  changePassword: (email: string, currentPassword: string, newPassword: string): Promise<any> => {
+
+    const response = axios.post(Config.CHANGE_PASSWORD_ENDPOINT, {
+      email: email,
+      password: currentPassword,
+      newPassword: newPassword,
+    }, Config.HEADER)
+
+    return response
+
+  }
 }
