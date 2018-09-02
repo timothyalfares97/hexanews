@@ -3,10 +3,14 @@ import { filter } from 'lodash'
 
 import { State } from '../../reducers'
 import { Article } from '../../domain/model/Article'
+import { User } from '../../domain/model/User'
 
 export interface StateProps {
+  user: User,
   userArticles: Article[]
 }
+
+const user = (state: State) => state.entities.user
 
 const userArticles = createSelector(
   (state: State) => state.entities.articles,
@@ -20,5 +24,6 @@ const userArticles = createSelector(
 )
 
 export default createStructuredSelector({
+  user,
   userArticles
 })

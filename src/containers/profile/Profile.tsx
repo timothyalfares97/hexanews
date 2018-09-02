@@ -22,8 +22,10 @@ import styles from './styles'
 import { profileString } from '../../constants/string'
 import selector, { StateProps } from './selector'
 import { Article } from '../../domain/model/Article'
+import { User } from '../../domain/model/User'
 
 type Props = {
+  user: User,
   dispatch: Dispatch<any>
 } & StateProps
 
@@ -34,13 +36,14 @@ class Profile extends React.Component<Props> {
   }
 
   public render() {
-    const { dispatch, userArticles } = this.props
+    const { dispatch, user, userArticles } = this.props
     return (
       <div style={styles.container}>
         <ProfileCard
-          name='Hillary Clinton'
-          description='A politician, writer and philanthropist.'
+          name={user.name}
+          description={user.description ? user.description : ''}
           image={avatarPlaceholder}
+          createdAt={user.createdAt}
         />
         <Button
           variant='outlined'
@@ -58,8 +61,8 @@ class Profile extends React.Component<Props> {
               <Card style={styles.card}>
                 <CardHeader
                   avatar={this.renderAvatar()}
-                  title='Hillary Clinton'
-                  subheader='20 August 2018'
+                  title={user.name}
+                  subheader={user.createdAt}
                 />
                 <CardContent>
                   <Typography gutterBottom variant='headline' component='h2'>

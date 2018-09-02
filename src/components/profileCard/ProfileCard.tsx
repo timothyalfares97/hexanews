@@ -13,12 +13,14 @@ type Props = {
   name: string,
   description: string,
   image: string,
+  createdAt: string
 }
 
 const ProfileCard: React.StatelessComponent<Props> = ({
   name,
   description,
   image,
+  createdAt,
 }) => {
   return (
     <div>
@@ -41,7 +43,7 @@ const ProfileCard: React.StatelessComponent<Props> = ({
               component='p'
               style={styles.memberText}
             >
-              {`${profileCardString.memberSince} 20 August 2018`}
+              {`${profileCardString.memberSince} ${createdAt}`}
             </Typography>
           </CardContent>
         </div>
