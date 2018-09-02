@@ -14,6 +14,7 @@ const initialUser = {
   _id: '',
   email: '',
   name: '',
+  description: '',
   createdAt: '',
 }
 

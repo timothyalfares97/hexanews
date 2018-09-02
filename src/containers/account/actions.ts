@@ -4,19 +4,20 @@
 import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
+import { User } from '../../domain/model/User'
 import UserRepository from '../../domain/repository/UserRepository'
 
-export const changeName = (newName: string) => (dispatch: Dispatch<any>) => (async () => {
+export const editUser = (edittedUser: User) => (dispatch: Dispatch<any>) => (async () => {
   const id = localStorage.getItem('id')
   if (id !== null) {
-    dispatch({ type: ActionTypes.CHANGE_NAME_REQUESTED })
+    dispatch({ type: ActionTypes.EDIT_USER_REQUESTED })
     try {
-      const response = await UserRepository.changeName(id, newName)
+      const response = await UserRepository.editUser(id, edittedUser)
       if (response.data) {
-        dispatch({ type: ActionTypes.CHANGE_NAME_SUCCESS })
+        dispatch({ type: ActionTypes.EDIT_USER_SUCCESS })
       }
     } catch (error) {
-      dispatch({ type: ActionTypes.CHANGE_NAME_FAILED })
+      dispatch({ type: ActionTypes.EDIT_USER_FAILED })
     }
   }
 })()

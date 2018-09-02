@@ -15,6 +15,7 @@ import Routes from './routes'
 import registerServiceWorker from './registerServiceWorker'
 import configureStore from './store/configureStore'
 import ArticleRepository from './domain/repository/ArticleRepository'
+import UserRepository from './domain/repository/UserRepository'
 import { ActionTypes } from './actions/ActionTypes'
 
 export default class Hexanews extends React.Component {
@@ -28,6 +29,12 @@ export default class Hexanews extends React.Component {
 
     const isLoggedIn = await !!localStorage.getItem('token')
     this.store.dispatch({ type: ActionTypes.GET_LOGIN, isLoggedIn })
+
+    const id = localStorage.getItem('id')
+    if (id !== null) {
+      const user = await UserRepository.getUser(id)
+      this.store.dispatch({ type: ActionTypes.GET_USER, user: user.data })
+    }
   }
 
   render() {
@@ -36,8 +43,8 @@ export default class Hexanews extends React.Component {
         <Provider store={this.store}>
           <ConnectedRouter history={this.history}>
             <div>
-              <Header/>
-              <Routes/>
+              <Header />
+              <Routes />
             </div>
           </ConnectedRouter>
         </Provider>
@@ -46,5 +53,5 @@ export default class Hexanews extends React.Component {
   }
 }
 
-ReactDOM.render(<Hexanews/>, document.getElementById('root') as HTMLElement)
+ReactDOM.render(<Hexanews />, document.getElementById('root') as HTMLElement)
 registerServiceWorker()

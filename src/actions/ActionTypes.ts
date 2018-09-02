@@ -17,10 +17,10 @@ export enum ActionTypes {
   LOGIN_USER_SUCCESS = 'hexanews/user/LOGIN_USER_SUCCESS',
   LOGIN_USER_FAILED = 'hexanews/user/LOGIN_USER_FAILED',
 
-  // change name
-  CHANGE_NAME_REQUESTED = 'hexanews/user/CHANGE_NAME_REQUESTED',
-  CHANGE_NAME_SUCCESS = 'hexanews/user/CHANGE_NAME_SUCCESS',
-  CHANGE_NAME_FAILED = 'hexanews/user/CHANGE_NAME_FAILED',
+  // edit user
+  EDIT_USER_REQUESTED = 'hexanews/user/EDIT_USER_REQUESTED',
+  EDIT_USER_SUCCESS = 'hexanews/user/EDIT_USER_SUCCESS',
+  EDIT_USER_FAILED = 'hexanews/user/EDIT_USER_FAILED',
 
   // article
   CREATE_ARTICLE_REQUESTED = 'hexanews/article/CREATE_ARTICLE_REQUESTED',

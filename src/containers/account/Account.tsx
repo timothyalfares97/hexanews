@@ -39,7 +39,7 @@ class Account extends React.Component<Props, ComponentState> {
     this.state = {
       email: user.email,
       name: user.name,
-      description: 'A politician, writer and philanthropist.',
+      description: user.description,
       currentPassword: '',
       newPassword: '',
       confirmNewPassword: ''
@@ -64,6 +64,16 @@ class Account extends React.Component<Props, ComponentState> {
 
   handleConfirmNewPasswordChange = (event: any) => {
     this.setState({ confirmNewPassword: event.target.value })
+  }
+
+  onSaveProfile = async () => {
+    const { dispatch } = this.props
+    const { email, name, description } = this.state
+    const _id = localStorage.getItem('id') || ''
+    const createdAt = localStorage.getItem('createdAt') || ''
+
+    const edittedUser = { _id, email, name, description, createdAt }
+    await dispatch(actions.editUser(edittedUser))
   }
 
   public render() {
@@ -119,7 +129,7 @@ class Account extends React.Component<Props, ComponentState> {
             size='small'
             component='button'
             style={styles.button}
-            onClick={() => dispatch(actions.changeName(name))}
+            onClick={this.onSaveProfile}
           >
             {accountString.saveButton}
           </Button>

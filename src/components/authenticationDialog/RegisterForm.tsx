@@ -26,6 +26,7 @@ interface ComponentState {
   email: string
   password: string
   name: string
+  description: string
 }
 
 class RegisterForm extends React.Component<Props, ComponentState> {
@@ -36,14 +37,15 @@ class RegisterForm extends React.Component<Props, ComponentState> {
       email: '',
       password: '',
       name: '',
+      description: '',
     }
   }
 
   onRegister = async () => {
-    const { email, password, name } = this.state
+    const { email, password, name, description } = this.state
     const { dispatch, onChangeAuthenticationState } = this.props
 
-    await dispatch(actions.registerUser(email, password, name))
+    await dispatch(actions.registerUser(email, password, name, description))
     onChangeAuthenticationState()
   }
 
@@ -101,7 +103,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
             {registerFormString.cancelButton}
           </Button>
           <Button onClick={this.onRegister} color='primary'>
-            {isLoadingRegister ? <CircularProgress size={22}/> : registerFormString.submitButton}
+            {isLoadingRegister ? <CircularProgress size={22} /> : registerFormString.submitButton}
           </Button>
         </DialogActions>
       </div>
