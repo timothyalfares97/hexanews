@@ -12,6 +12,7 @@ import CreateArticle from '../containers/createArticle/CreateArticle'
 import Categories from '../containers/categories/Categories'
 import Category from '../containers/category/Category'
 import Account from '../containers/account/Account'
+import NotFound from '../containers/notFound/NotFound'
 
 type Props = {
 }
@@ -28,6 +29,7 @@ export default class Routes extends React.Component<Props> {
         <Route path='/createArticle' component={CreateArticle}/>
         <Route path='/categories' component={Categories}/>
         <Route path='/category/:category' component={Category}/>
+        <Route component={NotFound} />
       </Switch>
     )
   }
