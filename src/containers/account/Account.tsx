@@ -6,6 +6,7 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import { Typography } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
 import { Dispatch } from 'redux'
@@ -20,6 +21,7 @@ import selector, { StateProps } from './selector'
 type Props = {
   user: User,
   dispatch: Dispatch<any>,
+  isEditingUser: boolean,
 } & StateProps
 
 interface ComponentState {
@@ -77,7 +79,7 @@ class Account extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const { dispatch } = this.props
+    const { dispatch, isEditingUser } = this.props
     const { email, name, description, currentPassword, newPassword, confirmNewPassword } = this.state
     return (
       <div style={styles.container}>
@@ -131,7 +133,7 @@ class Account extends React.Component<Props, ComponentState> {
             style={styles.button}
             onClick={this.onSaveProfile}
           >
-            {accountString.saveButton}
+            {isEditingUser ? <CircularProgress size={22} /> : accountString.saveButton}
           </Button>
         </div>
         <Divider style={styles.sectionDivider} />

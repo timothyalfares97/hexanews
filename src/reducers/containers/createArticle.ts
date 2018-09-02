@@ -1,5 +1,5 @@
 /**
- * Redux reducer for the header.
+ * Redux reducer for create article.
  */
 
 import { combineReducers } from 'redux'
