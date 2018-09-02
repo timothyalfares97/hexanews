@@ -23,6 +23,10 @@ export default class Hexanews extends React.Component {
   history: History = createBrowserHistory()
   store: Store = configureStore({}, this.history)
 
+  state = {
+    isLoadingServer: true
+  }
+
   async componentWillMount() {
     const articles = await ArticleRepository.getAll()
     this.store.dispatch({ type: ActionTypes.GET_ARTICLES, articles: articles.data })
@@ -35,16 +39,20 @@ export default class Hexanews extends React.Component {
       const user = await UserRepository.getUser(id)
       this.store.dispatch({ type: ActionTypes.GET_USER, user: user.data })
     }
+    this.setState({ isLoadingServer: false })
   }
 
   render() {
+    const { isLoadingServer } = this.state
     return (
       <BrowserRouter>
         <Provider store={this.store}>
           <ConnectedRouter history={this.history}>
             <div>
               <Header />
-              <Routes />
+              {!isLoadingServer &&
+                <Routes />
+              }
             </div>
           </ConnectedRouter>
         </Provider>

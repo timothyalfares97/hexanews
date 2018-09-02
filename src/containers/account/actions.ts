@@ -14,7 +14,7 @@ export const editUser = (edittedUser: User) => (dispatch: Dispatch<any>) => (asy
     try {
       const response = await UserRepository.editUser(id, edittedUser)
       if (response.data) {
-        dispatch({ type: ActionTypes.EDIT_USER_SUCCESS })
+        dispatch({ type: ActionTypes.EDIT_USER_SUCCESS, user: response.data })
       }
     } catch (error) {
       dispatch({ type: ActionTypes.EDIT_USER_FAILED })
