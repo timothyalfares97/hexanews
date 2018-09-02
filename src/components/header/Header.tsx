@@ -24,7 +24,6 @@ type Props = {
 } & StateProps
 
 interface ComponentState {
-  isLoggedIn: boolean
   showDialog: boolean
 }
 
@@ -33,19 +32,13 @@ class Header extends React.Component<Props, ComponentState> {
   constructor(props: Props) {
     super(props)
     this.state = {
-      isLoggedIn: false,
       showDialog: false,
     }
-  }
-
-  componentWillReceiveProps() {
-    this.setState({ isLoggedIn: !!localStorage.getItem('token') })
   }
 
   onLogoutClick = async () => {
     const { dispatch } = this.props
     await dispatch(actions.logout())
-    this.setState({ isLoggedIn: !!localStorage.getItem('token') })
   }
 
   handleShowDialog = () => {
@@ -57,8 +50,8 @@ class Header extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const { showDialog, isLoggedIn } = this.state
-    const { dispatch, isLoadingLogin, isLoadingRegister } = this.props
+    const { showDialog } = this.state
+    const { dispatch, isLoadingLogin, isLoadingRegister, isLoggedIn } = this.props
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>

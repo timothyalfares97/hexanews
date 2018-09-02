@@ -5,6 +5,7 @@ export enum ActionTypes {
   // user profile
   GET_USER = 'hexanews/user/GET_USER',
   GET_ARTICLES = 'hexanews/article/GET_ARTICLES',
+  GET_LOGIN = 'hexanews/login/GET_LOGIN',
 
   // register
   REGISTER_USER_REQUESTED = 'hexanews/user/REGISTER_USER_REQUESTED',

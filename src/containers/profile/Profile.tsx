@@ -14,15 +14,18 @@ import Typography from '@material-ui/core/Typography'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 import { push } from 'connected-react-router'
+import { map } from 'lodash'
 
 import avatarPlaceholder from '../../assets/avatar_placeholder.png'
 import ProfileCard from '../../components/profileCard/ProfileCard'
 import styles from './styles'
 import { profileString } from '../../constants/string'
+import selector, { StateProps } from './selector'
+import { Article } from '../../domain/model/Article'
 
 type Props = {
   dispatch: Dispatch<any>
-}
+} & StateProps
 
 class Profile extends React.Component<Props> {
 
@@ -31,7 +34,7 @@ class Profile extends React.Component<Props> {
   }
 
   public render() {
-    const { dispatch } = this.props
+    const { dispatch, userArticles } = this.props
     return (
       <div style={styles.container}>
         <ProfileCard
@@ -51,59 +54,23 @@ class Profile extends React.Component<Props> {
         <Divider style={styles.profileDivider} />
         <Grid container spacing={24}>
           <Grid item xs={12} style={styles.articleContainer}>
-            <Card style={styles.card}>
-              <CardHeader
-                avatar={this.renderAvatar()}
-                title='Hillary Clinton'
-                subheader='20 August 2018'
-              />
-              <CardContent>
-                <Typography gutterBottom variant='headline' component='h2'>
-                  {'Implement Google Analytics for React Native'}
-                </Typography>
-                <Typography component='p'>
-                  {'For almost every product that is built or launched in the market, the business and development teams testing there'}
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card style={styles.card}>
-              <CardHeader
-                avatar={this.renderAvatar()}
-                title='Hillary Clinton'
-                subheader='11 July 2018'
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant='headline'
-                  component='h2'
-                >
-                  {'One Book at The Time —A Short Story'}
-                </Typography>
-                <Typography component='p'>
-                  {'There had been times she had almost given up. All the lying, the sneaking around. But today she once more managed to continue'}
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card style={styles.card}>
-              <CardHeader
-                avatar={this.renderAvatar()}
-                title='Hillary Clinton'
-                subheader='8 June 2018'
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant='headline'
-                  component='h2'
-                >
-                  {'Adjustable sidebar using Angular'}
-                </Typography>
-                <Typography component='p'>
-                  {'Also for this tutorial I din’t put accent on CSS, I assume that you already created a sidebar which you need to make draggable.'}
-                </Typography>
-              </CardContent>
-            </Card>
+            {map(userArticles, (article: Article) => (
+              <Card style={styles.card}>
+                <CardHeader
+                  avatar={this.renderAvatar()}
+                  title='Hillary Clinton'
+                  subheader='20 August 2018'
+                />
+                <CardContent>
+                  <Typography gutterBottom variant='headline' component='h2'>
+                    {article.title}
+                  </Typography>
+                  <Typography component='p'>
+                    {article.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            ))}
           </Grid>
         </Grid>
       </div >
@@ -111,4 +78,4 @@ class Profile extends React.Component<Props> {
   }
 }
 
-export default connect()(Profile)
+export default connect(selector)(Profile)
