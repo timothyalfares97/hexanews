@@ -25,16 +25,11 @@ export const editUser = (edittedUser: User) => (dispatch: Dispatch<any>) => (asy
 
 export const changePassword = (email: string, currentPassword: string, newPassword: string) =>
   (dispatch: Dispatch<any>) => (async () => {
-    const id = localStorage.getItem('id')
-    if (id !== null) {
-      dispatch({ type: ActionTypes.CHANGE_PASSWORD_REQUESTED })
+    dispatch({ type: ActionTypes.CHANGE_PASSWORD_REQUESTED })
       try {
-        const response = await AuthenticationService.changePassword(email, currentPassword, newPassword)
-        if (response.data) {
-          dispatch({ type: ActionTypes.CHANGE_PASSWORD_SUCCESS, user: response.data })
-        }
+        await AuthenticationService.changePassword(email, currentPassword, newPassword)
+        dispatch({ type: ActionTypes.CHANGE_PASSWORD_SUCCESS })
       } catch (error) {
         dispatch({ type: ActionTypes.CHANGE_PASSWORD_FAILED })
       }
-    }
   })()
