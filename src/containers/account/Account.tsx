@@ -39,7 +39,7 @@ class Account extends React.Component<Props, ComponentState> {
     this.state = {
       email: user.email,
       name: user.name,
-      description: user.description,
+      description: user.description ? user.description : '',
       currentPassword: '',
       newPassword: '',
       confirmNewPassword: ''

@@ -8,13 +8,12 @@ import * as Config from '../../constants/config'
 
 export default {
 
-  createUser: async (email: string, password: string, name: string, description: string): Promise<any> => {
+  createUser: async (email: string, password: string, name: string): Promise<any> => {
 
     const response = await axios.post(Config.USER_ENDPOINT, {
       email: email,
       password: password,
       name: name,
-      description: description,
     })
 
     return response
