@@ -60,7 +60,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
     const { title, category, description } = this.state
     const authorId = localStorage.getItem('id') || ''
 
-    const newArticle = { title, category, description, authorId }
+    const newArticle = { _id: '', title, category, description, authorId }
     await dispatch(actions.createArticle(newArticle))
 
     dispatch(push('/articleDetail'))

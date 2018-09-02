@@ -5,16 +5,19 @@
 import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import { connect } from 'react-redux'
+import { map } from 'lodash'
 
 import ArticleRow from '../../components/articleRow/ArticleRow'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 import styles from './styles'
+import selector, { StateProps } from './selector'
 
-type Props = {
-}
+type Props = StateProps
 
-export default class Category extends React.Component<Props> {
+class Category extends React.Component<Props> {
   public render() {
+    const { categoryArticles, categoryTitle } = this.props
     return (
       <div style={styles.container}>
         <CategoryHeader />
@@ -23,7 +26,7 @@ export default class Category extends React.Component<Props> {
           gutterBottom
           variant='headline'
         >
-          Film
+          {categoryTitle}
         </Typography>
         <Typography
           component='h2'
@@ -34,21 +37,18 @@ export default class Category extends React.Component<Props> {
         </Typography>
         <Grid container spacing={24}>
           <Grid item xs={8} style={styles.latestArticleContainer}>
-            <ArticleRow
-              title='Crazy Rich Asians: Does the movie live up the book?'
-              description='Much buzz has been made about the movie version of Kevin Kwan’s novel Crazy Rich Asians.'
-            />
-            <ArticleRow
-              title='Happy All the Time'
-              description='As biometric tracking takes over the modern workplace'
-            />
-            <ArticleRow
-              title='A Hollywood Without Immigrants'
-              description='A Diversity Check on the 2008–17 Academy Awards, in Data'
-            />
+            {map(categoryArticles, (article) => (
+              <ArticleRow
+                title={article.title}
+                description={article.description}
+                key={article._id}
+              />
+            ))}
           </Grid>
         </Grid>
       </div>
     )
   }
 }
+
+export default connect(selector)(Category as any)
