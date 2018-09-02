@@ -2,6 +2,7 @@
  * Display profile card component.
  */
 import * as React from 'react'
+import * as moment from 'moment'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
@@ -43,7 +44,7 @@ const ProfileCard: React.StatelessComponent<Props> = ({
               component='p'
               style={styles.memberText}
             >
-              {`${profileCardString.memberSince} ${createdAt}`}
+              {`${profileCardString.memberSince} ${moment(createdAt).format('DD MMMM YYYY')}`}
             </Typography>
           </CardContent>
         </div>
