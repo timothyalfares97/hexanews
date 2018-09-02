@@ -36,7 +36,7 @@ export default class Hexanews extends React.Component {
 
     const id = localStorage.getItem('id')
     if (id !== null) {
-      const user = await UserRepository.getUser(id)
+      const user = await UserRepository.get(id)
       this.store.dispatch({ type: ActionTypes.GET_USER, user: user.data })
     }
     this.setState({ isLoadingServer: false })

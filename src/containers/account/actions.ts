@@ -12,7 +12,7 @@ export const editUser = (edittedUser: User) => (dispatch: Dispatch<any>) => (asy
   if (id !== null) {
     dispatch({ type: ActionTypes.EDIT_USER_REQUESTED })
     try {
-      const response = await UserRepository.editUser(id, edittedUser)
+      const response = await UserRepository.edit(id, edittedUser)
       if (response.data) {
         dispatch({ type: ActionTypes.EDIT_USER_SUCCESS, user: response.data })
       }
