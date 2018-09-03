@@ -1,11 +1,12 @@
 import { createStructuredSelector } from 'reselect'
+
 import { State } from '../../reducers'
 import { User } from '../../domain/model/User'
 
 export interface StateProps {
-  user: User,
-  isEditingUser: boolean,
-  isChangingPassword: boolean,
+  user: User
+  isEditingUser: boolean
+  isChangingPassword: boolean
 }
 
 const user = (state: State) => state.entities.user

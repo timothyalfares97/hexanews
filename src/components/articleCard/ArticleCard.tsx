@@ -25,7 +25,7 @@ const ArticleCard: React.StatelessComponent<Props> = ({
   dispatch,
 }) => {
   return (
-    <div style={styles.root} onClick={() => dispatch(push(Config.HEADER_LINK.articleDetail))}>
+    <div style={styles.root} onClick={() => dispatch(push(`${Config.HEADER_LINK.articleDetail}/1`))}>
       <Card style={styles.card}>
         <CardMedia
           style={styles.media}

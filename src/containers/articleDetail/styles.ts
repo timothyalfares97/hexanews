@@ -10,6 +10,12 @@ export default {
     backgroundColor: 'green',
     alignSelf: 'center'
   },
+  buttonContainer: {
+    flex: 1,
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+    display: 'flex',
+  },
   container: {
     marginLeft: '15%',
     marginRight: '15%',

@@ -58,7 +58,7 @@ class Profile extends React.Component<Props> {
         <Grid container spacing={24}>
           <Grid item xs={12} style={styles.articleContainer}>
             {map(userArticles, (article: Article) => (
-              <Card style={styles.card}>
+              <Card style={styles.card} onClick={() => dispatch(push(`/articleDetail/${article._id}`))}>
                 <CardHeader
                   avatar={this.renderAvatar()}
                   title={user.name}

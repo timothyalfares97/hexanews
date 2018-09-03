@@ -7,19 +7,24 @@ import Avatar from '@material-ui/core/Avatar'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import { map } from 'lodash'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
+import { push } from 'connected-react-router'
 
+import * as actions from './actions'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
 import FooterCard from '../../components/footerCard/FooterCard'
+import selector, { StateProps } from './selector'
 
 type Props = {
   dispatch: Dispatch<any>
   article: Article
-}
+} & StateProps
 
 class ArticleDetail extends React.Component<Props> {
 
@@ -36,7 +41,7 @@ class ArticleDetail extends React.Component<Props> {
     const { dispatch } = this.props
     const titles = ['React vs Angular vs Vue.js', 'New Features in Angular 2.0', 'React Native at Airbnb: The Technology']
     return map(titles, (title) => (
-      <Grid item xs={4}>
+      <Grid item xs={4} key={title}>
         <FooterCard
           title={title}
           dispatch={dispatch}
@@ -45,8 +50,18 @@ class ArticleDetail extends React.Component<Props> {
     ))
   }
 
-  public render() {
+  onDeleteArticle = async () => {
+    const { dispatch, userArticle } = this.props
+    const articleId = userArticle._id
+    if (!!articleId) {
+      await dispatch(actions.deleteArticle(articleId))
+    }
 
+    dispatch(push('/profile'))
+  }
+
+  public render() {
+    const { isUserArticle, isDeletingArticle } = this.props
     return (
       <div style={styles.container}>
         <div style={styles.contentContainer}>
@@ -68,6 +83,19 @@ class ArticleDetail extends React.Component<Props> {
                 {'20 August 2018'}
               </Typography>
             </div>
+            <div style={styles.buttonContainer}>
+              {isUserArticle &&
+                <Button
+                  variant='outlined'
+                  size='small'
+                  component='button'
+                  style={{ alignSelf: 'center' }}
+                  onClick={this.onDeleteArticle}
+                >
+                  {isDeletingArticle ? <CircularProgress size={22} /> : 'Delete article'}
+                </Button>
+              }
+            </div>
           </div>
           <Typography
             variant='display1'
@@ -87,4 +115,4 @@ class ArticleDetail extends React.Component<Props> {
   }
 }
 
-export default connect()(ArticleDetail)
+export default connect(selector)(ArticleDetail)

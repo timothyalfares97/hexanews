@@ -12,6 +12,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
@@ -60,10 +61,10 @@ class CreateArticle extends React.Component<Props, ComponentState> {
     const { title, category, description } = this.state
     const authorId = localStorage.getItem('id') || ''
 
-    const newArticle = { _id: '', title, category, description, authorId }
+    const newArticle = { title, category, description, authorId }
     await dispatch(actions.createArticle(newArticle))
 
-    dispatch(push('/articleDetail'))
+    dispatch(push('/profile'))
   }
 
   modules = {
@@ -89,7 +90,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
   ]
 
   public render() {
-    const { dispatch } = this.props
+    const { dispatch, isCreatingArticle } = this.props
     const { title, category, description } = this.state
     return (
       <div style={styles.container}>
@@ -155,7 +156,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
             style={styles.button}
             onClick={this.onCreateArticle}
           >
-            {createArticleString.publishButton}
+            {isCreatingArticle ? <CircularProgress size={22} /> : createArticleString.publishButton}
           </Button>
           <Button
             variant='outlined'

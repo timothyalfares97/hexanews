@@ -24,7 +24,7 @@ export default class Routes extends React.Component<Props> {
         <Route exact={true} path='/' component={Home}/>
         <Route path='/profile' component={Profile}/>
         <Route path='/account' component={Account}/>
-        <Route path='/articleDetail' component={ArticleDetail}/>
+        <Route path='/articleDetail/:articleId' component={ArticleDetail}/>
         <Route path='/searchArticle' component={SearchArticle}/>
         <Route path='/createArticle' component={CreateArticle}/>
         <Route path='/categories' component={Categories}/>

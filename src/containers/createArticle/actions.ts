@@ -1,5 +1,5 @@
 /**
- * Redux action class for authentication dialog.
+ * Redux action class for create article.
  */
 
 import { Dispatch } from 'redux'
@@ -13,7 +13,7 @@ export const createArticle = (article: Article) => (dispatch: Dispatch<any>) => 
   try {
     const response = await ArticleRepository.create(article)
     if (response.data) {
-      dispatch({ type: ActionTypes.CREATE_ARTICLE_SUCCESS })
+      dispatch({ type: ActionTypes.CREATE_ARTICLE_SUCCESS, article: response.data })
     }
   } catch (error) {
     dispatch({ type: ActionTypes.CREATE_ARTICLE_FAILED })

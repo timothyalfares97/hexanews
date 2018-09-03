@@ -22,4 +22,9 @@ export default {
 
     return response
   },
+
+  delete: async (id: string): Promise<any> => {
+
+    await axios.delete(`${Config.ARTICLE_ENDPOINT}/${id}`)
+  },
 }
