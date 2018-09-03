@@ -19,6 +19,7 @@ type Props = {
 
 interface ComponentState {
   email: string
+  emailError: string
 }
 
 class ForgotPasswordForm extends React.Component<Props, ComponentState> {
@@ -26,12 +27,37 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
   constructor(props: Props) {
     super(props)
     this.state = {
-      email: ''
+      email: '',
+      emailError: ''
     }
   }
 
+  validateEmailTextField = () => {
+    const { email } = this.state
+
+    let errorMessage = ''
+
+    if (email === '') {
+      errorMessage = 'Please enter your email address'
+    }
+
+    // tslint:disable:max-line-length
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if (!emailRegex.test(email.toLowerCase())) {
+      errorMessage = 'Invalid email address. Valid e-mail can contain only latin letters, numbers, "@" and "."'
+    }
+
+    this.setState({ emailError: errorMessage })
+  }
+
+  onForgotPassword = async () => {
+    await this.validateEmailTextField()
+  }
+
   public render() {
+    const { emailError } = this.state
     const { handleCloseDialog, onChangeAuthenticationState } = this.props
+    const isEmailErrorEmpty = emailError !== ''
     return (
       <div>
         <DialogTitle>
@@ -42,8 +68,11 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
             {forgetPasswordFormString.dialogDescription}
           </DialogContentText>
           <TextField
+            error={isEmailErrorEmpty}
             margin='dense'
             id='forgotPasswordEmail'
+            helperText={isEmailErrorEmpty ? emailError : ''}
+            onChange={(event: any) => this.setState({ email: event.target.value })}
             label='Email Address'
             type='email'
             fullWidth
@@ -62,7 +91,7 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
           <Button onClick={handleCloseDialog} color='primary'>
             {forgetPasswordFormString.cancelButton}
           </Button>
-          <Button onClick={handleCloseDialog} color='primary'>
+          <Button onClick={this.onForgotPassword} color='primary'>
             {forgetPasswordFormString.submitButton}
           </Button>
         </DialogActions>
