@@ -31,6 +31,9 @@ export default class Hexanews extends React.Component {
     const articles = await ArticleRepository.getAll()
     this.store.dispatch({ type: ActionTypes.GET_ARTICLES, articles: articles.data })
 
+    const users = await UserRepository.getAll()
+    this.store.dispatch({ type: ActionTypes.GET_USERS, users: users.data })
+
     const isLoggedIn = await !!localStorage.getItem('token')
     this.store.dispatch({ type: ActionTypes.GET_LOGIN, isLoggedIn })
 

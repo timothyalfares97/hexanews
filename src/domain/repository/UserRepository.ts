@@ -1,6 +1,7 @@
 /**
  * Repository domain for the user.
  */
+
 import axios from 'axios'
 
 import { User } from '../model/User'
@@ -22,6 +23,13 @@ export default {
   get: async (id: string) => {
 
     const response = await axios.get(`${Config.USER_ENDPOINT}/${id}`)
+
+    return response
+  },
+
+  getAll: async (): Promise<any> => {
+
+    const response = await axios.get(Config.USER_ENDPOINT)
 
     return response
   },

@@ -3,15 +3,18 @@
  */
 import { combineReducers } from 'redux'
 
-import user, { UserEntities } from './user'
+import user, { UserEntity } from './user'
+import users, { UserEntities } from './users'
 import articles, { ArticleEntities } from './articles'
 
 export type Entities = {
-  user: UserEntities,
-  articles: ArticleEntities
+  user: UserEntity,
+  users: UserEntities
+  articles: ArticleEntities,
 }
 
 export default combineReducers<Entities>({
   articles,
   user,
+  users,
 })

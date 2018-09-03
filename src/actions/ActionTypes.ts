@@ -4,6 +4,7 @@
 export enum ActionTypes {
   // user profile
   GET_USER = 'hexanews/user/GET_USER',
+  GET_USERS = 'hexanews/user/GET_USERS',
   GET_ARTICLES = 'hexanews/article/GET_ARTICLES',
   GET_LOGIN = 'hexanews/login/GET_LOGIN',
 

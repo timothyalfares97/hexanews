@@ -31,6 +31,6 @@ const user = (state: User = initialUser, action: UserAction) => {
   }
 }
 
-export type UserEntities = User
+export type UserEntity = User
 
 export default user
