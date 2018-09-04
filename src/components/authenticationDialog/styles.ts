@@ -17,5 +17,9 @@ export default {
   footerLink: {
     cursor: 'pointer',
     color: '#03a87c',
-  }
+  },
+  errorLoginLabel: {
+    color: '#E53935',
+    fontSize: 12,
+  },
 }

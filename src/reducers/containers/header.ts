@@ -32,12 +32,27 @@ const isLoadingLogin = (state: boolean = false, action: any) => {
   }
 }
 
+const loginError = (state: string = '', action: any) => {
+  switch (action.type) {
+    case ActionTypes.LOGIN_USER_FAILED:
+      return action.error
+    case ActionTypes.LOGIN_USER_REQUESTED:
+    case ActionTypes.LOGIN_USER_SUCCESS:
+    case ActionTypes.LOGOUT:
+      return ''
+    default:
+      return state
+  }
+}
+
 export type HeaderContainer = {
   isLoadingRegister: boolean,
   isLoadingLogin: boolean,
+  loginError: string,
 }
 
 export default combineReducers<HeaderContainer>({
   isLoadingRegister,
   isLoadingLogin,
+  loginError,
 })

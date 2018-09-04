@@ -15,6 +15,7 @@ type Props = {
   isLoadingRegister: boolean
   isLoadingLogin: boolean
   handleCloseDialog: () => void
+  loginError: string
 }
 
 interface ComponentState {
@@ -40,7 +41,7 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
 
   renderAuthenticationForm = () => {
     const { authenticationState } = this.state
-    const { handleCloseDialog, dispatch, isLoadingLogin, isLoadingRegister } = this.props
+    const { handleCloseDialog, dispatch, isLoadingLogin, isLoadingRegister, loginError } = this.props
 
     switch (authenticationState) {
       case 'login':
@@ -51,6 +52,7 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
             onChangeForgotPassword={() => this.onChangeAuthenticationState('forgotPassword')}
             onChangeAuthenticationState={() => this.onChangeAuthenticationState('register')}
             handleCloseDialog={handleCloseDialog}
+            loginError={loginError}
           />
         )
       case 'register':

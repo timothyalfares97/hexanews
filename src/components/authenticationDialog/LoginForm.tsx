@@ -22,6 +22,7 @@ type Props = {
   handleCloseDialog: () => void,
   onChangeForgotPassword: () => void,
   onChangeAuthenticationState: () => void,
+  loginError: string,
 }
 
 interface ComponentState {
@@ -44,11 +45,16 @@ class LoginForm extends React.Component<Props, ComponentState> {
     const { dispatch, handleCloseDialog } = this.props
 
     await dispatch(actions.loginUser(email, password))
-    handleCloseDialog()
+
+    const { loginError } = this.props
+
+    if (loginError === '') {
+      handleCloseDialog()
+    }
   }
 
   render() {
-    const { handleCloseDialog, onChangeAuthenticationState, onChangeForgotPassword, isLoadingLogin } = this.props
+    const { handleCloseDialog, onChangeAuthenticationState, onChangeForgotPassword, isLoadingLogin, loginError } = this.props
     return (
       <div>
         <DialogTitle>
@@ -75,6 +81,9 @@ class LoginForm extends React.Component<Props, ComponentState> {
             type='password'
             fullWidth
           />
+          <span style={styles.errorLoginLabel}>
+            {loginError}
+          </span>
           <DialogContentText style={styles.forgotPasswordContainer}>
             <span
               onClick={onChangeForgotPassword}

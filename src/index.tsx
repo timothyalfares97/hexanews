@@ -8,8 +8,10 @@ import { Store } from 'redux'
 import { BrowserRouter } from 'react-router-dom'
 import { createBrowserHistory, History } from 'history'
 import { ConnectedRouter } from 'connected-react-router'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 import './index.css'
+import styles from './styles'
 import Header from './components/header/Header'
 import Routes from './routes'
 import registerServiceWorker from './registerServiceWorker'
@@ -45,17 +47,22 @@ export default class Hexanews extends React.Component {
     this.setState({ isLoadingServer: false })
   }
 
+  renderMainContainer = () => (
+    this.state.isLoadingServer ?
+      <div style={styles.progressContainer}>
+        <CircularProgress />
+      </div> :
+      <Routes />
+  )
+
   render() {
-    const { isLoadingServer } = this.state
     return (
       <BrowserRouter>
         <Provider store={this.store}>
           <ConnectedRouter history={this.history}>
             <div>
               <Header />
-              {!isLoadingServer &&
-                <Routes />
-              }
+              {this.renderMainContainer()}
             </div>
           </ConnectedRouter>
         </Provider>

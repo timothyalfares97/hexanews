@@ -51,7 +51,7 @@ class Header extends React.Component<Props, ComponentState> {
 
   public render() {
     const { showDialog } = this.state
-    const { dispatch, isLoadingLogin, isLoadingRegister, isLoggedIn } = this.props
+    const { dispatch, isLoadingLogin, isLoadingRegister, isLoggedIn, loginError } = this.props
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
@@ -120,6 +120,7 @@ class Header extends React.Component<Props, ComponentState> {
           handleCloseDialog={this.handleCloseDialog}
           isLoadingRegister={isLoadingRegister}
           isLoadingLogin={isLoadingLogin}
+          loginError={loginError}
         />
       </div>
     )

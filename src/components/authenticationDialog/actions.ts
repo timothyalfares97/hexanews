@@ -28,8 +28,10 @@ export const loginUser = (email: string, password: string) => (dispatch: Dispatc
       localStorage.setItem('id', response.data.id)
       const user = await UserRepository.get(response.data.id)
       dispatch({ type: ActionTypes.LOGIN_USER_SUCCESS, user: user.data })
+    } else {
+      throw response.data
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.LOGIN_USER_FAILED })
+    dispatch({ type: ActionTypes.LOGIN_USER_FAILED, error: error.message })
   }
 })()
