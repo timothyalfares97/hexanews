@@ -50,6 +50,11 @@ export default {
     flexDirection: 'row',
     display: 'flex',
   },
+  innerRightContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    display: 'flex',
+  },
   profileTypography: {
     alignSelf: 'center',
     marginLeft: 8

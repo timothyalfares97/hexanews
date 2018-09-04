@@ -56,12 +56,13 @@ export default class Hexanews extends React.Component {
   )
 
   render() {
+    const { isLoadingServer } = this.state
     return (
       <BrowserRouter>
         <Provider store={this.store}>
           <ConnectedRouter history={this.history}>
             <div>
-              <Header />
+              <Header isLoadingServer={isLoadingServer}/>
               {this.renderMainContainer()}
             </div>
           </ConnectedRouter>

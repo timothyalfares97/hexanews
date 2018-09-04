@@ -20,7 +20,8 @@ import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
 import selector, { StateProps } from './selector'
 
 type Props = {
-  dispatch: Dispatch<any>
+  dispatch: Dispatch<any>,
+  isLoadingServer: boolean,
 } & StateProps
 
 interface ComponentState {
@@ -51,7 +52,7 @@ class Header extends React.Component<Props, ComponentState> {
 
   public render() {
     const { showDialog } = this.state
-    const { dispatch, isLoadingLogin, isLoadingRegister, isLoggedIn, loginError } = this.props
+    const { dispatch, isLoadingLogin, isLoadingRegister, isLoggedIn, loginError, isLoadingServer } = this.props
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
@@ -67,49 +68,53 @@ class Header extends React.Component<Props, ComponentState> {
               </Typography>
             </div>
             <div style={styles.rightContainer as any}>
-              {!isLoggedIn &&
-                <Typography
-                  variant='title'
-                  color='inherit'
-                  style={styles.profileTypography}
-                >
-                  <span style={styles.signLink} onClick={this.handleShowDialog}>Sign in</span>
-                </Typography>
-              }
-              {isLoggedIn &&
-                <Typography
-                  variant='title'
-                  color='inherit'
-                  style={styles.profileTypography}
-                >
-                  <Link to={Config.HEADER_LINK.profile} style={styles.profileLink}>Profile</Link>
-                </Typography>
-              }
-              <IconButton
-                style={styles.menuButton}
-                color='default'
-                aria-label='Search'
-              >
-                <Link to={Config.HEADER_LINK.searchArticle} style={styles.createLink}><SearchIcon /></Link>
-              </IconButton>
-              {isLoggedIn &&
-                <IconButton
-                  style={styles.menuButton}
-                  color='default'
-                  aria-label='Create'
-                >
-                  <Link to={Config.HEADER_LINK.createArticle} style={styles.createLink}><CreateIcon /></Link>
-                </IconButton>
-              }
-              {isLoggedIn &&
-                <IconButton
-                  style={styles.menuButton}
-                  color='default'
-                  aria-label='Logout'
-                  onClick={this.onLogoutClick}
-                >
-                  <ExitIcon />
-                </IconButton>
+              {!isLoadingServer &&
+                <div style={styles.innerRightContainer as any}>
+                  {!isLoggedIn &&
+                    <Typography
+                      variant='title'
+                      color='inherit'
+                      style={styles.profileTypography}
+                    >
+                      <span style={styles.signLink} onClick={this.handleShowDialog}>Sign in</span>
+                    </Typography>
+                  }
+                  {isLoggedIn &&
+                    <Typography
+                      variant='title'
+                      color='inherit'
+                      style={styles.profileTypography}
+                    >
+                      <Link to={Config.HEADER_LINK.profile} style={styles.profileLink}>Profile</Link>
+                    </Typography>
+                  }
+                  <IconButton
+                    style={styles.menuButton}
+                    color='default'
+                    aria-label='Search'
+                  >
+                    <Link to={Config.HEADER_LINK.searchArticle} style={styles.createLink}><SearchIcon /></Link>
+                  </IconButton>
+                  {isLoggedIn &&
+                    <IconButton
+                      style={styles.menuButton}
+                      color='default'
+                      aria-label='Create'
+                    >
+                      <Link to={Config.HEADER_LINK.createArticle} style={styles.createLink}><CreateIcon /></Link>
+                    </IconButton>
+                  }
+                  {isLoggedIn &&
+                    <IconButton
+                      style={styles.menuButton}
+                      color='default'
+                      aria-label='Logout'
+                      onClick={this.onLogoutClick}
+                    >
+                      <ExitIcon />
+                    </IconButton>
+                  }
+                </div>
               }
             </div>
           </Toolbar>

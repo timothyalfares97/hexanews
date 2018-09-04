@@ -48,6 +48,8 @@ class LoginForm extends React.Component<Props, ComponentState> {
 
     const { loginError } = this.props
 
+    this.setState({ email: '', password: ''})
+
     if (loginError === '') {
       handleCloseDialog()
     }
@@ -55,6 +57,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
 
   render() {
     const { handleCloseDialog, onChangeAuthenticationState, onChangeForgotPassword, isLoadingLogin, loginError } = this.props
+    const { email, password } = this.state
     return (
       <div>
         <DialogTitle>
@@ -72,6 +75,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
             onChange={(event: any) => this.setState({ email: event.target.value })}
             fullWidth
             style={styles.descriptionContainer}
+            value={email}
           />
           <TextField
             margin='dense'
@@ -80,6 +84,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
             onChange={(event: any) => this.setState({ password: event.target.value })}
             type='password'
             fullWidth
+            value={password}
           />
           <span style={styles.errorLoginLabel}>
             {loginError}
