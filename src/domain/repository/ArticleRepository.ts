@@ -11,7 +11,7 @@ export default {
 
   create: async (article: Article): Promise<any> => {
 
-    const response = await axios.post(Config.ARTICLE_ENDPOINT, article)
+    const response = await axios.post(Config.ARTICLE_ENDPOINT, article, Config.HEADER)
 
     return response
   },
@@ -25,6 +25,8 @@ export default {
 
   delete: async (id: string): Promise<any> => {
 
-    await axios.delete(`${Config.ARTICLE_ENDPOINT}/${id}`)
+    const response = await axios.delete(`${Config.ARTICLE_ENDPOINT}/${id}`, Config.HEADER)
+
+    return response
   },
 }

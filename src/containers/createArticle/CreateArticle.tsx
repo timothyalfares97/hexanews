@@ -63,8 +63,6 @@ class CreateArticle extends React.Component<Props, ComponentState> {
 
     const newArticle = { title, category, description, authorId }
     await dispatch(actions.createArticle(newArticle))
-
-    dispatch(push('/profile'))
   }
 
   modules = {

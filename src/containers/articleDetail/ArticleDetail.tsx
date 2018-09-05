@@ -12,7 +12,6 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import { map } from 'lodash'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
-import { push } from 'connected-react-router'
 
 import * as actions from './actions'
 import placeholder from '../../assets/placeholder.png'
@@ -56,8 +55,6 @@ class ArticleDetail extends React.Component<Props> {
     if (!!articleId) {
       await dispatch(actions.deleteArticle(articleId))
     }
-
-    dispatch(push('/profile'))
   }
 
   public render() {

@@ -16,11 +16,7 @@ export const CHANGE_PASSWORD_ENDPOINT = `${AUTH_ENDPOINT}/changePassword`
 
 export const ARTICLE_ENDPOINT = `${API_ENDPOINT}/articles`
 
-export const HEADER = {
-  headers: {
-    'token': localStorage.getItem('token')
-  }
-}
+export const HEADER = { headers: { 'token': localStorage.getItem('token') } }
 
 export const HEADER_LINK = {
   articleDetail: '/articleDetail',
