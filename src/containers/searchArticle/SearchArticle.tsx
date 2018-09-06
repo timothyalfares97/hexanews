@@ -17,13 +17,13 @@ import selector, { StateProps } from './selector'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
 
-type Props = StateProps
+export type Props = StateProps
 
-interface ComponentState {
+export interface ComponentState {
   query: string
 }
 
-class SearchArticle extends React.Component<Props, ComponentState> {
+export class SearchArticle extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)
@@ -32,8 +32,10 @@ class SearchArticle extends React.Component<Props, ComponentState> {
     }
   }
 
-  renderAvatar = () => {
-    return <Avatar style={styles.avatar}>HC</Avatar>
+  getFilteredArticles = () => {
+    const { articles } = this.props
+    const query = this.state.query.trim().toLowerCase()
+    return filter(articles, (article: any) => article.title.toLowerCase().indexOf(query) !== -1)
   }
 
   handleQueryChange = (event: any) => {
@@ -50,7 +52,7 @@ class SearchArticle extends React.Component<Props, ComponentState> {
     }
 
     return map(filteredArticles, (article: Article) => (
-      <Card style={styles.card}>
+      <Card style={styles.card} key={article._id}>
         <CardHeader
           avatar={<Avatar style={styles.avatar}>HC</Avatar>}
           title='Hillary Clinton'
@@ -69,12 +71,8 @@ class SearchArticle extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const { articles } = this.props
-
     const query = this.state.query.trim().toLowerCase()
-
-    const filteredArticles = filter(articles, (article: any) => article.title.toLowerCase().indexOf(query) !== -1)
-
+    const filteredArticles = this.getFilteredArticles()
     return (
       <div style={styles.container}>
         <form>

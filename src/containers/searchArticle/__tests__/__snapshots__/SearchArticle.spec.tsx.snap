@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Article renders Search Articles with two articles 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "25%",
+      "marginRight": "25%",
+      "marginTop": "4%",
+      "paddingBottom": "5%",
+    }
+  }
+>
+  <form>
+    <div
+      aria-describedby={undefined}
+      className="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <label
+        className="MuiFormLabel-root-10 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+        data-shrink={false}
+        htmlFor="query"
+      >
+        Search
+      </label>
+      <div
+        className="MuiInput-root-17 MuiInput-formControl-18 MuiInput-underline-21"
+      >
+        <input
+          aria-invalid={false}
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-25"
+          defaultValue={undefined}
+          disabled={false}
+          id="query"
+          name={undefined}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={false}
+          rows={undefined}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </form>
+  <div
+    className="MuiGrid-container-30 MuiGrid-spacing-xs-24-54"
+  >
+    <div
+      className="MuiGrid-item-31 MuiGrid-grid-xs-12-70"
+      style={
+        Object {
+          "marginRight": 24,
+        }
+      }
+    >
+      <div
+        className="MuiPaper-root-128 MuiPaper-elevation1-131 MuiPaper-rounded-129 MuiCard-root-127"
+        style={
+          Object {
+            "boxShadow": "0 1px 4px rgba(0, 0, 0, 0.2)",
+            "marginTop": 36,
+          }
+        }
+      >
+        <div
+          className="MuiCardHeader-root-155"
+        >
+          <div
+            className="MuiCardHeader-avatar-156"
+          >
+            <div
+              className="MuiAvatar-root-161 MuiAvatar-colorDefault-162"
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "backgroundColor": "green",
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            >
+              HC
+            </div>
+          </div>
+          <div
+            className="MuiCardHeader-content-158"
+          >
+            <span
+              className="MuiTypography-root-164 MuiTypography-body2-172 MuiCardHeader-title-159"
+            >
+              Hillary Clinton
+            </span>
+            <span
+              className="MuiTypography-root-164 MuiTypography-body2-172 MuiTypography-colorTextSecondary-187 MuiCardHeader-subheader-160"
+            >
+              20 August 2018
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCardContent-root-189"
+        >
+          <h2
+            className="MuiTypography-root-164 MuiTypography-headline-169 MuiTypography-gutterBottom-181"
+          >
+            abc
+          </h2>
+          <p
+            className="MuiTypography-root-164 MuiTypography-body1-173"
+          >
+            test
+          </p>
+        </div>
+      </div>
+      <div
+        className="MuiPaper-root-128 MuiPaper-elevation1-131 MuiPaper-rounded-129 MuiCard-root-127"
+        style={
+          Object {
+            "boxShadow": "0 1px 4px rgba(0, 0, 0, 0.2)",
+            "marginTop": 36,
+          }
+        }
+      >
+        <div
+          className="MuiCardHeader-root-155"
+        >
+          <div
+            className="MuiCardHeader-avatar-156"
+          >
+            <div
+              className="MuiAvatar-root-161 MuiAvatar-colorDefault-162"
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "backgroundColor": "green",
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            >
+              HC
+            </div>
+          </div>
+          <div
+            className="MuiCardHeader-content-158"
+          >
+            <span
+              className="MuiTypography-root-164 MuiTypography-body2-172 MuiCardHeader-title-159"
+            >
+              Hillary Clinton
+            </span>
+            <span
+              className="MuiTypography-root-164 MuiTypography-body2-172 MuiTypography-colorTextSecondary-187 MuiCardHeader-subheader-160"
+            >
+              20 August 2018
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCardContent-root-189"
+        >
+          <h2
+            className="MuiTypography-root-164 MuiTypography-headline-169 MuiTypography-gutterBottom-181"
+          >
+            def
+          </h2>
+          <p
+            className="MuiTypography-root-164 MuiTypography-body1-173"
+          >
+            tester
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Search Article renders Search Articles with zero articles 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "25%",
+      "marginRight": "25%",
+      "marginTop": "4%",
+      "paddingBottom": "5%",
+    }
+  }
+>
+  <form>
+    <div
+      aria-describedby={undefined}
+      className="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <label
+        className="MuiFormLabel-root-10 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+        data-shrink={false}
+        htmlFor="query"
+      >
+        Search
+      </label>
+      <div
+        className="MuiInput-root-17 MuiInput-formControl-18 MuiInput-underline-21"
+      >
+        <input
+          aria-invalid={false}
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-25"
+          defaultValue={undefined}
+          disabled={false}
+          id="query"
+          name={undefined}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={false}
+          rows={undefined}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </form>
+  <div
+    className="MuiGrid-container-30 MuiGrid-spacing-xs-24-54"
+  >
+    <div
+      className="MuiGrid-item-31 MuiGrid-grid-xs-12-70"
+      style={
+        Object {
+          "marginRight": 24,
+        }
+      }
+    >
+      <div>
+        <p>
+          There is no articles found
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
