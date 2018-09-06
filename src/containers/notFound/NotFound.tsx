@@ -15,7 +15,7 @@ type Props = {
   dispatch: Dispatch<any>
 }
 
-class NotFound extends React.Component<Props> {
+export class NotFound extends React.Component<Props> {
 
   public render() {
     const { dispatch } = this.props
@@ -38,6 +38,7 @@ class NotFound extends React.Component<Props> {
           There is no page here.
         </Typography>
         <Button
+          id='backHomeButton'
           variant='outlined'
           size='large'
           component='button'
