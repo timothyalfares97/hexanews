@@ -77,11 +77,15 @@ class Account extends React.Component<Props, ComponentState> {
   }
 
   handleNewPasswordChange = (event: any) => {
-    this.setState({ newPasswordFormData.newPassword: event.target.value })
+    let newPasswordFormData = Object.assign({}, this.state.newPasswordFormData)
+    newPasswordFormData.newPassword = event.target.value
+    this.setState({ newPasswordFormData })
   }
 
   handleConfirmNewPasswordChange = (event: any) => {
-    this.setState({ newPasswordFormData.confirmNewPassword: event.target.value })
+    let newPasswordFormData = Object.assign({}, this.state.newPasswordFormData)
+    newPasswordFormData.confirmNewPassword = event.target.value
+    this.setState({ newPasswordFormData })
   }
 
   onSaveProfile = async () => {
@@ -103,7 +107,7 @@ class Account extends React.Component<Props, ComponentState> {
 
   public render() {
     const { isEditingUser, isChangingPassword } = this.props
-    const { email, name, description, newPasswordFormData, currentPassword, submitted } = this.state
+    const { email, name, description, newPasswordFormData, currentPassword } = this.state
     return (
       <div style={styles.container}>
         <Typography
@@ -125,7 +129,7 @@ class Account extends React.Component<Props, ComponentState> {
           </Typography>
           <ValidatorForm
             ref='saveProFileForm'
-            onSubmit={this.setState({ submitted: true })}
+            onSubmit={() => this.onSaveProfile()}
           >
             <TextField
               id='email'
@@ -137,48 +141,33 @@ class Account extends React.Component<Props, ComponentState> {
             />
             <TextValidator
               label='Name'
-              name='name'
-              value={name}
               onChange={this.handleNameChange}
+              name='name'
               style={styles.textField}
               margin='normal'
-              validators={['required', 'isEmail']}
-              errorMessages={['This field is required', 'Email is not valid']}
+              value={name}
+              validators={['required', 'minStringLength:3', 'maxStringLength:50',
+                'matchRegexp:^[a-zA-Z\\s]+$']}
+              errorMessages={['This field is required', 'Minimum 3 characters required', 'Maximum 50 characters required',
+                'Name can only contain alphabetical characters']}
             />
             <TextValidator
               label='Description'
+              onChange={this.handleDescriptionChange}
               name='description'
-              value={description}
-              onChange={this.handleDescriptionChange}
               style={styles.textField}
               margin='normal'
-              validators={['maxCharacter:100']}
-              errorMessages={['Maximum 100 characters']}
+              value={description}
+              validators={['maxStringLength:100']}
+              errorMessages={['Maximum 100 characters required']}
             />
-            {/* <TextField
-              id='name'
-              label='Name'
-              value={name}
-              onChange={this.handleNameChange}
-              style={styles.textField}
-              margin='normal'
-            /> */}
-            {/* <TextField
-              id='description'
-              label='Description'
-              value={description}
-              onChange={this.handleDescriptionChange}
-              style={styles.textField}
-              margin='normal'
-            /> */}
             <Button
               variant='outlined'
               size='small'
-              type='submit'
-              disabled={submitted}
+              // disabled={submitted}
               component='button'
               style={styles.button}
-            // onClick={this.onSaveProfile}
+              type='submit'
             >
               {isEditingUser ? <CircularProgress size={22} /> : accountString.saveButton}
             </Button>
@@ -187,7 +176,7 @@ class Account extends React.Component<Props, ComponentState> {
         <Divider style={styles.sectionDivider} />
         <div style={styles.sectionContainer}>
           <ValidatorForm
-            onSubmit={this.onChangePassword}
+            onSubmit={() => this.onChangePassword()}
           >
             <Typography
               variant='headline'
@@ -198,70 +187,44 @@ class Account extends React.Component<Props, ComponentState> {
             </Typography>
             <TextValidator
               label='Current Password'
+              onChange={this.handleCurrentPasswordChange}
               name='currentPassword'
-              value={currentPassword}
-              onChange={this.handleCurrentPasswordChange}
               style={styles.textField}
               margin='normal'
               type='password'
-              validators={['Required']}
+              value={currentPassword}
+              validators={['required']}
               errorMessages={['This field is required']}
             />
             <TextValidator
               label='New Password'
+              onChange={this.handleNewPasswordChange}
               name='newPassword'
-              value={newPasswordFormData.newPassword}
-              onChange={this.handleNewPasswordChange}
               style={styles.textField}
               margin='normal'
               type='password'
-              validators={['Required']}
+              value={newPasswordFormData.newPassword}
+              validators={['required']}
               errorMessages={['This field is required']}
             />
             <TextValidator
               label='Confirm New Password'
-              name='confirmNewPassword'
-              value={newPasswordFormData.confirmNewPassword}
               onChange={this.handleConfirmNewPasswordChange}
+              name='confirmNewPassword'
               style={styles.textField}
               margin='normal'
               type='password'
-              validators={['Required']}
+              value={newPasswordFormData.confirmNewPassword}
+              validators={['required']}
               errorMessages={['This field is required']}
             />
-            {/* <TextField
-              id='currentPassword'
-              label='Current Password'
-              value={currentPassword}
-              onChange={this.handleCurrentPasswordChange}
-              style={styles.textField}
-              margin='normal'
-              type='password'
-            />
-            <TextField
-              id='newPassword'
-              label='New Password'
-              value={newPassword}
-              onChange={this.handleNewPasswordChange}
-              style={styles.textField}
-              margin='normal'
-              type='password'
-            />
-            <TextField
-              id='confirmNewPassword'
-              label='Confirm New Password'
-              value={confirmNewPassword}
-              onChange={this.handleConfirmNewPasswordChange}
-              style={styles.textField}
-              margin='normal'
-              type='password'
-            /> */}
             <Button
               variant='outlined'
               size='small'
               component='button'
               style={styles.button}
-              onClick={this.onChangePassword}
+              type='submit'
+            // onClick={this.onChangePassword}
             >
               {isChangingPassword ? <CircularProgress size={22} /> : accountString.changePassword}
             </Button>
