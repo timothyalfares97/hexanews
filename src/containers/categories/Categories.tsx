@@ -15,15 +15,15 @@ import styles from './styles'
 import categories from './mockCategories'
 import { categoriesString } from '../../constants/string'
 
-type Props = {
+export type Props = {
   dispatch: Dispatch<any>
 }
 
-class Categories extends React.Component<Props> {
+export class Categories extends React.Component<Props> {
 
   renderCategoriesCard = () => (
     map(categories, (item) => (
-      <Grid item xs={3}>
+      <Grid item xs={3} key={item}>
         <CategoryCard
           dispatch={this.props.dispatch}
           category={item}

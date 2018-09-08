@@ -1,0 +1,767 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories renders Categories component 1`] = `
+<div
+  style={
+    Object {
+      "padding": "5%",
+      "paddingLeft": "7%",
+      "paddingTop": "0%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <header
+      className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-7"
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "boxShadow": "none",
+          "paddingRight": 18,
+        }
+      }
+    >
+      <div
+        className="MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37"
+      >
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/tech"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            TECH
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/science"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            SCIENCE
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/art"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            ART
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/design"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            DESIGN
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/culture"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            CULTURE
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/photography"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            PHOTOGRAPHY
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/leadership"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            LEADERSHIP
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/math"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            MATH
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/economy"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            ECONOMY
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/music"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            MUSIC
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/categories"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            MORE
+          </a>
+        </span>
+      </div>
+    </header>
+  </div>
+  <h1
+    className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
+  >
+    Explore categories
+  </h1>
+  <div
+    className="MuiGrid-container-65 MuiGrid-spacing-xs-24-89"
+    style={
+      Object {
+        "paddingTop": "2%",
+      }
+    }
+  >
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Tech
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Science
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Art
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Design
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Culture
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Photography
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Leadership
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Math
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Economy
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              Music
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          onClick={[Function]}
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 300,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-title-46"
+            >
+              More
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

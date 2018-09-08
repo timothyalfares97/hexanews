@@ -29,7 +29,7 @@ type Props = {
   dispatch: Dispatch<any>
 } & StateProps
 
-class Profile extends React.Component<Props> {
+export class Profile extends React.Component<Props> {
 
   renderAvatar = () => {
     return <Avatar style={styles.avatar}>HC</Avatar>
@@ -46,6 +46,7 @@ class Profile extends React.Component<Props> {
           createdAt={user.createdAt}
         />
         <Button
+          id='accountButton'
           variant='outlined'
           size='small'
           component='button'
@@ -58,7 +59,12 @@ class Profile extends React.Component<Props> {
         <Grid container spacing={24}>
           <Grid item xs={12} style={styles.articleContainer}>
             {map(userArticles, (article: Article) => (
-              <Card style={styles.card} onClick={() => dispatch(push(`/articleDetail/${article._id}`))}>
+              <Card
+                style={styles.card}
+                key={article._id}
+                onClick={() => dispatch(push(`/articleDetail/${article._id}`))}
+                id={`card-${article._id}`}
+              >
                 <CardHeader
                   avatar={this.renderAvatar()}
                   title={user.name}
