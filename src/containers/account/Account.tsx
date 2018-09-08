@@ -30,8 +30,10 @@ interface ComponentState {
   name: string,
   description: string,
   currentPassword: string,
-  newPassword: string,
-  confirmNewPassword: string,
+  newPasswordFormData: {
+    newPassword: string,
+    confirmNewPassword: string,
+  },
   submitted: boolean,
 }
 
@@ -45,10 +47,21 @@ class Account extends React.Component<Props, ComponentState> {
       name: user.name,
       description: user.description ? user.description : '',
       currentPassword: '',
-      newPassword: '',
-      confirmNewPassword: '',
+      newPasswordFormData: {
+        newPassword: '',
+        confirmNewPassword: '',
+      },
       submitted: false,
     }
+  }
+
+  componentWillMount() {
+    ValidatorForm.addValidationRule('isNewPasswordMatch', (value: any) => {
+      if (value !== this.state.newPasswordFormData) {
+        return false
+      }
+      return true
+    })
   }
 
   handleNameChange = (event: any) => {
@@ -64,11 +77,11 @@ class Account extends React.Component<Props, ComponentState> {
   }
 
   handleNewPasswordChange = (event: any) => {
-    this.setState({ newPassword: event.target.value })
+    this.setState({ newPasswordFormData.newPassword: event.target.value })
   }
 
   handleConfirmNewPasswordChange = (event: any) => {
-    this.setState({ confirmNewPassword: event.target.value })
+    this.setState({ newPasswordFormData.confirmNewPassword: event.target.value })
   }
 
   onSaveProfile = async () => {
@@ -83,14 +96,14 @@ class Account extends React.Component<Props, ComponentState> {
 
   onChangePassword = async () => {
     const { dispatch } = this.props
-    const { email, currentPassword, newPassword } = this.state
+    const { email, currentPassword, newPasswordFormData } = this.state
 
-    await dispatch(actions.changePassword(email, currentPassword, newPassword))
+    await dispatch(actions.changePassword(email, currentPassword, newPasswordFormData.newPassword))
   }
 
   public render() {
     const { isEditingUser, isChangingPassword } = this.props
-    const { email, name, description, currentPassword, newPassword, confirmNewPassword, submitted } = this.state
+    const { email, name, description, newPasswordFormData, currentPassword, submitted } = this.state
     return (
       <div style={styles.container}>
         <Typography
@@ -130,7 +143,7 @@ class Account extends React.Component<Props, ComponentState> {
               style={styles.textField}
               margin='normal'
               validators={['required', 'isEmail']}
-              errorMessages={['this field is required', 'email is not valid']}
+              errorMessages={['This field is required', 'Email is not valid']}
             />
             <TextValidator
               label='Description'
@@ -139,8 +152,8 @@ class Account extends React.Component<Props, ComponentState> {
               onChange={this.handleDescriptionChange}
               style={styles.textField}
               margin='normal'
-              validators={['minCharacter:0', 'maxCharacter:100']}
-              errorMessages={['this field is required', 'maximum 100 characters']}
+              validators={['maxCharacter:100']}
+              errorMessages={['Maximum 100 characters']}
             />
             {/* <TextField
               id='name'
@@ -165,7 +178,7 @@ class Account extends React.Component<Props, ComponentState> {
               disabled={submitted}
               component='button'
               style={styles.button}
-              // onClick={this.onSaveProfile}
+            // onClick={this.onSaveProfile}
             >
               {isEditingUser ? <CircularProgress size={22} /> : accountString.saveButton}
             </Button>
@@ -173,51 +186,86 @@ class Account extends React.Component<Props, ComponentState> {
         </div>
         <Divider style={styles.sectionDivider} />
         <div style={styles.sectionContainer}>
-          <Typography
-            variant='headline'
-            component='h2'
-            color='textPrimary'
+          <ValidatorForm
+            onSubmit={this.onChangePassword}
           >
-            {accountString.changePassword}
-          </Typography>
-          <TextField
-            id='currentPassword'
-            label='Current Password'
-            value={currentPassword}
-            onChange={this.handleCurrentPasswordChange}
-            style={styles.textField}
-            margin='normal'
-            type='password'
-          />
-          <TextField
-            id='newPassword'
-            label='New Password'
-            value={newPassword}
-            onChange={this.handleNewPasswordChange}
-            style={styles.textField}
-            margin='normal'
-            type='password'
-          />
-          <TextField
-            id='confirmNewPassword'
-            label='Confirm New Password'
-            value={confirmNewPassword}
-            onChange={this.handleConfirmNewPasswordChange}
-            style={styles.textField}
-            margin='normal'
-            type='password'
-          />
-        </div>
-        <div>
-          <Button
-            variant='outlined'
-            size='small'
-            component='button'
-            style={styles.button}
-            onClick={this.onChangePassword}
-          >
-            {isChangingPassword ? <CircularProgress size={22} /> : accountString.changePassword}
-          </Button>
+            <Typography
+              variant='headline'
+              component='h2'
+              color='textPrimary'
+            >
+              {accountString.changePassword}
+            </Typography>
+            <TextValidator
+              label='Current Password'
+              name='currentPassword'
+              value={currentPassword}
+              onChange={this.handleCurrentPasswordChange}
+              style={styles.textField}
+              margin='normal'
+              type='password'
+              validators={['Required']}
+              errorMessages={['This field is required']}
+            />
+            <TextValidator
+              label='New Password'
+              name='newPassword'
+              value={newPasswordFormData.newPassword}
+              onChange={this.handleNewPasswordChange}
+              style={styles.textField}
+              margin='normal'
+              type='password'
+              validators={['Required']}
+              errorMessages={['This field is required']}
+            />
+            <TextValidator
+              label='Confirm New Password'
+              name='confirmNewPassword'
+              value={newPasswordFormData.confirmNewPassword}
+              onChange={this.handleConfirmNewPasswordChange}
+              style={styles.textField}
+              margin='normal'
+              type='password'
+              validators={['Required']}
+              errorMessages={['This field is required']}
+            />
+            {/* <TextField
+              id='currentPassword'
+              label='Current Password'
+              value={currentPassword}
+              onChange={this.handleCurrentPasswordChange}
+              style={styles.textField}
+              margin='normal'
+              type='password'
+            />
+            <TextField
+              id='newPassword'
+              label='New Password'
+              value={newPassword}
+              onChange={this.handleNewPasswordChange}
+              style={styles.textField}
+              margin='normal'
+              type='password'
+            />
+            <TextField
+              id='confirmNewPassword'
+              label='Confirm New Password'
+              value={confirmNewPassword}
+              onChange={this.handleConfirmNewPasswordChange}
+              style={styles.textField}
+              margin='normal'
+              type='password'
+            /> */}
+            <Button
+              variant='outlined'
+              size='small'
+              component='button'
+              style={styles.button}
+              onClick={this.onChangePassword}
+            >
+              {isChangingPassword ? <CircularProgress size={22} /> : accountString.changePassword}
+            </Button>
+          </ValidatorForm>
         </div>
       </div>
     )
