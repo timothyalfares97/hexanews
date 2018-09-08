@@ -57,7 +57,7 @@ class Account extends React.Component<Props, ComponentState> {
 
   componentWillMount() {
     ValidatorForm.addValidationRule('isNewPasswordMatch', (value: any) => {
-      if (value !== this.state.newPasswordFormData) {
+      if (value !== this.state.newPasswordFormData.newPassword) {
         return false
       }
       return true
@@ -107,7 +107,7 @@ class Account extends React.Component<Props, ComponentState> {
 
   public render() {
     const { isEditingUser, isChangingPassword } = this.props
-    const { email, name, description, newPasswordFormData, currentPassword } = this.state
+    const { email, name, description, currentPassword, newPasswordFormData } = this.state
     return (
       <div style={styles.container}>
         <Typography
@@ -148,7 +148,9 @@ class Account extends React.Component<Props, ComponentState> {
               value={name}
               validators={['required', 'minStringLength:3', 'maxStringLength:50',
                 'matchRegexp:^[a-zA-Z\\s]+$']}
-              errorMessages={['This field is required', 'Minimum 3 characters required', 'Maximum 50 characters required',
+              errorMessages={['Please enter name',
+                'Name field requires a minimum of 3 characters',
+                'Name field requires a maximum of 50 characters',
                 'Name can only contain alphabetical characters']}
             />
             <TextValidator
@@ -159,12 +161,11 @@ class Account extends React.Component<Props, ComponentState> {
               margin='normal'
               value={description}
               validators={['maxStringLength:100']}
-              errorMessages={['Maximum 100 characters required']}
+              errorMessages={['Description field requires a maximum of 100 characters']}
             />
             <Button
               variant='outlined'
               size='small'
-              // disabled={submitted}
               component='button'
               style={styles.button}
               type='submit'
@@ -193,8 +194,9 @@ class Account extends React.Component<Props, ComponentState> {
               margin='normal'
               type='password'
               value={currentPassword}
-              validators={['required']}
-              errorMessages={['This field is required']}
+              validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
+              errorMessages={['Please enter current password',
+                'Password length must be between 6-20 characters and contains no special character']}
             />
             <TextValidator
               label='New Password'
@@ -204,8 +206,9 @@ class Account extends React.Component<Props, ComponentState> {
               margin='normal'
               type='password'
               value={newPasswordFormData.newPassword}
-              validators={['required']}
-              errorMessages={['This field is required']}
+              validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
+              errorMessages={['Please enter new password',
+                'Password length must be between 6-20 characters and contains no special character']}
             />
             <TextValidator
               label='Confirm New Password'
@@ -215,8 +218,11 @@ class Account extends React.Component<Props, ComponentState> {
               margin='normal'
               type='password'
               value={newPasswordFormData.confirmNewPassword}
-              validators={['required']}
-              errorMessages={['This field is required']}
+              validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$',
+                'isNewPasswordMatch']}
+              errorMessages={['Please confirm new password',
+                'Password length must be between 6-20 characters and contains no special character',
+                'New password mismatch']}
             />
             <Button
               variant='outlined'
@@ -224,7 +230,6 @@ class Account extends React.Component<Props, ComponentState> {
               component='button'
               style={styles.button}
               type='submit'
-            // onClick={this.onChangePassword}
             >
               {isChangingPassword ? <CircularProgress size={22} /> : accountString.changePassword}
             </Button>
