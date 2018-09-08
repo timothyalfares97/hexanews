@@ -22,7 +22,36 @@ describe('Category selector', () => {
     })
   })
 
-  it('Changed state', () => {
+  it('Changed state without article category', () => {
+    const initialState: State = rootReducer(undefined, { type: '' })
+    const state: State = {
+      ...initialState,
+      entities: {
+        ...initialState.entities,
+        articles: [{
+          _id: '1',
+          title: 'abc',
+          description: 'test',
+          authorId: 'test',
+        }]
+      }
+    }
+
+    const props = {
+      match: {
+        params: {
+          category: 'technology'
+        },
+      },
+    }
+
+    expect(selector(state, props)).toMatchObject({
+      categoryTitle: 'technology',
+      categoryArticles: []
+    })
+  })
+
+  it('Changed state with article category', () => {
     const initialState: State = rootReducer(undefined, { type: '' })
     const state: State = {
       ...initialState,
