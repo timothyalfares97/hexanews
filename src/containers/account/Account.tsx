@@ -3,6 +3,7 @@
  */
 
 import * as React from 'react'
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import { connect } from 'react-redux'
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
@@ -30,7 +31,8 @@ interface ComponentState {
   description: string,
   currentPassword: string,
   newPassword: string,
-  confirmNewPassword: string
+  confirmNewPassword: string,
+  submitted: boolean,
 }
 
 class Account extends React.Component<Props, ComponentState> {
@@ -44,7 +46,8 @@ class Account extends React.Component<Props, ComponentState> {
       description: user.description ? user.description : '',
       currentPassword: '',
       newPassword: '',
-      confirmNewPassword: ''
+      confirmNewPassword: '',
+      submitted: false,
     }
   }
 
@@ -87,7 +90,7 @@ class Account extends React.Component<Props, ComponentState> {
 
   public render() {
     const { isEditingUser, isChangingPassword } = this.props
-    const { email, name, description, currentPassword, newPassword, confirmNewPassword } = this.state
+    const { email, name, description, currentPassword, newPassword, confirmNewPassword, submitted } = this.state
     return (
       <div style={styles.container}>
         <Typography
@@ -107,41 +110,66 @@ class Account extends React.Component<Props, ComponentState> {
           >
             {accountString.editProfile}
           </Typography>
-          <TextField
-            id='email'
-            label='Email'
-            value={email}
-            disabled
-            style={styles.textField}
-            margin='normal'
-          />
-          <TextField
-            id='name'
-            label='Name'
-            value={name}
-            onChange={this.handleNameChange}
-            style={styles.textField}
-            margin='normal'
-          />
-          <TextField
-            id='description'
-            label='Description'
-            value={description}
-            onChange={this.handleDescriptionChange}
-            style={styles.textField}
-            margin='normal'
-          />
-        </div>
-        <div>
-          <Button
-            variant='outlined'
-            size='small'
-            component='button'
-            style={styles.button}
-            onClick={this.onSaveProfile}
+          <ValidatorForm
+            ref='saveProFileForm'
+            onSubmit={this.setState({ submitted: true })}
           >
-            {isEditingUser ? <CircularProgress size={22} /> : accountString.saveButton}
-          </Button>
+            <TextField
+              id='email'
+              label='Email'
+              value={email}
+              disabled
+              style={styles.textField}
+              margin='normal'
+            />
+            <TextValidator
+              label='Name'
+              name='name'
+              value={name}
+              onChange={this.handleNameChange}
+              style={styles.textField}
+              margin='normal'
+              validators={['required', 'isEmail']}
+              errorMessages={['this field is required', 'email is not valid']}
+            />
+            <TextValidator
+              label='Description'
+              name='description'
+              value={description}
+              onChange={this.handleDescriptionChange}
+              style={styles.textField}
+              margin='normal'
+              validators={['minCharacter:0', 'maxCharacter:100']}
+              errorMessages={['this field is required', 'maximum 100 characters']}
+            />
+            {/* <TextField
+              id='name'
+              label='Name'
+              value={name}
+              onChange={this.handleNameChange}
+              style={styles.textField}
+              margin='normal'
+            /> */}
+            {/* <TextField
+              id='description'
+              label='Description'
+              value={description}
+              onChange={this.handleDescriptionChange}
+              style={styles.textField}
+              margin='normal'
+            /> */}
+            <Button
+              variant='outlined'
+              size='small'
+              type='submit'
+              disabled={submitted}
+              component='button'
+              style={styles.button}
+              // onClick={this.onSaveProfile}
+            >
+              {isEditingUser ? <CircularProgress size={22} /> : accountString.saveButton}
+            </Button>
+          </ValidatorForm>
         </div>
         <Divider style={styles.sectionDivider} />
         <div style={styles.sectionContainer}>
