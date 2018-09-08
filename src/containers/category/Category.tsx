@@ -15,7 +15,7 @@ import selector, { StateProps } from './selector'
 
 type Props = StateProps
 
-class Category extends React.Component<Props> {
+export class Category extends React.Component<Props> {
   public render() {
     const { categoryArticles, categoryTitle } = this.props
     return (

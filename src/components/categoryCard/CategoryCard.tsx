@@ -21,7 +21,6 @@ const CategoryCard: React.StatelessComponent<Props> = ({
   category,
   dispatch
 }) => {
-  console.log(placeholder)
   return (
     <div style={styles.root}>
       <Card style={styles.card} onClick={() => dispatch(push(`/category/${category}`))}>
