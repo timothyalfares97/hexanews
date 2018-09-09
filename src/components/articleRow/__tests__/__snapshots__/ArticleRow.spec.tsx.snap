@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Row renders Article row 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": 24,
+    }
+  }
+>
+  <div
+    className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+    style={
+      Object {
+        "boxShadow": "0px 0.5px 0px 0px rgba(0, 0, 0, 0.2)",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flex": 4,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-29"
+        style={
+          Object {
+            "flex": "1 0 auto",
+          }
+        }
+      >
+        <h1
+          className="MuiTypography-root-30 MuiTypography-headline-35"
+          style={
+            Object {
+              "marginBottom": 8,
+            }
+          }
+        >
+          test
+        </h1>
+        <p
+          className="MuiTypography-root-30 MuiTypography-body1-39"
+        >
+          test
+        </p>
+        <p
+          className="MuiTypography-root-30 MuiTypography-body1-39"
+          style={
+            Object {
+              "marginTop": 28,
+            }
+          }
+        >
+          Hillary Clinton
+        </p>
+        <p
+          className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-53"
+          style={
+            Object {
+              "marginTop": 2,
+            }
+          }
+        >
+          22 August 2018
+        </p>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flex": 1,
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <div
+        className="MuiCardMedia-root-55"
+        src={undefined}
+        style={
+          Object {
+            "height": 151,
+            "width": 151,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Card renders Article Card 1`] = `
+<div
+  id="article-test"
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "flexGrow": 1,
+    }
+  }
+>
+  <div
+    className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+    style={
+      Object {
+        "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+        "maxWidth": 385,
+      }
+    }
+  >
+    <div
+      className="MuiCardMedia-root-29"
+      src={undefined}
+      style={
+        Object {
+          "height": 0,
+          "paddingTop": "56.25%",
+        }
+      }
+    />
+    <div
+      className="MuiCardContent-root-31"
+    >
+      <h2
+        className="MuiTypography-root-32 MuiTypography-headline-37 MuiTypography-gutterBottom-49"
+      >
+        test
+      </h2>
+      <p
+        className="MuiTypography-root-32 MuiTypography-body1-41"
+      >
+        test
+      </p>
+    </div>
+  </div>
+</div>
+`;

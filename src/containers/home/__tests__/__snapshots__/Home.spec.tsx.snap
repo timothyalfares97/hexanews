@@ -288,6 +288,7 @@ exports[`Home renders Home component 1`] = `
       className="MuiGrid-item-66 MuiGrid-grid-xs-4-97"
     >
       <div
+        id="article-Adjustable sidebar using Angular"
         onClick={[Function]}
         style={
           Object {
@@ -337,6 +338,7 @@ exports[`Home renders Home component 1`] = `
       className="MuiGrid-item-66 MuiGrid-grid-xs-4-97"
     >
       <div
+        id="article-Implement Google Analytics for React Native"
         onClick={[Function]}
         style={
           Object {
@@ -386,6 +388,7 @@ exports[`Home renders Home component 1`] = `
       className="MuiGrid-item-66 MuiGrid-grid-xs-4-97"
     >
       <div
+        id="article-One Book at The Time —A Short Story"
         onClick={[Function]}
         style={
           Object {
