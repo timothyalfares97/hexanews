@@ -6,5 +6,5 @@ export type User = {
   email: string,
   name: string,
   description?: string,
-  createdAt: string,
+  createdAt?: string,
 }

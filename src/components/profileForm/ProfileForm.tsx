@@ -58,9 +58,8 @@ class ProfileForm extends React.Component<Props, ComponentState> {
     const { dispatch } = this.props
     const { email, name, description } = this.state
     const _id = localStorage.getItem('id') || ''
-    const createdAt = localStorage.getItem('createdAt') || ''
 
-    const edittedUser = { _id, email, name, description, createdAt }
+    const edittedUser = { _id, email, name, description }
     await dispatch(actions.editUser(edittedUser))
   }
 

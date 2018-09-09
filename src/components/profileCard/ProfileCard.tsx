@@ -44,6 +44,7 @@ const ProfileCard: React.StatelessComponent<Props> = ({
               component='p'
               style={styles.memberText}
             >
+              {console.log(createdAt)}
               {`${profileCardString.memberSince} ${moment(createdAt).format('DD MMMM YYYY')}`}
             </Typography>
           </CardContent>
