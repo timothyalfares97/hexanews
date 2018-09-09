@@ -4,35 +4,19 @@
 
 import * as React from 'react'
 import { connect } from 'react-redux'
-import Divider from '@material-ui/core/Divider'
 import { Typography } from '@material-ui/core'
-import { Dispatch } from 'redux'
+import Divider from '@material-ui/core/Divider'
 
-import ProfileForm from '../../components/profileForm/ProfileForm'
-import ChangePasswordForm from '../../components/changePasswordForm/ChangePasswordForm'
-import styles from './styles'
-import { User } from '../../domain/model/User'
 import { accountString } from '../../constants/string'
-import selector, { StateProps } from './selector'
+import ChangePasswordForm from '../../components/changePasswordForm/ChangePasswordForm'
+import ProfileForm from '../../components/profileForm/ProfileForm'
+import styles from './styles'
 
 type Props = {
-  user: User,
-  dispatch: Dispatch<any>,
-} & StateProps
+}
 
 class Account extends React.Component<Props> {
-
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      currentPassword: '',
-      newPassword: '',
-      confirmNewPassword: '',
-    }
-  }
-
   public render() {
-    const { user, dispatch, isEditingUser, isChangingPassword } = this.props
     return (
       <div style={styles.container}>
         <Typography
@@ -43,20 +27,12 @@ class Account extends React.Component<Props> {
         >
           {accountString.myAccount}
         </Typography>
-        <ProfileForm
-          user={user}
-          dispatch={dispatch}
-          isEditingUser={isEditingUser}
-        />
+        <ProfileForm />
         <Divider style={styles.sectionDivider} />
-        <ChangePasswordForm
-          user={user}
-          dispatch={dispatch}
-          isChangingPassword={isChangingPassword}
-        />
+        <ChangePasswordForm />
       </div>
     )
   }
 }
 
-export default connect(selector)(Account)
+export default connect()(Account)

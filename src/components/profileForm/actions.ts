@@ -1,5 +1,5 @@
 /**
- * Redux action class for profile form.
+ * Redux action class for Profile Form.
  */
 import { Dispatch } from 'redux'
 

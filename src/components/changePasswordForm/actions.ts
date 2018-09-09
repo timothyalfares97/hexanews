@@ -1,5 +1,5 @@
 /**
- * Redux action class for change password form.
+ * Redux action class for Change Password Form.
  */
 import { Dispatch } from 'redux'
 

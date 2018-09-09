@@ -1,21 +1,21 @@
 /**
- * Display profile form component for user to edit their profile
+ * Display Profile Form component for user to edit their profile
  */
 
 import * as React from 'react'
-import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { Typography } from '@material-ui/core'
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import { Typography } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
-import { Dispatch } from 'redux'
 
 import * as actions from './actions'
-import styles from './styles'
-import { User } from '../../domain/model/User'
 import { accountString } from '../../constants/string'
+import { User } from '../../domain/model/User'
 import selector, { StateProps } from './selector'
+import styles from './styles'
 
 type Props = {
   user: User,
@@ -69,19 +69,19 @@ class ProfileForm extends React.Component<Props, ComponentState> {
     const { email, name, description } = this.state
     return (
       <div style={styles.sectionContainer}>
-        <Typography
-          variant='headline'
-          component='h2'
-          color='textPrimary'
-          gutterBottom
-        >
-          {accountString.editProfile}
-        </Typography>
         <ValidatorForm
           ref='saveProFileForm'
           onSubmit={() => this.onSaveProfile()}
           instantValidate={false}
         >
+          <Typography
+            variant='headline'
+            component='h2'
+            color='textPrimary'
+            gutterBottom
+          >
+            {accountString.editProfile}
+          </Typography>
           <TextField
             id='email'
             label='Email'

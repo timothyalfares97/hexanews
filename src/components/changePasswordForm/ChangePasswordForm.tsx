@@ -1,20 +1,20 @@
 /**
- * Display change password form component for user to change their password
+ * Display Change Password Form component for user to change their password
  */
 
 import * as React from 'react'
-import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { Typography } from '@material-ui/core'
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import { Typography } from '@material-ui/core'
-import { Dispatch } from 'redux'
 
 import * as actions from './actions'
-import styles from './styles'
-import { User } from '../../domain/model/User'
 import { accountString } from '../../constants/string'
+import { User } from '../../domain/model/User'
 import selector, { StateProps } from './selector'
+import styles from './styles'
 
 type Props = {
   user: User,
@@ -42,10 +42,10 @@ class ChangePasswordForm extends React.Component<Props, ComponentState> {
     }
   }
 
-  componentWillMount() {
-    const { newPassword } = this.state
+  componentDidMount() {
+    // Custom rule validation to confirm new password matches
     ValidatorForm.addValidationRule('isNewPasswordMatch', (value: any) => {
-      if (value !== newPassword) {
+      if (value !== this.state.newPassword) {
         return false
       }
       return true
@@ -81,18 +81,18 @@ class ChangePasswordForm extends React.Component<Props, ComponentState> {
     const { currentPassword, newPassword, confirmNewPassword } = this.state
     return (
       <div style={styles.sectionContainer}>
-        <Typography
-          variant='headline'
-          component='h2'
-          color='textPrimary'
-        >
-          {accountString.changePassword}
-        </Typography>
         <ValidatorForm
           ref='changePasswordForm'
           onSubmit={() => this.onChangePassword()}
           instantValidate={false}
         >
+          <Typography
+            variant='headline'
+            component='h2'
+            color='textPrimary'
+          >
+            {accountString.changePassword}
+          </Typography>
           <TextValidator
             label='Current Password'
             onChange={this.handleCurrentPasswordChange}
@@ -125,8 +125,7 @@ class ChangePasswordForm extends React.Component<Props, ComponentState> {
             margin='normal'
             type='password'
             value={confirmNewPassword}
-            validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$',
-              'isNewPasswordMatch']}
+            validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$', 'isNewPasswordMatch']}
             errorMessages={['Please confirm new password',
               'Password length must be between 6-20 characters and contains no special character',
               'Confirm new password must match new password']}
