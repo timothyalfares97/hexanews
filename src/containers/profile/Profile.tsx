@@ -43,7 +43,7 @@ export class Profile extends React.Component<Props> {
           name={user.name}
           description={user.description ? user.description : ''}
           image={avatarPlaceholder}
-          createdAt={user.createdAt}
+          createdAt={user.createdAt ? user.createdAt : ''}
         />
         <Button
           id='accountButton'
