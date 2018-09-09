@@ -302,6 +302,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-tech"
           onClick={[Function]}
           style={
             Object {
@@ -345,6 +346,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-science"
           onClick={[Function]}
           style={
             Object {
@@ -388,6 +390,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-art"
           onClick={[Function]}
           style={
             Object {
@@ -431,6 +434,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-design"
           onClick={[Function]}
           style={
             Object {
@@ -474,6 +478,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-culture"
           onClick={[Function]}
           style={
             Object {
@@ -517,6 +522,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-photography"
           onClick={[Function]}
           style={
             Object {
@@ -560,6 +566,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-leadership"
           onClick={[Function]}
           style={
             Object {
@@ -603,6 +610,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-math"
           onClick={[Function]}
           style={
             Object {
@@ -646,6 +654,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-economy"
           onClick={[Function]}
           style={
             Object {
@@ -689,6 +698,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-music"
           onClick={[Function]}
           style={
             Object {
@@ -732,6 +742,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          id="category-more"
           onClick={[Function]}
           style={
             Object {
