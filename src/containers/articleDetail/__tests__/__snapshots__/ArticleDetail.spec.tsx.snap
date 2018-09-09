@@ -1,0 +1,993 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Detail renders Article Detail 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "15%",
+      "marginRight": "15%",
+      "marginTop": "4%",
+      "paddingBottom": "5%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "2%",
+        "marginLeft": "10%",
+        "marginRight": "10%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "marginBottom": "3%",
+        }
+      }
+    >
+      <div
+        className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "green",
+            "height": 50,
+            "margin": 10,
+            "width": 50,
+          }
+        }
+      >
+        HC
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+          }
+        }
+      >
+        <h3
+          className="MuiTypography-root-4 MuiTypography-subheading-11"
+          style={
+            Object {
+              "marginTop": 12,
+            }
+          }
+        >
+          Henry Connor
+        </h3>
+        <p
+          className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+        >
+          20 August 2018
+        </p>
+      </div>
+      <div
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "display": "flex",
+            "flex": 1,
+            "justifyContent": "flex-end",
+          }
+        }
+      >
+        <button
+          className="MuiButtonBase-root-55 MuiButton-root-29 MuiButton-text-31 MuiButton-outlined-37 MuiButton-sizeSmall-52"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          }
+          tabIndex="0"
+          type="button"
+        >
+          <span
+            className="MuiButton-label-30"
+          >
+            Delete article
+          </span>
+          <span
+            className="MuiTouchRipple-root-58"
+          />
+        </button>
+      </div>
+    </div>
+    <h1
+      className="MuiTypography-root-4 MuiTypography-display1-8"
+    >
+      Adjustable sidebar using Angular
+    </h1>
+    <img
+      src={undefined}
+      style={
+        Object {
+          "height": "80%",
+          "marginTop": "4%",
+          "width": "100%",
+        }
+      }
+    />
+    <p
+      className="MuiTypography-root-4 MuiTypography-body1-13"
+      style={
+        Object {
+          "fontFamily": "Helvetica",
+          "fontSize": 18,
+          "fontStyle": "normal",
+          "lineHeight": 1.75,
+          "marginTop": 24,
+        }
+      }
+    >
+      Also for this tutorial I din’t put accent on CSS I assume that you already created a sidebar which you need to make draggable. For my example the structure is pretty simple, the class attributes are used only for CSS purposes. The #sidebarIdentifier is a property decorator that I will use to get the current width of the sidebar and the [style.width.px] is the Angular property that I will use to bind the new width.
+    </p>
+    <p
+      className="MuiTypography-root-4 MuiTypography-body1-13"
+      style={
+        Object {
+          "fontFamily": "Helvetica",
+          "fontSize": 18,
+          "fontStyle": "normal",
+          "lineHeight": 1.75,
+          "marginTop": 24,
+        }
+      }
+    >
+          But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
+    </p>
+  </div>
+  <hr
+    className="MuiDivider-root-65"
+    style={
+      Object {
+        "marginBottom": 32,
+        "marginTop": 32,
+      }
+    }
+  />
+  <div
+    className="MuiGrid-container-69 MuiGrid-spacing-xs-24-93"
+  >
+    <div
+      className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 385,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-194"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-196"
+            style={
+              Object {
+                "paddingRight": "2%",
+              }
+            }
+          >
+            <h2
+              className="MuiTypography-root-4 MuiTypography-caption-14 MuiTypography-gutterBottom-21"
+            >
+              Related reads
+            </h2>
+            <h2
+              className="MuiTypography-root-4 MuiTypography-subheading-11 MuiTypography-gutterBottom-21"
+            >
+              React vs Angular vs Vue.js
+            </h2>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "marginBottom": "3%",
+                }
+              }
+            >
+              <div
+                className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "green",
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              >
+                EK
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13"
+                  style={
+                    Object {
+                      "marginTop": 6,
+                    }
+                  }
+                >
+                  Erik Kennedy
+                </p>
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+                  style={
+                    Object {
+                      "marginTop": 2,
+                    }
+                  }
+                >
+                  8 March 2018
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 385,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-194"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-196"
+            style={
+              Object {
+                "paddingRight": "2%",
+              }
+            }
+          >
+            <h2
+              className="MuiTypography-root-4 MuiTypography-caption-14 MuiTypography-gutterBottom-21"
+            >
+              Related reads
+            </h2>
+            <h2
+              className="MuiTypography-root-4 MuiTypography-subheading-11 MuiTypography-gutterBottom-21"
+            >
+              New Features in Angular 2.0
+            </h2>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "marginBottom": "3%",
+                }
+              }
+            >
+              <div
+                className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "green",
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              >
+                EK
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13"
+                  style={
+                    Object {
+                      "marginTop": 6,
+                    }
+                  }
+                >
+                  Erik Kennedy
+                </p>
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+                  style={
+                    Object {
+                      "marginTop": 2,
+                    }
+                  }
+                >
+                  8 March 2018
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 385,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-194"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-196"
+            style={
+              Object {
+                "paddingRight": "2%",
+              }
+            }
+          >
+            <h2
+              className="MuiTypography-root-4 MuiTypography-caption-14 MuiTypography-gutterBottom-21"
+            >
+              Related reads
+            </h2>
+            <h2
+              className="MuiTypography-root-4 MuiTypography-subheading-11 MuiTypography-gutterBottom-21"
+            >
+              React Native at Airbnb: The Technology
+            </h2>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "marginBottom": "3%",
+                }
+              }
+            >
+              <div
+                className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "green",
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              >
+                EK
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13"
+                  style={
+                    Object {
+                      "marginTop": 6,
+                    }
+                  }
+                >
+                  Erik Kennedy
+                </p>
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+                  style={
+                    Object {
+                      "marginTop": 2,
+                    }
+                  }
+                >
+                  8 March 2018
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Article Detail renders Article Detail with isDeletingArticle to be true 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "15%",
+      "marginRight": "15%",
+      "marginTop": "4%",
+      "paddingBottom": "5%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "2%",
+        "marginLeft": "10%",
+        "marginRight": "10%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "marginBottom": "3%",
+        }
+      }
+    >
+      <div
+        className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "green",
+            "height": 50,
+            "margin": 10,
+            "width": 50,
+          }
+        }
+      >
+        HC
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+          }
+        }
+      >
+        <h3
+          className="MuiTypography-root-4 MuiTypography-subheading-11"
+          style={
+            Object {
+              "marginTop": 12,
+            }
+          }
+        >
+          Henry Connor
+        </h3>
+        <p
+          className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+        >
+          20 August 2018
+        </p>
+      </div>
+      <div
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "display": "flex",
+            "flex": 1,
+            "justifyContent": "flex-end",
+          }
+        }
+      >
+        <button
+          className="MuiButtonBase-root-55 MuiButton-root-29 MuiButton-text-31 MuiButton-outlined-37 MuiButton-sizeSmall-52"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          }
+          tabIndex="0"
+          type="button"
+        >
+          <span
+            className="MuiButton-label-30"
+          >
+            <div
+              className="MuiCircularProgress-root-197 MuiCircularProgress-colorPrimary-200 MuiCircularProgress-indeterminate-199"
+              role="progressbar"
+              style={
+                Object {
+                  "height": 22,
+                  "width": 22,
+                }
+              }
+            >
+              <svg
+                className="MuiCircularProgress-svg-202"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  className="MuiCircularProgress-circle-203 MuiCircularProgress-circleIndeterminate-205"
+                  cx={44}
+                  cy={44}
+                  fill="none"
+                  r={20.2}
+                  strokeWidth={3.6}
+                  style={Object {}}
+                />
+              </svg>
+            </div>
+          </span>
+          <span
+            className="MuiTouchRipple-root-58"
+          />
+        </button>
+      </div>
+    </div>
+    <h1
+      className="MuiTypography-root-4 MuiTypography-display1-8"
+    >
+      Adjustable sidebar using Angular
+    </h1>
+    <img
+      src={undefined}
+      style={
+        Object {
+          "height": "80%",
+          "marginTop": "4%",
+          "width": "100%",
+        }
+      }
+    />
+    <p
+      className="MuiTypography-root-4 MuiTypography-body1-13"
+      style={
+        Object {
+          "fontFamily": "Helvetica",
+          "fontSize": 18,
+          "fontStyle": "normal",
+          "lineHeight": 1.75,
+          "marginTop": 24,
+        }
+      }
+    >
+      Also for this tutorial I din’t put accent on CSS I assume that you already created a sidebar which you need to make draggable. For my example the structure is pretty simple, the class attributes are used only for CSS purposes. The #sidebarIdentifier is a property decorator that I will use to get the current width of the sidebar and the [style.width.px] is the Angular property that I will use to bind the new width.
+    </p>
+    <p
+      className="MuiTypography-root-4 MuiTypography-body1-13"
+      style={
+        Object {
+          "fontFamily": "Helvetica",
+          "fontSize": 18,
+          "fontStyle": "normal",
+          "lineHeight": 1.75,
+          "marginTop": 24,
+        }
+      }
+    >
+          But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
+    </p>
+  </div>
+  <hr
+    className="MuiDivider-root-65"
+    style={
+      Object {
+        "marginBottom": 32,
+        "marginTop": 32,
+      }
+    }
+  />
+  <div
+    className="MuiGrid-container-69 MuiGrid-spacing-xs-24-93"
+  >
+    <div
+      className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 385,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-194"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-196"
+            style={
+              Object {
+                "paddingRight": "2%",
+              }
+            }
+          >
+            <h2
+              className="MuiTypography-root-4 MuiTypography-caption-14 MuiTypography-gutterBottom-21"
+            >
+              Related reads
+            </h2>
+            <h2
+              className="MuiTypography-root-4 MuiTypography-subheading-11 MuiTypography-gutterBottom-21"
+            >
+              React vs Angular vs Vue.js
+            </h2>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "marginBottom": "3%",
+                }
+              }
+            >
+              <div
+                className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "green",
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              >
+                EK
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13"
+                  style={
+                    Object {
+                      "marginTop": 6,
+                    }
+                  }
+                >
+                  Erik Kennedy
+                </p>
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+                  style={
+                    Object {
+                      "marginTop": 2,
+                    }
+                  }
+                >
+                  8 March 2018
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 385,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-194"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-196"
+            style={
+              Object {
+                "paddingRight": "2%",
+              }
+            }
+          >
+            <h2
+              className="MuiTypography-root-4 MuiTypography-caption-14 MuiTypography-gutterBottom-21"
+            >
+              Related reads
+            </h2>
+            <h2
+              className="MuiTypography-root-4 MuiTypography-subheading-11 MuiTypography-gutterBottom-21"
+            >
+              New Features in Angular 2.0
+            </h2>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "marginBottom": "3%",
+                }
+              }
+            >
+              <div
+                className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "green",
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              >
+                EK
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13"
+                  style={
+                    Object {
+                      "marginTop": 6,
+                    }
+                  }
+                >
+                  Erik Kennedy
+                </p>
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+                  style={
+                    Object {
+                      "marginTop": 2,
+                    }
+                  }
+                >
+                  8 March 2018
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 385,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-194"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-196"
+            style={
+              Object {
+                "paddingRight": "2%",
+              }
+            }
+          >
+            <h2
+              className="MuiTypography-root-4 MuiTypography-caption-14 MuiTypography-gutterBottom-21"
+            >
+              Related reads
+            </h2>
+            <h2
+              className="MuiTypography-root-4 MuiTypography-subheading-11 MuiTypography-gutterBottom-21"
+            >
+              React Native at Airbnb: The Technology
+            </h2>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "marginBottom": "3%",
+                }
+              }
+            >
+              <div
+                className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "green",
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              >
+                EK
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13"
+                  style={
+                    Object {
+                      "marginTop": 6,
+                    }
+                  }
+                >
+                  Erik Kennedy
+                </p>
+                <p
+                  className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+                  style={
+                    Object {
+                      "marginTop": 2,
+                    }
+                  }
+                >
+                  8 March 2018
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

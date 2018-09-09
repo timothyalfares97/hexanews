@@ -1,0 +1,835 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders Home component 1`] = `
+<div
+  style={
+    Object {
+      "padding": "5%",
+      "paddingLeft": "7%",
+      "paddingTop": "0%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <header
+      className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-7"
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "boxShadow": "none",
+          "paddingRight": 18,
+        }
+      }
+    >
+      <div
+        className="MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37"
+      >
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/tech"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            TECH
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/science"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            SCIENCE
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/art"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            ART
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/design"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            DESIGN
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/culture"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            CULTURE
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/photography"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            PHOTOGRAPHY
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/leadership"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            LEADERSHIP
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/math"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            MATH
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/economy"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            ECONOMY
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/music"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            MUSIC
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/categories"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            MORE
+          </a>
+        </span>
+      </div>
+    </header>
+  </div>
+  <div
+    className="MuiGrid-container-65 MuiGrid-spacing-xs-24-89"
+    style={
+      Object {
+        "paddingTop": "2%",
+      }
+    }
+  >
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-4-97"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 385,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
+            >
+              Adjustable sidebar using Angular
+            </h2>
+            <p
+              className="MuiTypography-root-40 MuiTypography-body1-49"
+            >
+              Also for this tutorial I din’t put accent on CSS,
+                I assume that you already created a sidebar which you need to make draggable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-4-97"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 385,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
+            >
+              Implement Google Analytics for React Native
+            </h2>
+            <p
+              className="MuiTypography-root-40 MuiTypography-body1-49"
+            >
+              For almost every product that is built or launched in the market, the business and development
+               teams testing there
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-4-97"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "flexGrow": 1,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          style={
+            Object {
+              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+              "maxWidth": 385,
+            }
+          }
+        >
+          <div
+            className="MuiCardMedia-root-163"
+            src={undefined}
+            style={
+              Object {
+                "height": 0,
+                "paddingTop": "56.25%",
+              }
+            }
+          />
+          <div
+            className="MuiCardContent-root-165"
+          >
+            <h2
+              className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
+            >
+              One Book at The Time —A Short Story
+            </h2>
+            <p
+              className="MuiTypography-root-40 MuiTypography-body1-49"
+            >
+              There had been times she had almost given up. All the lying, the sneaking around.
+                But today she once more managed to continue
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr
+    className="MuiDivider-root-166"
+    style={
+      Object {
+        "marginRight": 18,
+        "marginTop": 64,
+      }
+    }
+  />
+  <div
+    className="MuiGrid-container-65 MuiGrid-spacing-xs-24-89"
+  >
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-8-101"
+      style={
+        Object {
+          "marginRight": 24,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          style={
+            Object {
+              "boxShadow": "0px 0.5px 0px 0px rgba(0, 0, 0, 0.2)",
+              "display": "flex",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flex": 4,
+                "flexDirection": "column",
+              }
+            }
+          >
+            <div
+              className="MuiCardContent-root-165"
+              style={
+                Object {
+                  "flex": "1 0 auto",
+                }
+              }
+            >
+              <h1
+                className="MuiTypography-root-40 MuiTypography-headline-45"
+                style={
+                  Object {
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                We Still Don’t Know Whether Uber Is a Real Business
+              </h1>
+              <p
+                className="MuiTypography-root-40 MuiTypography-body1-49"
+              >
+                It has never had to live on the cash it generates.
+              </p>
+              <p
+                className="MuiTypography-root-40 MuiTypography-body1-49"
+                style={
+                  Object {
+                    "marginTop": 28,
+                  }
+                }
+              >
+                Hillary Clinton
+              </p>
+              <p
+                className="MuiTypography-root-40 MuiTypography-body1-49 MuiTypography-colorTextSecondary-63"
+                style={
+                  Object {
+                    "marginTop": 2,
+                  }
+                }
+              >
+                22 August 2018
+              </p>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flex": 1,
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <div
+              className="MuiCardMedia-root-163"
+              src={undefined}
+              style={
+                Object {
+                  "height": 151,
+                  "width": 151,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          style={
+            Object {
+              "boxShadow": "0px 0.5px 0px 0px rgba(0, 0, 0, 0.2)",
+              "display": "flex",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flex": 4,
+                "flexDirection": "column",
+              }
+            }
+          >
+            <div
+              className="MuiCardContent-root-165"
+              style={
+                Object {
+                  "flex": "1 0 auto",
+                }
+              }
+            >
+              <h1
+                className="MuiTypography-root-40 MuiTypography-headline-45"
+                style={
+                  Object {
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                Happy All the Time
+              </h1>
+              <p
+                className="MuiTypography-root-40 MuiTypography-body1-49"
+              >
+                As biometric tracking takes over the modern workplace
+              </p>
+              <p
+                className="MuiTypography-root-40 MuiTypography-body1-49"
+                style={
+                  Object {
+                    "marginTop": 28,
+                  }
+                }
+              >
+                Hillary Clinton
+              </p>
+              <p
+                className="MuiTypography-root-40 MuiTypography-body1-49 MuiTypography-colorTextSecondary-63"
+                style={
+                  Object {
+                    "marginTop": 2,
+                  }
+                }
+              >
+                22 August 2018
+              </p>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flex": 1,
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <div
+              className="MuiCardMedia-root-163"
+              src={undefined}
+              style={
+                Object {
+                  "height": 151,
+                  "width": 151,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <div
+          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          style={
+            Object {
+              "boxShadow": "0px 0.5px 0px 0px rgba(0, 0, 0, 0.2)",
+              "display": "flex",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flex": 4,
+                "flexDirection": "column",
+              }
+            }
+          >
+            <div
+              className="MuiCardContent-root-165"
+              style={
+                Object {
+                  "flex": "1 0 auto",
+                }
+              }
+            >
+              <h1
+                className="MuiTypography-root-40 MuiTypography-headline-45"
+                style={
+                  Object {
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                If you’re a developer, you should start blogging
+              </h1>
+              <p
+                className="MuiTypography-root-40 MuiTypography-body1-49"
+              >
+                My blogging journey and skills I’ve acquired along the way
+              </p>
+              <p
+                className="MuiTypography-root-40 MuiTypography-body1-49"
+                style={
+                  Object {
+                    "marginTop": 28,
+                  }
+                }
+              >
+                Hillary Clinton
+              </p>
+              <p
+                className="MuiTypography-root-40 MuiTypography-body1-49 MuiTypography-colorTextSecondary-63"
+                style={
+                  Object {
+                    "marginTop": 2,
+                  }
+                }
+              >
+                22 August 2018
+              </p>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flex": 1,
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <div
+              className="MuiCardMedia-root-163"
+              src={undefined}
+              style={
+                Object {
+                  "height": 151,
+                  "width": 151,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+    >
+      <h2
+        className="MuiTypography-root-40 MuiTypography-headline-45"
+        style={
+          Object {
+            "marginLeft": 24,
+            "marginTop": 32,
+          }
+        }
+      >
+        Top story of Hexanews
+      </h2>
+      <hr
+        className="MuiDivider-root-166"
+        style={
+          Object {
+            "marginLeft": 24,
+            "marginTop": 20,
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "marginLeft": 36,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "marginTop": 24,
+            }
+          }
+        >
+          <h3
+            className="MuiTypography-root-40 MuiTypography-subheading-47"
+          >
+            The software engineer’s guide
+          </h3>
+          <p
+            className="MuiTypography-root-40 MuiTypography-body1-49 MuiTypography-colorTextSecondary-63"
+            style={
+              Object {
+                "marginTop": 4,
+              }
+            }
+          >
+            Daniel Wu
+          </p>
+        </div>
+        <div
+          style={
+            Object {
+              "marginTop": 24,
+            }
+          }
+        >
+          <h3
+            className="MuiTypography-root-40 MuiTypography-subheading-47"
+          >
+            Design won't save the world
+          </h3>
+          <p
+            className="MuiTypography-root-40 MuiTypography-body1-49 MuiTypography-colorTextSecondary-63"
+            style={
+              Object {
+                "marginTop": 4,
+              }
+            }
+          >
+            Jesse Weaver
+          </p>
+        </div>
+        <div
+          style={
+            Object {
+              "marginTop": 24,
+            }
+          }
+        >
+          <h3
+            className="MuiTypography-root-40 MuiTypography-subheading-47"
+          >
+            Write clean code and get rid of code smell
+          </h3>
+          <p
+            className="MuiTypography-root-40 MuiTypography-body1-49 MuiTypography-colorTextSecondary-63"
+            style={
+              Object {
+                "marginTop": 4,
+              }
+            }
+          >
+            Mohammed Aladdin
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

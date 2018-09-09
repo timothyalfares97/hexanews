@@ -12,7 +12,6 @@ export const deleteArticle = (id: string) => (dispatch: Dispatch<any>) => (async
   dispatch({ type: ActionTypes.DELETE_ARTICLE_REQUESTED })
   try {
     const response = await ArticleRepository.delete(id)
-    console.log(response)
     if (response.data.code === 'SUCCESS') {
       dispatch({ type: ActionTypes.DELETE_ARTICLE_SUCCESS, id: id })
       dispatch(push('/profile'))
@@ -20,6 +19,6 @@ export const deleteArticle = (id: string) => (dispatch: Dispatch<any>) => (async
       throw response.data.message
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.DELETE_ARTICLE_FAILED, error: error })
+    dispatch({ type: ActionTypes.DELETE_ARTICLE_FAILED })
   }
 })()

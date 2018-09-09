@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Categories renders Categories component 1`] = `
+exports[`Category renders Category component 1`] = `
 <div
   style={
     Object {

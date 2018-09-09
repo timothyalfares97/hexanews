@@ -25,7 +25,7 @@ type Props = {
   article: Article
 } & StateProps
 
-class ArticleDetail extends React.Component<Props> {
+export class ArticleDetail extends React.Component<Props> {
 
   renderMultilineText = () => {
     // tslint:disable:max-line-length

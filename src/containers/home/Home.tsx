@@ -20,7 +20,7 @@ type Props = {
   dispatch: Dispatch<any>
 }
 
-class Home extends React.Component<Props> {
+export class Home extends React.Component<Props> {
 
   public render() {
     const { dispatch } = this.props
