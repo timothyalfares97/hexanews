@@ -78,7 +78,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
               type='email'
               value={email}
               validators={['required', 'isEmail']}
-              errorMessages={['Please enter email', 'Please enter valid email']}
+              errorMessages={['Please enter email', 'Please enter a valid email']}
             />
             <TextValidator
               label='Password'
@@ -122,7 +122,6 @@ class RegisterForm extends React.Component<Props, ComponentState> {
               {registerFormString.cancelButton}
             </Button>
             <Button
-              onClick={this.onRegister}
               color='primary'
               disabled={this.disableSubmitButton()}
               type='submit'
