@@ -81,6 +81,17 @@ class Account extends React.Component<Props, ComponentState> {
     this.setState({ confirmNewPassword: event.target.value })
   }
 
+  disableSaveProfileButton = () => {
+    const { name, description } = this.state
+
+    console.log(ValidatorForm.validate(name, description))
+    return ValidatorForm.validate(name, description)
+  }
+
+  // handleNameBlur = (event: any) => {
+  //   this.refs[name].validate(event.target.value)
+  // }
+
   onSaveProfile = async () => {
     const { dispatch } = this.props
     const { email, name, description } = this.state
@@ -162,6 +173,8 @@ class Account extends React.Component<Props, ComponentState> {
               size='small'
               component='button'
               style={styles.button}
+              // onBlur={this.handleNameBlur()}
+              onSubmit={() => this.disableSaveProfileButton()}
               type='submit'
             >
               {isEditingUser ? <CircularProgress size={22} /> : accountString.saveButton}
