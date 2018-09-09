@@ -30,10 +30,8 @@ interface ComponentState {
   name: string,
   description: string,
   currentPassword: string,
-  newPasswordFormData: {
-    newPassword: string,
-    confirmNewPassword: string,
-  },
+  newPassword: string,
+  confirmNewPassword: string,
   submitted: boolean,
 }
 
@@ -47,17 +45,16 @@ class Account extends React.Component<Props, ComponentState> {
       name: user.name,
       description: user.description ? user.description : '',
       currentPassword: '',
-      newPasswordFormData: {
-        newPassword: '',
-        confirmNewPassword: '',
-      },
+      newPassword: '',
+      confirmNewPassword: '',
       submitted: false,
     }
   }
 
   componentWillMount() {
+    const { newPassword } = this.state
     ValidatorForm.addValidationRule('isNewPasswordMatch', (value: any) => {
-      if (value !== this.state.newPasswordFormData.newPassword) {
+      if (value !== newPassword) {
         return false
       }
       return true
@@ -77,15 +74,11 @@ class Account extends React.Component<Props, ComponentState> {
   }
 
   handleNewPasswordChange = (event: any) => {
-    let newPasswordFormData = Object.assign({}, this.state.newPasswordFormData)
-    newPasswordFormData.newPassword = event.target.value
-    this.setState({ newPasswordFormData })
+    this.setState({ newPassword: event.target.value })
   }
 
   handleConfirmNewPasswordChange = (event: any) => {
-    let newPasswordFormData = Object.assign({}, this.state.newPasswordFormData)
-    newPasswordFormData.confirmNewPassword = event.target.value
-    this.setState({ newPasswordFormData })
+    this.setState({ confirmNewPassword: event.target.value })
   }
 
   onSaveProfile = async () => {
@@ -94,20 +87,21 @@ class Account extends React.Component<Props, ComponentState> {
     const _id = localStorage.getItem('id') || ''
     const createdAt = localStorage.getItem('createdAt') || ''
 
+    this.setState({ submitted: true })
     const edittedUser = { _id, email, name, description, createdAt }
     await dispatch(actions.editUser(edittedUser))
   }
 
   onChangePassword = async () => {
     const { dispatch } = this.props
-    const { email, currentPassword, newPasswordFormData } = this.state
+    const { email, currentPassword, newPassword } = this.state
 
-    await dispatch(actions.changePassword(email, currentPassword, newPasswordFormData.newPassword))
+    await dispatch(actions.changePassword(email, currentPassword, newPassword))
   }
 
   public render() {
     const { isEditingUser, isChangingPassword } = this.props
-    const { email, name, description, currentPassword, newPasswordFormData } = this.state
+    const { email, name, description, currentPassword, newPassword, confirmNewPassword } = this.state
     return (
       <div style={styles.container}>
         <Typography
@@ -177,6 +171,7 @@ class Account extends React.Component<Props, ComponentState> {
         <Divider style={styles.sectionDivider} />
         <div style={styles.sectionContainer}>
           <ValidatorForm
+            ref='changePasswordForm'
             onSubmit={() => this.onChangePassword()}
           >
             <Typography
@@ -205,7 +200,7 @@ class Account extends React.Component<Props, ComponentState> {
               style={styles.textField}
               margin='normal'
               type='password'
-              value={newPasswordFormData.newPassword}
+              value={newPassword}
               validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
               errorMessages={['Please enter new password',
                 'Password length must be between 6-20 characters and contains no special character']}
@@ -217,12 +212,12 @@ class Account extends React.Component<Props, ComponentState> {
               style={styles.textField}
               margin='normal'
               type='password'
-              value={newPasswordFormData.confirmNewPassword}
+              value={confirmNewPassword}
               validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$',
                 'isNewPasswordMatch']}
               errorMessages={['Please confirm new password',
                 'Password length must be between 6-20 characters and contains no special character',
-                'New password mismatch']}
+                'Confirm new password must match new password']}
             />
             <Button
               variant='outlined'
