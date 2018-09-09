@@ -32,7 +32,6 @@ interface ComponentState {
   currentPassword: string,
   newPassword: string,
   confirmNewPassword: string,
-  submitted: boolean,
 }
 
 class Account extends React.Component<Props, ComponentState> {
@@ -47,7 +46,6 @@ class Account extends React.Component<Props, ComponentState> {
       currentPassword: '',
       newPassword: '',
       confirmNewPassword: '',
-      submitted: false,
     }
   }
 
@@ -81,16 +79,15 @@ class Account extends React.Component<Props, ComponentState> {
     this.setState({ confirmNewPassword: event.target.value })
   }
 
-  disableSaveProfileButton = () => {
-    const { name, description } = this.state
-
-    console.log(ValidatorForm.validate(name, description))
-    return ValidatorForm.validate(name, description)
+  disableSaveProfileButton() {
+    const { name } = this.state
+    return (name === '')
   }
 
-  // handleNameBlur = (event: any) => {
-  //   this.refs[name].validate(event.target.value)
-  // }
+  disableChangePasswordButton() {
+    const { currentPassword, newPassword, confirmNewPassword } = this.state
+    return (currentPassword === '' || newPassword === '' || confirmNewPassword === '')
+  }
 
   onSaveProfile = async () => {
     const { dispatch } = this.props
@@ -98,7 +95,6 @@ class Account extends React.Component<Props, ComponentState> {
     const _id = localStorage.getItem('id') || ''
     const createdAt = localStorage.getItem('createdAt') || ''
 
-    this.setState({ submitted: true })
     const edittedUser = { _id, email, name, description, createdAt }
     await dispatch(actions.editUser(edittedUser))
   }
@@ -135,6 +131,7 @@ class Account extends React.Component<Props, ComponentState> {
           <ValidatorForm
             ref='saveProFileForm'
             onSubmit={() => this.onSaveProfile()}
+            instantValidate={false}
           >
             <TextField
               id='email'
@@ -173,8 +170,7 @@ class Account extends React.Component<Props, ComponentState> {
               size='small'
               component='button'
               style={styles.button}
-              // onBlur={this.handleNameBlur()}
-              onSubmit={() => this.disableSaveProfileButton()}
+              disabled={this.disableSaveProfileButton()}
               type='submit'
             >
               {isEditingUser ? <CircularProgress size={22} /> : accountString.saveButton}
@@ -186,6 +182,7 @@ class Account extends React.Component<Props, ComponentState> {
           <ValidatorForm
             ref='changePasswordForm'
             onSubmit={() => this.onChangePassword()}
+            instantValidate={false}
           >
             <Typography
               variant='headline'
@@ -237,6 +234,7 @@ class Account extends React.Component<Props, ComponentState> {
               size='small'
               component='button'
               style={styles.button}
+              disabled={this.disableChangePasswordButton()}
               type='submit'
             >
               {isChangingPassword ? <CircularProgress size={22} /> : accountString.changePassword}
