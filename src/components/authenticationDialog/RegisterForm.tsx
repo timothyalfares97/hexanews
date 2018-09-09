@@ -2,18 +2,18 @@
  * Display register form component.
  */
 import * as React from 'react'
-import TextField from '@material-ui/core/TextField'
-import DialogActions from '@material-ui/core/DialogActions'
+import { Dispatch } from 'redux'
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
+import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
-import Button from '@material-ui/core/Button'
-import { Dispatch } from 'redux'
 
 import * as actions from './actions'
-import styles from './styles'
 import { registerFormString } from '../../constants/string'
+import styles from './styles'
 
 type Props = {
   dispatch: Dispatch<any>
@@ -39,12 +39,16 @@ class RegisterForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  disableSubmitButton() {
+    const { email, password, name } = this.state
+    return (email === '' || password === '' || name === '')
+  }
+
   onRegister = async () => {
     const { email, password, name } = this.state
     const { dispatch, onChangeAuthenticationState } = this.props
 
-    await dispatch(actions.registerUser(email, password, name))
-    onChangeAuthenticationState()
+    await dispatch(actions.registerUser(email, password, name, onChangeAuthenticationState))
   }
 
   public render() {
@@ -52,58 +56,81 @@ class RegisterForm extends React.Component<Props, ComponentState> {
     const { email, password, name } = this.state
     return (
       <div>
-        <DialogTitle>
-          {registerFormString.dialogTitle}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText style={styles.descriptionContainer}>
-            {registerFormString.dialogDescription}
-          </DialogContentText>
-          <TextField
-            margin='dense'
-            id='registerEmail'
-            label='Email Address'
-            type='email'
-            onChange={(event: any) => this.setState({ email: event.target.value })}
-            value={email}
-            fullWidth
-            style={styles.descriptionContainer}
-          />
-          <TextField
-            margin='dense'
-            id='registerPassword'
-            label='Password'
-            type='password'
-            onChange={(event: any) => this.setState({ password: event.target.value })}
-            value={password}
-            fullWidth
-          />
-          <TextField
-            margin='dense'
-            id='registerName'
-            label='name'
-            onChange={(event: any) => this.setState({ name: event.target.value })}
-            value={name}
-            fullWidth
-          />
-          <DialogContentText style={styles.footerContainer}>
-            {registerFormString.haveAccountLabel}
-            <span
-              onClick={onChangeAuthenticationState}
-              style={styles.footerLink}
+        <ValidatorForm
+          ref='registerForm'
+          onSubmit={() => this.onRegister()}
+          instantValidate={false}
+        >
+          <DialogTitle>
+            {registerFormString.dialogTitle}
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText style={styles.descriptionContainer}>
+              {registerFormString.dialogDescription}
+            </DialogContentText>
+            <TextValidator
+              label='Email Address'
+              onChange={(event: any) => this.setState({ email: event.target.value })}
+              name='registerEmail'
+              style={styles.descriptionContainer}
+              margin='dense'
+              fullWidth
+              type='email'
+              value={email}
+              validators={['required', 'isEmail']}
+              errorMessages={['Please enter email', 'Please enter valid email']}
+            />
+            <TextValidator
+              label='Password'
+              onChange={(event: any) => this.setState({ password: event.target.value })}
+              name='registerPassword'
+              margin='dense'
+              fullWidth
+              type='password'
+              value={password}
+              validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
+              errorMessages={['Please enter password',
+                'Password length must be between 6-20 characters and contains no special character']}
+            />
+            <TextValidator
+              label='Name'
+              onChange={(event: any) => this.setState({ name: event.target.value })}
+              name='registerName'
+              margin='dense'
+              fullWidth
+              type='name'
+              value={name}
+              validators={['required', 'minStringLength:3', 'maxStringLength:50',
+                'matchRegexp:^[a-zA-Z\\s]+$']}
+              errorMessages={['Please enter name',
+                'Name field requires a minimum of 3 characters',
+                'Name field requires a maximum of 50 characters',
+                'Name can only contain alphabetical characters']}
+            />
+            <DialogContentText style={styles.footerContainer}>
+              {registerFormString.haveAccountLabel}
+              <span
+                onClick={onChangeAuthenticationState}
+                style={styles.footerLink}
+              >
+                {registerFormString.loginHereLabel}
+              </span>
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseDialog} color='primary'>
+              {registerFormString.cancelButton}
+            </Button>
+            <Button
+              onClick={this.onRegister}
+              color='primary'
+              disabled={this.disableSubmitButton()}
+              type='submit'
             >
-              {registerFormString.loginHereLabel}
-            </span>
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseDialog} color='primary'>
-            {registerFormString.cancelButton}
-          </Button>
-          <Button onClick={this.onRegister} color='primary'>
-            {isLoadingRegister ? <CircularProgress size={22} /> : registerFormString.submitButton}
-          </Button>
-        </DialogActions>
+              {isLoadingRegister ? <CircularProgress size={22} /> : registerFormString.submitButton}
+            </Button>
+          </DialogActions>
+        </ValidatorForm>
       </div>
     )
   }

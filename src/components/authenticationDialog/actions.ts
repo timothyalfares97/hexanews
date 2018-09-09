@@ -7,12 +7,14 @@ import { ActionTypes } from '../../actions/ActionTypes'
 import UserRepository from '../../domain/repository/UserRepository'
 import AuthenticationService from '../../domain/service/AuthenticationService'
 
-export const registerUser = (email: string, password: string, name: string) => (dispatch: Dispatch<any>) => (async () => {
+export const registerUser = (email: string, password: string, name: string,
+  onChangeAuthenticationState: () => void) => (dispatch: Dispatch<any>) => (async () => {
   dispatch({ type: ActionTypes.REGISTER_USER_REQUESTED })
   try {
     const response = await UserRepository.create(email, password, name)
     if (response.data) {
       dispatch({ type: ActionTypes.REGISTER_USER_SUCCESS })
+      onChangeAuthenticationState()
     }
   } catch (error) {
     dispatch({ type: ActionTypes.REGISTER_USER_FAILED })
