@@ -1,5 +1,5 @@
 /**
- * Style file for editProfile containers
+ * Style file for Account container
  */
 
 export default {
@@ -9,17 +9,7 @@ export default {
     marginTop: '4%',
     marginBottom: '4%',
   },
-  sectionContainer: {
-    marginTop: 24,
-  },
   sectionDivider: {
     marginTop: 50,
-  },
-  textField: {
-    width: '100%',
-  },
-  button: {
-    marginTop: 30,
-    marginRight: 10,
   },
 }
