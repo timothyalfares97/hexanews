@@ -26,6 +26,7 @@ describe('Article Detail', () => {
         isDeletingArticle={false}
         isUserArticle={true}
         article={mockArticle}
+        footerArticles={[mockArticle]}
         dispatch={jest.fn()}
       />
     )
@@ -39,6 +40,7 @@ describe('Article Detail', () => {
         userArticle={mockArticle}
         isDeletingArticle={true}
         isUserArticle={true}
+        footerArticles={[mockArticle]}
         article={mockArticle}
         dispatch={jest.fn()}
       />
@@ -55,6 +57,7 @@ describe('Article Detail', () => {
         userArticle={articleWithoutId}
         isDeletingArticle={false}
         isUserArticle={true}
+        footerArticles={[mockArticle]}
         article={articleWithoutId}
         dispatch={dispatch}
       />

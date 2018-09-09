@@ -14,14 +14,15 @@ import * as Config from '../../constants/config'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import { footerCardString } from '../../constants/string'
+import { Article } from '../../domain/model/Article'
 
 type Props = {
   dispatch: Dispatch<any>,
-  title: string,
+  article: Article,
 }
 
 const FooterCard: React.StatelessComponent<Props> = ({
-  title,
+  article,
   dispatch,
 }) => {
   return (
@@ -44,7 +45,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
             gutterBottom
             variant='subheading'
           >
-            {title}
+            {article.title}
           </Typography>
           <div style={styles.profileContainer}>
             <Avatar style={styles.avatar}>

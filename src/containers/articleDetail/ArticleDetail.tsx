@@ -37,12 +37,11 @@ export class ArticleDetail extends React.Component<Props> {
   }
 
   renderFooterCards = () => {
-    const { dispatch } = this.props
-    const titles = ['React vs Angular vs Vue.js', 'New Features in Angular 2.0', 'React Native at Airbnb: The Technology']
-    return map(titles, (title) => (
-      <Grid item xs={4} key={title}>
+    const { dispatch, footerArticles } = this.props
+    return map(footerArticles, (article) => (
+      <Grid item xs={4} key={article._id}>
         <FooterCard
-          title={title}
+          article={article}
           dispatch={dispatch}
         />
       </Grid>

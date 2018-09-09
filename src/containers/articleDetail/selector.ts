@@ -1,13 +1,14 @@
 import { createStructuredSelector, createSelector } from 'reselect'
-import { find } from 'lodash'
+import { find, filter, sampleSize } from 'lodash'
 
 import { State } from '../../reducers'
 import { Article } from '../../domain/model/Article'
 
 export interface StateProps {
-  userArticle: Article
-  isUserArticle: boolean
+  footerArticles: Article[]
   isDeletingArticle: boolean
+  isUserArticle: boolean
+  userArticle: Article
 }
 
 const userArticle = createSelector(
@@ -24,10 +25,25 @@ const isUserArticle = createSelector(
   }
 )
 
+const footerArticles = createSelector(
+  (state: State) => state.entities.articles,
+  userArticle,
+  isUserArticle,
+  (articles, userArticle, isUserArticle) => {
+    const filteredArticles = filter(articles, article => {
+      const articleCategory = userArticle ? userArticle.category : ''
+      return article.category === articleCategory && !isUserArticle
+    })
+    const randomThreeFilteredArticles = sampleSize(filteredArticles, 3)
+    return randomThreeFilteredArticles
+  }
+)
+
 const isDeletingArticle = (state: State) => state.containers.articleDetail.isDeletingArticle
 
 export default createStructuredSelector({
-  userArticle,
-  isUserArticle,
+  footerArticles,
   isDeletingArticle,
+  isUserArticle,
+  userArticle,
 })
