@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popular Article Row renders Popular Article Row 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": 24,
+    }
+  }
+>
+  <h3
+    className="MuiTypography-root-1 MuiTypography-subheading-8"
+  >
+    title
+  </h3>
+  <p
+    className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextSecondary-24"
+    style={
+      Object {
+        "marginTop": 4,
+      }
+    }
+  >
+    test
+  </p>
+</div>
+`;

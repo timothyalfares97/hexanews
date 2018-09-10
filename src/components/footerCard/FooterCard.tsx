@@ -25,8 +25,13 @@ const FooterCard: React.StatelessComponent<Props> = ({
   article,
   dispatch,
 }) => {
+  console.log(`footer-${article._id}`)
   return (
-    <div style={styles.root} onClick={() => dispatch(push(Config.HEADER_LINK.articleDetail))}>
+    <div
+      id={`footer-${article._id}`}
+      onClick={() => dispatch(push(Config.HEADER_LINK.articleDetail))}
+      style={styles.root}
+    >
       <Card style={styles.card}>
         <CardMedia
           style={styles.media}

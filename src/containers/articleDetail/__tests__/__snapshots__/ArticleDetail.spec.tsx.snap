@@ -169,6 +169,7 @@ exports[`Article Detail renders Article Detail 1`] = `
       className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
     >
       <div
+        id="footer-2"
         onClick={[Function]}
         style={
           Object {
@@ -467,6 +468,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
       className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
     >
       <div
+        id="footer-2"
         onClick={[Function]}
         style={
           Object {

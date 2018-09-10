@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Card renders Profile Card 1`] = `
+<div>
+  <div
+    className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+    style={
+      Object {
+        "boxShadow": "0px 0px 0px 0px rgba(0, 0, 0, 0.2)",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flex": 4,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-29"
+        style={
+          Object {
+            "flex": "1 0 auto",
+          }
+        }
+      >
+        <h1
+          className="MuiTypography-root-30 MuiTypography-display1-34"
+        >
+          test
+        </h1>
+        <p
+          className="MuiTypography-root-30 MuiTypography-body1-39"
+          style={
+            Object {
+              "marginTop": 4,
+            }
+          }
+        >
+          desc
+        </p>
+        <p
+          className="MuiTypography-root-30 MuiTypography-body1-39"
+          style={
+            Object {
+              "color": "gray",
+              "fontSize": 12,
+              "marginTop": 12,
+            }
+          }
+        >
+          Hexanews member since Invalid date
+        </p>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <img
+        alt="avatar"
+        src="test"
+        style={
+          Object {
+            "borderRadius": "50%",
+            "height": 100,
+            "width": 100,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

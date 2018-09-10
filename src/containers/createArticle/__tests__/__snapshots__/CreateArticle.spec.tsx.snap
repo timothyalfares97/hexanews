@@ -196,8 +196,8 @@ exports[`Create Article renders Create Article 1`] = `
     }
   >
     <button
-      className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"
-      disabled={false}
+      className="MuiButtonBase-root-107 MuiButtonBase-disabled-108 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89 MuiButton-disabled-101"
+      disabled={true}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -215,7 +215,7 @@ exports[`Create Article renders Create Article 1`] = `
           "marginTop": 30,
         }
       }
-      tabIndex="0"
+      tabIndex="-1"
       type="button"
     >
       <span
@@ -223,9 +223,6 @@ exports[`Create Article renders Create Article 1`] = `
       >
         Publish
       </span>
-      <span
-        className="MuiTouchRipple-root-110"
-      />
     </button>
     <button
       className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"
@@ -460,8 +457,8 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
     }
   >
     <button
-      className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"
-      disabled={false}
+      className="MuiButtonBase-root-107 MuiButtonBase-disabled-108 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89 MuiButton-disabled-101"
+      disabled={true}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -479,7 +476,7 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
           "marginTop": 30,
         }
       }
-      tabIndex="0"
+      tabIndex="-1"
       type="button"
     >
       <span
@@ -511,9 +508,6 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
           </svg>
         </div>
       </span>
-      <span
-        className="MuiTouchRipple-root-110"
-      />
     </button>
     <button
       className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"

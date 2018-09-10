@@ -32,8 +32,8 @@ exports[`Account renders Account 1`] = `
         Edit Profile
       </h2>
       <div
-        aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginNormal-27"
+        aria-describedby="email-helper-text"
+        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
         style={
           Object {
             "width": "100%",
@@ -41,7 +41,7 @@ exports[`Account renders Account 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34"
+          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
           data-shrink={false}
           htmlFor="email"
         >
@@ -54,7 +54,7 @@ exports[`Account renders Account 1`] = `
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-disabled-45"
+            className="MuiInput-input-50 MuiInput-disabled-45 MuiInput-inputMarginDense-51"
             defaultValue={undefined}
             disabled={true}
             id="email"
@@ -72,10 +72,16 @@ exports[`Account renders Account 1`] = `
             value=""
           />
         </div>
+        <p
+          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
+          id="email-helper-text"
+        >
+           
+        </p>
       </div>
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginNormal-27"
+        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
         style={
           Object {
             "width": "100%",
@@ -83,7 +89,7 @@ exports[`Account renders Account 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34"
+          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
           data-shrink={false}
           htmlFor={undefined}
         >
@@ -96,7 +102,7 @@ exports[`Account renders Account 1`] = `
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-50"
+            className="MuiInput-input-50 MuiInput-inputMarginDense-51"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -114,10 +120,16 @@ exports[`Account renders Account 1`] = `
             value=""
           />
         </div>
+        <p
+          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
+          id={undefined}
+        >
+           
+        </p>
       </div>
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginNormal-27"
+        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
         style={
           Object {
             "width": "100%",
@@ -125,7 +137,7 @@ exports[`Account renders Account 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34"
+          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
           data-shrink={false}
           htmlFor={undefined}
         >
@@ -138,7 +150,7 @@ exports[`Account renders Account 1`] = `
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-50"
+            className="MuiInput-input-50 MuiInput-inputMarginDense-51"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -156,9 +168,15 @@ exports[`Account renders Account 1`] = `
             value=""
           />
         </div>
+        <p
+          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
+          id={undefined}
+        >
+           
+        </p>
       </div>
       <button
-        className="MuiButtonBase-root-81 MuiButtonBase-disabled-82 MuiButton-root-55 MuiButton-text-57 MuiButton-outlined-63 MuiButton-sizeSmall-78 MuiButton-disabled-75"
+        className="MuiButtonBase-root-88 MuiButtonBase-disabled-89 MuiButton-root-62 MuiButton-text-64 MuiButton-outlined-70 MuiButton-sizeSmall-85 MuiButton-disabled-82"
         disabled={true}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -172,15 +190,14 @@ exports[`Account renders Account 1`] = `
         onTouchStart={[Function]}
         style={
           Object {
-            "marginRight": 10,
-            "marginTop": 30,
+            "marginTop": 10,
           }
         }
         tabIndex="-1"
         type="submit"
       >
         <span
-          className="MuiButton-label-56"
+          className="MuiButton-label-63"
         >
           Save Profile
         </span>
@@ -188,7 +205,7 @@ exports[`Account renders Account 1`] = `
     </form>
   </div>
   <hr
-    className="MuiDivider-root-84"
+    className="MuiDivider-root-91"
     style={
       Object {
         "marginTop": 50,
@@ -212,7 +229,7 @@ exports[`Account renders Account 1`] = `
       </h2>
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginNormal-27"
+        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
         style={
           Object {
             "width": "100%",
@@ -220,7 +237,7 @@ exports[`Account renders Account 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34"
+          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
           data-shrink={false}
           htmlFor={undefined}
         >
@@ -233,7 +250,7 @@ exports[`Account renders Account 1`] = `
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-inputType-53"
+            className="MuiInput-input-50 MuiInput-inputType-53 MuiInput-inputMarginDense-51"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -251,10 +268,16 @@ exports[`Account renders Account 1`] = `
             value=""
           />
         </div>
+        <p
+          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
+          id={undefined}
+        >
+           
+        </p>
       </div>
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginNormal-27"
+        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
         style={
           Object {
             "width": "100%",
@@ -262,7 +285,7 @@ exports[`Account renders Account 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34"
+          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
           data-shrink={false}
           htmlFor={undefined}
         >
@@ -275,7 +298,7 @@ exports[`Account renders Account 1`] = `
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-inputType-53"
+            className="MuiInput-input-50 MuiInput-inputType-53 MuiInput-inputMarginDense-51"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -293,10 +316,16 @@ exports[`Account renders Account 1`] = `
             value=""
           />
         </div>
+        <p
+          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
+          id={undefined}
+        >
+           
+        </p>
       </div>
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginNormal-27"
+        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
         style={
           Object {
             "width": "100%",
@@ -304,7 +333,7 @@ exports[`Account renders Account 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34"
+          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
           data-shrink={false}
           htmlFor={undefined}
         >
@@ -317,7 +346,7 @@ exports[`Account renders Account 1`] = `
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-inputType-53"
+            className="MuiInput-input-50 MuiInput-inputType-53 MuiInput-inputMarginDense-51"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -335,9 +364,15 @@ exports[`Account renders Account 1`] = `
             value=""
           />
         </div>
+        <p
+          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
+          id={undefined}
+        >
+           
+        </p>
       </div>
       <button
-        className="MuiButtonBase-root-81 MuiButtonBase-disabled-82 MuiButton-root-55 MuiButton-text-57 MuiButton-outlined-63 MuiButton-sizeSmall-78 MuiButton-disabled-75"
+        className="MuiButtonBase-root-88 MuiButtonBase-disabled-89 MuiButton-root-62 MuiButton-text-64 MuiButton-outlined-70 MuiButton-sizeSmall-85 MuiButton-disabled-82"
         disabled={true}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -351,15 +386,14 @@ exports[`Account renders Account 1`] = `
         onTouchStart={[Function]}
         style={
           Object {
-            "marginRight": 10,
-            "marginTop": 30,
+            "marginTop": 10,
           }
         }
         tabIndex="-1"
         type="submit"
       >
         <span
-          className="MuiButton-label-56"
+          className="MuiButton-label-63"
         >
           Change Password
         </span>

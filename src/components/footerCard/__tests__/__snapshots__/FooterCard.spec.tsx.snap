@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Card renders Footer Card 1`] = `
+<div
+  id="footer-2"
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "flexGrow": 1,
+    }
+  }
+>
+  <div
+    className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+    style={
+      Object {
+        "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+        "maxWidth": 385,
+      }
+    }
+  >
+    <div
+      className="MuiCardMedia-root-29"
+      src={undefined}
+      style={
+        Object {
+          "height": 0,
+          "paddingTop": "56.25%",
+        }
+      }
+    />
+    <div
+      className="MuiCardContent-root-31"
+      style={
+        Object {
+          "paddingRight": "2%",
+        }
+      }
+    >
+      <h2
+        className="MuiTypography-root-32 MuiTypography-caption-42 MuiTypography-gutterBottom-49"
+      >
+        Related reads
+      </h2>
+      <h2
+        className="MuiTypography-root-32 MuiTypography-subheading-39 MuiTypography-gutterBottom-49"
+      >
+        def
+      </h2>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "marginBottom": "3%",
+          }
+        }
+      >
+        <div
+          className="MuiAvatar-root-57 MuiAvatar-colorDefault-58"
+          style={
+            Object {
+              "alignSelf": "center",
+              "backgroundColor": "green",
+              "height": 50,
+              "width": 50,
+            }
+          }
+        >
+          EK
+        </div>
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+              "marginLeft": 10,
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root-32 MuiTypography-body1-41"
+            style={
+              Object {
+                "marginTop": 6,
+              }
+            }
+          >
+            Erik Kennedy
+          </p>
+          <p
+            className="MuiTypography-root-32 MuiTypography-body1-41 MuiTypography-colorTextSecondary-55"
+            style={
+              Object {
+                "marginTop": 2,
+              }
+            }
+          >
+            8 March 2018
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
