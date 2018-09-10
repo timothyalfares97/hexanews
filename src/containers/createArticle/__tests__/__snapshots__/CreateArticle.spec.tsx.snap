@@ -1,0 +1,553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create Article renders Create Article 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "25%",
+      "marginRight": "25%",
+      "marginTop": "4%",
+      "paddingBottom": "5%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "marginBottom": "3%",
+      }
+    }
+  >
+    <div
+      className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+      style={
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "green",
+          "height": 50,
+          "margin": 10,
+          "width": 50,
+        }
+      }
+    >
+      HC
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
+    >
+      <h3
+        className="MuiTypography-root-4 MuiTypography-subheading-11"
+        style={
+          Object {
+            "marginTop": 12,
+          }
+        }
+      >
+        Hillary Clinton
+      </h3>
+      <p
+        className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+      >
+        A politician, writer and philanthropist.
+      </p>
+      <p
+        className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+      >
+        Draft
+      </p>
+    </div>
+  </div>
+  <div>
+    <form>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-29 MuiFormControl-marginNormal-30"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-38 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37"
+          data-shrink={false}
+          htmlFor="title"
+        >
+          Title
+        </label>
+        <div
+          className="MuiInput-root-45 MuiInput-formControl-46 MuiInput-underline-49"
+        >
+          <input
+            aria-invalid={false}
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className="MuiInput-input-53"
+            defaultValue={undefined}
+            disabled={false}
+            id="title"
+            name={undefined}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-29"
+        style={
+          Object {
+            "marginTop": 24,
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-38 MuiFormLabel-required-43 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37"
+          data-shrink={false}
+          htmlFor="category-required"
+        >
+          Category
+          <span
+            className="MuiFormLabel-asterisk-44"
+          >
+             *
+          </span>
+        </label>
+        <div
+          className="MuiInput-root-45 MuiInput-formControl-46 MuiInput-underline-49"
+        >
+          <div
+            className="MuiSelect-root-58"
+          >
+            <div
+              aria-haspopup="true"
+              aria-owns={null}
+              aria-pressed="false"
+              className="MuiSelect-select-59 MuiSelect-selectMenu-60 MuiInput-input-53"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&#8203;",
+                  }
+                }
+              />
+            </div>
+            <input
+              autoComplete={undefined}
+              autoFocus={undefined}
+              defaultValue={undefined}
+              id={undefined}
+              name="category"
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              rows={undefined}
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-63 MuiSelect-icon-62"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <p
+          className="MuiFormHelperText-root-74 MuiFormHelperText-required-80"
+        >
+          Required
+        </p>
+      </div>
+    </form>
+  </div>
+  <div
+    style={
+      Object {
+        "marginTop": "10%",
+      }
+    }
+  >
+    <button
+      className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "marginRight": 10,
+          "marginTop": 30,
+        }
+      }
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiButton-label-82"
+      >
+        Publish
+      </span>
+      <span
+        className="MuiTouchRipple-root-110"
+      />
+    </button>
+    <button
+      className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"
+      disabled={false}
+      id="cancelButton"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "marginRight": 10,
+          "marginTop": 30,
+        }
+      }
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiButton-label-82"
+      >
+        Cancel
+      </span>
+      <span
+        className="MuiTouchRipple-root-110"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Create Article renders Create Article with isCreatingArticle as true 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "25%",
+      "marginRight": "25%",
+      "marginTop": "4%",
+      "paddingBottom": "5%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "marginBottom": "3%",
+      }
+    }
+  >
+    <div
+      className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
+      style={
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "green",
+          "height": 50,
+          "margin": 10,
+          "width": 50,
+        }
+      }
+    >
+      HC
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
+    >
+      <h3
+        className="MuiTypography-root-4 MuiTypography-subheading-11"
+        style={
+          Object {
+            "marginTop": 12,
+          }
+        }
+      >
+        Hillary Clinton
+      </h3>
+      <p
+        className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+      >
+        A politician, writer and philanthropist.
+      </p>
+      <p
+        className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+      >
+        Draft
+      </p>
+    </div>
+  </div>
+  <div>
+    <form>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-29 MuiFormControl-marginNormal-30"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-38 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37"
+          data-shrink={false}
+          htmlFor="title"
+        >
+          Title
+        </label>
+        <div
+          className="MuiInput-root-45 MuiInput-formControl-46 MuiInput-underline-49"
+        >
+          <input
+            aria-invalid={false}
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className="MuiInput-input-53"
+            defaultValue={undefined}
+            disabled={false}
+            id="title"
+            name={undefined}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-29"
+        style={
+          Object {
+            "marginTop": 24,
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-38 MuiFormLabel-required-43 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37"
+          data-shrink={false}
+          htmlFor="category-required"
+        >
+          Category
+          <span
+            className="MuiFormLabel-asterisk-44"
+          >
+             *
+          </span>
+        </label>
+        <div
+          className="MuiInput-root-45 MuiInput-formControl-46 MuiInput-underline-49"
+        >
+          <div
+            className="MuiSelect-root-58"
+          >
+            <div
+              aria-haspopup="true"
+              aria-owns={null}
+              aria-pressed="false"
+              className="MuiSelect-select-59 MuiSelect-selectMenu-60 MuiInput-input-53"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&#8203;",
+                  }
+                }
+              />
+            </div>
+            <input
+              autoComplete={undefined}
+              autoFocus={undefined}
+              defaultValue={undefined}
+              id={undefined}
+              name="category"
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              rows={undefined}
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-63 MuiSelect-icon-62"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <p
+          className="MuiFormHelperText-root-74 MuiFormHelperText-required-80"
+        >
+          Required
+        </p>
+      </div>
+    </form>
+  </div>
+  <div
+    style={
+      Object {
+        "marginTop": "10%",
+      }
+    }
+  >
+    <button
+      className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "marginRight": 10,
+          "marginTop": 30,
+        }
+      }
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiButton-label-82"
+      >
+        <div
+          className="MuiCircularProgress-root-117 MuiCircularProgress-colorPrimary-120 MuiCircularProgress-indeterminate-119"
+          role="progressbar"
+          style={
+            Object {
+              "height": 22,
+              "width": 22,
+            }
+          }
+        >
+          <svg
+            className="MuiCircularProgress-svg-122"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              className="MuiCircularProgress-circle-123 MuiCircularProgress-circleIndeterminate-125"
+              cx={44}
+              cy={44}
+              fill="none"
+              r={20.2}
+              strokeWidth={3.6}
+              style={Object {}}
+            />
+          </svg>
+        </div>
+      </span>
+      <span
+        className="MuiTouchRipple-root-110"
+      />
+    </button>
+    <button
+      className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"
+      disabled={false}
+      id="cancelButton"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "marginRight": 10,
+          "marginTop": 30,
+        }
+      }
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiButton-label-82"
+      >
+        Cancel
+      </span>
+      <span
+        className="MuiTouchRipple-root-110"
+      />
+    </button>
+  </div>
+</div>
+`;

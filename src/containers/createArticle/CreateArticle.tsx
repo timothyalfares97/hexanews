@@ -23,17 +23,17 @@ import styles from './styles'
 import { createArticleString } from '../../constants/string'
 import selector, { StateProps } from './selector'
 
-type Props = {
+export type Props = {
   dispatch: Dispatch<any>
 } & StateProps
 
-interface ComponentState {
+export interface ComponentState {
   category: string
   description: string
   title: string
 }
 
-class CreateArticle extends React.Component<Props, ComponentState> {
+export class CreateArticle extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)
@@ -157,6 +157,7 @@ class CreateArticle extends React.Component<Props, ComponentState> {
             {isCreatingArticle ? <CircularProgress size={22} /> : createArticleString.publishButton}
           </Button>
           <Button
+            id='cancelButton'
             variant='outlined'
             component='button'
             style={styles.button}

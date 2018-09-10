@@ -17,19 +17,19 @@ import { User } from '../../domain/model/User'
 import selector, { StateProps } from './selector'
 import styles from './styles'
 
-type Props = {
+export type Props = {
   user: User,
   dispatch: Dispatch<any>,
   isEditingUser: boolean,
 } & StateProps
 
-interface ComponentState {
+export interface ComponentState {
   email: string,
   name: string,
   description: string,
 }
 
-class ProfileForm extends React.Component<Props, ComponentState> {
+export class ProfileForm extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)

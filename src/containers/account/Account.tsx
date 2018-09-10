@@ -15,7 +15,7 @@ import styles from './styles'
 type Props = {
 }
 
-class Account extends React.Component<Props> {
+export class Account extends React.Component<Props> {
   public render() {
     return (
       <div style={styles.container}>
