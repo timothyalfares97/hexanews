@@ -77,6 +77,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
               fullWidth
               type='email'
               value={email}
+              helperText=' '
               validators={['required', 'isEmail']}
               errorMessages={['Please enter email', 'Please enter a valid email']}
             />
@@ -88,6 +89,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
               fullWidth
               type='password'
               value={password}
+              helperText=' '
               validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
               errorMessages={['Please enter password',
                 'Password length must be between 6-20 characters and contains no special character']}
@@ -100,6 +102,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
               fullWidth
               type='name'
               value={name}
+              helperText=' '
               validators={['required', 'minStringLength:3', 'maxStringLength:50',
                 'matchRegexp:^[a-zA-Z\\s]+$']}
               errorMessages={['Please enter name',

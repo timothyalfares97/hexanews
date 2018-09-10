@@ -85,17 +85,19 @@ class ProfileForm extends React.Component<Props, ComponentState> {
             id='email'
             label='Email'
             value={email}
+            helperText=' '
             disabled
             style={styles.textField}
-            margin='normal'
+            margin='dense'
           />
           <TextValidator
             label='Name'
             onChange={this.handleNameChange}
             name='name'
             style={styles.textField}
-            margin='normal'
+            margin='dense'
             value={name}
+            helperText=' '
             validators={['required', 'minStringLength:3', 'maxStringLength:50',
               'matchRegexp:^[a-zA-Z\\s]+$']}
             errorMessages={['Please enter name',
@@ -108,8 +110,9 @@ class ProfileForm extends React.Component<Props, ComponentState> {
             onChange={this.handleDescriptionChange}
             name='description'
             style={styles.textField}
-            margin='normal'
+            margin='dense'
             value={description}
+            helperText=' '
             validators={['maxStringLength:100']}
             errorMessages={['Description field requires a maximum of 100 characters']}
           />

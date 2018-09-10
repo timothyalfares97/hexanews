@@ -20,6 +20,5 @@ export default {
   },
   errorLoginLabel: {
     color: '#E53935',
-    fontSize: 12,
   },
 }

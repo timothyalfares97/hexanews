@@ -10,7 +10,6 @@ export default {
     width: '100%',
   },
   button: {
-    marginTop: 30,
-    marginRight: 10,
+    marginTop: 10,
   },
 }

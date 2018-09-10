@@ -98,9 +98,10 @@ class ChangePasswordForm extends React.Component<Props, ComponentState> {
             onChange={this.handleCurrentPasswordChange}
             name='currentPassword'
             style={styles.textField}
-            margin='normal'
+            margin='dense'
             type='password'
             value={currentPassword}
+            helperText=' '
             validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
             errorMessages={['Please enter current password',
               'Password length must be between 6-20 characters and contains no special character']}
@@ -110,9 +111,10 @@ class ChangePasswordForm extends React.Component<Props, ComponentState> {
             onChange={this.handleNewPasswordChange}
             name='newPassword'
             style={styles.textField}
-            margin='normal'
+            margin='dense'
             type='password'
             value={newPassword}
+            helperText=' '
             validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
             errorMessages={['Please enter new password',
               'Password length must be between 6-20 characters and contains no special character']}
@@ -122,9 +124,10 @@ class ChangePasswordForm extends React.Component<Props, ComponentState> {
             onChange={this.handleConfirmNewPasswordChange}
             name='confirmNewPassword'
             style={styles.textField}
-            margin='normal'
+            margin='dense'
             type='password'
             value={confirmNewPassword}
+            helperText=' '
             validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$', 'isNewPasswordMatch']}
             errorMessages={['Please confirm new password',
               'Password length must be between 6-20 characters and contains no special character',

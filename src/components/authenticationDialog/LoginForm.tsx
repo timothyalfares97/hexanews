@@ -86,6 +86,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
               fullWidth
               type='email'
               value={email}
+              helperText=' '
               validators={['required', 'isEmail']}
               errorMessages={['Please enter email', 'Please enter a valid email']}
             />
@@ -97,13 +98,16 @@ class LoginForm extends React.Component<Props, ComponentState> {
               fullWidth
               type='password'
               value={password}
+              helperText=' '
               validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
               errorMessages={['Please enter password',
                 'Password length must be between 6-20 characters and contains no special character']}
             />
-            <span style={styles.errorLoginLabel}>
-              {loginError}
-            </span>
+            <DialogContentText>
+              <span style={styles.errorLoginLabel}>
+                {loginError}
+              </span>
+            </DialogContentText>
             <DialogContentText style={styles.forgotPasswordContainer}>
               <span
                 onClick={onChangeForgotPassword}
