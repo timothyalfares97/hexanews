@@ -56,6 +56,11 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
     this.setState({ description: html })
   }
 
+  disablePublishButton() {
+    const { category, description, title } = this.state
+    return (category === '' || description === '' || title === '')
+  }
+
   onCreateArticle = async () => {
     const { dispatch } = this.props
     const { title, category, description } = this.state
@@ -152,6 +157,7 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
             variant='outlined'
             component='button'
             style={styles.button}
+            disabled={this.disablePublishButton()}
             onClick={this.onCreateArticle}
           >
             {isCreatingArticle ? <CircularProgress size={22} /> : createArticleString.publishButton}

@@ -45,7 +45,7 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
     return (
       <div>
         <ValidatorForm
-          ref='loginForm'
+          ref='forgotPasswordForm'
           onSubmit={() => this.onForgotPassword()}
           instantValidate={false}
         >
