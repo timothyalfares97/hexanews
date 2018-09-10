@@ -1,6 +1,7 @@
 /**
  * Display authentication dialog component.
  */
+
 import * as React from 'react'
 import Dialog from '@material-ui/core/Dialog'
 import { Dispatch } from 'redux'
@@ -9,7 +10,7 @@ import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
 import ForgotPasswordForm from './ForgotPasswordForm'
 
-type Props = {
+export type Props = {
   dispatch: Dispatch<any>
   showDialog: boolean
   isLoadingRegister: boolean
@@ -18,9 +19,7 @@ type Props = {
   loginError: string
 }
 
-interface ComponentState {
-  email: string
-  password: string
+export interface ComponentState {
   authenticationState: string
 }
 
@@ -29,8 +28,6 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
   constructor(props: Props) {
     super(props)
     this.state = {
-      email: '',
-      password: '',
       authenticationState: 'login'
     }
   }
@@ -76,7 +73,7 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
     }
   }
 
-  public render() {
+  render() {
     const { showDialog } = this.props
     return (
       <Dialog open={showDialog}>

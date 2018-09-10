@@ -16,7 +16,7 @@ import * as actions from './actions'
 import styles from './styles'
 import { loginFormString } from '../../constants/string'
 
-type Props = {
+export type Props = {
   dispatch: Dispatch<any>,
   isLoadingLogin: boolean,
   handleCloseDialog: () => void,
@@ -25,7 +25,7 @@ type Props = {
   loginError: string,
 }
 
-interface ComponentState {
+export interface ComponentState {
   email: string
   password: string
 }

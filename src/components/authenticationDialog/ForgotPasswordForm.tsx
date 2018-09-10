@@ -1,6 +1,7 @@
 /**
  * Display forgot password form component.
  */
+
 import * as React from 'react'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import Button from '@material-ui/core/Button'
@@ -12,12 +13,12 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import { forgetPasswordFormString } from '../../constants/string'
 import styles from './styles'
 
-type Props = {
+export type Props = {
   handleCloseDialog: () => void
   onChangeAuthenticationState: () => void
 }
 
-interface ComponentState {
+export interface ComponentState {
   email: string
 }
 

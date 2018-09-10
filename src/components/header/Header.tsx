@@ -19,16 +19,16 @@ import styles from './styles'
 import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
 import selector, { StateProps } from './selector'
 
-type Props = {
+export type Props = {
   dispatch: Dispatch<any>,
   isLoadingServer: boolean,
 } & StateProps
 
-interface ComponentState {
+export interface ComponentState {
   showDialog: boolean
 }
 
-class Header extends React.Component<Props, ComponentState> {
+export class Header extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)

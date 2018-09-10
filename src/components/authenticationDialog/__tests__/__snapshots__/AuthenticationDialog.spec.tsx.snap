@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Authentication Dialog renders Authentication Dialog 1`] = `null`;
+
+exports[`Authentication Dialog renders Authentication Dialog fallback 1`] = `null`;
+
+exports[`Authentication Dialog renders Authentication Dialog with forgotPassword 1`] = `null`;
+
+exports[`Authentication Dialog renders Authentication Dialog with register 1`] = `null`;

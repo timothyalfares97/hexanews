@@ -1,6 +1,7 @@
 /**
  * Display register form component.
  */
+
 import * as React from 'react'
 import { Dispatch } from 'redux'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
@@ -15,14 +16,14 @@ import * as actions from './actions'
 import { registerFormString } from '../../constants/string'
 import styles from './styles'
 
-type Props = {
+export type Props = {
   dispatch: Dispatch<any>
   isLoadingRegister: boolean,
   handleCloseDialog: () => void
   onChangeAuthenticationState: () => void
 }
 
-interface ComponentState {
+export interface ComponentState {
   email: string
   password: string
   name: string
