@@ -6,7 +6,7 @@ import { combineReducers } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 
-const isLoadingRegister = (state: boolean = false, action: any) => {
+export const isLoadingRegister = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.REGISTER_USER_REQUESTED:
       return true
@@ -19,7 +19,7 @@ const isLoadingRegister = (state: boolean = false, action: any) => {
   }
 }
 
-const isLoadingLogin = (state: boolean = false, action: any) => {
+export const isLoadingLogin = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.LOGIN_USER_REQUESTED:
       return true
@@ -32,7 +32,7 @@ const isLoadingLogin = (state: boolean = false, action: any) => {
   }
 }
 
-const loginError = (state: string = '', action: any) => {
+export const loginError = (state: string = '', action: any) => {
   switch (action.type) {
     case ActionTypes.LOGIN_USER_FAILED:
       return action.error

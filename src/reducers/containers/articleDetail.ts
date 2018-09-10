@@ -6,7 +6,7 @@ import { combineReducers } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 
-const isDeletingArticle = (state: boolean = false, action: any) => {
+export const isDeletingArticle = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.DELETE_ARTICLE_REQUESTED:
       return true

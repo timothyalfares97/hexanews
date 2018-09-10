@@ -6,7 +6,7 @@ import { combineReducers } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 
-const isEditingUser = (state: boolean = false, action: any) => {
+export const isEditingUser = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.EDIT_USER_REQUESTED:
       return true
@@ -18,7 +18,7 @@ const isEditingUser = (state: boolean = false, action: any) => {
   }
 }
 
-const isChangingPassword = (state: boolean = false, action: any) => {
+export const isChangingPassword = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.CHANGE_PASSWORD_REQUESTED:
       return true

@@ -6,7 +6,7 @@ import { combineReducers } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 
-const isCreatingArticle = (state: boolean = false, action: any) => {
+export const isCreatingArticle = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.CREATE_ARTICLE_REQUESTED:
       return true
