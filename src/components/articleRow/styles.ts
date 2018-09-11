@@ -22,6 +22,7 @@ export default {
   },
   container: {
     marginTop: 24,
+    cursor: 'pointer',
   },
   cover: {
     width: 151,

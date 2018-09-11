@@ -8,6 +8,7 @@ import { Dispatch } from 'redux'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
+import { map, orderBy, take } from 'lodash'
 
 import ArticleCard from '../../components/articleCard/ArticleCard'
 import ArticleRow from '../../components/articleRow/ArticleRow'
@@ -15,12 +16,38 @@ import PopularArticleRow from '../../components/popularArticleRow/PopularArticle
 import styles from './styles'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 import { homeString } from '../../constants/string'
+import selector, { StateProps } from './selector'
 
 type Props = {
   dispatch: Dispatch<any>
-}
+} & StateProps
 
 export class Home extends React.Component<Props> {
+
+  renderAllArticles = () => {
+    const { articles, dispatch } = this.props
+    const orderedArticles = orderBy(articles, ['createdAt'], ['desc'])
+    return map(orderedArticles, (article) => (
+      <ArticleRow
+        article={article}
+        dispatch={dispatch}
+        key={article._id}
+      />
+    ))
+  }
+
+  renderPopularArticles = () => {
+    const { articles, dispatch } = this.props
+    const sortedPopularArticles = orderBy(articles, ['views'], ['desc'])
+    const threePopularArticles = take(sortedPopularArticles, 3)
+    return map(threePopularArticles, (article) => (
+      <PopularArticleRow
+        article={article}
+        dispatch={dispatch}
+        key={article._id}
+      />
+    ))
+  }
 
   public render() {
     const { dispatch } = this.props
@@ -56,18 +83,7 @@ export class Home extends React.Component<Props> {
         <Divider style={styles.divider}/>
         <Grid container spacing={24}>
           <Grid item xs={8} style={styles.latestArticleContainer}>
-            <ArticleRow
-              title='We Still Don’t Know Whether Uber Is a Real Business'
-              description='It has never had to live on the cash it generates.'
-            />
-            <ArticleRow
-              title='Happy All the Time'
-              description='As biometric tracking takes over the modern workplace'
-            />
-            <ArticleRow
-              title='If you’re a developer, you should start blogging'
-              description='My blogging journey and skills I’ve acquired along the way'
-            />
+            {this.renderAllArticles()}
           </Grid>
           <Grid item xs={3}>
             <Typography variant='headline' component='h2' style={styles.topStory}>
@@ -75,18 +91,7 @@ export class Home extends React.Component<Props> {
             </Typography>
             <Divider style={styles.articleDivider}/>
             <div style={styles.popularArticles}>
-              <PopularArticleRow
-                author={'Daniel Wu'}
-                title={'The software engineer’s guide'}
-              />
-              <PopularArticleRow
-                author={'Jesse Weaver'}
-                title={'Design won\'t save the world'}
-              />
-              <PopularArticleRow
-                author={'Mohammed Aladdin'}
-                title={'Write clean code and get rid of code smell'}
-              />
+              {this.renderPopularArticles()}
             </div>
           </Grid>
         </Grid>
@@ -95,4 +100,4 @@ export class Home extends React.Component<Props> {
   }
 }
 
-export default connect()(Home)
+export default connect(selector)(Home)

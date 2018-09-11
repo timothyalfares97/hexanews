@@ -14,6 +14,7 @@ describe('Home', () => {
     const component = renderer.create(
       <BrowserRouter>
         <Home
+          articles={[]}
           dispatch={jest.fn()}
         />
       </BrowserRouter>

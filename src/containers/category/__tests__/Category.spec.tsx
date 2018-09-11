@@ -27,6 +27,7 @@ describe('Category', () => {
         <Category
           categoryArticles={mockArticles}
           categoryTitle='technology'
+          dispatch={jest.fn()}
         />
       </BrowserRouter>
     )

@@ -6,6 +6,7 @@ export default {
     marginTop: 4
   },
   container: {
+    cursor: 'pointer',
     marginTop: 24
   },
 }

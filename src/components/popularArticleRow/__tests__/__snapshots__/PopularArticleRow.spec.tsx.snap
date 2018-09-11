@@ -2,8 +2,10 @@
 
 exports[`Popular Article Row renders Popular Article Row 1`] = `
 <div
+  onClick={[Function]}
   style={
     Object {
+      "cursor": "pointer",
       "marginTop": 24,
     }
   }
@@ -11,7 +13,7 @@ exports[`Popular Article Row renders Popular Article Row 1`] = `
   <h3
     className="MuiTypography-root-1 MuiTypography-subheading-8"
   >
-    title
+    def
   </h3>
   <p
     className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextSecondary-24"
@@ -21,7 +23,7 @@ exports[`Popular Article Row renders Popular Article Row 1`] = `
       }
     }
   >
-    test
+    Hillary Clinton
   </p>
 </div>
 `;

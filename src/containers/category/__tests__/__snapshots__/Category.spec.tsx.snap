@@ -298,8 +298,10 @@ exports[`Category renders Category component 1`] = `
       }
     >
       <div
+        onClick={[Function]}
         style={
           Object {
+            "cursor": "pointer",
             "marginTop": 24,
           }
         }
@@ -363,7 +365,7 @@ exports[`Category renders Category component 1`] = `
                   }
                 }
               >
-                22 August 2018
+                11 September 2018
               </p>
             </div>
           </div>

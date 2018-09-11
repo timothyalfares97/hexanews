@@ -1,31 +1,35 @@
 /**
  * Display popular article row component.
  */
+
 import * as React from 'react'
 import Typography from '@material-ui/core/Typography'
+import { Dispatch } from 'redux'
+import { push } from 'connected-react-router'
 
 import styles from './styles'
+import { Article } from '../../domain/model/Article'
 
 type Props = {
-  author: string,
-  title: string,
+  article: Article
+  dispatch: Dispatch<any>
 }
 
 const PopularArticleRow: React.StatelessComponent<Props> = ({
-  author,
-  title,
+  article,
+  dispatch,
 }) => {
   return (
-    <div style={styles.container}>
+    <div style={styles.container} onClick={() => dispatch(push(`articleDetail/${article._id}`))}>
       <Typography variant='subheading'>
-        {title}
+        {article.title}
       </Typography>
       <Typography
         variant='body1'
         color='textSecondary'
         style={styles.author}
       >
-        {author}
+        {'Hillary Clinton'}
       </Typography>
     </div>
   )

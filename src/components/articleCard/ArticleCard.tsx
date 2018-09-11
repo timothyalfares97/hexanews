@@ -1,6 +1,7 @@
 /**
  * Display article card component.
  */
+
 import * as React from 'react'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
