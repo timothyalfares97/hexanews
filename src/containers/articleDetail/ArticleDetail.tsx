@@ -80,7 +80,7 @@ export class ArticleDetail extends React.Component<Props> {
                 color='textSecondary'
               >
                 {/* {'20 August 2018'} */}
-                {isUserArticle && moment(userArticle.createdAt).format('DD MMMM YYYY')}
+                {isUserArticle && moment(userArticle.createdAt).format('D MMMM YYYY')}
               </Typography>
             </div>
             <div style={styles.buttonContainer}>
