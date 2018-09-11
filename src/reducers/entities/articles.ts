@@ -7,14 +7,7 @@ import { filter } from 'lodash'
 import { ActionTypes } from '../../actions/ActionTypes'
 import { Article } from '../../domain/model/Article'
 
-type ArticlesAction = {
-  type: ActionTypes.GET_ARTICLES | ActionTypes.DELETE_ARTICLE_SUCCESS | ActionTypes.CREATE_ARTICLE_SUCCESS,
-  articles: Article[],
-  article: Article,
-  id: string,
-}
-
-const articles = (state: Article[] = [], action: ArticlesAction) => {
+const articles = (state: Article[] = [], action: any = {}) => {
   switch (action.type) {
     case ActionTypes.GET_ARTICLES:
       return action.articles
