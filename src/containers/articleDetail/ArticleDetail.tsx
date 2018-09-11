@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react'
-// import * as ReactHtmlParser from 'react-html-parser'
+import ReactHtmlParser from 'react-html-parser'
 import * as moment from 'moment'
 import Avatar from '@material-ui/core/Avatar'
 import Divider from '@material-ui/core/Divider'
@@ -100,12 +100,13 @@ export class ArticleDetail extends React.Component<Props> {
           <Typography
             variant='display1'
             component='h1'
+            gutterBottom
           >
             {/* {'Adjustable sidebar using Angular'} */}
             {isUserArticle && userArticle.title}
           </Typography>
           {/* <img src={placeholder} style={styles.placeholderImage} /> */}
-          {/* {isUserArticle && ReactHtmlParser(userArticle.description)} */}
+          {isUserArticle && ReactHtmlParser(userArticle.description)}
           {/* {this.renderMultilineText()} */}
         </div>
         <Divider style={styles.footerDivider} />
