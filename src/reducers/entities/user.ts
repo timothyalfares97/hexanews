@@ -5,11 +5,6 @@
 import { ActionTypes } from '../../actions/ActionTypes'
 import { User } from '../../domain/model/User'
 
-type UserAction = {
-  type: ActionTypes.GET_USER | ActionTypes.LOGIN_USER_SUCCESS | ActionTypes.EDIT_USER_SUCCESS | ActionTypes.LOGOUT,
-  user: User,
-}
-
 const initialUser = {
   _id: '',
   email: '',
@@ -18,7 +13,7 @@ const initialUser = {
   createdAt: '',
 }
 
-const user = (state: User = initialUser, action: UserAction) => {
+const user = (state: User = initialUser, action: any = {}) => {
   switch (action.type) {
     case ActionTypes.GET_USER:
     case ActionTypes.LOGIN_USER_SUCCESS:

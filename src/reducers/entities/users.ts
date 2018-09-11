@@ -5,12 +5,7 @@
 import { ActionTypes } from '../../actions/ActionTypes'
 import { User } from '../../domain/model/User'
 
-type UsersAction = {
-  type: ActionTypes.GET_USERS,
-  users: User[],
-}
-
-const users = (state: User[] = [], action: UsersAction) => {
+const users = (state: User[] = [], action: any = {}) => {
   switch (action.type) {
     case ActionTypes.GET_USERS:
       return action.users
