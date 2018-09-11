@@ -3,6 +3,8 @@
  */
 
 import * as React from 'react'
+// import * as ReactHtmlParser from 'react-html-parser'
+import * as moment from 'moment'
 import Avatar from '@material-ui/core/Avatar'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
@@ -14,7 +16,7 @@ import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 
 import * as actions from './actions'
-import placeholder from '../../assets/placeholder.png'
+// import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
 import FooterCard from '../../components/footerCard/FooterCard'
@@ -57,7 +59,7 @@ export class ArticleDetail extends React.Component<Props> {
   }
 
   public render() {
-    const { isUserArticle, isDeletingArticle } = this.props
+    const { isUserArticle, isDeletingArticle, userArticle } = this.props
     return (
       <div style={styles.container}>
         <div style={styles.contentContainer}>
@@ -70,13 +72,15 @@ export class ArticleDetail extends React.Component<Props> {
                 variant='subheading'
                 style={styles.profileName}
               >
-                {'Henry Connor'}
+                {/* {'Henry Connor'} */}
+                {isUserArticle && userArticle.authorId}
               </Typography>
               <Typography
                 variant='body1'
                 color='textSecondary'
               >
-                {'20 August 2018'}
+                {/* {'20 August 2018'} */}
+                {isUserArticle && moment(userArticle.createdAt).format('DD MMMM YYYY')}
               </Typography>
             </div>
             <div style={styles.buttonContainer}>
@@ -97,10 +101,12 @@ export class ArticleDetail extends React.Component<Props> {
             variant='display1'
             component='h1'
           >
-            {'Adjustable sidebar using Angular'}
+            {/* {'Adjustable sidebar using Angular'} */}
+            {isUserArticle && userArticle.title}
           </Typography>
-          <img src={placeholder} style={styles.placeholderImage} />
-          {this.renderMultilineText()}
+          {/* <img src={placeholder} style={styles.placeholderImage} /> */}
+          {/* {isUserArticle && ReactHtmlParser(userArticle.description)} */}
+          {/* {this.renderMultilineText()} */}
         </div>
         <Divider style={styles.footerDivider} />
         <Grid container spacing={24}>
