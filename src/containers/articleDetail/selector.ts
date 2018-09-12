@@ -3,13 +3,20 @@ import { find, filter, sampleSize } from 'lodash'
 
 import { State } from '../../reducers'
 import { Article } from '../../domain/model/Article'
+import { User } from '../../domain/model/User'
 
 export interface StateProps {
+  articles: Article[]
+  users: User[]
+  userArticle: Article
+  isUserArticle: boolean
   footerArticles: Article[]
   isDeletingArticle: boolean
-  isUserArticle: boolean
-  userArticle: Article
 }
+
+const articles = (state: State) => state.entities.articles
+
+const users = (state: State) => state.entities.users
 
 const userArticle = createSelector(
   (state: State) => state.entities.articles,
@@ -42,8 +49,10 @@ const footerArticles = createSelector(
 const isDeletingArticle = (state: State) => state.containers.articleDetail.isDeletingArticle
 
 export default createStructuredSelector({
+  articles,
+  users,
+  userArticle,
+  isUserArticle,
   footerArticles,
   isDeletingArticle,
-  isUserArticle,
-  userArticle,
 })

@@ -10,7 +10,6 @@ import Typography from '@material-ui/core/Typography'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
 
-import * as Config from '../../constants/config'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import { footerCardString } from '../../constants/string'
@@ -29,7 +28,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
   return (
     <div
       id={`footer-${article._id}`}
-      onClick={() => dispatch(push(Config.HEADER_LINK.articleDetail))}
+      onClick={() => dispatch(push(`${article._id}`))}
       style={styles.root}
     >
       <Card style={styles.card}>

@@ -42,11 +42,6 @@ export default {
     marginTop: 32,
     marginBottom: 32
   },
-  placeholderImage: {
-    width: '100%',
-    height: '80%',
-    marginTop: '4%',
-  },
   profileContainer: {
     display: 'flex',
     marginBottom: '3%',

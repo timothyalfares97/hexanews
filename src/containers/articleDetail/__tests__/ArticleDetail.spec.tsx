@@ -18,10 +18,20 @@ const mockArticle: Article = {
   authorId: 'tester',
 }
 
+const mockUser = {
+  _id: '1',
+  createdAt: 'created',
+  description: 'desc',
+  email: 'user@email.com',
+  name: 'user'
+}
+
 describe('Article Detail', () => {
   it('renders Article Detail', () => {
     const component = renderer.create(
       <ArticleDetail
+        articles={[mockArticle]}
+        users={[mockUser]}
         userArticle={mockArticle}
         isDeletingArticle={false}
         isUserArticle={true}
@@ -37,6 +47,8 @@ describe('Article Detail', () => {
   it('renders Article Detail with isDeletingArticle to be true', () => {
     const component = renderer.create(
       <ArticleDetail
+        articles={[mockArticle]}
+        users={[mockUser]}
         userArticle={mockArticle}
         isDeletingArticle={true}
         isUserArticle={true}
@@ -54,6 +66,8 @@ describe('Article Detail', () => {
     const dispatch = jest.fn()
     const component = (
       <ArticleDetail
+        articles={[mockArticle]}
+        users={[mockUser]}
         userArticle={articleWithoutId}
         isDeletingArticle={false}
         isUserArticle={true}

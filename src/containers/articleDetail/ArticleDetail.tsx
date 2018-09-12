@@ -11,14 +11,14 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import { map } from 'lodash'
+import { map, find } from 'lodash'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 
 import * as actions from './actions'
-// import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
+import { User } from '../../domain/model/User'
 import FooterCard from '../../components/footerCard/FooterCard'
 import selector, { StateProps } from './selector'
 
@@ -29,58 +29,30 @@ type Props = {
 
 export class ArticleDetail extends React.Component<Props> {
 
-  renderMultilineText = () => {
-    // tslint:disable:max-line-length
-    const text = `Also for this tutorial I din’t put accent on CSS I assume that you already created a sidebar which you need to make draggable. For my example the structure is pretty simple, the class attributes are used only for CSS purposes. The #sidebarIdentifier is a property decorator that I will use to get the current width of the sidebar and the [style.width.px] is the Angular property that I will use to bind the new width.
-    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that`
-    return text.split('\n').map((item, i) => {
-      return <Typography style={styles.description}>{item}</Typography>
-    })
-  }
-
-  renderFooterCards = () => {
-    const { dispatch, footerArticles } = this.props
-    return map(footerArticles, (article) => (
-      <Grid item xs={4} key={article._id}>
-        <FooterCard
-          article={article}
-          dispatch={dispatch}
-        />
-      </Grid>
-    ))
-  }
-
-  onDeleteArticle = async () => {
-    const { dispatch, userArticle } = this.props
-    const articleId = userArticle._id
-    if (!!articleId) {
-      await dispatch(actions.deleteArticle(articleId))
-    }
-  }
-
-  public render() {
-    const { isUserArticle, isDeletingArticle, userArticle } = this.props
-    return (
-      <div style={styles.container}>
+  renderArticle = () => {
+    const { users, userArticle, isUserArticle, isDeletingArticle } = this.props
+    const authorId = userArticle.authorId
+    if (!!authorId) {
+      const author = find(users, (user: User) => user._id === userArticle.authorId)
+      const authorName = author ? author.name : 'Author Deleted'
+      return (
         <div style={styles.contentContainer}>
           <div style={styles.profileContainer}>
             <Avatar style={styles.avatar}>
               HC
-            </Avatar>
+              </Avatar>
             <div style={styles.detailContainer as any}>
               <Typography
                 variant='subheading'
                 style={styles.profileName}
               >
-                {/* {'Henry Connor'} */}
-                {isUserArticle && userArticle.authorId}
+                {authorName}
               </Typography>
               <Typography
                 variant='body1'
                 color='textSecondary'
               >
-                {/* {'20 August 2018'} */}
-                {isUserArticle && moment(userArticle.createdAt).format('D MMMM YYYY')}
+                {moment(userArticle.createdAt).format('D MMMM YYYY')}
               </Typography>
             </div>
             <div style={styles.buttonContainer}>
@@ -102,13 +74,40 @@ export class ArticleDetail extends React.Component<Props> {
             component='h1'
             gutterBottom
           >
-            {/* {'Adjustable sidebar using Angular'} */}
-            {isUserArticle && userArticle.title}
+            {userArticle.title}
           </Typography>
-          {/* <img src={placeholder} style={styles.placeholderImage} /> */}
-          {isUserArticle && ReactHtmlParser(userArticle.description)}
-          {/* {this.renderMultilineText()} */}
+          {ReactHtmlParser(userArticle.description)}
         </div>
+      )
+    }
+    return
+  }
+
+  renderFooterCards = () => {
+    const { dispatch, footerArticles } = this.props
+    return map(footerArticles, (article) => (
+      <Grid item xs={4} key={article._id}>
+        <FooterCard
+          article={article}
+          dispatch={dispatch}
+          key={article._id}
+        />
+      </Grid>
+    ))
+  }
+
+  onDeleteArticle = async () => {
+    const { dispatch, userArticle } = this.props
+    const articleId = userArticle._id
+    if (!!articleId) {
+      await dispatch(actions.deleteArticle(articleId))
+    }
+  }
+
+  public render() {
+    return (
+      <div style={styles.container}>
+        {this.renderArticle()}
         <Divider style={styles.footerDivider} />
         <Grid container spacing={24}>
           {this.renderFooterCards()}
