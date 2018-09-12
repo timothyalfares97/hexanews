@@ -13,22 +13,23 @@ import Typography from '@material-ui/core/Typography'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import * as Config from '../../constants/config'
+import { Article } from '../../domain/model/Article'
 
 type Props = {
-  title: string,
-  description: string,
+  article: Article,
   dispatch: Dispatch<any>,
 }
 
 const ArticleCard: React.StatelessComponent<Props> = ({
-  title,
-  description,
+  article,
   dispatch,
 }) => {
+  const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
+  const articleDescription = sanitizedDescription.length > 128 ? `${sanitizedDescription.substring(0, 128)}...` : sanitizedDescription
   return (
-    <div id={`article-${title}`}
-     style={styles.root}
-     onClick={() => dispatch(push(`${Config.HEADER_LINK.articleDetail}/1`))}
+    <div id={`article-${article.title}`}
+      style={styles.root}
+      onClick={() => dispatch(push(`${Config.HEADER_LINK.articleDetail}/${article._id}`))}
     >
       <Card style={styles.card}>
         <CardMedia
@@ -41,10 +42,10 @@ const ArticleCard: React.StatelessComponent<Props> = ({
             gutterBottom
             variant='headline'
           >
-            {title}
+            {article.title}
           </Typography>
           <Typography component='p'>
-            {description}
+            {articleDescription}
           </Typography>
         </CardContent>
       </Card>
