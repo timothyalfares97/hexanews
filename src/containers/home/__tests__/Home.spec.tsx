@@ -8,6 +8,14 @@ import { Home } from '../Home'
 
 Enzyme.configure({ adapter: new Adapter() })
 
+const mockUser = {
+  _id: '1',
+  createdAt: 'created',
+  description: 'desc',
+  email: 'user@email.com',
+  name: 'user'
+}
+
 describe('Home', () => {
 
   it('renders Home component', () => {
@@ -16,6 +24,7 @@ describe('Home', () => {
         <Home
           articles={[]}
           dispatch={jest.fn()}
+          users={[mockUser]}
         />
       </BrowserRouter>
     )

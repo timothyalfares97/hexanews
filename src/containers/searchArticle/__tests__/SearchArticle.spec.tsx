@@ -26,11 +26,20 @@ const mockArticles: Article[] = [
   }
 ]
 
+const mockUser = {
+  _id: '1',
+  createdAt: 'created',
+  description: 'desc',
+  email: 'user@email.com',
+  name: 'user'
+}
+
 describe('Search Article', () => {
   it('renders Search Articles with zero articles', () => {
     const component = renderer.create(
       <SearchArticle
         articles={[]}
+        users={[mockUser]}
       />
     )
     let tree = component.toJSON()
@@ -41,6 +50,7 @@ describe('Search Article', () => {
     const component = renderer.create(
       <SearchArticle
         articles={mockArticles}
+        users={[mockUser]}
       />
     )
     let tree = component.toJSON()
@@ -51,6 +61,7 @@ describe('Search Article', () => {
     const component = (
       <SearchArticle
         articles={mockArticles}
+        users={[mockUser]}
       />
     )
 
@@ -76,6 +87,7 @@ describe('Search Article', () => {
     const component = (
       <SearchArticle
         articles={mockArticles}
+        users={[mockUser]}
       />
     )
 

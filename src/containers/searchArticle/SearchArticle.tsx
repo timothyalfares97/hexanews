@@ -11,11 +11,13 @@ import CardHeader from '@material-ui/core/CardHeader'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
-import { isEmpty, map, filter } from 'lodash'
+import { isEmpty, map, filter, find } from 'lodash'
+import * as moment from 'moment'
 
 import selector, { StateProps } from './selector'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
+import { User } from '../../domain/model/User'
 
 export type Props = StateProps
 
@@ -43,6 +45,8 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
   }
 
   renderArticles = (filteredArticles: Article[]) => {
+    const { users } = this.props
+
     if (isEmpty(filteredArticles)) {
       return (
         <div>
@@ -51,23 +55,27 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
       )
     }
 
-    return map(filteredArticles, (article: Article) => (
-      <Card style={styles.card} key={article._id}>
-        <CardHeader
-          avatar={<Avatar style={styles.avatar}>HC</Avatar>}
-          title='Hillary Clinton'
-          subheader='20 August 2018'
-        />
-        <CardContent>
-          <Typography gutterBottom variant='headline' component='h2'>
-            {article.title}
-          </Typography>
-          <Typography component='p'>
-            {article.description}
-          </Typography>
-        </CardContent>
-      </Card>
-    ))
+    return map(filteredArticles, (article: Article) => {
+      const author = find(users, (user: User) => user._id === article.authorId)
+      const authorName = author ? author.name : ''
+      return (
+        <Card style={styles.card} key={article._id}>
+          <CardHeader
+            avatar={<Avatar style={styles.avatar}>HC</Avatar>}
+            title={authorName}
+            subheader={moment(article.createdAt).format('DD MMMM YYYY')}
+          />
+          <CardContent>
+            <Typography gutterBottom variant='headline' component='h2'>
+              {article.title}
+            </Typography>
+            <Typography component='p'>
+              {article.description}
+            </Typography>
+          </CardContent>
+        </Card>
+      )
+    })
   }
 
   public render() {

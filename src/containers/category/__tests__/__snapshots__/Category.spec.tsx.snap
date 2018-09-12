@@ -355,7 +355,7 @@ exports[`Category renders Category component 1`] = `
                   }
                 }
               >
-                Hillary Clinton
+                
               </p>
               <p
                 className="MuiTypography-root-40 MuiTypography-body1-49 MuiTypography-colorTextSecondary-63"
@@ -365,7 +365,7 @@ exports[`Category renders Category component 1`] = `
                   }
                 }
               >
-                11 September 2018
+                12 September 2018
               </p>
             </div>
           </div>

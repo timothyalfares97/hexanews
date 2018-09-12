@@ -16,12 +16,14 @@ import styles from './styles'
 import { Article } from '../../domain/model/Article'
 
 type Props = {
-  article: Article
-  dispatch: Dispatch<any>
+  article: Article,
+  authorName: string,
+  dispatch: Dispatch<any>,
 }
 
 const ArticleRow: React.StatelessComponent<Props> = ({
   article,
+  authorName,
   dispatch,
 }) => {
   const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
@@ -47,7 +49,7 @@ const ArticleRow: React.StatelessComponent<Props> = ({
               variant='body1'
               style={styles.author}
             >
-              {'Hillary Clinton'}
+              {authorName}
             </Typography>
             <Typography
               variant='body1'

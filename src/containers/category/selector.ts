@@ -3,10 +3,12 @@ import { filter } from 'lodash'
 
 import { State } from '../../reducers'
 import { Article } from '../../domain/model/Article'
+import { User } from '../../domain/model/User'
 
 export interface StateProps {
   categoryArticles: Article[]
   categoryTitle: string
+  users: User[]
 }
 
 const categoryArticles = createSelector(
@@ -23,7 +25,10 @@ const categoryArticles = createSelector(
 
 const categoryTitle = (_: State, props: any) => props.match.params.category
 
+const users = (state: State) => state.entities.users
+
 export default createStructuredSelector({
   categoryArticles,
-  categoryTitle
+  categoryTitle,
+  users,
 })

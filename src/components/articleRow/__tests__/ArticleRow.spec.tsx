@@ -21,6 +21,7 @@ describe('Article Row', () => {
     const component = renderer.create(
       <ArticleRow
         article={mockArticle}
+        authorName='tim'
         dispatch={jest.fn()}
       />
     )

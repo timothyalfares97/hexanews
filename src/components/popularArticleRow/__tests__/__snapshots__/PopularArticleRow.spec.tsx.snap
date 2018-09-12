@@ -23,7 +23,7 @@ exports[`Popular Article Row renders Popular Article Row 1`] = `
       }
     }
   >
-    Hillary Clinton
+    tim
   </p>
 </div>
 `;

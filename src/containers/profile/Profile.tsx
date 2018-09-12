@@ -11,6 +11,7 @@ import CardHeader from '@material-ui/core/CardHeader'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import * as moment from 'moment'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 import { push } from 'connected-react-router'
@@ -35,8 +36,34 @@ export class Profile extends React.Component<Props> {
     return <Avatar style={styles.avatar}>HC</Avatar>
   }
 
+  renderUserArticles = () => {
+    const { userArticles, dispatch, user } = this.props
+    return map(userArticles, (article: Article) => (
+      <Card
+        style={styles.card}
+        key={article._id}
+        onClick={() => dispatch(push(`/articleDetail/${article._id}`))}
+        id={`card-${article._id}`}
+      >
+        <CardHeader
+          avatar={this.renderAvatar()}
+          title={user.name}
+          subheader={moment(article.createdAt).format('DD MMMM YYYY')}
+        />
+        <CardContent>
+          <Typography gutterBottom variant='headline' component='h2'>
+            {article.title}
+          </Typography>
+          <Typography component='p'>
+            {article.description}
+          </Typography>
+        </CardContent>
+      </Card>
+    ))
+  }
+
   public render() {
-    const { dispatch, user, userArticles } = this.props
+    const { dispatch, user } = this.props
     return (
       <div style={styles.container}>
         <ProfileCard
@@ -58,28 +85,7 @@ export class Profile extends React.Component<Props> {
         <Divider style={styles.profileDivider} />
         <Grid container spacing={24}>
           <Grid item xs={12} style={styles.articleContainer}>
-            {map(userArticles, (article: Article) => (
-              <Card
-                style={styles.card}
-                key={article._id}
-                onClick={() => dispatch(push(`/articleDetail/${article._id}`))}
-                id={`card-${article._id}`}
-              >
-                <CardHeader
-                  avatar={this.renderAvatar()}
-                  title={user.name}
-                  subheader={user.createdAt}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant='headline' component='h2'>
-                    {article.title}
-                  </Typography>
-                  <Typography component='p'>
-                    {article.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            ))}
+            {this.renderUserArticles()}
           </Grid>
         </Grid>
       </div >

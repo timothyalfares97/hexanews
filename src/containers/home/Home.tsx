@@ -8,7 +8,7 @@ import { Dispatch } from 'redux'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
-import { map, orderBy, take } from 'lodash'
+import { map, orderBy, take, find } from 'lodash'
 
 import ArticleCard from '../../components/articleCard/ArticleCard'
 import ArticleRow from '../../components/articleRow/ArticleRow'
@@ -17,6 +17,7 @@ import styles from './styles'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 import { homeString } from '../../constants/string'
 import selector, { StateProps } from './selector'
+import { User } from '../../domain/model/User'
 
 type Props = {
   dispatch: Dispatch<any>
@@ -25,28 +26,38 @@ type Props = {
 export class Home extends React.Component<Props> {
 
   renderAllArticles = () => {
-    const { articles, dispatch } = this.props
+    const { articles, dispatch, users } = this.props
     const orderedArticles = orderBy(articles, ['createdAt'], ['desc'])
-    return map(orderedArticles, (article) => (
-      <ArticleRow
-        article={article}
-        dispatch={dispatch}
-        key={article._id}
-      />
-    ))
+    return map(orderedArticles, (article) => {
+      const author = find(users, (user: User) => user._id === article.authorId)
+      const authorName = author ? author.name : ''
+      return (
+        <ArticleRow
+          article={article}
+          authorName={authorName}
+          dispatch={dispatch}
+          key={article._id}
+        />
+      )
+    })
   }
 
   renderPopularArticles = () => {
-    const { articles, dispatch } = this.props
+    const { articles, dispatch, users } = this.props
     const sortedPopularArticles = orderBy(articles, ['views'], ['desc'])
     const threePopularArticles = take(sortedPopularArticles, 3)
-    return map(threePopularArticles, (article) => (
-      <PopularArticleRow
-        article={article}
-        dispatch={dispatch}
-        key={article._id}
-      />
-    ))
+    return map(threePopularArticles, (article) => {
+      const author = find(users, (user: User) => user._id === article.authorId)
+      const authorName = author ? author.name : ''
+      return (
+        <PopularArticleRow
+          article={article}
+          authorName={authorName}
+          dispatch={dispatch}
+          key={article._id}
+        />
+      )
+    })
   }
 
   public render() {

@@ -11,12 +11,14 @@ import styles from './styles'
 import { Article } from '../../domain/model/Article'
 
 type Props = {
-  article: Article
-  dispatch: Dispatch<any>
+  article: Article,
+  authorName: string,
+  dispatch: Dispatch<any>,
 }
 
 const PopularArticleRow: React.StatelessComponent<Props> = ({
   article,
+  authorName,
   dispatch,
 }) => {
   return (
@@ -29,7 +31,7 @@ const PopularArticleRow: React.StatelessComponent<Props> = ({
         color='textSecondary'
         style={styles.author}
       >
-        {'Hillary Clinton'}
+        {authorName}
       </Typography>
     </div>
   )

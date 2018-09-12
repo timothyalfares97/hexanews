@@ -19,6 +19,14 @@ const mockArticles: Article[] = [
   },
 ]
 
+const mockUser = {
+  _id: '1',
+  createdAt: 'created',
+  description: 'desc',
+  email: 'user@email.com',
+  name: 'user'
+}
+
 describe('Category', () => {
 
   it('renders Category component', () => {
@@ -28,6 +36,7 @@ describe('Category', () => {
           categoryArticles={mockArticles}
           categoryTitle='technology'
           dispatch={jest.fn()}
+          users={[mockUser]}
         />
       </BrowserRouter>
     )
