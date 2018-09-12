@@ -49,12 +49,12 @@ exports[`Create Article renders Create Article 1`] = `
           }
         }
       >
-        Hillary Clinton
+        user
       </h3>
       <p
         className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
       >
-        A politician, writer and philanthropist.
+        desc
       </p>
       <p
         className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
@@ -310,12 +310,12 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
           }
         }
       >
-        Hillary Clinton
+        user
       </h3>
       <p
         className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
       >
-        A politician, writer and philanthropist.
+        desc
       </p>
       <p
         className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"

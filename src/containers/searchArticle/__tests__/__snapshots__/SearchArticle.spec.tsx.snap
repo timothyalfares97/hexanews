@@ -82,7 +82,7 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
             className="MuiCardHeader-avatar-156"
           >
             <div
-              className="MuiAvatar-root-161 MuiAvatar-colorDefault-162"
+              className="MuiAvatar-root-161"
               style={
                 Object {
                   "alignSelf": "center",
@@ -91,9 +91,7 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
                   "width": 50,
                 }
               }
-            >
-              HC
-            </div>
+            />
           </div>
           <div
             className="MuiCardHeader-content-158"
@@ -141,7 +139,7 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
             className="MuiCardHeader-avatar-156"
           >
             <div
-              className="MuiAvatar-root-161 MuiAvatar-colorDefault-162"
+              className="MuiAvatar-root-161"
               style={
                 Object {
                   "alignSelf": "center",
@@ -150,9 +148,7 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
                   "width": 50,
                 }
               }
-            >
-              HC
-            </div>
+            />
           </div>
           <div
             className="MuiCardHeader-content-158"

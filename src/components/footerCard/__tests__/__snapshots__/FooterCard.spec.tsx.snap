@@ -67,7 +67,7 @@ exports[`Footer Card renders Footer Card 1`] = `
             }
           }
         >
-          EK
+          T
         </div>
         <div
           style={
@@ -86,7 +86,7 @@ exports[`Footer Card renders Footer Card 1`] = `
               }
             }
           >
-            Erik Kennedy
+            test
           </p>
           <p
             className="MuiTypography-root-32 MuiTypography-body1-41 MuiTypography-colorTextSecondary-55"
@@ -96,7 +96,7 @@ exports[`Footer Card renders Footer Card 1`] = `
               }
             }
           >
-            8 March 2018
+            12 September 2018
           </p>
         </div>
       </div>

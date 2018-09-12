@@ -56,7 +56,7 @@ const ArticleRow: React.StatelessComponent<Props> = ({
               color='textSecondary'
               style={styles.date}
             >
-              {moment(article.createdAt).format('DD MMMM YYYY')}
+              {moment(article.createdAt).format('D MMMM YYYY')}
             </Typography>
           </CardContent>
         </div>

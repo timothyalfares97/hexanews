@@ -171,7 +171,7 @@ exports[`Profile renders Profile 1`] = `
                 }
               }
             >
-              HC
+              U
             </div>
           </div>
           <div
@@ -233,7 +233,7 @@ exports[`Profile renders Profile 1`] = `
                 }
               }
             >
-              HC
+              U
             </div>
           </div>
           <div
@@ -442,7 +442,7 @@ exports[`Profile renders Profile without description 1`] = `
                 }
               }
             >
-              HC
+              U
             </div>
           </div>
           <div
@@ -504,7 +504,7 @@ exports[`Profile renders Profile without description 1`] = `
                 }
               }
             >
-              HC
+              U
             </div>
           </div>
           <div

@@ -15,7 +15,7 @@ import Typography from '@material-ui/core/Typography'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 import { push } from 'connected-react-router'
-import { map } from 'lodash'
+import { map, startCase, head } from 'lodash'
 
 import avatarPlaceholder from '../../assets/avatar_placeholder.png'
 import ProfileCard from '../../components/profileCard/ProfileCard'
@@ -32,8 +32,9 @@ type Props = {
 
 export class Profile extends React.Component<Props> {
 
-  renderAvatar = () => {
-    return <Avatar style={styles.avatar}>HC</Avatar>
+  renderAvatar = (authorName: string) => {
+    const initials = head(startCase(authorName))
+    return <Avatar style={styles.avatar}>{initials}</Avatar>
   }
 
   renderUserArticles = () => {
@@ -46,7 +47,7 @@ export class Profile extends React.Component<Props> {
         id={`card-${article._id}`}
       >
         <CardHeader
-          avatar={this.renderAvatar()}
+          avatar={this.renderAvatar(user.name)}
           title={user.name}
           subheader={moment(article.createdAt).format('D MMMM YYYY')}
         />

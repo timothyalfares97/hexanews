@@ -7,6 +7,7 @@ import { User } from '../../domain/model/User'
 
 export interface StateProps {
   articles: Article[]
+  authorName: string
   users: User[]
   userArticle: Article
   isUserArticle: boolean

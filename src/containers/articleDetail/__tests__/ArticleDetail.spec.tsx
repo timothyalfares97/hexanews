@@ -30,12 +30,12 @@ describe('Article Detail', () => {
   it('renders Article Detail', () => {
     const component = renderer.create(
       <ArticleDetail
+        authorName='test'
         articles={[mockArticle]}
         users={[mockUser]}
         userArticle={mockArticle}
         isDeletingArticle={false}
         isUserArticle={true}
-        article={mockArticle}
         footerArticles={[mockArticle]}
         dispatch={jest.fn()}
       />
@@ -53,7 +53,7 @@ describe('Article Detail', () => {
         isDeletingArticle={true}
         isUserArticle={true}
         footerArticles={[mockArticle]}
-        article={mockArticle}
+        authorName='test'
         dispatch={jest.fn()}
       />
     )
@@ -72,7 +72,7 @@ describe('Article Detail', () => {
         isDeletingArticle={false}
         isUserArticle={true}
         footerArticles={[mockArticle]}
-        article={articleWithoutId}
+        authorName='test'
         dispatch={dispatch}
       />
     )

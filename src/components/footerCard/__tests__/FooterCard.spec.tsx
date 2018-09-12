@@ -23,6 +23,7 @@ describe('Footer Card', () => {
       <FooterCard
         dispatch={jest.fn()}
         article={mockArticle}
+        authorName='test'
       />
     )
     let tree = component.toJSON()
@@ -35,6 +36,7 @@ describe('Footer Card', () => {
       <FooterCard
         dispatch={dispatch}
         article={mockArticle}
+        authorName='test'
       />
     )
     const layout = shallow(component)

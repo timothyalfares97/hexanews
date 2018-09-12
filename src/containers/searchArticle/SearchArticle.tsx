@@ -11,7 +11,7 @@ import CardHeader from '@material-ui/core/CardHeader'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
-import { isEmpty, map, filter, find } from 'lodash'
+import { isEmpty, map, filter, find, head, startCase } from 'lodash'
 import * as moment from 'moment'
 
 import selector, { StateProps } from './selector'
@@ -44,6 +44,11 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
     this.setState({ query: event.target.value })
   }
 
+  renderAvatar = (authorName: string) => {
+    const initials = head(startCase(authorName))
+    return <Avatar style={styles.avatar}>{initials}</Avatar>
+  }
+
   renderArticles = (filteredArticles: Article[]) => {
     const { users } = this.props
 
@@ -61,7 +66,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
       return (
         <Card style={styles.card} key={article._id}>
           <CardHeader
-            avatar={<Avatar style={styles.avatar}>HC</Avatar>}
+            avatar={this.renderAvatar(authorName)}
             title={authorName}
             subheader={moment(article.createdAt).format('DD MMMM YYYY')}
           />

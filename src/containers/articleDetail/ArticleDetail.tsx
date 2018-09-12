@@ -11,20 +11,18 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import { map, find } from 'lodash'
+import { map, find, head, startCase } from 'lodash'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 
 import * as actions from './actions'
 import styles from './styles'
-import { Article } from '../../domain/model/Article'
 import { User } from '../../domain/model/User'
 import FooterCard from '../../components/footerCard/FooterCard'
 import selector, { StateProps } from './selector'
 
 type Props = {
   dispatch: Dispatch<any>
-  article: Article
 } & StateProps
 
 export class ArticleDetail extends React.Component<Props> {
@@ -35,12 +33,13 @@ export class ArticleDetail extends React.Component<Props> {
     if (!!authorId) {
       const author = find(users, (user: User) => user._id === userArticle.authorId)
       const authorName = author ? author.name : 'Author Deleted'
+      const initials = head(startCase(authorName))
       return (
         <div style={styles.contentContainer}>
           <div style={styles.profileContainer}>
             <Avatar style={styles.avatar}>
-              HC
-              </Avatar>
+              {initials}
+            </Avatar>
             <div style={styles.detailContainer as any}>
               <Typography
                 variant='subheading'
@@ -84,16 +83,21 @@ export class ArticleDetail extends React.Component<Props> {
   }
 
   renderFooterCards = () => {
-    const { dispatch, footerArticles } = this.props
-    return map(footerArticles, (article) => (
-      <Grid item xs={4} key={article._id}>
-        <FooterCard
-          article={article}
-          dispatch={dispatch}
-          key={article._id}
-        />
-      </Grid>
-    ))
+    const { dispatch, footerArticles, users } = this.props
+    return map(footerArticles, (article) => {
+      const author = find(users, (user: User) => user._id === article.authorId)
+      const authorName = author ? author.name : 'Author Deleted'
+      return (
+        <Grid item xs={4} key={article._id}>
+          <FooterCard
+            article={article}
+            authorName={authorName}
+            dispatch={dispatch}
+            key={article._id}
+          />
+        </Grid>
+      )
+    })
   }
 
   onDeleteArticle = async () => {

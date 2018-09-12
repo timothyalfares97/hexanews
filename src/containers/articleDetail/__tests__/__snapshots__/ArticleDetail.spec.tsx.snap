@@ -40,7 +40,7 @@ exports[`Article Detail renders Article Detail 1`] = `
           }
         }
       >
-        HC
+        A
       </div>
       <div
         style={
@@ -58,12 +58,12 @@ exports[`Article Detail renders Article Detail 1`] = `
             }
           }
         >
-          Henry Connor
+          Author Deleted
         </h3>
         <p
           className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
         >
-          20 August 2018
+          12 September 2018
         </p>
       </div>
       <div
@@ -110,48 +110,11 @@ exports[`Article Detail renders Article Detail 1`] = `
       </div>
     </div>
     <h1
-      className="MuiTypography-root-4 MuiTypography-display1-8"
+      className="MuiTypography-root-4 MuiTypography-display1-8 MuiTypography-gutterBottom-21"
     >
-      Adjustable sidebar using Angular
+      def
     </h1>
-    <img
-      src={undefined}
-      style={
-        Object {
-          "height": "80%",
-          "marginTop": "4%",
-          "width": "100%",
-        }
-      }
-    />
-    <p
-      className="MuiTypography-root-4 MuiTypography-body1-13"
-      style={
-        Object {
-          "fontFamily": "Helvetica",
-          "fontSize": 18,
-          "fontStyle": "normal",
-          "lineHeight": 1.75,
-          "marginTop": 24,
-        }
-      }
-    >
-      Also for this tutorial I din’t put accent on CSS I assume that you already created a sidebar which you need to make draggable. For my example the structure is pretty simple, the class attributes are used only for CSS purposes. The #sidebarIdentifier is a property decorator that I will use to get the current width of the sidebar and the [style.width.px] is the Angular property that I will use to bind the new width.
-    </p>
-    <p
-      className="MuiTypography-root-4 MuiTypography-body1-13"
-      style={
-        Object {
-          "fontFamily": "Helvetica",
-          "fontSize": 18,
-          "fontStyle": "normal",
-          "lineHeight": 1.75,
-          "marginTop": 24,
-        }
-      }
-    >
-          But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
-    </p>
+    tester
   </div>
   <hr
     className="MuiDivider-root-65"
@@ -234,7 +197,7 @@ exports[`Article Detail renders Article Detail 1`] = `
                   }
                 }
               >
-                EK
+                A
               </div>
               <div
                 style={
@@ -253,7 +216,7 @@ exports[`Article Detail renders Article Detail 1`] = `
                     }
                   }
                 >
-                  Erik Kennedy
+                  Author Deleted
                 </p>
                 <p
                   className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
@@ -263,7 +226,7 @@ exports[`Article Detail renders Article Detail 1`] = `
                     }
                   }
                 >
-                  8 March 2018
+                  12 September 2018
                 </p>
               </div>
             </div>
@@ -315,7 +278,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
           }
         }
       >
-        HC
+        A
       </div>
       <div
         style={
@@ -333,12 +296,12 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
             }
           }
         >
-          Henry Connor
+          Author Deleted
         </h3>
         <p
           className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
         >
-          20 August 2018
+          12 September 2018
         </p>
       </div>
       <div
@@ -409,48 +372,11 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
       </div>
     </div>
     <h1
-      className="MuiTypography-root-4 MuiTypography-display1-8"
+      className="MuiTypography-root-4 MuiTypography-display1-8 MuiTypography-gutterBottom-21"
     >
-      Adjustable sidebar using Angular
+      def
     </h1>
-    <img
-      src={undefined}
-      style={
-        Object {
-          "height": "80%",
-          "marginTop": "4%",
-          "width": "100%",
-        }
-      }
-    />
-    <p
-      className="MuiTypography-root-4 MuiTypography-body1-13"
-      style={
-        Object {
-          "fontFamily": "Helvetica",
-          "fontSize": 18,
-          "fontStyle": "normal",
-          "lineHeight": 1.75,
-          "marginTop": 24,
-        }
-      }
-    >
-      Also for this tutorial I din’t put accent on CSS I assume that you already created a sidebar which you need to make draggable. For my example the structure is pretty simple, the class attributes are used only for CSS purposes. The #sidebarIdentifier is a property decorator that I will use to get the current width of the sidebar and the [style.width.px] is the Angular property that I will use to bind the new width.
-    </p>
-    <p
-      className="MuiTypography-root-4 MuiTypography-body1-13"
-      style={
-        Object {
-          "fontFamily": "Helvetica",
-          "fontSize": 18,
-          "fontStyle": "normal",
-          "lineHeight": 1.75,
-          "marginTop": 24,
-        }
-      }
-    >
-          But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
-    </p>
+    tester
   </div>
   <hr
     className="MuiDivider-root-65"
@@ -533,7 +459,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
                   }
                 }
               >
-                EK
+                A
               </div>
               <div
                 style={
@@ -552,7 +478,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
                     }
                   }
                 >
-                  Erik Kennedy
+                  Author Deleted
                 </p>
                 <p
                   className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
@@ -562,7 +488,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
                     }
                   }
                 >
-                  8 March 2018
+                  12 September 2018
                 </p>
               </div>
             </div>
