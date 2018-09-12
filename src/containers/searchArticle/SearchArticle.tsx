@@ -63,6 +63,8 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
     return map(filteredArticles, (article: Article) => {
       const author = find(users, (user: User) => user._id === article.authorId)
       const authorName = author ? author.name : ''
+      const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
+      const articleDescription = sanitizedDescription.length > 128 ? `${sanitizedDescription.substring(0, 128)}...` : sanitizedDescription
       return (
         <Card style={styles.card} key={article._id}>
           <CardHeader
@@ -75,7 +77,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
               {article.title}
             </Typography>
             <Typography component='p'>
-              {article.description}
+              {articleDescription}
             </Typography>
           </CardContent>
         </Card>

@@ -39,28 +39,32 @@ export class Profile extends React.Component<Props> {
 
   renderUserArticles = () => {
     const { userArticles, dispatch, user } = this.props
-    return map(userArticles, (article: Article) => (
-      <Card
-        style={styles.card}
-        key={article._id}
-        onClick={() => dispatch(push(`/articleDetail/${article._id}`))}
-        id={`card-${article._id}`}
-      >
-        <CardHeader
-          avatar={this.renderAvatar(user.name)}
-          title={user.name}
-          subheader={moment(article.createdAt).format('D MMMM YYYY')}
-        />
-        <CardContent>
-          <Typography gutterBottom variant='headline' component='h2'>
-            {article.title}
-          </Typography>
-          <Typography component='p'>
-            {article.description}
-          </Typography>
-        </CardContent>
-      </Card>
-    ))
+    return map(userArticles, (article: Article) => {
+      const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
+      const articleDescription = sanitizedDescription.length > 128 ? `${sanitizedDescription.substring(0, 128)}...` : sanitizedDescription
+      return (
+        <Card
+          style={styles.card}
+          key={article._id}
+          onClick={() => dispatch(push(`/articleDetail/${article._id}`))}
+          id={`card-${article._id}`}
+        >
+          <CardHeader
+            avatar={this.renderAvatar(user.name)}
+            title={user.name}
+            subheader={moment(article.createdAt).format('D MMMM YYYY')}
+          />
+          <CardContent>
+            <Typography gutterBottom variant='headline' component='h2'>
+              {article.title}
+            </Typography>
+            <Typography component='p'>
+              {articleDescription}
+            </Typography>
+          </CardContent>
+        </Card>
+      )
+    })
   }
 
   public render() {
