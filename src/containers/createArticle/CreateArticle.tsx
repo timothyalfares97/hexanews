@@ -93,7 +93,7 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
   ]
 
   public render() {
-    const { dispatch, isCreatingArticle } = this.props
+    const { dispatch, user, isCreatingArticle } = this.props
     const { title, category, description } = this.state
     return (
       <div style={styles.container}>
@@ -101,10 +101,10 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
           <Avatar style={styles.avatar}>HC</Avatar>
           <div style={styles.profile as any}>
             <Typography variant='subheading' style={styles.title}>
-              {'Hillary Clinton'}
+              {user.name}
             </Typography>
             <Typography variant='body1' color='textSecondary'>
-              {'A politician, writer and philanthropist.'}
+              {user.description}
             </Typography>
             <Typography variant='body1' color='textSecondary'>
               {'Draft'}

@@ -9,10 +9,19 @@ import { CreateArticle, Props, ComponentState } from '../CreateArticle'
 jest.mock('react-quill')
 Enzyme.configure({ adapter: new Adapter() })
 
+const mockUser = {
+  _id: '1',
+  createdAt: 'created',
+  description: 'desc',
+  email: 'user@email.com',
+  name: 'user'
+}
+
 describe('Create Article', () => {
   it('renders Create Article', () => {
     const component = renderer.create(
       <CreateArticle
+        user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={false}
       />
@@ -24,6 +33,7 @@ describe('Create Article', () => {
   it('renders Create Article with isCreatingArticle as true', () => {
     const component = renderer.create(
       <CreateArticle
+        user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={true}
       />
@@ -35,6 +45,7 @@ describe('Create Article', () => {
   it('handle onChangeTitle', () => {
     const component = (
       <CreateArticle
+        user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={true}
       />
@@ -62,6 +73,7 @@ describe('Create Article', () => {
   it('handle onChangeCategory', () => {
     const component = (
       <CreateArticle
+        user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={true}
       />
@@ -89,6 +101,7 @@ describe('Create Article', () => {
   it('handle onChangeDescription', () => {
     const component = (
       <CreateArticle
+        user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={true}
       />
@@ -113,6 +126,7 @@ describe('Create Article', () => {
     const dispatch = jest.fn()
     const component = (
       <CreateArticle
+        user={mockUser}
         dispatch={dispatch}
         isCreatingArticle={true}
       />
@@ -131,6 +145,7 @@ describe('Create Article', () => {
     const dispatch = jest.fn()
     const component = (
       <CreateArticle
+        user={mockUser}
         dispatch={dispatch}
         isCreatingArticle={true}
       />
