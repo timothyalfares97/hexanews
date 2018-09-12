@@ -2,7 +2,7 @@
 
 exports[`Article Card renders Article Card 1`] = `
 <div
-  id="article-test"
+  id="article-def"
   onClick={[Function]}
   style={
     Object {
@@ -33,15 +33,35 @@ exports[`Article Card renders Article Card 1`] = `
     <div
       className="MuiCardContent-root-31"
     >
-      <h2
+      <h3
         className="MuiTypography-root-32 MuiTypography-headline-37 MuiTypography-gutterBottom-49"
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
       >
-        test
-      </h2>
+        def
+      </h3>
       <p
         className="MuiTypography-root-32 MuiTypography-body1-41"
+        style={
+          Object {
+            "marginTop": 14,
+          }
+        }
       >
-        test
+        tim
+      </p>
+      <p
+        className="MuiTypography-root-32 MuiTypography-body1-41 MuiTypography-colorTextSecondary-55"
+        style={
+          Object {
+            "marginTop": 2,
+          }
+        }
+      >
+        13 September 2018
       </p>
     </div>
   </div>

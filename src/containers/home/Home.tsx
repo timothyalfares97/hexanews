@@ -43,13 +43,16 @@ export class Home extends React.Component<Props> {
   }
 
   renderFeaturedArticles = () => {
-    const { articles, dispatch } = this.props
+    const { articles, dispatch, users } = this.props
     const featuredArticles = filter(articles, ['isFeatured', true])
     return map(featuredArticles, (article) => {
+      const author = find(users, (user: User) => user._id === article.authorId)
+      const authorName = author ? author.name : ''
       return (
         <Grid item md={4} xs={12} key={article._id}>
           <ArticleCard
             article={article}
+            authorName={authorName}
             dispatch={dispatch}
             key={article._id}
           />
@@ -89,7 +92,11 @@ export class Home extends React.Component<Props> {
             {this.renderAllArticles()}
           </Grid>
           <Grid item md={3} xs={12}>
-            <Typography variant='headline' component='h2' style={styles.topStory}>
+            <Typography
+              variant='title'
+              component='h2'
+              style={styles.topStory as any}
+            >
               {homeString.topStory}
             </Typography>
             <Divider style={styles.articleDivider} />

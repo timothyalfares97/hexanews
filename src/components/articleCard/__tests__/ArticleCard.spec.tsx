@@ -22,6 +22,7 @@ describe('Article Card', () => {
     const component = renderer.create(
       <ArticleCard
         article={mockArticle}
+        authorName='tim'
         dispatch={jest.fn()}
       />
     )
@@ -34,11 +35,12 @@ describe('Article Card', () => {
     const component = (
       <ArticleCard
         article={mockArticle}
+        authorName='tim'
         dispatch={dispatch}
       />
     )
     const layout = shallow(component)
-    layout.find('#article-test').first().simulate('click')
+    layout.find('#article-def').first().simulate('click')
     expect(dispatch).toHaveBeenCalled()
   })
 })

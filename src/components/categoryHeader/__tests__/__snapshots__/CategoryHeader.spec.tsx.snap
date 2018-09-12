@@ -32,7 +32,7 @@ exports[`Category Header renders Category Header 1`] = `
         }
       >
         <a
-          href="/category/tech"
+          href="/category/technology"
           onClick={[Function]}
           style={
             Object {
@@ -42,7 +42,7 @@ exports[`Category Header renders Category Header 1`] = `
             }
           }
         >
-          TECH
+          TECHNOLOGY
         </a>
       </span>
       <span

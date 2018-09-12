@@ -34,6 +34,7 @@ export default {
     display: 'flex',
   },
   title: {
-    marginBottom: 8
+    marginBottom: 8,
+    fontWeight: 'bold',
   },
 }

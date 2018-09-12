@@ -14,4 +14,10 @@ export default {
     height: 0,
     paddingTop: '56.25%',
   },
+  author: {
+    marginTop: 14
+  },
+  date: {
+    marginTop: 2,
+  },
 }

@@ -23,7 +23,10 @@ const PopularArticleRow: React.StatelessComponent<Props> = ({
 }) => {
   return (
     <div style={styles.container} onClick={() => dispatch(push(`articleDetail/${article._id}`))}>
-      <Typography variant='subheading'>
+      <Typography
+        variant='body1'
+        style={{ fontWeight: ' bold' } as any}
+      >
         {article.title}
       </Typography>
       <Typography

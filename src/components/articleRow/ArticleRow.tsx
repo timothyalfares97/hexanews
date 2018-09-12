@@ -29,14 +29,14 @@ const ArticleRow: React.StatelessComponent<Props> = ({
   return (
     <div
       style={styles.container}
-      onClick={() => dispatch(push(`articleDetail/${article._id}`))}
+      onClick={() => dispatch(push(`../articleDetail/${article._id}`))}
     >
       <Card style={styles.card}>
         <div style={styles.details as any}>
           <CardContent style={styles.content}>
             <Typography
-              variant='headline'
-              style={styles.title}
+              variant='title'
+              style={styles.title as any}
             >
               {article.title}
             </Typography>

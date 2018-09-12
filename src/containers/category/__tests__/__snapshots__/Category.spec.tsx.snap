@@ -41,7 +41,7 @@ exports[`Category renders Category component 1`] = `
           }
         >
           <a
-            href="/category/tech"
+            href="/category/technology"
             onClick={[Function]}
             style={
               Object {
@@ -51,7 +51,7 @@ exports[`Category renders Category component 1`] = `
               }
             }
           >
-            TECH
+            TECHNOLOGY
           </a>
         </span>
         <span
@@ -344,16 +344,17 @@ exports[`Category renders Category component 1`] = `
                 }
               }
             >
-              <h1
-                className="MuiTypography-root-40 MuiTypography-headline-45"
+              <h2
+                className="MuiTypography-root-40 MuiTypography-title-46"
                 style={
                   Object {
+                    "fontWeight": "bold",
                     "marginBottom": 8,
                   }
                 }
               >
                 abc
-              </h1>
+              </h2>
               <p
                 className="MuiTypography-root-40 MuiTypography-body1-49"
               >
@@ -377,7 +378,7 @@ exports[`Category renders Category component 1`] = `
                   }
                 }
               >
-                12 September 2018
+                13 September 2018
               </p>
             </div>
           </div>

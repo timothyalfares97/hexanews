@@ -41,7 +41,7 @@ exports[`Categories renders Categories component 1`] = `
           }
         >
           <a
-            href="/category/tech"
+            href="/category/technology"
             onClick={[Function]}
             style={
               Object {
@@ -51,7 +51,7 @@ exports[`Categories renders Categories component 1`] = `
               }
             }
           >
-            TECH
+            TECHNOLOGY
           </a>
         </span>
         <span
@@ -303,7 +303,7 @@ exports[`Categories renders Categories component 1`] = `
       >
         <div
           className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
-          id="category-tech"
+          id="category-technology"
           onClick={[Function]}
           style={
             Object {
@@ -328,7 +328,7 @@ exports[`Categories renders Categories component 1`] = `
             <h2
               className="MuiTypography-root-40 MuiTypography-title-46"
             >
-              Tech
+              Technology
             </h2>
           </div>
         </div>

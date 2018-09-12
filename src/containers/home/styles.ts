@@ -25,6 +25,7 @@ export default {
   topStory: {
     marginTop: 32,
     marginLeft: 24,
+    fontWeight: 'bold',
   },
   gridContainer: {
     paddingTop: '2%',

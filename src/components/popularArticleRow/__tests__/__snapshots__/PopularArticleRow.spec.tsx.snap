@@ -10,11 +10,16 @@ exports[`Popular Article Row renders Popular Article Row 1`] = `
     }
   }
 >
-  <h3
-    className="MuiTypography-root-1 MuiTypography-subheading-8"
+  <p
+    className="MuiTypography-root-1 MuiTypography-body1-10"
+    style={
+      Object {
+        "fontWeight": " bold",
+      }
+    }
   >
     def
-  </h3>
+  </p>
   <p
     className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextSecondary-24"
     style={

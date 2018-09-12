@@ -41,7 +41,7 @@ exports[`Home renders Home component 1`] = `
           }
         >
           <a
-            href="/category/tech"
+            href="/category/technology"
             onClick={[Function]}
             style={
               Object {
@@ -51,7 +51,7 @@ exports[`Home renders Home component 1`] = `
               }
             }
           >
-            TECH
+            TECHNOLOGY
           </a>
         </span>
         <span
@@ -284,160 +284,9 @@ exports[`Home renders Home component 1`] = `
         "paddingTop": "2%",
       }
     }
-  >
-    <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-4-125"
-    >
-      <div
-        id="article-Adjustable sidebar using Angular"
-        onClick={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-            "flexGrow": 1,
-          }
-        }
-      >
-        <div
-          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
-          style={
-            Object {
-              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
-              "maxWidth": 385,
-            }
-          }
-        >
-          <div
-            className="MuiCardMedia-root-163"
-            src={undefined}
-            style={
-              Object {
-                "height": 0,
-                "paddingTop": "56.25%",
-              }
-            }
-          />
-          <div
-            className="MuiCardContent-root-165"
-          >
-            <h2
-              className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
-            >
-              Adjustable sidebar using Angular
-            </h2>
-            <p
-              className="MuiTypography-root-40 MuiTypography-body1-49"
-            >
-              Also for this tutorial I din’t put accent on CSS,
-                I assume that you already created a sidebar which you need to make draggable.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-4-125"
-    >
-      <div
-        id="article-Implement Google Analytics for React Native"
-        onClick={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-            "flexGrow": 1,
-          }
-        }
-      >
-        <div
-          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
-          style={
-            Object {
-              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
-              "maxWidth": 385,
-            }
-          }
-        >
-          <div
-            className="MuiCardMedia-root-163"
-            src={undefined}
-            style={
-              Object {
-                "height": 0,
-                "paddingTop": "56.25%",
-              }
-            }
-          />
-          <div
-            className="MuiCardContent-root-165"
-          >
-            <h2
-              className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
-            >
-              Implement Google Analytics for React Native
-            </h2>
-            <p
-              className="MuiTypography-root-40 MuiTypography-body1-49"
-            >
-              For almost every product that is built or launched in the market, the business and development
-               teams testing there
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-4-125"
-    >
-      <div
-        id="article-One Book at The Time —A Short Story"
-        onClick={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-            "flexGrow": 1,
-          }
-        }
-      >
-        <div
-          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
-          style={
-            Object {
-              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
-              "maxWidth": 385,
-            }
-          }
-        >
-          <div
-            className="MuiCardMedia-root-163"
-            src={undefined}
-            style={
-              Object {
-                "height": 0,
-                "paddingTop": "56.25%",
-              }
-            }
-          />
-          <div
-            className="MuiCardContent-root-165"
-          >
-            <h2
-              className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
-            >
-              One Book at The Time —A Short Story
-            </h2>
-            <p
-              className="MuiTypography-root-40 MuiTypography-body1-49"
-            >
-              There had been times she had almost given up. All the lying, the sneaking around.
-                But today she once more managed to continue
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  />
   <hr
-    className="MuiDivider-root-166"
+    className="MuiDivider-root-162"
     style={
       Object {
         "marginRight": 18,
@@ -460,9 +309,10 @@ exports[`Home renders Home component 1`] = `
       className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-3-124"
     >
       <h2
-        className="MuiTypography-root-40 MuiTypography-headline-45"
+        className="MuiTypography-root-40 MuiTypography-title-46"
         style={
           Object {
+            "fontWeight": "bold",
             "marginLeft": 24,
             "marginTop": 32,
           }
@@ -471,7 +321,7 @@ exports[`Home renders Home component 1`] = `
         Top story of Hexanews
       </h2>
       <hr
-        className="MuiDivider-root-166"
+        className="MuiDivider-root-162"
         style={
           Object {
             "marginLeft": 24,
