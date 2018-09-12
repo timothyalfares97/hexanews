@@ -42,22 +42,24 @@ export class Category extends React.Component<Props> {
     return (
       <div style={styles.container}>
         <CategoryHeader />
-        <Typography
-          component='h1'
-          gutterBottom
-          variant='headline'
-        >
-          {categoryTitle}
-        </Typography>
-        <Typography
-          component='h2'
-          gutterBottom
-          variant='subheading'
-        >
-          Behind the scenes
-        </Typography>
+        <Grid container style={{ flexDirection: 'column', marginLeft: '2%', marginTop: '2%'}}>
+          <Typography
+            component='h1'
+            gutterBottom
+            variant='headline'
+          >
+            {categoryTitle}
+          </Typography>
+          <Typography
+            component='h2'
+            gutterBottom
+            variant='subheading'
+          >
+            Behind the scenes
+          </Typography>
+        </Grid>
         <Grid container spacing={24}>
-          <Grid item xs={8} style={styles.latestArticleContainer}>
+          <Grid item xs={12} md={8} style={styles.latestArticleContainer}>
             {this.renderCategoryArticles()}
           </Grid>
         </Grid>

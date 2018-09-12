@@ -3,6 +3,7 @@
  */
 
 import * as React from 'react'
+import Grid from '@material-ui/core/Grid'
 import { connect } from 'react-redux'
 import { Typography } from '@material-ui/core'
 import Divider from '@material-ui/core/Divider'
@@ -18,19 +19,23 @@ type Props = {
 export class Account extends React.Component<Props> {
   public render() {
     return (
-      <div style={styles.container}>
-        <Typography
-          variant='display1'
-          component='h1'
-          color='textPrimary'
-          gutterBottom
-        >
-          {accountString.myAccount}
-        </Typography>
-        <ProfileForm />
-        <Divider style={styles.sectionDivider} />
-        <ChangePasswordForm />
-      </div>
+      <Grid container style={styles.container}>
+        <Grid item md={3} xs={1}/>
+        <Grid item md={6} xs={10}>
+          <Typography
+            variant='display1'
+            component='h1'
+            color='textPrimary'
+            gutterBottom
+          >
+            {accountString.myAccount}
+          </Typography>
+          <ProfileForm />
+          <Divider style={styles.sectionDivider} />
+          <ChangePasswordForm />
+        </Grid>
+        <Grid item md={3} xs={1}/>
+      </Grid>
     )
   }
 }

@@ -4,70 +4,86 @@ exports[`Create Article renders Create Article 1`] = `
 <div
   style={
     Object {
-      "marginLeft": "25%",
-      "marginRight": "25%",
       "marginTop": "4%",
       "paddingBottom": "5%",
     }
   }
 >
   <div
-    style={
-      Object {
-        "display": "flex",
-        "marginBottom": "3%",
-      }
-    }
+    className="MuiGrid-container-1"
   >
     <div
-      className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
-      style={
-        Object {
-          "alignSelf": "center",
-          "backgroundColor": "green",
-          "height": 50,
-          "margin": 10,
-          "width": 50,
-        }
-      }
-    >
-      HC
-    </div>
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
     <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
       style={
         Object {
           "display": "flex",
-          "flexDirection": "column",
+          "marginBottom": "3%",
         }
       }
     >
-      <h3
-        className="MuiTypography-root-4 MuiTypography-subheading-11"
+      <div
+        className="MuiAvatar-root-98 MuiAvatar-colorDefault-99"
         style={
           Object {
-            "marginTop": 12,
+            "alignSelf": "center",
+            "backgroundColor": "green",
+            "height": 50,
+            "margin": 10,
+            "width": 50,
           }
         }
       >
-        user
-      </h3>
-      <p
-        className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+        U
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+          }
+        }
       >
-        desc
-      </p>
-      <p
-        className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
-      >
-        Draft
-      </p>
+        <h3
+          className="MuiTypography-root-101 MuiTypography-subheading-108"
+          style={
+            Object {
+              "marginTop": 12,
+            }
+          }
+        >
+          user
+        </h3>
+        <p
+          className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
+        >
+          desc
+        </p>
+        <p
+          className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
+        >
+          Draft
+        </p>
+      </div>
     </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
   </div>
-  <div>
-    <form>
+  <div
+    className="MuiGrid-container-1"
+  >
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
+    >
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-29 MuiFormControl-marginNormal-30"
+        className="MuiFormControl-root-126 MuiFormControl-marginNormal-127"
         style={
           Object {
             "width": "100%",
@@ -75,20 +91,20 @@ exports[`Create Article renders Create Article 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-38 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37"
+          className="MuiFormLabel-root-135 MuiInputLabel-root-130 MuiInputLabel-formControl-131 MuiInputLabel-animated-134"
           data-shrink={false}
           htmlFor="title"
         >
           Title
         </label>
         <div
-          className="MuiInput-root-45 MuiInput-formControl-46 MuiInput-underline-49"
+          className="MuiInput-root-142 MuiInput-formControl-143 MuiInput-underline-146"
         >
           <input
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-53"
+            className="MuiInput-input-150"
             defaultValue={undefined}
             disabled={false}
             id="title"
@@ -108,7 +124,7 @@ exports[`Create Article renders Create Article 1`] = `
         </div>
       </div>
       <div
-        className="MuiFormControl-root-29"
+        className="MuiFormControl-root-126"
         style={
           Object {
             "marginTop": 24,
@@ -117,28 +133,28 @@ exports[`Create Article renders Create Article 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-38 MuiFormLabel-required-43 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37"
+          className="MuiFormLabel-root-135 MuiFormLabel-required-140 MuiInputLabel-root-130 MuiInputLabel-formControl-131 MuiInputLabel-animated-134"
           data-shrink={false}
           htmlFor="category-required"
         >
           Category
           <span
-            className="MuiFormLabel-asterisk-44"
+            className="MuiFormLabel-asterisk-141"
           >
              *
           </span>
         </label>
         <div
-          className="MuiInput-root-45 MuiInput-formControl-46 MuiInput-underline-49"
+          className="MuiInput-root-142 MuiInput-formControl-143 MuiInput-underline-146"
         >
           <div
-            className="MuiSelect-root-58"
+            className="MuiSelect-root-155"
           >
             <div
               aria-haspopup="true"
               aria-owns={null}
               aria-pressed="false"
-              className="MuiSelect-select-59 MuiSelect-selectMenu-60 MuiInput-input-53"
+              className="MuiSelect-select-156 MuiSelect-selectMenu-157 MuiInput-input-150"
               onBlur={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
@@ -169,7 +185,7 @@ exports[`Create Article renders Create Article 1`] = `
             />
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-63 MuiSelect-icon-62"
+              className="MuiSvgIcon-root-160 MuiSelect-icon-159"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -181,82 +197,96 @@ exports[`Create Article renders Create Article 1`] = `
           </div>
         </div>
         <p
-          className="MuiFormHelperText-root-74 MuiFormHelperText-required-80"
+          className="MuiFormHelperText-root-171 MuiFormHelperText-required-177"
         >
           Required
         </p>
       </div>
-    </form>
+    </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
   </div>
   <div
+    className="MuiGrid-container-1"
     style={
       Object {
-        "marginTop": "10%",
+        "marginTop": "17%",
       }
     }
   >
-    <button
-      className="MuiButtonBase-root-107 MuiButtonBase-disabled-108 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89 MuiButton-disabled-101"
-      disabled={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "marginRight": 10,
-          "marginTop": 30,
-        }
-      }
-      tabIndex="-1"
-      type="button"
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
     >
-      <span
-        className="MuiButton-label-82"
-      >
-        Publish
-      </span>
-    </button>
-    <button
-      className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"
-      disabled={false}
-      id="cancelButton"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "marginRight": 10,
-          "marginTop": 30,
+      <button
+        className="MuiButtonBase-root-204 MuiButtonBase-disabled-205 MuiButton-root-178 MuiButton-text-180 MuiButton-outlined-186 MuiButton-disabled-198"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "marginRight": 10,
+            "marginTop": 30,
+          }
         }
-      }
-      tabIndex="0"
-      type="button"
-    >
-      <span
-        className="MuiButton-label-82"
+        tabIndex="-1"
+        type="button"
       >
-        Cancel
-      </span>
-      <span
-        className="MuiTouchRipple-root-110"
-      />
-    </button>
+        <span
+          className="MuiButton-label-179"
+        >
+          Publish
+        </span>
+      </button>
+      <button
+        className="MuiButtonBase-root-204 MuiButton-root-178 MuiButton-text-180 MuiButton-outlined-186"
+        disabled={false}
+        id="cancelButton"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "marginRight": 10,
+            "marginTop": 30,
+          }
+        }
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label-179"
+        >
+          Cancel
+        </span>
+        <span
+          className="MuiTouchRipple-root-207"
+        />
+      </button>
+    </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
   </div>
 </div>
 `;
@@ -265,70 +295,86 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
 <div
   style={
     Object {
-      "marginLeft": "25%",
-      "marginRight": "25%",
       "marginTop": "4%",
       "paddingBottom": "5%",
     }
   }
 >
   <div
-    style={
-      Object {
-        "display": "flex",
-        "marginBottom": "3%",
-      }
-    }
+    className="MuiGrid-container-1"
   >
     <div
-      className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
-      style={
-        Object {
-          "alignSelf": "center",
-          "backgroundColor": "green",
-          "height": 50,
-          "margin": 10,
-          "width": 50,
-        }
-      }
-    >
-      HC
-    </div>
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
     <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
       style={
         Object {
           "display": "flex",
-          "flexDirection": "column",
+          "marginBottom": "3%",
         }
       }
     >
-      <h3
-        className="MuiTypography-root-4 MuiTypography-subheading-11"
+      <div
+        className="MuiAvatar-root-98 MuiAvatar-colorDefault-99"
         style={
           Object {
-            "marginTop": 12,
+            "alignSelf": "center",
+            "backgroundColor": "green",
+            "height": 50,
+            "margin": 10,
+            "width": 50,
           }
         }
       >
-        user
-      </h3>
-      <p
-        className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+        U
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+          }
+        }
       >
-        desc
-      </p>
-      <p
-        className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
-      >
-        Draft
-      </p>
+        <h3
+          className="MuiTypography-root-101 MuiTypography-subheading-108"
+          style={
+            Object {
+              "marginTop": 12,
+            }
+          }
+        >
+          user
+        </h3>
+        <p
+          className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
+        >
+          desc
+        </p>
+        <p
+          className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
+        >
+          Draft
+        </p>
+      </div>
     </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
   </div>
-  <div>
-    <form>
+  <div
+    className="MuiGrid-container-1"
+  >
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
+    >
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-29 MuiFormControl-marginNormal-30"
+        className="MuiFormControl-root-126 MuiFormControl-marginNormal-127"
         style={
           Object {
             "width": "100%",
@@ -336,20 +382,20 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
         }
       >
         <label
-          className="MuiFormLabel-root-38 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37"
+          className="MuiFormLabel-root-135 MuiInputLabel-root-130 MuiInputLabel-formControl-131 MuiInputLabel-animated-134"
           data-shrink={false}
           htmlFor="title"
         >
           Title
         </label>
         <div
-          className="MuiInput-root-45 MuiInput-formControl-46 MuiInput-underline-49"
+          className="MuiInput-root-142 MuiInput-formControl-143 MuiInput-underline-146"
         >
           <input
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-53"
+            className="MuiInput-input-150"
             defaultValue={undefined}
             disabled={false}
             id="title"
@@ -369,7 +415,7 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
         </div>
       </div>
       <div
-        className="MuiFormControl-root-29"
+        className="MuiFormControl-root-126"
         style={
           Object {
             "marginTop": 24,
@@ -378,28 +424,28 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
         }
       >
         <label
-          className="MuiFormLabel-root-38 MuiFormLabel-required-43 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37"
+          className="MuiFormLabel-root-135 MuiFormLabel-required-140 MuiInputLabel-root-130 MuiInputLabel-formControl-131 MuiInputLabel-animated-134"
           data-shrink={false}
           htmlFor="category-required"
         >
           Category
           <span
-            className="MuiFormLabel-asterisk-44"
+            className="MuiFormLabel-asterisk-141"
           >
              *
           </span>
         </label>
         <div
-          className="MuiInput-root-45 MuiInput-formControl-46 MuiInput-underline-49"
+          className="MuiInput-root-142 MuiInput-formControl-143 MuiInput-underline-146"
         >
           <div
-            className="MuiSelect-root-58"
+            className="MuiSelect-root-155"
           >
             <div
               aria-haspopup="true"
               aria-owns={null}
               aria-pressed="false"
-              className="MuiSelect-select-59 MuiSelect-selectMenu-60 MuiInput-input-53"
+              className="MuiSelect-select-156 MuiSelect-selectMenu-157 MuiInput-input-150"
               onBlur={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
@@ -430,7 +476,7 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
             />
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-63 MuiSelect-icon-62"
+              className="MuiSvgIcon-root-160 MuiSelect-icon-159"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -442,106 +488,120 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
           </div>
         </div>
         <p
-          className="MuiFormHelperText-root-74 MuiFormHelperText-required-80"
+          className="MuiFormHelperText-root-171 MuiFormHelperText-required-177"
         >
           Required
         </p>
       </div>
-    </form>
+    </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
   </div>
   <div
+    className="MuiGrid-container-1"
     style={
       Object {
-        "marginTop": "10%",
+        "marginTop": "17%",
       }
     }
   >
-    <button
-      className="MuiButtonBase-root-107 MuiButtonBase-disabled-108 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89 MuiButton-disabled-101"
-      disabled={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "marginRight": 10,
-          "marginTop": 30,
-        }
-      }
-      tabIndex="-1"
-      type="button"
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
     >
-      <span
-        className="MuiButton-label-82"
-      >
-        <div
-          className="MuiCircularProgress-root-117 MuiCircularProgress-colorPrimary-120 MuiCircularProgress-indeterminate-119"
-          role="progressbar"
-          style={
-            Object {
-              "height": 22,
-              "width": 22,
-            }
+      <button
+        className="MuiButtonBase-root-204 MuiButtonBase-disabled-205 MuiButton-root-178 MuiButton-text-180 MuiButton-outlined-186 MuiButton-disabled-198"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "marginRight": 10,
+            "marginTop": 30,
           }
-        >
-          <svg
-            className="MuiCircularProgress-svg-122"
-            viewBox="22 22 44 44"
-          >
-            <circle
-              className="MuiCircularProgress-circle-123 MuiCircularProgress-circleIndeterminate-125"
-              cx={44}
-              cy={44}
-              fill="none"
-              r={20.2}
-              strokeWidth={3.6}
-              style={Object {}}
-            />
-          </svg>
-        </div>
-      </span>
-    </button>
-    <button
-      className="MuiButtonBase-root-107 MuiButton-root-81 MuiButton-text-83 MuiButton-outlined-89"
-      disabled={false}
-      id="cancelButton"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "marginRight": 10,
-          "marginTop": 30,
         }
-      }
-      tabIndex="0"
-      type="button"
-    >
-      <span
-        className="MuiButton-label-82"
+        tabIndex="-1"
+        type="button"
       >
-        Cancel
-      </span>
-      <span
-        className="MuiTouchRipple-root-110"
-      />
-    </button>
+        <span
+          className="MuiButton-label-179"
+        >
+          <div
+            className="MuiCircularProgress-root-214 MuiCircularProgress-colorPrimary-217 MuiCircularProgress-indeterminate-216"
+            role="progressbar"
+            style={
+              Object {
+                "height": 22,
+                "width": 22,
+              }
+            }
+          >
+            <svg
+              className="MuiCircularProgress-svg-219"
+              viewBox="22 22 44 44"
+            >
+              <circle
+                className="MuiCircularProgress-circle-220 MuiCircularProgress-circleIndeterminate-222"
+                cx={44}
+                cy={44}
+                fill="none"
+                r={20.2}
+                strokeWidth={3.6}
+                style={Object {}}
+              />
+            </svg>
+          </div>
+        </span>
+      </button>
+      <button
+        className="MuiButtonBase-root-204 MuiButton-root-178 MuiButton-text-180 MuiButton-outlined-186"
+        disabled={false}
+        id="cancelButton"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "marginRight": 10,
+            "marginTop": 30,
+          }
+        }
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label-179"
+        >
+          Cancel
+        </span>
+        <span
+          className="MuiTouchRipple-root-207"
+        />
+      </button>
+    </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
   </div>
 </div>
 `;

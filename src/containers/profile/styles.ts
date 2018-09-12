@@ -10,13 +10,10 @@ export default {
     alignSelf: 'center'
   },
   container: {
-    marginLeft: '25%',
-    marginRight: '25%',
     marginTop: '2%',
     paddingBottom: '5%'
   },
   articleContainer: {
-    marginRight: 24,
   },
   profileContainer: {
     display: 'flex',

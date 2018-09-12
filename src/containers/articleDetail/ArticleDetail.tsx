@@ -88,7 +88,7 @@ export class ArticleDetail extends React.Component<Props> {
       const author = find(users, (user: User) => user._id === article.authorId)
       const authorName = author ? author.name : 'Author Deleted'
       return (
-        <Grid item xs={4} key={article._id}>
+        <Grid item xs={12} md={4} key={article._id}>
           <FooterCard
             article={article}
             authorName={authorName}
@@ -110,13 +110,19 @@ export class ArticleDetail extends React.Component<Props> {
 
   public render() {
     return (
-      <div style={styles.container}>
-        {this.renderArticle()}
-        <Divider style={styles.footerDivider} />
-        <Grid container spacing={24}>
-          {this.renderFooterCards()}
+      <Grid container style={styles.container}>
+        <Grid item md={2} xs={1}/>
+        <Grid item md={8} xs={10}>
+          <Grid container>
+            {this.renderArticle()}
+          </Grid>
+          <Divider style={styles.footerDivider} />
+          <Grid container spacing={24}>
+            {this.renderFooterCards()}
+          </Grid>
         </Grid>
-      </div>
+        <Grid item md={2} xs={1}/>
+      </Grid>
     )
   }
 }

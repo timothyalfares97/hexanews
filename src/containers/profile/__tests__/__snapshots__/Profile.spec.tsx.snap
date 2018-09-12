@@ -2,148 +2,165 @@
 
 exports[`Profile renders Profile 1`] = `
 <div
+  className="MuiGrid-container-1"
   style={
     Object {
-      "marginLeft": "25%",
-      "marginRight": "25%",
       "marginTop": "2%",
       "paddingBottom": "5%",
     }
   }
 >
-  <div>
+  <div
+    className="MuiGrid-container-1"
+  >
     <div
-      className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
       style={
         Object {
-          "boxShadow": "0px 0px 0px 0px rgba(0, 0, 0, 0.2)",
-          "display": "flex",
+          "flexDirection": "column",
         }
       }
     >
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "flex": 4,
-            "flexDirection": "column",
-          }
-        }
-      >
+      <div>
         <div
-          className="MuiCardContent-root-29"
+          className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
           style={
             Object {
-              "flex": "1 0 auto",
+              "boxShadow": "0px 0px 0px 0px rgba(0, 0, 0, 0.2)",
+              "display": "flex",
             }
           }
         >
-          <h1
-            className="MuiTypography-root-30 MuiTypography-display1-34"
-          >
-            user
-          </h1>
-          <p
-            className="MuiTypography-root-30 MuiTypography-body1-39"
+          <div
             style={
               Object {
-                "marginTop": 4,
+                "display": "flex",
+                "flex": 4,
+                "flexDirection": "column",
               }
             }
           >
-            desc
-          </p>
-          <p
-            className="MuiTypography-root-30 MuiTypography-body1-39"
+            <div
+              className="MuiCardContent-root-126"
+              style={
+                Object {
+                  "flex": "1 0 auto",
+                }
+              }
+            >
+              <h1
+                className="MuiTypography-root-127 MuiTypography-display1-131"
+              >
+                user
+              </h1>
+              <p
+                className="MuiTypography-root-127 MuiTypography-body1-136"
+                style={
+                  Object {
+                    "marginTop": 4,
+                  }
+                }
+              >
+                desc
+              </p>
+              <p
+                className="MuiTypography-root-127 MuiTypography-body1-136"
+                style={
+                  Object {
+                    "color": "gray",
+                    "fontSize": 12,
+                    "marginTop": 12,
+                  }
+                }
+              >
+                Hexanews member since Invalid date
+              </p>
+            </div>
+          </div>
+          <div
             style={
               Object {
-                "color": "gray",
-                "fontSize": 12,
-                "marginTop": 12,
+                "alignItems": "center",
+                "display": "flex",
+                "flex": 1,
+                "justifyContent": "center",
               }
             }
           >
-            Hexanews member since Invalid date
-          </p>
+            <img
+              alt="avatar"
+              src={undefined}
+              style={
+                Object {
+                  "borderRadius": "50%",
+                  "height": 100,
+                  "width": 100,
+                }
+              }
+            />
+          </div>
         </div>
       </div>
-      <div
+      <button
+        className="MuiButtonBase-root-178 MuiButton-root-152 MuiButton-text-154 MuiButton-outlined-160 MuiButton-sizeSmall-175"
+        disabled={false}
+        id="accountButton"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "justifyContent": "center",
+            "marginLeft": 20,
           }
         }
+        tabIndex="0"
+        type="button"
       >
-        <img
-          alt="avatar"
-          src={undefined}
-          style={
-            Object {
-              "borderRadius": "50%",
-              "height": 100,
-              "width": 100,
-            }
-          }
+        <span
+          className="MuiButton-label-153"
+        >
+          My Account
+        </span>
+        <span
+          className="MuiTouchRipple-root-181"
         />
-      </div>
+      </button>
+      <hr
+        className="MuiDivider-root-188"
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+      />
     </div>
-  </div>
-  <button
-    className="MuiButtonBase-root-81 MuiButton-root-55 MuiButton-text-57 MuiButton-outlined-63 MuiButton-sizeSmall-78"
-    disabled={false}
-    id="accountButton"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    style={
-      Object {
-        "marginLeft": 20,
-      }
-    }
-    tabIndex="0"
-    type="button"
-  >
-    <span
-      className="MuiButton-label-56"
-    >
-      My Account
-    </span>
-    <span
-      className="MuiTouchRipple-root-84"
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
-  </button>
-  <hr
-    className="MuiDivider-root-91"
-    style={
-      Object {
-        "marginTop": 20,
-      }
-    }
-  />
+  </div>
   <div
-    className="MuiGrid-container-95 MuiGrid-spacing-xs-24-119"
+    className="MuiGrid-container-1 MuiGrid-spacing-xs-24-25"
   >
     <div
-      className="MuiGrid-item-96 MuiGrid-grid-xs-12-135"
-      style={
-        Object {
-          "marginRight": 24,
-        }
-      }
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
+      style={Object {}}
     >
       <div
-        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+        className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
         id="card-1"
         onClick={[Function]}
         style={
@@ -178,34 +195,34 @@ exports[`Profile renders Profile 1`] = `
             className="MuiCardHeader-content-195"
           >
             <span
-              className="MuiTypography-root-30 MuiTypography-body2-38 MuiCardHeader-title-196"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-196"
             >
               user
             </span>
             <span
-              className="MuiTypography-root-30 MuiTypography-body2-38 MuiTypography-colorTextSecondary-53 MuiCardHeader-subheader-197"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-197"
             >
               12 September 2018
             </span>
           </div>
         </div>
         <div
-          className="MuiCardContent-root-29"
+          className="MuiCardContent-root-126"
         >
           <h2
-            className="MuiTypography-root-30 MuiTypography-headline-35 MuiTypography-gutterBottom-47"
+            className="MuiTypography-root-127 MuiTypography-headline-132 MuiTypography-gutterBottom-144"
           >
             abc
           </h2>
           <p
-            className="MuiTypography-root-30 MuiTypography-body1-39"
+            className="MuiTypography-root-127 MuiTypography-body1-136"
           >
             test
           </p>
         </div>
       </div>
       <div
-        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+        className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
         id="card-2"
         onClick={[Function]}
         style={
@@ -240,181 +257,201 @@ exports[`Profile renders Profile 1`] = `
             className="MuiCardHeader-content-195"
           >
             <span
-              className="MuiTypography-root-30 MuiTypography-body2-38 MuiCardHeader-title-196"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-196"
             >
               user
             </span>
             <span
-              className="MuiTypography-root-30 MuiTypography-body2-38 MuiTypography-colorTextSecondary-53 MuiCardHeader-subheader-197"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-197"
             >
               12 September 2018
             </span>
           </div>
         </div>
         <div
-          className="MuiCardContent-root-29"
+          className="MuiCardContent-root-126"
         >
           <h2
-            className="MuiTypography-root-30 MuiTypography-headline-35 MuiTypography-gutterBottom-47"
+            className="MuiTypography-root-127 MuiTypography-headline-132 MuiTypography-gutterBottom-144"
           >
             def
           </h2>
           <p
-            className="MuiTypography-root-30 MuiTypography-body1-39"
+            className="MuiTypography-root-127 MuiTypography-body1-136"
           >
             tester
           </p>
         </div>
       </div>
     </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
   </div>
 </div>
 `;
 
 exports[`Profile renders Profile without description 1`] = `
 <div
+  className="MuiGrid-container-1"
   style={
     Object {
-      "marginLeft": "25%",
-      "marginRight": "25%",
       "marginTop": "2%",
       "paddingBottom": "5%",
     }
   }
 >
-  <div>
+  <div
+    className="MuiGrid-container-1"
+  >
     <div
-      className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
       style={
         Object {
-          "boxShadow": "0px 0px 0px 0px rgba(0, 0, 0, 0.2)",
-          "display": "flex",
+          "flexDirection": "column",
         }
       }
     >
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "flex": 4,
-            "flexDirection": "column",
-          }
-        }
-      >
+      <div>
         <div
-          className="MuiCardContent-root-29"
+          className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
           style={
             Object {
-              "flex": "1 0 auto",
+              "boxShadow": "0px 0px 0px 0px rgba(0, 0, 0, 0.2)",
+              "display": "flex",
             }
           }
         >
-          <h1
-            className="MuiTypography-root-30 MuiTypography-display1-34"
-          >
-            user
-          </h1>
-          <p
-            className="MuiTypography-root-30 MuiTypography-body1-39"
+          <div
             style={
               Object {
-                "marginTop": 4,
+                "display": "flex",
+                "flex": 4,
+                "flexDirection": "column",
               }
             }
           >
-            
-          </p>
-          <p
-            className="MuiTypography-root-30 MuiTypography-body1-39"
+            <div
+              className="MuiCardContent-root-126"
+              style={
+                Object {
+                  "flex": "1 0 auto",
+                }
+              }
+            >
+              <h1
+                className="MuiTypography-root-127 MuiTypography-display1-131"
+              >
+                user
+              </h1>
+              <p
+                className="MuiTypography-root-127 MuiTypography-body1-136"
+                style={
+                  Object {
+                    "marginTop": 4,
+                  }
+                }
+              >
+                
+              </p>
+              <p
+                className="MuiTypography-root-127 MuiTypography-body1-136"
+                style={
+                  Object {
+                    "color": "gray",
+                    "fontSize": 12,
+                    "marginTop": 12,
+                  }
+                }
+              >
+                Hexanews member since Invalid date
+              </p>
+            </div>
+          </div>
+          <div
             style={
               Object {
-                "color": "gray",
-                "fontSize": 12,
-                "marginTop": 12,
+                "alignItems": "center",
+                "display": "flex",
+                "flex": 1,
+                "justifyContent": "center",
               }
             }
           >
-            Hexanews member since Invalid date
-          </p>
+            <img
+              alt="avatar"
+              src={undefined}
+              style={
+                Object {
+                  "borderRadius": "50%",
+                  "height": 100,
+                  "width": 100,
+                }
+              }
+            />
+          </div>
         </div>
       </div>
-      <div
+      <button
+        className="MuiButtonBase-root-178 MuiButton-root-152 MuiButton-text-154 MuiButton-outlined-160 MuiButton-sizeSmall-175"
+        disabled={false}
+        id="accountButton"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "justifyContent": "center",
+            "marginLeft": 20,
           }
         }
+        tabIndex="0"
+        type="button"
       >
-        <img
-          alt="avatar"
-          src={undefined}
-          style={
-            Object {
-              "borderRadius": "50%",
-              "height": 100,
-              "width": 100,
-            }
-          }
+        <span
+          className="MuiButton-label-153"
+        >
+          My Account
+        </span>
+        <span
+          className="MuiTouchRipple-root-181"
         />
-      </div>
+      </button>
+      <hr
+        className="MuiDivider-root-188"
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+      />
     </div>
-  </div>
-  <button
-    className="MuiButtonBase-root-81 MuiButton-root-55 MuiButton-text-57 MuiButton-outlined-63 MuiButton-sizeSmall-78"
-    disabled={false}
-    id="accountButton"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    style={
-      Object {
-        "marginLeft": 20,
-      }
-    }
-    tabIndex="0"
-    type="button"
-  >
-    <span
-      className="MuiButton-label-56"
-    >
-      My Account
-    </span>
-    <span
-      className="MuiTouchRipple-root-84"
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
-  </button>
-  <hr
-    className="MuiDivider-root-91"
-    style={
-      Object {
-        "marginTop": 20,
-      }
-    }
-  />
+  </div>
   <div
-    className="MuiGrid-container-95 MuiGrid-spacing-xs-24-119"
+    className="MuiGrid-container-1 MuiGrid-spacing-xs-24-25"
   >
     <div
-      className="MuiGrid-item-96 MuiGrid-grid-xs-12-135"
-      style={
-        Object {
-          "marginRight": 24,
-        }
-      }
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
+      style={Object {}}
     >
       <div
-        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+        className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
         id="card-1"
         onClick={[Function]}
         style={
@@ -449,34 +486,34 @@ exports[`Profile renders Profile without description 1`] = `
             className="MuiCardHeader-content-195"
           >
             <span
-              className="MuiTypography-root-30 MuiTypography-body2-38 MuiCardHeader-title-196"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-196"
             >
               user
             </span>
             <span
-              className="MuiTypography-root-30 MuiTypography-body2-38 MuiTypography-colorTextSecondary-53 MuiCardHeader-subheader-197"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-197"
             >
               12 September 2018
             </span>
           </div>
         </div>
         <div
-          className="MuiCardContent-root-29"
+          className="MuiCardContent-root-126"
         >
           <h2
-            className="MuiTypography-root-30 MuiTypography-headline-35 MuiTypography-gutterBottom-47"
+            className="MuiTypography-root-127 MuiTypography-headline-132 MuiTypography-gutterBottom-144"
           >
             abc
           </h2>
           <p
-            className="MuiTypography-root-30 MuiTypography-body1-39"
+            className="MuiTypography-root-127 MuiTypography-body1-136"
           >
             test
           </p>
         </div>
       </div>
       <div
-        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+        className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
         id="card-2"
         onClick={[Function]}
         style={
@@ -511,33 +548,36 @@ exports[`Profile renders Profile without description 1`] = `
             className="MuiCardHeader-content-195"
           >
             <span
-              className="MuiTypography-root-30 MuiTypography-body2-38 MuiCardHeader-title-196"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-196"
             >
               user
             </span>
             <span
-              className="MuiTypography-root-30 MuiTypography-body2-38 MuiTypography-colorTextSecondary-53 MuiCardHeader-subheader-197"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-197"
             >
               12 September 2018
             </span>
           </div>
         </div>
         <div
-          className="MuiCardContent-root-29"
+          className="MuiCardContent-root-126"
         >
           <h2
-            className="MuiTypography-root-30 MuiTypography-headline-35 MuiTypography-gutterBottom-47"
+            className="MuiTypography-root-127 MuiTypography-headline-132 MuiTypography-gutterBottom-144"
           >
             def
           </h2>
           <p
-            className="MuiTypography-root-30 MuiTypography-body1-39"
+            className="MuiTypography-root-127 MuiTypography-body1-136"
           >
             tester
           </p>
         </div>
       </div>
     </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
   </div>
 </div>
 `;

@@ -6,9 +6,9 @@ export default {
   container: {
     padding: '5%',
     paddingTop: '0%',
-    paddingLeft: '7%',
+    paddingLeft: '5%',
   },
   latestArticleContainer: {
-    marginRight: 24,
+    marginRight: 2,
   },
 }

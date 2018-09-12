@@ -70,30 +70,38 @@ export class Profile extends React.Component<Props> {
   public render() {
     const { dispatch, user } = this.props
     return (
-      <div style={styles.container}>
-        <ProfileCard
-          name={user.name}
-          description={user.description ? user.description : ''}
-          image={avatarPlaceholder}
-          createdAt={user.createdAt ? user.createdAt : ''}
-        />
-        <Button
-          id='accountButton'
-          variant='outlined'
-          size='small'
-          component='button'
-          style={styles.button}
-          onClick={() => dispatch(push('/account'))}
-        >
-          {profileString.myAccount}
-        </Button>
-        <Divider style={styles.profileDivider} />
+      <Grid container style={styles.container as any}>
+        <Grid container>
+          <Grid item md={3} xs={1} />
+          <Grid item md={6} xs={10} style={{ flexDirection: 'column' }}>
+            <ProfileCard
+              name={user.name}
+              description={user.description ? user.description : ''}
+              image={avatarPlaceholder}
+              createdAt={user.createdAt ? user.createdAt : ''}
+            />
+            <Button
+              id='accountButton'
+              variant='outlined'
+              size='small'
+              component='button'
+              style={styles.button}
+              onClick={() => dispatch(push('/account'))}
+            >
+              {profileString.myAccount}
+            </Button>
+            <Divider style={styles.profileDivider} />
+          </Grid>
+          <Grid item md={3} xs={1} />
+        </Grid>
         <Grid container spacing={24}>
-          <Grid item xs={12} style={styles.articleContainer}>
+          <Grid item md={3} xs={1}/>
+          <Grid item md={6} xs={10} style={styles.articleContainer}>
             {this.renderUserArticles()}
           </Grid>
+          <Grid item md={3} xs={1} />
         </Grid>
-      </div >
+      </Grid >
     )
   }
 }

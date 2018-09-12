@@ -10,12 +10,14 @@ import Typography from '@material-ui/core/Typography'
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormHelperText from '@material-ui/core/FormHelperText'
+import Grid from '@material-ui/core/Grid'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
+import { head, startCase } from 'lodash'
 const ReactQuill = require('react-quill')
 
 import * as actions from './actions'
@@ -77,7 +79,7 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
       ['bold', 'italic', 'underline', 'strike', 'blockquote'],
       [{'list': 'ordered'}, {'list': 'bullet'},
       {'indent': '-1'}, {'indent': '+1'}],
-      ['link', 'image', 'video'],
+      ['link', 'image'],
       ['clean']
     ],
     clipboard: {
@@ -89,30 +91,36 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
     'header', 'font', 'size',
     'bold', 'italic', 'underline', 'strike', 'blockquote',
     'list', 'bullet', 'indent',
-    'link', 'image', 'video'
+    'link', 'image'
   ]
 
   public render() {
     const { dispatch, user, isCreatingArticle } = this.props
     const { title, category, description } = this.state
+    const initials = head(startCase(user.name))
     return (
       <div style={styles.container}>
-        <div style={styles.profileContainer}>
-          <Avatar style={styles.avatar}>HC</Avatar>
-          <div style={styles.profile as any}>
-            <Typography variant='subheading' style={styles.title}>
-              {user.name}
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              {user.description}
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              {'Draft'}
-            </Typography>
-          </div>
-        </div>
-        <div>
-          <form>
+        <Grid container>
+          <Grid item md={3} xs={1} />
+          <Grid item md={6} xs={10} style={styles.profileContainer}>
+            <Avatar style={styles.avatar}>{initials}</Avatar>
+            <div style={styles.profile as any}>
+              <Typography variant='subheading' style={styles.title}>
+                {user.name}
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                {user.description}
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                {'Draft'}
+              </Typography>
+            </div>
+          </Grid>
+          <Grid item md={3} xs={1} />
+        </Grid>
+        <Grid container>
+          <Grid item md={3} xs={1} />
+          <Grid item md={6} xs={10}>
             <TextField
               id='title'
               label='Title'
@@ -150,28 +158,33 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
               theme='snow'
               style={styles.descTextField}
             />
-          </form>
-        </div>
-        <div style={styles.buttonContainer}>
-          <Button
-            variant='outlined'
-            component='button'
-            style={styles.button}
-            disabled={this.disablePublishButton()}
-            onClick={this.onCreateArticle}
-          >
-            {isCreatingArticle ? <CircularProgress size={22} /> : createArticleString.publishButton}
-          </Button>
-          <Button
-            id='cancelButton'
-            variant='outlined'
-            component='button'
-            style={styles.button}
-            onClick={() => dispatch(push('/'))}
-          >
-            {createArticleString.cancelButton}
-          </Button>
-        </div>
+          </Grid>
+          <Grid item md={3} xs={1} />
+        </Grid>
+        <Grid container style={styles.buttonContainer}>
+          <Grid item md={3} xs={1} />
+          <Grid item md={6} xs={10} >
+            <Button
+              variant='outlined'
+              component='button'
+              style={styles.button}
+              disabled={this.disablePublishButton()}
+              onClick={this.onCreateArticle}
+            >
+              {isCreatingArticle ? <CircularProgress size={22} /> : createArticleString.publishButton}
+            </Button>
+            <Button
+              id='cancelButton'
+              variant='outlined'
+              component='button'
+              style={styles.button}
+              onClick={() => dispatch(push('/'))}
+            >
+              {createArticleString.cancelButton}
+            </Button>
+          </Grid>
+          <Grid item md={3} xs={1} />
+        </Grid>
       </div>
     )
   }

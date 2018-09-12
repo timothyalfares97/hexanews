@@ -2,232 +2,240 @@
 
 exports[`Article Detail renders Article Detail 1`] = `
 <div
+  className="MuiGrid-container-1"
   style={
     Object {
-      "marginLeft": "15%",
-      "marginRight": "15%",
       "marginTop": "4%",
       "paddingBottom": "5%",
     }
   }
 >
   <div
-    style={
-      Object {
-        "marginBottom": "2%",
-        "marginLeft": "10%",
-        "marginRight": "10%",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "marginBottom": "3%",
-        }
-      }
-    >
-      <div
-        className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
-        style={
-          Object {
-            "alignSelf": "center",
-            "backgroundColor": "green",
-            "height": 50,
-            "margin": 10,
-            "width": 50,
-          }
-        }
-      >
-        A
-      </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "flexDirection": "column",
-          }
-        }
-      >
-        <h3
-          className="MuiTypography-root-4 MuiTypography-subheading-11"
-          style={
-            Object {
-              "marginTop": 12,
-            }
-          }
-        >
-          Author Deleted
-        </h3>
-        <p
-          className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
-        >
-          12 September 2018
-        </p>
-      </div>
-      <div
-        style={
-          Object {
-            "alignItems": "flex-end",
-            "display": "flex",
-            "flex": 1,
-            "justifyContent": "flex-end",
-          }
-        }
-      >
-        <button
-          className="MuiButtonBase-root-55 MuiButton-root-29 MuiButton-text-31 MuiButton-outlined-37 MuiButton-sizeSmall-52"
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          style={
-            Object {
-              "alignSelf": "center",
-            }
-          }
-          tabIndex="0"
-          type="button"
-        >
-          <span
-            className="MuiButton-label-30"
-          >
-            Delete article
-          </span>
-          <span
-            className="MuiTouchRipple-root-58"
-          />
-        </button>
-      </div>
-    </div>
-    <h1
-      className="MuiTypography-root-4 MuiTypography-display1-8 MuiTypography-gutterBottom-21"
-    >
-      def
-    </h1>
-    tester
-  </div>
-  <hr
-    className="MuiDivider-root-65"
-    style={
-      Object {
-        "marginBottom": 32,
-        "marginTop": 32,
-      }
-    }
+    className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-2-59"
   />
   <div
-    className="MuiGrid-container-69 MuiGrid-spacing-xs-24-93"
+    className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-8-65"
   >
     <div
-      className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
+      className="MuiGrid-container-1"
     >
       <div
-        id="footer-2"
-        onClick={[Function]}
         style={
           Object {
-            "cursor": "pointer",
-            "flexGrow": 1,
+            "marginBottom": "2%",
           }
         }
       >
         <div
-          className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
           style={
             Object {
-              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
-              "maxWidth": 385,
+              "display": "flex",
+              "marginBottom": "3%",
             }
           }
         >
           <div
-            className="MuiCardMedia-root-194"
-            src={undefined}
+            className="MuiAvatar-root-98 MuiAvatar-colorDefault-99"
             style={
               Object {
-                "height": 0,
-                "paddingTop": "56.25%",
-              }
-            }
-          />
-          <div
-            className="MuiCardContent-root-196"
-            style={
-              Object {
-                "paddingRight": "2%",
+                "alignSelf": "center",
+                "backgroundColor": "green",
+                "height": 50,
+                "margin": 10,
+                "width": 50,
               }
             }
           >
-            <h2
-              className="MuiTypography-root-4 MuiTypography-caption-14 MuiTypography-gutterBottom-21"
-            >
-              Related reads
-            </h2>
-            <h2
-              className="MuiTypography-root-4 MuiTypography-subheading-11 MuiTypography-gutterBottom-21"
-            >
-              def
-            </h2>
-            <div
+            A
+          </div>
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "column",
+              }
+            }
+          >
+            <h3
+              className="MuiTypography-root-101 MuiTypography-subheading-108"
               style={
                 Object {
-                  "display": "flex",
-                  "marginBottom": "3%",
+                  "marginTop": 12,
                 }
               }
             >
-              <div
-                className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
-                style={
-                  Object {
-                    "alignSelf": "center",
-                    "backgroundColor": "green",
-                    "height": 50,
-                    "width": 50,
-                  }
+              Author Deleted
+            </h3>
+            <p
+              className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
+            >
+              12 September 2018
+            </p>
+          </div>
+          <div
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "display": "flex",
+                "flex": 1,
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <button
+              className="MuiButtonBase-root-152 MuiButton-root-126 MuiButton-text-128 MuiButton-outlined-134 MuiButton-sizeSmall-149"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "alignSelf": "center",
                 }
+              }
+              tabIndex="0"
+              type="button"
+            >
+              <span
+                className="MuiButton-label-127"
               >
-                A
-              </div>
+                Delete article
+              </span>
+              <span
+                className="MuiTouchRipple-root-155"
+              />
+            </button>
+          </div>
+        </div>
+        <h1
+          className="MuiTypography-root-101 MuiTypography-display1-105 MuiTypography-gutterBottom-118"
+        >
+          def
+        </h1>
+        tester
+      </div>
+    </div>
+    <hr
+      className="MuiDivider-root-162"
+      style={
+        Object {
+          "marginBottom": 32,
+          "marginTop": 32,
+        }
+      }
+    />
+    <div
+      className="MuiGrid-container-1 MuiGrid-spacing-xs-24-25"
+    >
+      <div
+        className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-md-4-61"
+      >
+        <div
+          id="footer-2"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+              "flexGrow": 1,
+            }
+          }
+        >
+          <div
+            className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
+            style={
+              Object {
+                "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+                "maxWidth": 385,
+              }
+            }
+          >
+            <div
+              className="MuiCardMedia-root-194"
+              src={undefined}
+              style={
+                Object {
+                  "height": 0,
+                  "paddingTop": "56.25%",
+                }
+              }
+            />
+            <div
+              className="MuiCardContent-root-196"
+              style={
+                Object {
+                  "paddingRight": "2%",
+                }
+              }
+            >
+              <h2
+                className="MuiTypography-root-101 MuiTypography-caption-111 MuiTypography-gutterBottom-118"
+              >
+                Related reads
+              </h2>
+              <h2
+                className="MuiTypography-root-101 MuiTypography-subheading-108 MuiTypography-gutterBottom-118"
+              >
+                def
+              </h2>
               <div
                 style={
                   Object {
                     "display": "flex",
-                    "flexDirection": "column",
-                    "marginLeft": 10,
+                    "marginBottom": "3%",
                   }
                 }
               >
-                <p
-                  className="MuiTypography-root-4 MuiTypography-body1-13"
+                <div
+                  className="MuiAvatar-root-98 MuiAvatar-colorDefault-99"
                   style={
                     Object {
-                      "marginTop": 6,
+                      "alignSelf": "center",
+                      "backgroundColor": "green",
+                      "height": 50,
+                      "width": 50,
                     }
                   }
                 >
-                  Author Deleted
-                </p>
-                <p
-                  className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+                  A
+                </div>
+                <div
                   style={
                     Object {
-                      "marginTop": 2,
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "marginLeft": 10,
                     }
                   }
                 >
-                  12 September 2018
-                </p>
+                  <p
+                    className="MuiTypography-root-101 MuiTypography-body1-110"
+                    style={
+                      Object {
+                        "marginTop": 6,
+                      }
+                    }
+                  >
+                    Author Deleted
+                  </p>
+                  <p
+                    className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
+                    style={
+                      Object {
+                        "marginTop": 2,
+                      }
+                    }
+                  >
+                    12 September 2018
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -235,261 +243,272 @@ exports[`Article Detail renders Article Detail 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-2-59"
+  />
 </div>
 `;
 
 exports[`Article Detail renders Article Detail with isDeletingArticle to be true 1`] = `
 <div
+  className="MuiGrid-container-1"
   style={
     Object {
-      "marginLeft": "15%",
-      "marginRight": "15%",
       "marginTop": "4%",
       "paddingBottom": "5%",
     }
   }
 >
   <div
-    style={
-      Object {
-        "marginBottom": "2%",
-        "marginLeft": "10%",
-        "marginRight": "10%",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "marginBottom": "3%",
-        }
-      }
-    >
-      <div
-        className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
-        style={
-          Object {
-            "alignSelf": "center",
-            "backgroundColor": "green",
-            "height": 50,
-            "margin": 10,
-            "width": 50,
-          }
-        }
-      >
-        A
-      </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "flexDirection": "column",
-          }
-        }
-      >
-        <h3
-          className="MuiTypography-root-4 MuiTypography-subheading-11"
-          style={
-            Object {
-              "marginTop": 12,
-            }
-          }
-        >
-          Author Deleted
-        </h3>
-        <p
-          className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
-        >
-          12 September 2018
-        </p>
-      </div>
-      <div
-        style={
-          Object {
-            "alignItems": "flex-end",
-            "display": "flex",
-            "flex": 1,
-            "justifyContent": "flex-end",
-          }
-        }
-      >
-        <button
-          className="MuiButtonBase-root-55 MuiButton-root-29 MuiButton-text-31 MuiButton-outlined-37 MuiButton-sizeSmall-52"
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          style={
-            Object {
-              "alignSelf": "center",
-            }
-          }
-          tabIndex="0"
-          type="button"
-        >
-          <span
-            className="MuiButton-label-30"
-          >
-            <div
-              className="MuiCircularProgress-root-197 MuiCircularProgress-colorPrimary-200 MuiCircularProgress-indeterminate-199"
-              role="progressbar"
-              style={
-                Object {
-                  "height": 22,
-                  "width": 22,
-                }
-              }
-            >
-              <svg
-                className="MuiCircularProgress-svg-202"
-                viewBox="22 22 44 44"
-              >
-                <circle
-                  className="MuiCircularProgress-circle-203 MuiCircularProgress-circleIndeterminate-205"
-                  cx={44}
-                  cy={44}
-                  fill="none"
-                  r={20.2}
-                  strokeWidth={3.6}
-                  style={Object {}}
-                />
-              </svg>
-            </div>
-          </span>
-          <span
-            className="MuiTouchRipple-root-58"
-          />
-        </button>
-      </div>
-    </div>
-    <h1
-      className="MuiTypography-root-4 MuiTypography-display1-8 MuiTypography-gutterBottom-21"
-    >
-      def
-    </h1>
-    tester
-  </div>
-  <hr
-    className="MuiDivider-root-65"
-    style={
-      Object {
-        "marginBottom": 32,
-        "marginTop": 32,
-      }
-    }
+    className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-2-59"
   />
   <div
-    className="MuiGrid-container-69 MuiGrid-spacing-xs-24-93"
+    className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-8-65"
   >
     <div
-      className="MuiGrid-item-70 MuiGrid-grid-xs-4-101"
+      className="MuiGrid-container-1"
     >
       <div
-        id="footer-2"
-        onClick={[Function]}
         style={
           Object {
-            "cursor": "pointer",
-            "flexGrow": 1,
+            "marginBottom": "2%",
           }
         }
       >
         <div
-          className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
           style={
             Object {
-              "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
-              "maxWidth": 385,
+              "display": "flex",
+              "marginBottom": "3%",
             }
           }
         >
           <div
-            className="MuiCardMedia-root-194"
-            src={undefined}
+            className="MuiAvatar-root-98 MuiAvatar-colorDefault-99"
             style={
               Object {
-                "height": 0,
-                "paddingTop": "56.25%",
-              }
-            }
-          />
-          <div
-            className="MuiCardContent-root-196"
-            style={
-              Object {
-                "paddingRight": "2%",
+                "alignSelf": "center",
+                "backgroundColor": "green",
+                "height": 50,
+                "margin": 10,
+                "width": 50,
               }
             }
           >
-            <h2
-              className="MuiTypography-root-4 MuiTypography-caption-14 MuiTypography-gutterBottom-21"
-            >
-              Related reads
-            </h2>
-            <h2
-              className="MuiTypography-root-4 MuiTypography-subheading-11 MuiTypography-gutterBottom-21"
-            >
-              def
-            </h2>
-            <div
+            A
+          </div>
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "column",
+              }
+            }
+          >
+            <h3
+              className="MuiTypography-root-101 MuiTypography-subheading-108"
               style={
                 Object {
-                  "display": "flex",
-                  "marginBottom": "3%",
+                  "marginTop": 12,
                 }
               }
             >
-              <div
-                className="MuiAvatar-root-1 MuiAvatar-colorDefault-2"
-                style={
-                  Object {
-                    "alignSelf": "center",
-                    "backgroundColor": "green",
-                    "height": 50,
-                    "width": 50,
-                  }
+              Author Deleted
+            </h3>
+            <p
+              className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
+            >
+              12 September 2018
+            </p>
+          </div>
+          <div
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "display": "flex",
+                "flex": 1,
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <button
+              className="MuiButtonBase-root-152 MuiButton-root-126 MuiButton-text-128 MuiButton-outlined-134 MuiButton-sizeSmall-149"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "alignSelf": "center",
                 }
+              }
+              tabIndex="0"
+              type="button"
+            >
+              <span
+                className="MuiButton-label-127"
               >
-                A
-              </div>
+                <div
+                  className="MuiCircularProgress-root-197 MuiCircularProgress-colorPrimary-200 MuiCircularProgress-indeterminate-199"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "height": 22,
+                      "width": 22,
+                    }
+                  }
+                >
+                  <svg
+                    className="MuiCircularProgress-svg-202"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      className="MuiCircularProgress-circle-203 MuiCircularProgress-circleIndeterminate-205"
+                      cx={44}
+                      cy={44}
+                      fill="none"
+                      r={20.2}
+                      strokeWidth={3.6}
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </span>
+              <span
+                className="MuiTouchRipple-root-155"
+              />
+            </button>
+          </div>
+        </div>
+        <h1
+          className="MuiTypography-root-101 MuiTypography-display1-105 MuiTypography-gutterBottom-118"
+        >
+          def
+        </h1>
+        tester
+      </div>
+    </div>
+    <hr
+      className="MuiDivider-root-162"
+      style={
+        Object {
+          "marginBottom": 32,
+          "marginTop": 32,
+        }
+      }
+    />
+    <div
+      className="MuiGrid-container-1 MuiGrid-spacing-xs-24-25"
+    >
+      <div
+        className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-md-4-61"
+      >
+        <div
+          id="footer-2"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+              "flexGrow": 1,
+            }
+          }
+        >
+          <div
+            className="MuiPaper-root-167 MuiPaper-elevation1-170 MuiPaper-rounded-168 MuiCard-root-166"
+            style={
+              Object {
+                "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
+                "maxWidth": 385,
+              }
+            }
+          >
+            <div
+              className="MuiCardMedia-root-194"
+              src={undefined}
+              style={
+                Object {
+                  "height": 0,
+                  "paddingTop": "56.25%",
+                }
+              }
+            />
+            <div
+              className="MuiCardContent-root-196"
+              style={
+                Object {
+                  "paddingRight": "2%",
+                }
+              }
+            >
+              <h2
+                className="MuiTypography-root-101 MuiTypography-caption-111 MuiTypography-gutterBottom-118"
+              >
+                Related reads
+              </h2>
+              <h2
+                className="MuiTypography-root-101 MuiTypography-subheading-108 MuiTypography-gutterBottom-118"
+              >
+                def
+              </h2>
               <div
                 style={
                   Object {
                     "display": "flex",
-                    "flexDirection": "column",
-                    "marginLeft": 10,
+                    "marginBottom": "3%",
                   }
                 }
               >
-                <p
-                  className="MuiTypography-root-4 MuiTypography-body1-13"
+                <div
+                  className="MuiAvatar-root-98 MuiAvatar-colorDefault-99"
                   style={
                     Object {
-                      "marginTop": 6,
+                      "alignSelf": "center",
+                      "backgroundColor": "green",
+                      "height": 50,
+                      "width": 50,
                     }
                   }
                 >
-                  Author Deleted
-                </p>
-                <p
-                  className="MuiTypography-root-4 MuiTypography-body1-13 MuiTypography-colorTextSecondary-27"
+                  A
+                </div>
+                <div
                   style={
                     Object {
-                      "marginTop": 2,
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "marginLeft": 10,
                     }
                   }
                 >
-                  12 September 2018
-                </p>
+                  <p
+                    className="MuiTypography-root-101 MuiTypography-body1-110"
+                    style={
+                      Object {
+                        "marginTop": 6,
+                      }
+                    }
+                  >
+                    Author Deleted
+                  </p>
+                  <p
+                    className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
+                    style={
+                      Object {
+                        "marginTop": 2,
+                      }
+                    }
+                  >
+                    12 September 2018
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -497,5 +516,8 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
       </div>
     </div>
   </div>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-2-59"
+  />
 </div>
 `;

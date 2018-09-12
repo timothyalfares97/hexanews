@@ -23,7 +23,7 @@ export class Categories extends React.Component<Props> {
 
   renderCategoriesCard = () => (
     map(categories, (item) => (
-      <Grid item xs={3} key={item}>
+      <Grid item md={3} xs={6} key={item}>
         <CategoryCard
           dispatch={this.props.dispatch}
           category={item}

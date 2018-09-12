@@ -14,6 +14,7 @@ exports[`Categories renders Categories component 1`] = `
     style={
       Object {
         "flexGrow": 1,
+        "overflow": "auto",
       }
     }
   >
@@ -290,7 +291,7 @@ exports[`Categories renders Categories component 1`] = `
     }
   >
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -334,7 +335,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -378,7 +379,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -422,7 +423,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -466,7 +467,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -510,7 +511,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -554,7 +555,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -598,7 +599,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -642,7 +643,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -686,7 +687,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={
@@ -730,7 +731,7 @@ exports[`Categories renders Categories component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-6-99 MuiGrid-grid-md-3-124"
     >
       <div
         style={

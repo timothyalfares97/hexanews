@@ -2,403 +2,412 @@
 
 exports[`Account renders Account 1`] = `
 <div
+  className="MuiGrid-container-1"
   style={
     Object {
       "marginBottom": "4%",
-      "marginLeft": "25%",
-      "marginRight": "25%",
       "marginTop": "4%",
     }
   }
 >
-  <h1
-    className="MuiTypography-root-1 MuiTypography-display1-5 MuiTypography-colorTextPrimary-23 MuiTypography-gutterBottom-18"
-  >
-    My Account
-  </h1>
   <div
-    style={
-      Object {
-        "marginTop": 24,
-      }
-    }
-  >
-    <form
-      onSubmit={[Function]}
-    >
-      <h2
-        className="MuiTypography-root-1 MuiTypography-headline-6 MuiTypography-colorTextPrimary-23 MuiTypography-gutterBottom-18"
-      >
-        Edit Profile
-      </h2>
-      <div
-        aria-describedby="email-helper-text"
-        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
-      >
-        <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
-          data-shrink={false}
-          htmlFor="email"
-        >
-          Email
-        </label>
-        <div
-          className="MuiInput-root-42 MuiInput-disabled-45 MuiInput-formControl-43 MuiInput-underline-46"
-        >
-          <input
-            aria-invalid={false}
-            autoComplete={undefined}
-            autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-disabled-45 MuiInput-inputMarginDense-51"
-            defaultValue={undefined}
-            disabled={true}
-            id="email"
-            name={undefined}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={undefined}
-            onKeyUp={undefined}
-            placeholder={undefined}
-            readOnly={undefined}
-            required={false}
-            rows={undefined}
-            type="text"
-            value=""
-          />
-        </div>
-        <p
-          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
-          id="email-helper-text"
-        >
-           
-        </p>
-      </div>
-      <div
-        aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
-      >
-        <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
-          data-shrink={false}
-          htmlFor={undefined}
-        >
-          Name
-        </label>
-        <div
-          className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
-        >
-          <input
-            aria-invalid={false}
-            autoComplete={undefined}
-            autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-inputMarginDense-51"
-            defaultValue={undefined}
-            disabled={false}
-            id={undefined}
-            name="name"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={undefined}
-            onKeyUp={undefined}
-            placeholder={undefined}
-            readOnly={undefined}
-            required={false}
-            rows={undefined}
-            type="text"
-            value=""
-          />
-        </div>
-        <p
-          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
-          id={undefined}
-        >
-           
-        </p>
-      </div>
-      <div
-        aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
-      >
-        <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
-          data-shrink={false}
-          htmlFor={undefined}
-        >
-          Description
-        </label>
-        <div
-          className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
-        >
-          <input
-            aria-invalid={false}
-            autoComplete={undefined}
-            autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-inputMarginDense-51"
-            defaultValue={undefined}
-            disabled={false}
-            id={undefined}
-            name="description"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={undefined}
-            onKeyUp={undefined}
-            placeholder={undefined}
-            readOnly={undefined}
-            required={false}
-            rows={undefined}
-            type="text"
-            value=""
-          />
-        </div>
-        <p
-          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
-          id={undefined}
-        >
-           
-        </p>
-      </div>
-      <button
-        className="MuiButtonBase-root-88 MuiButtonBase-disabled-89 MuiButton-root-62 MuiButton-text-64 MuiButton-outlined-70 MuiButton-sizeSmall-85 MuiButton-disabled-82"
-        disabled={true}
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        style={
-          Object {
-            "marginTop": 10,
-          }
-        }
-        tabIndex="-1"
-        type="submit"
-      >
-        <span
-          className="MuiButton-label-63"
-        >
-          Save Profile
-        </span>
-      </button>
-    </form>
-  </div>
-  <hr
-    className="MuiDivider-root-91"
-    style={
-      Object {
-        "marginTop": 50,
-      }
-    }
+    className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
   />
   <div
-    style={
-      Object {
-        "marginTop": 24,
-      }
-    }
+    className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
   >
-    <form
-      onSubmit={[Function]}
+    <h1
+      className="MuiTypography-root-98 MuiTypography-display1-102 MuiTypography-colorTextPrimary-120 MuiTypography-gutterBottom-115"
     >
-      <h2
-        className="MuiTypography-root-1 MuiTypography-headline-6 MuiTypography-colorTextPrimary-23"
-      >
-        Change Password
-      </h2>
-      <div
-        aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
-        style={
-          Object {
-            "width": "100%",
-          }
+      My Account
+    </h1>
+    <div
+      style={
+        Object {
+          "marginTop": 24,
         }
+      }
+    >
+      <form
+        onSubmit={[Function]}
       >
-        <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
-          data-shrink={false}
-          htmlFor={undefined}
+        <h2
+          className="MuiTypography-root-98 MuiTypography-headline-103 MuiTypography-colorTextPrimary-120 MuiTypography-gutterBottom-115"
         >
-          Current Password
-        </label>
+          Edit Profile
+        </h2>
         <div
-          className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
-        >
-          <input
-            aria-invalid={false}
-            autoComplete={undefined}
-            autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-inputType-53 MuiInput-inputMarginDense-51"
-            defaultValue={undefined}
-            disabled={false}
-            id={undefined}
-            name="currentPassword"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={undefined}
-            onKeyUp={undefined}
-            placeholder={undefined}
-            readOnly={undefined}
-            required={false}
-            rows={undefined}
-            type="password"
-            value=""
-          />
-        </div>
-        <p
-          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
-          id={undefined}
-        >
-           
-        </p>
-      </div>
-      <div
-        aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
-        style={
-          Object {
-            "width": "100%",
+          aria-describedby="email-helper-text"
+          className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
+          style={
+            Object {
+              "width": "100%",
+            }
           }
-        }
-      >
-        <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
-          data-shrink={false}
-          htmlFor={undefined}
         >
-          New Password
-        </label>
+          <label
+            className="MuiFormLabel-root-132 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-marginDense-129"
+            data-shrink={false}
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <div
+            className="MuiInput-root-139 MuiInput-disabled-142 MuiInput-formControl-140 MuiInput-underline-143"
+          >
+            <input
+              aria-invalid={false}
+              autoComplete={undefined}
+              autoFocus={undefined}
+              className="MuiInput-input-147 MuiInput-disabled-142 MuiInput-inputMarginDense-148"
+              defaultValue={undefined}
+              disabled={true}
+              id="email"
+              name={undefined}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              readOnly={undefined}
+              required={false}
+              rows={undefined}
+              type="text"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root-152 MuiFormHelperText-marginDense-155"
+            id="email-helper-text"
+          >
+             
+          </p>
+        </div>
         <div
-          className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
-        >
-          <input
-            aria-invalid={false}
-            autoComplete={undefined}
-            autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-inputType-53 MuiInput-inputMarginDense-51"
-            defaultValue={undefined}
-            disabled={false}
-            id={undefined}
-            name="newPassword"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={undefined}
-            onKeyUp={undefined}
-            placeholder={undefined}
-            readOnly={undefined}
-            required={false}
-            rows={undefined}
-            type="password"
-            value=""
-          />
-        </div>
-        <p
-          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
-          id={undefined}
-        >
-           
-        </p>
-      </div>
-      <div
-        aria-describedby={undefined}
-        className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
-        style={
-          Object {
-            "width": "100%",
+          aria-describedby={undefined}
+          className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
+          style={
+            Object {
+              "width": "100%",
+            }
           }
-        }
-      >
-        <label
-          className="MuiFormLabel-root-35 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-marginDense-32"
-          data-shrink={false}
-          htmlFor={undefined}
         >
-          Confirm New Password
-        </label>
+          <label
+            className="MuiFormLabel-root-132 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-marginDense-129"
+            data-shrink={false}
+            htmlFor={undefined}
+          >
+            Name
+          </label>
+          <div
+            className="MuiInput-root-139 MuiInput-formControl-140 MuiInput-underline-143"
+          >
+            <input
+              aria-invalid={false}
+              autoComplete={undefined}
+              autoFocus={undefined}
+              className="MuiInput-input-147 MuiInput-inputMarginDense-148"
+              defaultValue={undefined}
+              disabled={false}
+              id={undefined}
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              readOnly={undefined}
+              required={false}
+              rows={undefined}
+              type="text"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root-152 MuiFormHelperText-marginDense-155"
+            id={undefined}
+          >
+             
+          </p>
+        </div>
         <div
-          className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
-        >
-          <input
-            aria-invalid={false}
-            autoComplete={undefined}
-            autoFocus={undefined}
-            className="MuiInput-input-50 MuiInput-inputType-53 MuiInput-inputMarginDense-51"
-            defaultValue={undefined}
-            disabled={false}
-            id={undefined}
-            name="confirmNewPassword"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={undefined}
-            onKeyUp={undefined}
-            placeholder={undefined}
-            readOnly={undefined}
-            required={false}
-            rows={undefined}
-            type="password"
-            value=""
-          />
-        </div>
-        <p
-          className="MuiFormHelperText-root-55 MuiFormHelperText-marginDense-58"
-          id={undefined}
-        >
-           
-        </p>
-      </div>
-      <button
-        className="MuiButtonBase-root-88 MuiButtonBase-disabled-89 MuiButton-root-62 MuiButton-text-64 MuiButton-outlined-70 MuiButton-sizeSmall-85 MuiButton-disabled-82"
-        disabled={true}
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        style={
-          Object {
-            "marginTop": 10,
+          aria-describedby={undefined}
+          className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
+          style={
+            Object {
+              "width": "100%",
+            }
           }
+        >
+          <label
+            className="MuiFormLabel-root-132 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-marginDense-129"
+            data-shrink={false}
+            htmlFor={undefined}
+          >
+            Description
+          </label>
+          <div
+            className="MuiInput-root-139 MuiInput-formControl-140 MuiInput-underline-143"
+          >
+            <input
+              aria-invalid={false}
+              autoComplete={undefined}
+              autoFocus={undefined}
+              className="MuiInput-input-147 MuiInput-inputMarginDense-148"
+              defaultValue={undefined}
+              disabled={false}
+              id={undefined}
+              name="description"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              readOnly={undefined}
+              required={false}
+              rows={undefined}
+              type="text"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root-152 MuiFormHelperText-marginDense-155"
+            id={undefined}
+          >
+             
+          </p>
+        </div>
+        <button
+          className="MuiButtonBase-root-185 MuiButtonBase-disabled-186 MuiButton-root-159 MuiButton-text-161 MuiButton-outlined-167 MuiButton-sizeSmall-182 MuiButton-disabled-179"
+          disabled={true}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          tabIndex="-1"
+          type="submit"
+        >
+          <span
+            className="MuiButton-label-160"
+          >
+            Save Profile
+          </span>
+        </button>
+      </form>
+    </div>
+    <hr
+      className="MuiDivider-root-188"
+      style={
+        Object {
+          "marginTop": 50,
         }
-        tabIndex="-1"
-        type="submit"
+      }
+    />
+    <div
+      style={
+        Object {
+          "marginTop": 24,
+        }
+      }
+    >
+      <form
+        onSubmit={[Function]}
       >
-        <span
-          className="MuiButton-label-63"
+        <h2
+          className="MuiTypography-root-98 MuiTypography-headline-103 MuiTypography-colorTextPrimary-120"
         >
           Change Password
-        </span>
-      </button>
-    </form>
+        </h2>
+        <div
+          aria-describedby={undefined}
+          className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <label
+            className="MuiFormLabel-root-132 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-marginDense-129"
+            data-shrink={false}
+            htmlFor={undefined}
+          >
+            Current Password
+          </label>
+          <div
+            className="MuiInput-root-139 MuiInput-formControl-140 MuiInput-underline-143"
+          >
+            <input
+              aria-invalid={false}
+              autoComplete={undefined}
+              autoFocus={undefined}
+              className="MuiInput-input-147 MuiInput-inputType-150 MuiInput-inputMarginDense-148"
+              defaultValue={undefined}
+              disabled={false}
+              id={undefined}
+              name="currentPassword"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              readOnly={undefined}
+              required={false}
+              rows={undefined}
+              type="password"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root-152 MuiFormHelperText-marginDense-155"
+            id={undefined}
+          >
+             
+          </p>
+        </div>
+        <div
+          aria-describedby={undefined}
+          className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <label
+            className="MuiFormLabel-root-132 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-marginDense-129"
+            data-shrink={false}
+            htmlFor={undefined}
+          >
+            New Password
+          </label>
+          <div
+            className="MuiInput-root-139 MuiInput-formControl-140 MuiInput-underline-143"
+          >
+            <input
+              aria-invalid={false}
+              autoComplete={undefined}
+              autoFocus={undefined}
+              className="MuiInput-input-147 MuiInput-inputType-150 MuiInput-inputMarginDense-148"
+              defaultValue={undefined}
+              disabled={false}
+              id={undefined}
+              name="newPassword"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              readOnly={undefined}
+              required={false}
+              rows={undefined}
+              type="password"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root-152 MuiFormHelperText-marginDense-155"
+            id={undefined}
+          >
+             
+          </p>
+        </div>
+        <div
+          aria-describedby={undefined}
+          className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <label
+            className="MuiFormLabel-root-132 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-marginDense-129"
+            data-shrink={false}
+            htmlFor={undefined}
+          >
+            Confirm New Password
+          </label>
+          <div
+            className="MuiInput-root-139 MuiInput-formControl-140 MuiInput-underline-143"
+          >
+            <input
+              aria-invalid={false}
+              autoComplete={undefined}
+              autoFocus={undefined}
+              className="MuiInput-input-147 MuiInput-inputType-150 MuiInput-inputMarginDense-148"
+              defaultValue={undefined}
+              disabled={false}
+              id={undefined}
+              name="confirmNewPassword"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              readOnly={undefined}
+              required={false}
+              rows={undefined}
+              type="password"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root-152 MuiFormHelperText-marginDense-155"
+            id={undefined}
+          >
+             
+          </p>
+        </div>
+        <button
+          className="MuiButtonBase-root-185 MuiButtonBase-disabled-186 MuiButton-root-159 MuiButton-text-161 MuiButton-outlined-167 MuiButton-sizeSmall-182 MuiButton-disabled-179"
+          disabled={true}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          tabIndex="-1"
+          type="submit"
+        >
+          <span
+            className="MuiButton-label-160"
+          >
+            Change Password
+          </span>
+        </button>
+      </form>
+    </div>
   </div>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+  />
 </div>
 `;

@@ -86,24 +86,30 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const query = this.state.query.trim().toLowerCase()
+    const query = this.state.query
     const filteredArticles = this.getFilteredArticles()
     return (
       <div style={styles.container}>
-        <form>
-          <TextField
-            id='query'
-            label='Search'
-            value={query}
-            onChange={this.handleQueryChange}
-            style={styles.textField}
-            margin='normal'
-          />
-        </form>
+        <Grid container>
+          <Grid md={3} xs={1}/>
+          <Grid md={6} xs={10}>
+            <TextField
+              id='query'
+              label='Search'
+              value={query}
+              onChange={this.handleQueryChange}
+              style={styles.textField}
+              margin='normal'
+            />
+          </Grid>
+          <Grid md={3} xs={1}/>
+        </Grid>
         <Grid container spacing={24}>
-          <Grid item xs={12} style={styles.articleContainer}>
+          <Grid md={3} xs={1}/>
+          <Grid item md={6} xs={10} style={styles.articleContainer}>
             {this.renderArticles(filteredArticles)}
           </Grid>
+          <Grid md={3} xs={1}/>
         </Grid>
       </div>
     )

@@ -17,14 +17,10 @@ export default {
     display: 'flex',
   },
   container: {
-    marginLeft: '15%',
-    marginRight: '15%',
     marginTop: '4%',
     paddingBottom: '5%'
   },
   contentContainer: {
-    marginLeft: '10%',
-    marginRight: '10%',
     marginBottom: '2%',
   },
   description: {

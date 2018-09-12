@@ -5,7 +5,7 @@ exports[`Home renders Home component 1`] = `
   style={
     Object {
       "padding": "5%",
-      "paddingLeft": "7%",
+      "paddingLeft": "6%",
       "paddingTop": "0%",
     }
   }
@@ -14,6 +14,7 @@ exports[`Home renders Home component 1`] = `
     style={
       Object {
         "flexGrow": 1,
+        "overflow": "auto",
       }
     }
   >
@@ -285,7 +286,7 @@ exports[`Home renders Home component 1`] = `
     }
   >
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-4-97"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-4-125"
     >
       <div
         id="article-Adjustable sidebar using Angular"
@@ -335,7 +336,7 @@ exports[`Home renders Home component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-4-97"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-4-125"
     >
       <div
         id="article-Implement Google Analytics for React Native"
@@ -385,7 +386,7 @@ exports[`Home renders Home component 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-4-97"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-4-125"
     >
       <div
         id="article-One Book at The Time —A Short Story"
@@ -448,7 +449,7 @@ exports[`Home renders Home component 1`] = `
     className="MuiGrid-container-65 MuiGrid-spacing-xs-24-89"
   >
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-8-101"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-8-129"
       style={
         Object {
           "marginRight": 24,
@@ -456,7 +457,7 @@ exports[`Home renders Home component 1`] = `
       }
     />
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-3-96"
+      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-3-124"
     >
       <h2
         className="MuiTypography-root-40 MuiTypography-headline-45"

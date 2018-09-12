@@ -10,7 +10,7 @@ export default {
   container: {
     padding: '5%',
     paddingTop: '0%',
-    paddingLeft: '7%',
+    paddingLeft: '6%',
   },
   divider: {
     marginTop: 64,

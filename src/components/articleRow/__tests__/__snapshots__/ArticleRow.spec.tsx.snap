@@ -81,18 +81,7 @@ exports[`Article Row renders Article row 1`] = `
           "justifyContent": "flex-end",
         }
       }
-    >
-      <div
-        className="MuiCardMedia-root-55"
-        src={undefined}
-        style={
-          Object {
-            "height": 151,
-            "width": 151,
-          }
-        }
-      />
-    </div>
+    />
   </div>
 </div>
 `;

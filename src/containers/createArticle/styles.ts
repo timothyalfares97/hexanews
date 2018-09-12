@@ -11,8 +11,6 @@ export default {
     alignSelf: 'center'
   },
   container: {
-    marginLeft: '25%',
-    marginRight: '25%',
     marginTop: '4%',
     paddingBottom: '5%'
   },
@@ -43,6 +41,6 @@ export default {
     marginTop: 24,
   },
   buttonContainer: {
-    marginTop: '10%'
+    marginTop: '17%'
   },
 }

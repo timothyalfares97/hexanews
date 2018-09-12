@@ -66,7 +66,7 @@ export class Home extends React.Component<Props> {
       <div style={styles.container}>
         <CategoryHeader />
         <Grid container spacing={24} style={styles.gridContainer}>
-          <Grid item xs={4}>
+          <Grid item md={4} xs={12}>
             <ArticleCard
               dispatch={dispatch}
               title='Adjustable sidebar using Angular'
@@ -74,7 +74,7 @@ export class Home extends React.Component<Props> {
                 I assume that you already created a sidebar which you need to make draggable.'
             />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item md={4} xs={12}>
             <ArticleCard
               dispatch={dispatch}
               title='Implement Google Analytics for React Native'
@@ -82,7 +82,7 @@ export class Home extends React.Component<Props> {
                teams testing there'
             />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item md={4} xs={12}>
             <ArticleCard
               dispatch={dispatch}
               title='One Book at The Time —A Short Story'
@@ -93,10 +93,10 @@ export class Home extends React.Component<Props> {
         </Grid>
         <Divider style={styles.divider}/>
         <Grid container spacing={24}>
-          <Grid item xs={8} style={styles.latestArticleContainer}>
+          <Grid item md={8} xs={12} style={styles.latestArticleContainer}>
             {this.renderAllArticles()}
           </Grid>
-          <Grid item xs={3}>
+          <Grid item md={3} xs={12}>
             <Typography variant='headline' component='h2' style={styles.topStory}>
               {homeString.topStory}
             </Typography>

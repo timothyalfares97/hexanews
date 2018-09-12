@@ -18,5 +18,6 @@ export default {
   },
   root: {
     flexGrow: 1,
+    overflow: 'auto'
   },
 }

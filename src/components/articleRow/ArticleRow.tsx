@@ -5,13 +5,11 @@
 import * as React from 'react'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import * as moment from 'moment'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
 
-import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
 
@@ -60,12 +58,7 @@ const ArticleRow: React.StatelessComponent<Props> = ({
             </Typography>
           </CardContent>
         </div>
-        <div style={styles.imageContainer}>
-          <CardMedia
-            style={styles.cover}
-            image={placeholder}
-          />
-        </div>
+        <div style={styles.imageContainer}/>
       </Card>
     </div>
   )

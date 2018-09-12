@@ -5,6 +5,7 @@ exports[`Category Header renders Category Header 1`] = `
   style={
     Object {
       "flexGrow": 1,
+      "overflow": "auto",
     }
   }
 >
