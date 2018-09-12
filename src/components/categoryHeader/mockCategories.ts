@@ -2,7 +2,7 @@
  * Mock data for categories.
  */
 export default [
-  'tech',
+  'technology',
   'science',
   'art',
   'design',

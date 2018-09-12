@@ -3,7 +3,7 @@
  */
 
 export default [
-  'tech',
+  'technology',
   'science',
   'art',
   'design',
