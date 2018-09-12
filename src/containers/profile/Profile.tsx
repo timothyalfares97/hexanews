@@ -48,7 +48,7 @@ export class Profile extends React.Component<Props> {
         <CardHeader
           avatar={this.renderAvatar()}
           title={user.name}
-          subheader={moment(article.createdAt).format('DD MMMM YYYY')}
+          subheader={moment(article.createdAt).format('D MMMM YYYY')}
         />
         <CardContent>
           <Typography gutterBottom variant='headline' component='h2'>
