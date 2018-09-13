@@ -45,11 +45,19 @@ class RegisterForm extends React.Component<Props, ComponentState> {
     return (email === '' || password === '' || name === '')
   }
 
+  toTitleCase = (str: string) => {
+    return str.toLowerCase()
+      .split(' ')
+      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+      .join(' ')
+  }
+
   onRegister = async () => {
     const { email, password, name } = this.state
     const { dispatch, onChangeAuthenticationState } = this.props
 
-    await dispatch(actions.registerUser(email, password, name, onChangeAuthenticationState))
+    const capitalizedName = this.toTitleCase(name)
+    await dispatch(actions.registerUser(email, password, capitalizedName, onChangeAuthenticationState))
   }
 
   public render() {

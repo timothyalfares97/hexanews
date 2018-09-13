@@ -21,6 +21,13 @@ type Props = StateProps & {
 
 export class Category extends React.Component<Props> {
 
+  toTitleCase = (str: string) => {
+    return str.toLowerCase()
+      .split(' ')
+      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+      .join(' ')
+  }
+
   renderCategoryArticles = () => {
     const { categoryArticles, dispatch, users } = this.props
     return map(categoryArticles, (article) => {
@@ -49,7 +56,7 @@ export class Category extends React.Component<Props> {
             variant='headline'
             style={styles.h1 as any}
           >
-            {categoryTitle.charAt(0).toUpperCase() + categoryTitle.slice(1)}
+            {this.toTitleCase(categoryTitle)}
           </Typography>
         </Grid>
         <Grid container spacing={24}>
