@@ -20,6 +20,7 @@ import styles from './styles'
 import { User } from '../../domain/model/User'
 import FooterCard from '../../components/footerCard/FooterCard'
 import selector, { StateProps } from './selector'
+import { NotFound } from '../notFound/NotFound'
 
 type Props = {
   dispatch: Dispatch<any>
@@ -109,9 +110,17 @@ export class ArticleDetail extends React.Component<Props> {
   }
 
   public render() {
+    const { dispatch, userArticle } = this.props
+    if (!userArticle) {
+      return (
+        <NotFound
+          dispatch={dispatch}
+        />
+      )
+    }
     return (
       <Grid container style={styles.container}>
-        <Grid item md={2} xs={1}/>
+        <Grid item md={2} xs={1} />
         <Grid item md={8} xs={10}>
           <Grid container>
             {this.renderArticle()}
@@ -121,7 +130,7 @@ export class ArticleDetail extends React.Component<Props> {
             {this.renderFooterCards()}
           </Grid>
         </Grid>
-        <Grid item md={2} xs={1}/>
+        <Grid item md={2} xs={1} />
       </Grid>
     )
   }
