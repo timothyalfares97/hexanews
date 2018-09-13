@@ -40,6 +40,7 @@ export class Categories extends React.Component<Props> {
           component='h1'
           gutterBottom
           variant='headline'
+          style={styles.h1 as any}
         >
           {categoriesString.exploreCategory}
         </Typography>

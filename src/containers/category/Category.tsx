@@ -47,15 +47,9 @@ export class Category extends React.Component<Props> {
             component='h1'
             gutterBottom
             variant='headline'
+            style={styles.h1 as any}
           >
-            {categoryTitle}
-          </Typography>
-          <Typography
-            component='h2'
-            gutterBottom
-            variant='subheading'
-          >
-            Behind the scenes
+            {categoryTitle.charAt(0).toUpperCase() + categoryTitle.slice(1)}
           </Typography>
         </Grid>
         <Grid container spacing={24}>
