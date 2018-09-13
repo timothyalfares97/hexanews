@@ -29,9 +29,9 @@ export class ArticleDetail extends React.Component<Props> {
 
   renderArticle = () => {
     const { users, userArticle, isUserArticle, isDeletingArticle } = this.props
-    const authorId = userArticle.authorId
-    if (!!authorId) {
-      const author = find(users, (user: User) => user._id === userArticle.authorId)
+    if (!!userArticle) {
+      const authorId = userArticle.authorId
+      const author = find(users, (user: User) => user._id === authorId)
       const authorName = author ? author.name : 'Author Deleted'
       const initials = head(startCase(authorName))
       return (
