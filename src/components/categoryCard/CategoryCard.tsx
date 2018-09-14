@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
+import { startCase } from 'lodash'
 
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
@@ -35,7 +36,7 @@ const CategoryCard: React.StatelessComponent<Props> = ({
         />
         <CardContent>
           <Typography variant='title'>
-            {category.charAt(0).toUpperCase() + category.slice(1)}
+            {startCase(category)}
           </Typography>
         </CardContent>
       </Card>

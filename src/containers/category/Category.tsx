@@ -3,11 +3,11 @@
  */
 
 import * as React from 'react'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { map, find, startCase } from 'lodash'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { connect } from 'react-redux'
-import { map, find } from 'lodash'
-import { Dispatch } from 'redux'
 
 import ArticleRow from '../../components/articleRow/ArticleRow'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
@@ -20,13 +20,6 @@ type Props = StateProps & {
 }
 
 export class Category extends React.Component<Props> {
-
-  toTitleCase = (str: string) => {
-    return str.toLowerCase()
-      .split(' ')
-      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-      .join(' ')
-  }
 
   renderCategoryArticles = () => {
     const { categoryArticles, dispatch, users } = this.props
@@ -49,14 +42,14 @@ export class Category extends React.Component<Props> {
     return (
       <div style={styles.container}>
         <CategoryHeader />
-        <Grid container style={{ flexDirection: 'column', marginLeft: '2%', marginTop: '2%'}}>
+        <Grid container style={{ flexDirection: 'column', marginLeft: '2%', marginTop: '2%' }}>
           <Typography
             component='h1'
             gutterBottom
             variant='headline'
             style={styles.h1 as any}
           >
-            {this.toTitleCase(categoryTitle)}
+            {startCase(categoryTitle)}
           </Typography>
         </Grid>
         <Grid container spacing={24}>

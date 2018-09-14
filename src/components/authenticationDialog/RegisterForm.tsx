@@ -4,6 +4,7 @@
 
 import * as React from 'react'
 import { Dispatch } from 'redux'
+import { startCase } from 'lodash'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
@@ -45,18 +46,11 @@ class RegisterForm extends React.Component<Props, ComponentState> {
     return (email === '' || password === '' || name === '')
   }
 
-  toTitleCase = (str: string) => {
-    return str.toLowerCase()
-      .split(' ')
-      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-      .join(' ')
-  }
-
   onRegister = async () => {
     const { email, password, name } = this.state
     const { dispatch, onChangeAuthenticationState } = this.props
 
-    const capitalizedName = this.toTitleCase(name)
+    const capitalizedName = startCase(name)
     await dispatch(actions.registerUser(email, password, capitalizedName, onChangeAuthenticationState))
   }
 
