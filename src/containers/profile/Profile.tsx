@@ -12,11 +12,13 @@ import CardHeader from '@material-ui/core/CardHeader'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import { CardMedia } from '@material-ui/core'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 import { push } from 'connected-react-router'
 import { map, startCase, head } from 'lodash'
 
+import placeholder from '../../assets/placeholder.png'
 import avatarPlaceholder from '../../assets/avatar_placeholder.png'
 import ProfileCard from '../../components/profileCard/ProfileCard'
 import styles from './styles'
@@ -24,6 +26,7 @@ import { profileString } from '../../constants/string'
 import selector, { StateProps } from './selector'
 import { Article } from '../../domain/model/Article'
 import { User } from '../../domain/model/User'
+import Utils from '../../utils'
 
 type Props = {
   user: User,
@@ -41,6 +44,7 @@ export class Profile extends React.Component<Props> {
     const { userArticles, dispatch, user } = this.props
     return map(userArticles, (article: Article) => {
       const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
+      const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
       const articleDescription = sanitizedDescription.length > 128 ? `${sanitizedDescription.substring(0, 128)}...` : sanitizedDescription
       return (
         <Card
@@ -53,6 +57,10 @@ export class Profile extends React.Component<Props> {
             avatar={this.renderAvatar(user.name)}
             title={user.name}
             subheader={moment(article.createdAt).format('D MMMM YYYY')}
+          />
+          <CardMedia
+            style={styles.media}
+            image={articleImage}
           />
           <CardContent>
             <Typography gutterBottom variant='headline' component='h2'>

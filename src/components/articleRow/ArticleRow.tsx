@@ -6,12 +6,15 @@ import * as React from 'react'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
+import { CardMedia } from '@material-ui/core'
 import * as moment from 'moment'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
 
+import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
+import Utils from '../../utils'
 
 type Props = {
   article: Article,
@@ -24,6 +27,7 @@ const ArticleRow: React.StatelessComponent<Props> = ({
   authorName,
   dispatch,
 }) => {
+  const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
   const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
   const articleDescription = sanitizedDescription.length > 128 ? `${sanitizedDescription.substring(0, 128)}...` : sanitizedDescription
   return (
@@ -58,7 +62,12 @@ const ArticleRow: React.StatelessComponent<Props> = ({
             </Typography>
           </CardContent>
         </div>
-        <div style={styles.imageContainer}/>
+        <div style={styles.imageContainer}>
+          <CardMedia
+            style={styles.cover}
+            image={articleImage}
+          />
+        </div>
       </Card>
     </div>
   )

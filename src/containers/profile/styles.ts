@@ -33,4 +33,8 @@ export default {
   button: {
     marginLeft: 20,
   },
+  media: {
+    height: 0,
+    paddingTop: '50%',
+  },
 }

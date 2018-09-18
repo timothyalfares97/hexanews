@@ -13,11 +13,14 @@ import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import { isEmpty, map, filter, find, head, startCase } from 'lodash'
 import * as moment from 'moment'
+import { CardMedia } from '@material-ui/core'
 
+import placeholder from '../../assets/placeholder.png'
 import selector, { StateProps } from './selector'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
 import { User } from '../../domain/model/User'
+import Utils from '../../utils'
 
 export type Props = StateProps
 
@@ -63,6 +66,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
     return map(filteredArticles, (article: Article) => {
       const author = find(users, (user: User) => user._id === article.authorId)
       const authorName = author ? author.name : ''
+      const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
       const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
       const articleDescription = sanitizedDescription.length > 128 ? `${sanitizedDescription.substring(0, 128)}...` : sanitizedDescription
       return (
@@ -71,6 +75,10 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
             avatar={this.renderAvatar(authorName)}
             title={authorName}
             subheader={moment(article.createdAt).format('DD MMMM YYYY')}
+          />
+          <CardMedia
+            style={styles.media}
+            image={articleImage}
           />
           <CardContent>
             <Typography gutterBottom variant='headline' component='h2'>

@@ -22,5 +22,9 @@ export default {
   },
   textField: {
     width: '100%',
-  }
+  },
+  media: {
+    height: 0,
+    paddingTop: '50%',
+  },
 }

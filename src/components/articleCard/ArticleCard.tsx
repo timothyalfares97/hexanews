@@ -15,6 +15,7 @@ import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import * as Config from '../../constants/config'
 import { Article } from '../../domain/model/Article'
+import Utils from '../../utils'
 
 type Props = {
   article: Article,
@@ -27,6 +28,7 @@ const ArticleCard: React.StatelessComponent<Props> = ({
   authorName,
   dispatch,
 }) => {
+  const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
   return (
     <div id={`article-${article.title}`}
       style={styles.root}
@@ -35,7 +37,7 @@ const ArticleCard: React.StatelessComponent<Props> = ({
       <Card style={styles.card}>
         <CardMedia
           style={styles.media}
-          image={placeholder}
+          image={articleImage}
         />
         <CardContent>
           <Typography

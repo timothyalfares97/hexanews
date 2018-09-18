@@ -378,7 +378,7 @@ exports[`Category renders Category component 1`] = `
                   }
                 }
               >
-                13 September 2018
+                18 September 2018
               </p>
             </div>
           </div>
@@ -390,7 +390,18 @@ exports[`Category renders Category component 1`] = `
                 "justifyContent": "flex-end",
               }
             }
-          />
+          >
+            <div
+              className="MuiCardMedia-root-164"
+              src={undefined}
+              style={
+                Object {
+                  "height": 151,
+                  "width": 151,
+                }
+              }
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -17,6 +17,7 @@ import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import { footerCardString } from '../../constants/string'
 import { Article } from '../../domain/model/Article'
+import Utils from '../../utils'
 
 type Props = {
   authorName: string,
@@ -30,6 +31,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
   dispatch,
 }) => {
   const initials = head(startCase(authorName))
+  const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
   return (
     <div
       id={`footer-${article._id}`}
@@ -39,7 +41,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
       <Card style={styles.card}>
         <CardMedia
           style={styles.media}
-          image={placeholder}
+          image={articleImage}
         />
         <CardContent style={styles.cardContent}>
           <Typography
