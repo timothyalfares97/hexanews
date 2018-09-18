@@ -1,16 +1,16 @@
 /**
- * Constant string file for the application
+ * Constant locales en file for the application
  */
 
-export const footerCardString = {
+const footerCard = {
   relatedRead: 'Related reads'
 }
 
-export const profileCardString = {
+const profileCard = {
   memberSince: 'Hexanews member since'
 }
 
-export const forgetPasswordFormString = {
+const forgetPasswordForm = {
   dialogTitle: 'Forgot Password',
   dialogDescription: 'Put your email here, we will send a confirmation to reset your password',
   backLogin: 'Back to login',
@@ -18,7 +18,7 @@ export const forgetPasswordFormString = {
   submitButton: 'Submit',
 }
 
-export const loginFormString = {
+const loginForm = {
   dialogTitle: 'Sign In',
   dialogDescription: 'Login to access your personalized homepage. Please enter your email address and password.',
   forgotPasswordLabel: 'Forgot Password? ',
@@ -28,7 +28,7 @@ export const loginFormString = {
   submitButton: 'Sign In',
 }
 
-export const registerFormString = {
+const registerForm = {
   dialogTitle: 'Register',
   dialogDescription: 'Register to access your personalized homepage. Please enter your email address and password.',
   haveAccountLabel: 'Have an account? ',
@@ -37,19 +37,40 @@ export const registerFormString = {
   submitButton: 'Register',
 }
 
-export const categoriesString = {
+const categories = {
   exploreCategory: 'Explore categories'
 }
 
-export const createArticleString = {
+const createArticle = {
   cancelButton: 'Cancel',
   publishButton: 'Publish'
 }
 
-export const homeString = {
+const account = {
+  myAccount: 'Akun Saya',
+  editProfile: 'Sunting Profil',
+  saveButton: 'Simpan Profil',
+  cancelButton: 'Batal',
+  changePassword: 'Ganti Kata Sandi'
+}
+
+const home = {
   topStory: 'Top story of Hexanews'
 }
 
-export const profileString = {
+const profile = {
   myAccount: 'My Account',
+}
+
+export default {
+  footerCard,
+  profileCard,
+  forgetPasswordForm,
+  loginForm,
+  registerForm,
+  categories,
+  createArticle,
+  account,
+  home,
+  profile,
 }

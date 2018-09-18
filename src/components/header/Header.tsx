@@ -1,18 +1,22 @@
 /**
  * Display header component.
  */
+
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
+import MenuItem from '@material-ui/core/MenuItem'
 import CreateIcon from '@material-ui/icons/Create'
+import Select from '@material-ui/core/Select'
 import SearchIcon from '@material-ui/icons/Search'
 import ExitIcon from '@material-ui/icons/ExitToApp'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 
+import i18n from '../../i18n'
 import * as actions from './actions'
 import * as Config from '../../constants/config'
 import styles from './styles'
@@ -25,6 +29,7 @@ export type Props = {
 } & StateProps
 
 export interface ComponentState {
+  language: string
   showDialog: boolean
 }
 
@@ -32,9 +37,18 @@ export class Header extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)
+    const language = localStorage.getItem('language')
     this.state = {
+      language: language ? language : '',
       showDialog: false,
     }
+  }
+
+  handleLanguageChange = (event: any) => {
+    this.setState({ language: event.target.value }, () => {
+      i18n.changeLanguage(event.target.value)
+      localStorage.setItem('language', event.target.value)
+    })
   }
 
   onLogoutClick = async () => {
@@ -51,7 +65,7 @@ export class Header extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const { showDialog } = this.state
+    const { showDialog, language } = this.state
     const { dispatch, isLoadingLogin, isLoadingRegister, isLoggedIn, loginError, isLoadingServer } = this.props
     return (
       <div style={styles.root}>
@@ -70,6 +84,17 @@ export class Header extends React.Component<Props, ComponentState> {
             <div style={styles.rightContainer as any}>
               {!isLoadingServer &&
                 <div style={styles.innerRightContainer as any}>
+                  <Select
+                    value={language}
+                    onChange={this.handleLanguageChange}
+                    name='language'
+                    displayEmpty
+                    style={{ marginRight: 16, marginTop: 8 }}
+                    disableUnderline
+                  >
+                    <MenuItem value='en'>EN</MenuItem>
+                    <MenuItem value='id'>ID</MenuItem>
+                  </Select>
                   {!isLoggedIn &&
                     <Typography
                       variant='title'

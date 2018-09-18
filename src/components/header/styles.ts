@@ -43,7 +43,7 @@ export default {
     flex: 1,
   },
   titleContainer: {
-    flex: 2
+    flex: 1
   },
   rightContainer: {
     flex: 1,

@@ -10,12 +10,13 @@ import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import TextField from '@material-ui/core/TextField'
+import { translate } from 'react-i18next'
 
 import * as actions from './actions'
-import { accountString } from '../../constants/string'
 import { User } from '../../domain/model/User'
 import selector, { StateProps } from './selector'
 import styles from './styles'
+import i18n from '../../i18n'
 
 export type Props = {
   user: User,
@@ -79,7 +80,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             color='textPrimary'
             gutterBottom
           >
-            {accountString.editProfile}
+            {i18n.t('account.editProfile')}
           </Typography>
           <TextField
             id='email'
@@ -124,7 +125,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             disabled={this.disableSaveProfileButton()}
             type='submit'
           >
-            {isEditingUser ? <CircularProgress size={22} /> : accountString.saveButton}
+            {isEditingUser ? <CircularProgress size={22} /> : i18n.t('account.saveButton')}
           </Button>
         </ValidatorForm>
       </div>
@@ -132,4 +133,6 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
   }
 }
 
-export default connect(selector)(ProfileForm)
+const ConnectedProfileForm = connect(selector)(ProfileForm)
+
+export default translate('translations')(ConnectedProfileForm)

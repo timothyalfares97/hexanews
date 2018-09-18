@@ -8,13 +8,14 @@ import { Dispatch } from 'redux'
 import { Typography } from '@material-ui/core'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import Button from '@material-ui/core/Button'
+import { translate } from 'react-i18next'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 import * as actions from './actions'
-import { accountString } from '../../constants/string'
 import { User } from '../../domain/model/User'
 import selector, { StateProps } from './selector'
 import styles from './styles'
+import i18n from '../../i18n'
 
 export type Props = {
   user: User,
@@ -91,7 +92,7 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
             component='h2'
             color='textPrimary'
           >
-            {accountString.changePassword}
+            {i18n.t('account.changePassword')}
           </Typography>
           <TextValidator
             label='Current Password'
@@ -141,7 +142,7 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
             disabled={this.disableChangePasswordButton()}
             type='submit'
           >
-            {isChangingPassword ? <CircularProgress size={22} /> : accountString.changePassword}
+            {isChangingPassword ? <CircularProgress size={22} /> : i18n.t('account.changePassword')}
           </Button>
         </ValidatorForm>
       </div>
@@ -149,4 +150,6 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
   }
 }
 
-export default connect(selector)(ChangePasswordForm)
+const ConnectedChangePassword = connect(selector)(ChangePasswordForm)
+
+export default translate('translations')(ConnectedChangePassword)

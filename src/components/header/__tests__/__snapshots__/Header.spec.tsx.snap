@@ -31,7 +31,7 @@ exports[`Header renders Header 1`] = `
       <div
         style={
           Object {
-            "flex": 2,
+            "flex": 1,
           }
         }
       >
@@ -76,6 +76,64 @@ exports[`Header renders Header 1`] = `
             }
           }
         >
+          <div
+            className="MuiInput-root-70"
+            style={
+              Object {
+                "marginRight": 16,
+                "marginTop": 8,
+              }
+            }
+          >
+            <div
+              className="MuiSelect-root-65"
+            >
+              <div
+                aria-haspopup="true"
+                aria-owns={null}
+                aria-pressed="false"
+                className="MuiSelect-select-66 MuiSelect-selectMenu-67 MuiInput-input-78"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <span
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "&#8203;",
+                    }
+                  }
+                />
+              </div>
+              <input
+                autoComplete={undefined}
+                autoFocus={undefined}
+                defaultValue={undefined}
+                id={undefined}
+                name="language"
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                rows={undefined}
+                type="hidden"
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-83 MuiSelect-icon-69"
+                color={undefined}
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
           <h2
             className="MuiTypography-root-40 MuiTypography-title-46 MuiTypography-colorInherit-59"
             style={
@@ -102,7 +160,7 @@ exports[`Header renders Header 1`] = `
           </h2>
           <button
             aria-label="Search"
-            className="MuiButtonBase-root-71 MuiIconButton-root-65"
+            className="MuiButtonBase-root-100 MuiIconButton-root-94"
             disabled={false}
             onBlur={[Function]}
             onFocus={[Function]}
@@ -124,7 +182,7 @@ exports[`Header renders Header 1`] = `
             type="button"
           >
             <span
-              className="MuiIconButton-label-70"
+              className="MuiIconButton-label-99"
             >
               <a
                 href="/searchArticle"
@@ -138,7 +196,7 @@ exports[`Header renders Header 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-74"
+                  className="MuiSvgIcon-root-83"
                   color={undefined}
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -154,7 +212,7 @@ exports[`Header renders Header 1`] = `
               </a>
             </span>
             <span
-              className="MuiTouchRipple-root-81"
+              className="MuiTouchRipple-root-103"
             />
           </button>
         </div>
@@ -195,7 +253,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
       <div
         style={
           Object {
-            "flex": 2,
+            "flex": 1,
           }
         }
       >
@@ -240,6 +298,64 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
             }
           }
         >
+          <div
+            className="MuiInput-root-70"
+            style={
+              Object {
+                "marginRight": 16,
+                "marginTop": 8,
+              }
+            }
+          >
+            <div
+              className="MuiSelect-root-65"
+            >
+              <div
+                aria-haspopup="true"
+                aria-owns={null}
+                aria-pressed="false"
+                className="MuiSelect-select-66 MuiSelect-selectMenu-67 MuiInput-input-78"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <span
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "&#8203;",
+                    }
+                  }
+                />
+              </div>
+              <input
+                autoComplete={undefined}
+                autoFocus={undefined}
+                defaultValue={undefined}
+                id={undefined}
+                name="language"
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                rows={undefined}
+                type="hidden"
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-83 MuiSelect-icon-69"
+                color={undefined}
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
           <h2
             className="MuiTypography-root-40 MuiTypography-title-46 MuiTypography-colorInherit-59"
             style={
@@ -266,7 +382,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
           </h2>
           <button
             aria-label="Search"
-            className="MuiButtonBase-root-71 MuiIconButton-root-65"
+            className="MuiButtonBase-root-100 MuiIconButton-root-94"
             disabled={false}
             onBlur={[Function]}
             onFocus={[Function]}
@@ -288,7 +404,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
             type="button"
           >
             <span
-              className="MuiIconButton-label-70"
+              className="MuiIconButton-label-99"
             >
               <a
                 href="/searchArticle"
@@ -302,7 +418,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-74"
+                  className="MuiSvgIcon-root-83"
                   color={undefined}
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -318,12 +434,12 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
               </a>
             </span>
             <span
-              className="MuiTouchRipple-root-81"
+              className="MuiTouchRipple-root-103"
             />
           </button>
           <button
             aria-label="Create"
-            className="MuiButtonBase-root-71 MuiIconButton-root-65"
+            className="MuiButtonBase-root-100 MuiIconButton-root-94"
             disabled={false}
             onBlur={[Function]}
             onFocus={[Function]}
@@ -345,7 +461,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
             type="button"
           >
             <span
-              className="MuiIconButton-label-70"
+              className="MuiIconButton-label-99"
             >
               <a
                 href="/createArticle"
@@ -359,7 +475,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-74"
+                  className="MuiSvgIcon-root-83"
                   color={undefined}
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -375,12 +491,12 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
               </a>
             </span>
             <span
-              className="MuiTouchRipple-root-81"
+              className="MuiTouchRipple-root-103"
             />
           </button>
           <button
             aria-label="Logout"
-            className="MuiButtonBase-root-71 MuiIconButton-root-65"
+            className="MuiButtonBase-root-100 MuiIconButton-root-94"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -403,11 +519,11 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
             type="button"
           >
             <span
-              className="MuiIconButton-label-70"
+              className="MuiIconButton-label-99"
             >
               <svg
                 aria-hidden="true"
-                className="MuiSvgIcon-root-74"
+                className="MuiSvgIcon-root-83"
                 color={undefined}
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -422,7 +538,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root-81"
+              className="MuiTouchRipple-root-103"
             />
           </button>
         </div>

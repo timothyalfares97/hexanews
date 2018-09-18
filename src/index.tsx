@@ -1,6 +1,7 @@
 /**
  * Entry point for the main application.
  */
+
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -9,6 +10,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { createBrowserHistory, History } from 'history'
 import { ConnectedRouter } from 'connected-react-router'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import { I18nextProvider } from 'react-i18next'
 
 import './index.css'
 import styles from './styles'
@@ -19,6 +21,7 @@ import configureStore from './store/configureStore'
 import ArticleRepository from './domain/repository/ArticleRepository'
 import UserRepository from './domain/repository/UserRepository'
 import { ActionTypes } from './actions/ActionTypes'
+import i18n from './i18n'
 
 export default class Hexanews extends React.Component {
 
@@ -44,6 +47,11 @@ export default class Hexanews extends React.Component {
       const user = await UserRepository.get(id)
       this.store.dispatch({ type: ActionTypes.GET_USER, user: user.data })
     }
+
+    const localLanguage = localStorage.getItem('language')
+    const currentLanguage = localLanguage ? localLanguage : 'en'
+    i18n.changeLanguage(currentLanguage)
+
     this.setState({ isLoadingServer: false })
   }
 
@@ -59,14 +67,16 @@ export default class Hexanews extends React.Component {
     const { isLoadingServer } = this.state
     return (
       <BrowserRouter>
-        <Provider store={this.store}>
-          <ConnectedRouter history={this.history}>
-            <div>
-              <Header isLoadingServer={isLoadingServer}/>
-              {this.renderMainContainer()}
-            </div>
-          </ConnectedRouter>
-        </Provider>
+        <I18nextProvider i18n={i18n}>
+          <Provider store={this.store}>
+            <ConnectedRouter history={this.history}>
+              <div>
+                <Header isLoadingServer={isLoadingServer}/>
+                {this.renderMainContainer()}
+              </div>
+            </ConnectedRouter>
+          </Provider>
+        </I18nextProvider>
       </BrowserRouter>
     )
   }

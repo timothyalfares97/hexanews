@@ -6,17 +6,19 @@ import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import { connect } from 'react-redux'
 import { Typography } from '@material-ui/core'
+import { translate } from 'react-i18next'
 import Divider from '@material-ui/core/Divider'
 
-import { accountString } from '../../constants/string'
 import ChangePasswordForm from '../../components/changePasswordForm/ChangePasswordForm'
 import ProfileForm from '../../components/profileForm/ProfileForm'
 import styles from './styles'
+import i18n from '../../i18n'
 
 type Props = {
 }
 
 export class Account extends React.Component<Props> {
+
   public render() {
     return (
       <Grid container style={styles.container}>
@@ -28,7 +30,7 @@ export class Account extends React.Component<Props> {
             color='textPrimary'
             gutterBottom
           >
-            {accountString.myAccount}
+            {i18n.t('account.myAccount')}
           </Typography>
           <ProfileForm />
           <Divider style={styles.sectionDivider} />
@@ -40,4 +42,6 @@ export class Account extends React.Component<Props> {
   }
 }
 
-export default connect()(Account)
+const ConnectedAccount = connect()(Account)
+
+export default translate('translations')(ConnectedAccount)
