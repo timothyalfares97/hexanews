@@ -11,4 +11,7 @@ export default {
   latestArticleContainer: {
     marginRight: 2,
   },
+  h1: {
+    fontWeight: 'bold'
+  },
 }

@@ -11,4 +11,7 @@ export default {
   gridContainer: {
     paddingTop: '2%',
   },
+  h1: {
+    fontWeight: 'bold'
+  },
 }

@@ -3,11 +3,11 @@
  */
 
 import * as React from 'react'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { map, find, startCase } from 'lodash'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { connect } from 'react-redux'
-import { map, find } from 'lodash'
-import { Dispatch } from 'redux'
 
 import ArticleRow from '../../components/articleRow/ArticleRow'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
@@ -42,20 +42,14 @@ export class Category extends React.Component<Props> {
     return (
       <div style={styles.container}>
         <CategoryHeader />
-        <Grid container style={{ flexDirection: 'column', marginLeft: '2%', marginTop: '2%'}}>
+        <Grid container style={{ flexDirection: 'column', marginLeft: '2%', marginTop: '2%' }}>
           <Typography
             component='h1'
             gutterBottom
             variant='headline'
+            style={styles.h1 as any}
           >
-            {categoryTitle}
-          </Typography>
-          <Typography
-            component='h2'
-            gutterBottom
-            variant='subheading'
-          >
-            Behind the scenes
+            {startCase(categoryTitle)}
           </Typography>
         </Grid>
         <Grid container spacing={24}>
