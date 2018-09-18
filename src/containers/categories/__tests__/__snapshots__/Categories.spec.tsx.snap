@@ -279,6 +279,11 @@ exports[`Categories renders Categories component 1`] = `
   </div>
   <h1
     className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
+    style={
+      Object {
+        "fontWeight": "bold",
+      }
+    }
   >
     Explore categories
   </h1>

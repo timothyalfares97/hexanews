@@ -36,11 +36,11 @@ const isUserArticle = createSelector(
 const footerArticles = createSelector(
   (state: State) => state.entities.articles,
   userArticle,
-  isUserArticle,
-  (articles, userArticle, isUserArticle) => {
+  (articles, userArticle) => {
     const filteredArticles = filter(articles, article => {
       const articleCategory = userArticle ? userArticle.category : ''
-      return article.category === articleCategory && !isUserArticle
+      const isSameWithCurrentArticle = userArticle ? article._id !== userArticle._id : false
+      return article.category === articleCategory && isSameWithCurrentArticle
     })
     const randomThreeFilteredArticles = sampleSize(filteredArticles, 3)
     return randomThreeFilteredArticles

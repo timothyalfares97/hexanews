@@ -289,14 +289,14 @@ exports[`Category renders Category component 1`] = `
   >
     <h1
       className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
     >
-      technology
+      Technology
     </h1>
-    <h2
-      className="MuiTypography-root-40 MuiTypography-subheading-47 MuiTypography-gutterBottom-57"
-    >
-      Behind the scenes
-    </h2>
   </div>
   <div
     className="MuiGrid-container-65 MuiGrid-spacing-xs-24-89"
