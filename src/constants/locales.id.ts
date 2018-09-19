@@ -7,7 +7,7 @@ const footerCard = {
 }
 
 const profileCard = {
-  memberSince: 'Hexanews member since'
+  memberSince: 'Member Hexanews sejak'
 }
 
 const forgetPasswordForm = {
@@ -81,7 +81,7 @@ const home = {
 }
 
 const profile = {
-  myAccount: 'My Account',
+  myAccount: 'Akun Saya',
 }
 
 export default {

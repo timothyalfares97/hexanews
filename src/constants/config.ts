@@ -19,10 +19,12 @@ export const ARTICLE_ENDPOINT = `${API_ENDPOINT}/articles`
 export const HEADER = { headers: { 'token': localStorage.getItem('token') } }
 
 export const HEADER_LINK = {
-  articleDetail: '/articleDetail',
+  articleDetail: (articleId: string) => `/articleDetail/${articleId}`,
   categories: '/categories',
   category: (item: string) => `/category/${item}`,
   createArticle: '/createArticle',
   profile: '/profile',
   searchArticle: '/searchArticle',
 }
+
+export const DATE_FORMAT = 'D MMMM YYYY'

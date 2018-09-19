@@ -16,17 +16,19 @@ import { CardMedia } from '@material-ui/core'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 import { push } from 'connected-react-router'
+import { translate } from 'react-i18next'
 import { map, startCase, head } from 'lodash'
 
 import placeholder from '../../assets/placeholder.png'
 import avatarPlaceholder from '../../assets/avatar_placeholder.png'
 import ProfileCard from '../../components/profileCard/ProfileCard'
 import styles from './styles'
-import { profileString } from '../../constants/string'
 import selector, { StateProps } from './selector'
 import { Article } from '../../domain/model/Article'
 import { User } from '../../domain/model/User'
 import Utils from '../../utils'
+import { DATE_FORMAT, HEADER_LINK } from '../../constants/config'
+import i18n from '../../i18n'
 
 type Props = {
   user: User,
@@ -46,17 +48,18 @@ export class Profile extends React.Component<Props> {
       const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
       const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
       const articleDescription = sanitizedDescription.length > 128 ? `${sanitizedDescription.substring(0, 128)}...` : sanitizedDescription
+      const articleId = article._id ? article._id : ''
       return (
         <Card
           style={styles.card}
           key={article._id}
-          onClick={() => dispatch(push(`/articleDetail/${article._id}`))}
+          onClick={() => dispatch(push(HEADER_LINK.articleDetail(articleId)))}
           id={`card-${article._id}`}
         >
           <CardHeader
             avatar={this.renderAvatar(user.name)}
             title={user.name}
-            subheader={moment(article.createdAt).format('D MMMM YYYY')}
+            subheader={moment(article.createdAt).format(DATE_FORMAT)}
           />
           <CardMedia
             style={styles.media}
@@ -96,7 +99,7 @@ export class Profile extends React.Component<Props> {
               style={styles.button}
               onClick={() => dispatch(push('/account'))}
             >
-              {profileString.myAccount}
+              {i18n.t('profile.myAccount')}
             </Button>
             <Divider style={styles.profileDivider} />
           </Grid>
@@ -114,4 +117,6 @@ export class Profile extends React.Component<Props> {
   }
 }
 
-export default connect(selector)(Profile)
+const ConnectedProfile = connect(selector)(Profile)
+
+export default translate('translations')(ConnectedProfile)

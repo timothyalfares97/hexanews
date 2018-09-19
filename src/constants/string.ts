@@ -6,10 +6,6 @@ export const footerCardString = {
   relatedRead: 'Related reads'
 }
 
-export const profileCardString = {
-  memberSince: 'Hexanews member since'
-}
-
 export const forgetPasswordFormString = {
   dialogTitle: 'Forgot Password',
   dialogDescription: 'Put your email here, we will send a confirmation to reset your password',
@@ -44,8 +40,4 @@ export const createArticleString = {
 
 export const homeString = {
   topStory: 'Top story of Hexanews'
-}
-
-export const profileString = {
-  myAccount: 'My Account',
 }

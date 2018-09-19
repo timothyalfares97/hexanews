@@ -8,7 +8,7 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 
 import styles from './styles'
-import { profileCardString } from '../../constants/string'
+import i18n from '../../i18n'
 
 type Props = {
   name: string,
@@ -44,7 +44,7 @@ const ProfileCard: React.StatelessComponent<Props> = ({
               component='p'
               style={styles.memberText}
             >
-              {`${profileCardString.memberSince} ${moment(createdAt).format('DD MMMM YYYY')}`}
+              {`${i18n.t('profileCard.memberSince')} ${moment(createdAt).format('DD MMMM YYYY')}`}
             </Typography>
           </CardContent>
         </div>
