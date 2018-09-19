@@ -48,10 +48,32 @@ const createArticle = {
 
 const account = {
   myAccount: 'Akun Saya',
+  cancelButton: 'Batal',
+}
+
+const profileForm = {
   editProfile: 'Sunting Profil',
   saveButton: 'Simpan Profil',
-  cancelButton: 'Batal',
-  changePassword: 'Ganti Kata Sandi'
+  email: 'Email',
+  name: 'Nama',
+  description: 'Deskripsi',
+  enterName: 'Please enter name',
+  minName: 'Nama harus lebih dari 3 huruf',
+  maxName: 'Namea tidak boleh lebih dari 50 huruf',
+  alphabeticName: 'Name hanya bisa terdiri dari huruf alfabet',
+  maxDescription: 'Deskripsi tidak boleh lebih dari 100 huruf',
+}
+
+const changePasswordForm = {
+  changePassword: 'Ganti Kata Sandi',
+  currentPassword: 'Kata Sandi Saat Ini',
+  newPassword: 'Kata Sandi Baru',
+  confirmNewPassword: 'Konfirmasi Kata Sandi Baru',
+  enterCurrentPassword: 'Masukkan kata sandi saat ini',
+  enterNewPassword: 'Masukkan kata sandi terbaru anda',
+  enterConfirmNewPassword: 'Masukkan konfirmasi kata sandi terbaru anda',
+  passwordRequirement: 'Kata sandi harus diantara 6-20 huruf dan tidak mengandung huruf spesial',
+  isPasswordMatch: 'Konfirmasi kata sandi harus sesuai dengan kata sandi terbaru anda',
 }
 
 const home = {
@@ -70,6 +92,8 @@ export default {
   registerForm,
   categories,
   createArticle,
+  profileForm,
+  changePasswordForm,
   account,
   home,
   profile,

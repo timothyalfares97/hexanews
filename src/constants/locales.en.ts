@@ -48,10 +48,32 @@ const createArticle = {
 
 const account = {
   myAccount: 'My Account',
+  cancelButton: 'Cancel',
+}
+
+const profileForm = {
   editProfile: 'Edit Profile',
   saveButton: 'Save Profile',
-  cancelButton: 'Cancel',
-  changePassword: 'Change Password'
+  email: 'Email',
+  name: 'Name',
+  description: 'Description',
+  enterName: 'Please enter name',
+  minName: 'Name field requires a minimum of 3 characters',
+  maxName: 'Name field requires a maximum of 50 characters',
+  alphabeticName: 'Name can only contain alphabetical characters',
+  maxDescription: 'Description field requires a maximum of 100 characters',
+}
+
+const changePasswordForm = {
+  changePassword: 'Change Password',
+  currentPassword: 'Current Password',
+  newPassword: 'New Password',
+  confirmNewPassword: 'Confirm New Password',
+  enterCurrentPassword: 'Please enter current password',
+  enterNewPassword: 'Please enter new password',
+  enterConfirmNewPassword: 'Please confirm new password',
+  passwordRequirement: 'Password length must be between 6-20 characters and contains no special character',
+  isPasswordMatch: 'Confirm new password must match new password',
 }
 
 const home = {
@@ -65,6 +87,7 @@ const profile = {
 export default {
   footerCard,
   profileCard,
+  profileForm,
   forgetPasswordForm,
   loginForm,
   registerForm,
@@ -72,5 +95,6 @@ export default {
   createArticle,
   account,
   home,
+  changePasswordForm,
   profile,
 }
