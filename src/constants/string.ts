@@ -32,8 +32,3 @@ export const registerFormString = {
   cancelButton: 'Cancel',
   submitButton: 'Register',
 }
-
-export const createArticleString = {
-  cancelButton: 'Cancel',
-  publishButton: 'Publish'
-}

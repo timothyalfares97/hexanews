@@ -43,7 +43,11 @@ const categories = {
 
 const createArticle = {
   cancelButton: 'Cancel',
-  publishButton: 'Publish'
+  publishButton: 'Publish',
+  draft: 'Draft',
+  title: 'Title',
+  category: 'Category',
+  descriptionPlaceholder: 'Tell your story in here...',
 }
 
 const account = {

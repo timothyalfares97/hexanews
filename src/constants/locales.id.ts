@@ -42,8 +42,12 @@ const categories = {
 }
 
 const createArticle = {
-  cancelButton: 'Cancel',
-  publishButton: 'Publish'
+  cancelButton: 'Batal',
+  publishButton: 'Terbitkan',
+  draft: 'Draf',
+  title: 'Judul',
+  category: 'Kategori',
+  descriptionPlaceholder: 'Ceritakan kisah anda di sini...',
 }
 
 const account = {
