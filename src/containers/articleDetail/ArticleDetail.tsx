@@ -11,16 +11,19 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import { translate } from 'react-i18next'
 import { map, find, head, startCase } from 'lodash'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 
-import * as actions from './actions'
-import styles from './styles'
-import { User } from '../../domain/model/User'
-import FooterCard from '../../components/footerCard/FooterCard'
-import selector, { StateProps } from './selector'
+import { DATE_FORMAT } from '../../constants/config'
 import { NotFound } from '../notFound/NotFound'
+import { User } from '../../domain/model/User'
+import * as actions from './actions'
+import FooterCard from '../../components/footerCard/FooterCard'
+import i18n from '../../i18n'
+import selector, { StateProps } from './selector'
+import styles from './styles'
 
 type Props = {
   dispatch: Dispatch<any>
@@ -33,7 +36,7 @@ export class ArticleDetail extends React.Component<Props> {
     if (!!userArticle) {
       const authorId = userArticle.authorId
       const author = find(users, (user: User) => user._id === authorId)
-      const authorName = author ? author.name : 'Author Deleted'
+      const authorName = author ? author.name : i18n.t('articleDetail.authorDeleted')
       const initials = head(startCase(authorName))
       return (
         <div style={styles.contentContainer}>
@@ -52,7 +55,7 @@ export class ArticleDetail extends React.Component<Props> {
                 variant='body1'
                 color='textSecondary'
               >
-                {moment(userArticle.createdAt).format('D MMMM YYYY')}
+                {moment(userArticle.createdAt).format(DATE_FORMAT)}
               </Typography>
             </div>
             <div style={styles.buttonContainer}>
@@ -64,7 +67,7 @@ export class ArticleDetail extends React.Component<Props> {
                   style={{ alignSelf: 'center' }}
                   onClick={this.onDeleteArticle}
                 >
-                  {isDeletingArticle ? <CircularProgress size={22} /> : 'Delete article'}
+                  {isDeletingArticle ? <CircularProgress size={22} /> : i18n.t('articleDetail.deleteArticle')}
                 </Button>
               }
             </div>
@@ -87,7 +90,7 @@ export class ArticleDetail extends React.Component<Props> {
     const { dispatch, footerArticles, users } = this.props
     return map(footerArticles, (article) => {
       const author = find(users, (user: User) => user._id === article.authorId)
-      const authorName = author ? author.name : 'Author Deleted'
+      const authorName = author ? author.name : i18n.t('articleDetail.authorDeleted')
       return (
         <Grid item xs={12} md={4} key={article._id}>
           <FooterCard
@@ -118,6 +121,7 @@ export class ArticleDetail extends React.Component<Props> {
         />
       )
     }
+
     return (
       <Grid container style={styles.container}>
         <Grid item md={2} xs={1} />
@@ -136,4 +140,6 @@ export class ArticleDetail extends React.Component<Props> {
   }
 }
 
-export default connect(selector)(ArticleDetail)
+const ConnectedArticleDetail = connect(selector)(ArticleDetail)
+
+export default translate('translations')(ConnectedArticleDetail)

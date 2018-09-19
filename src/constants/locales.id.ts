@@ -88,17 +88,23 @@ const profile = {
   myAccount: 'Akun Saya',
 }
 
+const articleDetail = {
+  authorDeleted: 'Penulis telah dihapus',
+  deleteArticle: 'Hapus artikel'
+}
+
 export default {
-  footerCard,
-  profileCard,
-  forgetPasswordForm,
-  loginForm,
-  registerForm,
-  categories,
-  createArticle,
-  profileForm,
-  changePasswordForm,
   account,
+  articleDetail,
+  categories,
+  changePasswordForm,
+  createArticle,
+  footerCard,
+  forgetPasswordForm,
   home,
+  loginForm,
   profile,
+  profileCard,
+  profileForm,
+  registerForm,
 }

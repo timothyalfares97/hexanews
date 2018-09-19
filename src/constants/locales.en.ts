@@ -88,17 +88,23 @@ const profile = {
   myAccount: 'My Account',
 }
 
+const articleDetail = {
+  authorDeleted: 'Author is deleted',
+  deleteArticle: 'Delete article'
+}
+
 export default {
+  account,
+  articleDetail,
+  categories,
+  changePasswordForm,
+  createArticle,
   footerCard,
+  forgetPasswordForm,
+  home,
+  loginForm,
+  profile,
   profileCard,
   profileForm,
-  forgetPasswordForm,
-  loginForm,
   registerForm,
-  categories,
-  createArticle,
-  account,
-  home,
-  changePasswordForm,
-  profile,
 }
