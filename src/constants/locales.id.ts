@@ -77,7 +77,7 @@ const changePasswordForm = {
 }
 
 const home = {
-  topStory: 'Top story of Hexanews'
+  topStory: 'Article terpopuler Hexanews'
 }
 
 const profile = {

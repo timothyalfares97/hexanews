@@ -37,7 +37,3 @@ export const createArticleString = {
   cancelButton: 'Cancel',
   publishButton: 'Publish'
 }
-
-export const homeString = {
-  topStory: 'Top story of Hexanews'
-}
