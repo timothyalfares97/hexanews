@@ -37,10 +37,6 @@ export const registerFormString = {
   submitButton: 'Register',
 }
 
-export const categoriesString = {
-  exploreCategory: 'Explore categories'
-}
-
 export const createArticleString = {
   cancelButton: 'Cancel',
   publishButton: 'Publish'

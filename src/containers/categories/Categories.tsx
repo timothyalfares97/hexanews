@@ -6,6 +6,7 @@ import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { Dispatch } from 'redux'
+import { translate } from 'react-i18next'
 import { map } from 'lodash'
 import { connect } from 'react-redux'
 
@@ -13,7 +14,7 @@ import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
 import CategoryCard from '../../components/categoryCard/CategoryCard'
 import styles from './styles'
 import categories from './mockCategories'
-import { categoriesString } from '../../constants/string'
+import i18n from '../../i18n'
 
 export type Props = {
   dispatch: Dispatch<any>
@@ -42,7 +43,7 @@ export class Categories extends React.Component<Props> {
           variant='headline'
           style={styles.h1 as any}
         >
-          {categoriesString.exploreCategory}
+          {i18n.t('categories.exploreCategories')}
         </Typography>
         <Grid container spacing={24} style={styles.gridContainer}>
           {this.renderCategoriesCard()}
@@ -52,4 +53,6 @@ export class Categories extends React.Component<Props> {
   }
 }
 
-export default connect()(Categories)
+const ConnectedCategories = connect()(Categories)
+
+export default translate('translations')(ConnectedCategories)

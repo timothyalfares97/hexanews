@@ -38,7 +38,7 @@ const registerForm = {
 }
 
 const categories = {
-  exploreCategory: 'Explore categories'
+  exploreCategories: 'Lihat berbagai kategori'
 }
 
 const createArticle = {
@@ -59,8 +59,8 @@ const profileForm = {
   description: 'Deskripsi',
   enterName: 'Please enter name',
   minName: 'Nama harus lebih dari 3 huruf',
-  maxName: 'Namea tidak boleh lebih dari 50 huruf',
-  alphabeticName: 'Name hanya bisa terdiri dari huruf alfabet',
+  maxName: 'Nama tidak boleh lebih dari 50 huruf',
+  alphabeticName: 'Nama hanya bisa terdiri dari huruf alfabet',
   maxDescription: 'Deskripsi tidak boleh lebih dari 100 huruf',
 }
 

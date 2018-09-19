@@ -38,7 +38,7 @@ const registerForm = {
 }
 
 const categories = {
-  exploreCategory: 'Explore categories'
+  exploreCategories: 'Explore categories'
 }
 
 const createArticle = {
