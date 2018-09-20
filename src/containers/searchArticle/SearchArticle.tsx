@@ -4,6 +4,7 @@
 
 import * as React from 'react'
 import { connect } from 'react-redux'
+import { translate } from 'react-i18next'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -126,4 +127,6 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
   }
 }
 
-export default connect(selector)(SearchArticle)
+const ConnectedSearchArticle = connect(selector)(SearchArticle)
+
+export default translate('translations')(ConnectedSearchArticle)
