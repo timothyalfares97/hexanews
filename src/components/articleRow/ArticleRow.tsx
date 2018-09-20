@@ -11,9 +11,10 @@ import * as moment from 'moment'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
 
+import { Article } from '../../domain/model/Article'
+import { DATE_FORMAT } from '../../constants/config'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
-import { Article } from '../../domain/model/Article'
 import Utils from '../../utils'
 
 type Props = {
@@ -58,7 +59,7 @@ const ArticleRow: React.StatelessComponent<Props> = ({
               color='textSecondary'
               style={styles.date}
             >
-              {moment(article.createdAt).format('D MMMM YYYY')}
+              {moment(article.createdAt).format(DATE_FORMAT)}
             </Typography>
           </CardContent>
         </div>

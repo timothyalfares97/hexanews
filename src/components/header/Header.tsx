@@ -16,12 +16,13 @@ import ExitIcon from '@material-ui/icons/ExitToApp'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 
-import i18n from '../../i18n'
 import * as actions from './actions'
 import * as Config from '../../constants/config'
-import styles from './styles'
+import { translate } from 'react-i18next'
 import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
+import i18n from '../../i18n'
 import selector, { StateProps } from './selector'
+import styles from './styles'
 
 export type Props = {
   dispatch: Dispatch<any>,
@@ -101,7 +102,7 @@ export class Header extends React.Component<Props, ComponentState> {
                       color='inherit'
                       style={styles.profileTypography}
                     >
-                      <span style={styles.signLink} onClick={this.handleShowDialog}>Sign in</span>
+                      <span style={styles.signLink} onClick={this.handleShowDialog}>{i18n.t('header.signIn')}</span>
                     </Typography>
                   }
                   {isLoggedIn &&
@@ -110,7 +111,7 @@ export class Header extends React.Component<Props, ComponentState> {
                       color='inherit'
                       style={styles.profileTypography}
                     >
-                      <Link to={Config.HEADER_LINK.profile} style={styles.profileLink}>Profile</Link>
+                      <Link to={Config.HEADER_LINK.profile} style={styles.profileLink}>{i18n.t('header.profile')}</Link>
                     </Typography>
                   }
                   <IconButton
@@ -157,4 +158,6 @@ export class Header extends React.Component<Props, ComponentState> {
   }
 }
 
-export default connect(selector)(Header)
+const ConnectedHeader = connect(selector)(Header)
+
+export default translate('translations')(ConnectedHeader)

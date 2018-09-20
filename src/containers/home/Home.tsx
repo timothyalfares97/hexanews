@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
+import { translate } from 'react-i18next'
 import Typography from '@material-ui/core/Typography'
 import { map, orderBy, take, find, filter } from 'lodash'
 
@@ -15,9 +16,9 @@ import ArticleRow from '../../components/articleRow/ArticleRow'
 import PopularArticleRow from '../../components/popularArticleRow/PopularArticleRow'
 import styles from './styles'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
-import { homeString } from '../../constants/string'
 import selector, { StateProps } from './selector'
 import { User } from '../../domain/model/User'
+import i18n from '../../i18n'
 
 type Props = {
   dispatch: Dispatch<any>
@@ -98,7 +99,7 @@ export class Home extends React.Component<Props> {
               component='h2'
               style={styles.topStory as any}
             >
-              {homeString.topStory}
+              {i18n.t('home.topStory')}
             </Typography>
             <Divider style={styles.articleDivider} />
             <div style={styles.popularArticles}>
@@ -111,4 +112,6 @@ export class Home extends React.Component<Props> {
   }
 }
 
-export default connect(selector)(Home)
+const ConnectedHome = connect(selector)(Home)
+
+export default translate('translations')(ConnectedHome)

@@ -12,6 +12,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import Grid from '@material-ui/core/Grid'
 import FormControl from '@material-ui/core/FormControl'
+import { translate } from 'react-i18next'
 import Select from '@material-ui/core/Select'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { connect } from 'react-redux'
@@ -22,8 +23,9 @@ const ReactQuill = require('react-quill')
 
 import * as actions from './actions'
 import styles from './styles'
-import { createArticleString } from '../../constants/string'
 import selector, { StateProps } from './selector'
+import { TEXT_EDITOR } from '../../constants/config'
+import i18n from '../../i18n'
 
 export type Props = {
   dispatch: Dispatch<any>
@@ -72,28 +74,6 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
     await dispatch(actions.createArticle(newArticle))
   }
 
-  modules = {
-    toolbar: [
-      [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
-      [{size: []}],
-      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-      [{'list': 'ordered'}, {'list': 'bullet'},
-      {'indent': '-1'}, {'indent': '+1'}],
-      ['link', 'image'],
-      ['clean']
-    ],
-    clipboard: {
-      matchVisual: false,
-    }
-  }
-
-  formats = [
-    'header', 'font', 'size',
-    'bold', 'italic', 'underline', 'strike', 'blockquote',
-    'list', 'bullet', 'indent',
-    'link', 'image'
-  ]
-
   public render() {
     const { dispatch, user, isCreatingArticle } = this.props
     const { title, category, description } = this.state
@@ -112,7 +92,7 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
                 {user.description}
               </Typography>
               <Typography variant='body1' color='textSecondary'>
-                {'Draft'}
+                {i18n.t('createArticle.draft')}
               </Typography>
             </div>
           </Grid>
@@ -123,14 +103,14 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
           <Grid item md={6} xs={10}>
             <TextField
               id='title'
-              label='Title'
+              label={i18n.t('createArticle.title')}
               value={title}
               onChange={this.handleTitleChange}
               style={styles.textField}
               margin='normal'
             />
             <FormControl required style={styles.categoryTextField}>
-              <InputLabel htmlFor='category-required'>Category</InputLabel>
+              <InputLabel htmlFor='category-required'>{i18n.t('createArticle.category')}</InputLabel>
               <Select
                 value={category}
                 onChange={this.handleCategoryChange}
@@ -152,10 +132,10 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
             <ReactQuill
               value={description}
               onChange={this.handleDescriptionChange}
-              formats={this.formats}
-              modules={this.modules}
-              placeholder='Tell your story in here...'
-              theme='snow'
+              formats={TEXT_EDITOR.formats}
+              modules={TEXT_EDITOR.modules}
+              placeholder={i18n.t('createArticle.descriptionPlaceholder')}
+              theme={TEXT_EDITOR.theme}
               style={styles.descTextField}
             />
           </Grid>
@@ -171,7 +151,7 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
               disabled={this.disablePublishButton()}
               onClick={this.onCreateArticle}
             >
-              {isCreatingArticle ? <CircularProgress size={22} /> : createArticleString.publishButton}
+              {isCreatingArticle ? <CircularProgress size={22} /> : i18n.t('createArticle.publishButton')}
             </Button>
             <Button
               id='cancelButton'
@@ -180,7 +160,7 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
               style={styles.button}
               onClick={() => dispatch(push('/'))}
             >
-              {createArticleString.cancelButton}
+              {i18n.t('createArticle.cancelButton')}
             </Button>
           </Grid>
           <Grid item md={3} xs={1} />
@@ -190,4 +170,6 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
   }
 }
 
-export default connect(selector)(CreateArticle)
+const ConnectedCreateArticle = connect(selector)(CreateArticle)
+
+export default translate('translations')(ConnectedCreateArticle)

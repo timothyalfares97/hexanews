@@ -4,19 +4,20 @@
 
 import * as React from 'react'
 import * as moment from 'moment'
+import { Dispatch } from 'redux'
+import { head, startCase } from 'lodash'
+import { push } from 'connected-react-router'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
-import { Dispatch } from 'redux'
-import { head, startCase } from 'lodash'
-import { push } from 'connected-react-router'
 
+import { Article } from '../../domain/model/Article'
+import { DATE_FORMAT } from '../../constants/config'
+import i18n from '../../i18n'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
-import { footerCardString } from '../../constants/string'
-import { Article } from '../../domain/model/Article'
 import Utils from '../../utils'
 
 type Props = {
@@ -49,7 +50,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
             gutterBottom
             variant='caption'
           >
-            {footerCardString.relatedRead}
+            {i18n.t('footerCard.relatedRead')}
           </Typography>
           <Typography
             component='h2'
@@ -74,7 +75,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
                 color='textSecondary'
                 style={styles.date}
               >
-                {moment(article.createdAt).format('D MMMM YYYY')}
+                {moment(article.createdAt).format(DATE_FORMAT)}
               </Typography>
             </div>
           </div>

@@ -14,8 +14,8 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 
 import * as actions from './actions'
-import { registerFormString } from '../../constants/string'
 import styles from './styles'
+import i18n from '../../i18n'
 
 export type Props = {
   dispatch: Dispatch<any>
@@ -65,14 +65,14 @@ class RegisterForm extends React.Component<Props, ComponentState> {
           instantValidate={false}
         >
           <DialogTitle>
-            {registerFormString.dialogTitle}
+            {i18n.t('registerForm.dialogTitle')}
           </DialogTitle>
           <DialogContent>
             <DialogContentText style={styles.descriptionContainer}>
-              {registerFormString.dialogDescription}
+              {i18n.t('registerForm.dialogDescription')}
             </DialogContentText>
             <TextValidator
-              label='Email Address'
+              label={i18n.t('registerForm.emailAddress')}
               onChange={(event: any) => this.setState({ email: event.target.value })}
               name='registerEmail'
               style={styles.descriptionContainer}
@@ -82,10 +82,10 @@ class RegisterForm extends React.Component<Props, ComponentState> {
               value={email}
               helperText=' '
               validators={['required', 'isEmail']}
-              errorMessages={['Please enter email', 'Please enter a valid email']}
+              errorMessages={[i18n.t('registerForm.enterEmail'), i18n.t('registerForm.enterValidEmail')]}
             />
             <TextValidator
-              label='Password'
+              label={i18n.t('registerForm.password')}
               onChange={(event: any) => this.setState({ password: event.target.value })}
               name='registerPassword'
               margin='dense'
@@ -94,11 +94,10 @@ class RegisterForm extends React.Component<Props, ComponentState> {
               value={password}
               helperText=' '
               validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
-              errorMessages={['Please enter password',
-                'Password length must be between 6-20 characters and contains no special character']}
+              errorMessages={[i18n.t('registerForm.enterPassword'), i18n.t('registerForm.passwordRequirement')]}
             />
             <TextValidator
-              label='Name'
+              label={i18n.t('registerForm.name')}
               onChange={(event: any) => this.setState({ name: event.target.value })}
               name='registerName'
               margin='dense'
@@ -108,31 +107,31 @@ class RegisterForm extends React.Component<Props, ComponentState> {
               helperText=' '
               validators={['required', 'minStringLength:3', 'maxStringLength:50',
                 'matchRegexp:^[a-zA-Z\\s]+$']}
-              errorMessages={['Please enter name',
-                'Name field requires a minimum of 3 characters',
-                'Name field requires a maximum of 50 characters',
-                'Name can only contain alphabetical characters']}
+              errorMessages={[i18n.t('registerForm.enterName'),
+              i18n.t('registerForm.minName'),
+              i18n.t('registerForm.maxName'),
+              i18n.t('registerForm.alphabeticName')]}
             />
             <DialogContentText style={styles.footerContainer}>
-              {registerFormString.haveAccountLabel}
+              {i18n.t('registerForm.haveAccountLabel')}
               <span
                 onClick={onChangeAuthenticationState}
                 style={styles.footerLink}
               >
-                {registerFormString.loginHereLabel}
+                {i18n.t('registerForm.loginHereLabel')}
               </span>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleCloseDialog} color='primary'>
-              {registerFormString.cancelButton}
+              {i18n.t('registerForm.cancelButton')}
             </Button>
             <Button
               color='primary'
               disabled={this.disableSubmitButton()}
               type='submit'
             >
-              {isLoadingRegister ? <CircularProgress size={22} /> : registerFormString.submitButton}
+              {isLoadingRegister ? <CircularProgress size={22} /> : i18n.t('registerForm.submitButton')}
             </Button>
           </DialogActions>
         </ValidatorForm>

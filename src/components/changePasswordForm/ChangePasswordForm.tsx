@@ -92,10 +92,10 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
             component='h2'
             color='textPrimary'
           >
-            {i18n.t('account.changePassword')}
+            {i18n.t('changePasswordForm.changePassword')}
           </Typography>
           <TextValidator
-            label='Current Password'
+            label={i18n.t('changePasswordForm.currentPassword')}
             onChange={this.handleCurrentPasswordChange}
             name='currentPassword'
             style={styles.textField}
@@ -104,11 +104,10 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
             value={currentPassword}
             helperText=' '
             validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
-            errorMessages={['Please enter current password',
-              'Password length must be between 6-20 characters and contains no special character']}
+            errorMessages={[i18n.t('changePasswordForm.enterCurrentPassword'), i18n.t('changePasswordForm.passwordRequirement')]}
           />
           <TextValidator
-            label='New Password'
+            label={i18n.t('changePasswordForm.newPassword')}
             onChange={this.handleNewPasswordChange}
             name='newPassword'
             style={styles.textField}
@@ -117,11 +116,10 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
             value={newPassword}
             helperText=' '
             validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
-            errorMessages={['Please enter new password',
-              'Password length must be between 6-20 characters and contains no special character']}
+            errorMessages={[i18n.t('changePasswordForm.enterNewPassword'), i18n.t('changePasswordForm.passwordRequirement')]}
           />
           <TextValidator
-            label='Confirm New Password'
+            label={i18n.t('changePasswordForm.confirmNewPassword')}
             onChange={this.handleConfirmNewPasswordChange}
             name='confirmNewPassword'
             style={styles.textField}
@@ -130,9 +128,8 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
             value={confirmNewPassword}
             helperText=' '
             validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$', 'isNewPasswordMatch']}
-            errorMessages={['Please confirm new password',
-              'Password length must be between 6-20 characters and contains no special character',
-              'Confirm new password must match new password']}
+            errorMessages={[i18n.t('changePasswordForm.enterConfirmNewPassword'),
+              i18n.t('changePasswordForm.passwordRequirement'), i18n.t('changePasswordForm.isPasswordMatch')]}
           />
           <Button
             variant='outlined'
@@ -142,7 +139,7 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
             disabled={this.disableChangePasswordButton()}
             type='submit'
           >
-            {isChangingPassword ? <CircularProgress size={22} /> : i18n.t('account.changePassword')}
+            {isChangingPassword ? <CircularProgress size={22} /> : i18n.t('changePasswordForm.changePassword')}
           </Button>
         </ValidatorForm>
       </div>

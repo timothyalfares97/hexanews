@@ -64,12 +64,12 @@ exports[`Article Detail renders Article Detail 1`] = `
                 }
               }
             >
-              Author Deleted
+              Author is deleted
             </h3>
             <p
               className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
             >
-              20 September 2018
+              21 September 2018
             </p>
           </div>
           <div
@@ -223,7 +223,7 @@ exports[`Article Detail renders Article Detail 1`] = `
                       }
                     }
                   >
-                    Author Deleted
+                    Author is deleted
                   </p>
                   <p
                     className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
@@ -233,7 +233,7 @@ exports[`Article Detail renders Article Detail 1`] = `
                       }
                     }
                   >
-                    20 September 2018
+                    21 September 2018
                   </p>
                 </div>
               </div>
@@ -313,12 +313,12 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
                 }
               }
             >
-              Author Deleted
+              Author is deleted
             </h3>
             <p
               className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
             >
-              20 September 2018
+              21 September 2018
             </p>
           </div>
           <div
@@ -496,7 +496,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
                       }
                     }
                   >
-                    Author Deleted
+                    Author is deleted
                   </p>
                   <p
                     className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
@@ -506,7 +506,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
                       }
                     }
                   >
-                    20 September 2018
+                    21 September 2018
                   </p>
                 </div>
               </div>

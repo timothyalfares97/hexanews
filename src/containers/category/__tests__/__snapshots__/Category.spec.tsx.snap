@@ -41,7 +41,7 @@ exports[`Category renders Category component 1`] = `
           }
         >
           <a
-            href="/category/tech"
+            href="/category/technology"
             onClick={[Function]}
             style={
               Object {
@@ -51,7 +51,227 @@ exports[`Category renders Category component 1`] = `
               }
             }
           >
-            TECH
+            TECHNOLOGY
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/science"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            SCIENCE
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/art"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            ART
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/design"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            DESIGN
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/culture"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            CULTURE
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/photography"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            PHOTOGRAPHY
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/leadership"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            LEADERSHIP
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/math"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            MATH
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/economy"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            ECONOMY
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/category/music"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            MUSIC
+          </a>
+        </span>
+        <span
+          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <a
+            href="/categories"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333",
+                "marginLeft": 24,
+                "textDecoration": "none",
+              }
+            }
+          >
+            MORE
           </a>
         </span>
       </div>
@@ -75,17 +295,7 @@ exports[`Category renders Category component 1`] = `
         }
       }
     >
-      Tech
-    </h1>
-    <h1
-      className="MuiTypography-root-40 MuiTypography-subheading-47 MuiTypography-gutterBottom-57"
-      style={
-        Object {
-          "fontWeight": "bold",
-        }
-      }
-    >
-      test
+      Technology
     </h1>
   </div>
   <div
@@ -168,7 +378,7 @@ exports[`Category renders Category component 1`] = `
                   }
                 }
               >
-                20 September 2018
+                21 September 2018
               </p>
             </div>
           </div>

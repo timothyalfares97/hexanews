@@ -11,10 +11,11 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import * as moment from 'moment'
 
+import { Article } from '../../domain/model/Article'
+import { DATE_FORMAT } from '../../constants/config'
+import * as Config from '../../constants/config'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
-import * as Config from '../../constants/config'
-import { Article } from '../../domain/model/Article'
 import Utils from '../../utils'
 
 type Props = {
@@ -59,7 +60,7 @@ const ArticleCard: React.StatelessComponent<Props> = ({
             color='textSecondary'
             style={styles.date}
           >
-            {moment(article.createdAt).format('D MMMM YYYY')}
+            {moment(article.createdAt).format(DATE_FORMAT)}
           </Typography>
         </CardContent>
       </Card>

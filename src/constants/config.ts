@@ -21,10 +21,36 @@ export const ARTICLE_ENDPOINT = `${API_ENDPOINT}/articles`
 export const HEADER = { headers: { 'token': localStorage.getItem('token') } }
 
 export const HEADER_LINK = {
-  articleDetail: '/articleDetail',
+  articleDetail: (articleId: string) => `/articleDetail/${articleId}`,
   categories: '/categories',
   category: (item: string) => `/category/${item}`,
   createArticle: '/createArticle',
   profile: '/profile',
   searchArticle: '/searchArticle',
+}
+
+export const DATE_FORMAT = 'D MMMM YYYY'
+
+export const TEXT_EDITOR = {
+  modules: {
+    toolbar: [
+      [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
+      [{size: []}],
+      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+      [{'list': 'ordered'}, {'list': 'bullet'},
+      {'indent': '-1'}, {'indent': '+1'}],
+      ['link', 'image'],
+      ['clean']
+    ],
+    clipboard: {
+      matchVisual: false,
+    }
+  },
+  formats: [
+    'header', 'font', 'size',
+    'bold', 'italic', 'underline', 'strike', 'blockquote',
+    'list', 'bullet', 'indent',
+    'link', 'image'
+  ],
+  theme: 'snow'
 }

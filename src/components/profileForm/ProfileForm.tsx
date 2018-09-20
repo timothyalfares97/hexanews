@@ -50,7 +50,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
     this.setState({ description: event.target.value })
   }
 
-  disableSaveProfileButton() {
+  disableSaveProfileButton = () => {
     const { name } = this.state
     return (name === '')
   }
@@ -80,11 +80,11 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             color='textPrimary'
             gutterBottom
           >
-            {i18n.t('account.editProfile')}
+            {i18n.t('profileForm.editProfile')}
           </Typography>
           <TextField
             id='email'
-            label='Email'
+            label={i18n.t('profileForm.email')}
             value={email}
             helperText=' '
             disabled
@@ -92,7 +92,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             margin='dense'
           />
           <TextValidator
-            label='Name'
+            label={i18n.t('profileForm.name')}
             onChange={this.handleNameChange}
             name='name'
             style={styles.textField}
@@ -101,13 +101,13 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             helperText=' '
             validators={['required', 'minStringLength:3', 'maxStringLength:50',
               'matchRegexp:^[a-zA-Z\\s]+$']}
-            errorMessages={['Please enter name',
-              'Name field requires a minimum of 3 characters',
-              'Name field requires a maximum of 50 characters',
-              'Name can only contain alphabetical characters']}
+            errorMessages={[i18n.t('profileForm.enterName'),
+              i18n.t('profileForm.minName'),
+              i18n.t('profileForm.maxName'),
+              i18n.t('profileForm.alphabeticName')]}
           />
           <TextValidator
-            label='Description'
+            label={i18n.t('profileForm.description')}
             onChange={this.handleDescriptionChange}
             name='description'
             style={styles.textField}
@@ -115,7 +115,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             value={description}
             helperText=' '
             validators={['maxStringLength:100']}
-            errorMessages={['Description field requires a maximum of 100 characters']}
+            errorMessages={[i18n.t('profileForm.maxDescription')]}
           />
           <Button
             variant='outlined'
@@ -125,7 +125,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             disabled={this.disableSaveProfileButton()}
             type='submit'
           >
-            {isEditingUser ? <CircularProgress size={22} /> : i18n.t('account.saveButton')}
+            {isEditingUser ? <CircularProgress size={22} /> : i18n.t('profileForm.saveButton')}
           </Button>
         </ValidatorForm>
       </div>

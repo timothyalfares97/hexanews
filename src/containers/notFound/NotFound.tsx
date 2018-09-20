@@ -9,6 +9,7 @@ import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
 
+import i18n from '../../i18n'
 import styles from './styles'
 
 type Props = {
@@ -27,7 +28,7 @@ export class NotFound extends React.Component<Props> {
           color='textPrimary'
           style={styles.errorLabel}
         >
-          404
+          {i18n.t('notFound.errorLabel')}
         </Typography>
         <Typography
           variant='body1'
@@ -35,7 +36,7 @@ export class NotFound extends React.Component<Props> {
           color='textPrimary'
           style={styles.noPage}
         >
-          There is no page here.
+          {i18n.t('notFound.noPage')}
         </Typography>
         <Button
           id='backHomeButton'
@@ -44,7 +45,7 @@ export class NotFound extends React.Component<Props> {
           component='button'
           onClick={() => dispatch(push('/'))}
         >
-          Back to home
+          {i18n.t('notFound.homeLabel')}
         </Button>
       </div >
     )
