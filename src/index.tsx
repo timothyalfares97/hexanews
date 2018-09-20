@@ -13,15 +13,16 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import { I18nextProvider } from 'react-i18next'
 
 import './index.css'
-import styles from './styles'
-import Header from './components/header/Header'
-import Routes from './routes'
-import registerServiceWorker from './registerServiceWorker'
-import configureStore from './store/configureStore'
-import ArticleRepository from './domain/repository/ArticleRepository'
-import UserRepository from './domain/repository/UserRepository'
 import { ActionTypes } from './actions/ActionTypes'
+import ArticleRepository from './domain/repository/ArticleRepository'
+import CategoryRepository from './domain/repository/CategoryRepository'
+import configureStore from './store/configureStore'
+import Header from './components/header/Header'
 import i18n from './i18n'
+import registerServiceWorker from './registerServiceWorker'
+import Routes from './routes'
+import styles from './styles'
+import UserRepository from './domain/repository/UserRepository'
 
 export default class Hexanews extends React.Component {
 
@@ -38,6 +39,9 @@ export default class Hexanews extends React.Component {
 
     const users = await UserRepository.getAll()
     this.store.dispatch({ type: ActionTypes.GET_USERS, users: users.data })
+
+    const categories = await CategoryRepository.getAll()
+    this.store.dispatch({ type: ActionTypes.GET_CATEGORIES, categories: categories.data })
 
     const isLoggedIn = await !!localStorage.getItem('token')
     this.store.dispatch({ type: ActionTypes.GET_LOGIN, isLoggedIn })

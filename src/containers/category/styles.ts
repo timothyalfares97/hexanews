@@ -14,4 +14,9 @@ export default {
   h1: {
     fontWeight: 'bold'
   },
+  categoryContainer: {
+    flexDirection: 'column',
+    marginLeft: '2%',
+    marginTop: '2%',
+  },
 }

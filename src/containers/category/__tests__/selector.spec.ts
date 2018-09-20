@@ -17,7 +17,8 @@ describe('Category selector', () => {
     }
 
     expect(selector(state, props)).toMatchObject({
-      categoryTitle: '',
+      category: undefined,
+      users: [],
       categoryArticles: [],
     })
   })
@@ -46,7 +47,8 @@ describe('Category selector', () => {
     }
 
     expect(selector(state, props)).toMatchObject({
-      categoryTitle: 'technology',
+      category: undefined,
+      users: [],
       categoryArticles: []
     })
   })
@@ -76,7 +78,8 @@ describe('Category selector', () => {
     }
 
     expect(selector(state, props)).toMatchObject({
-      categoryTitle: 'technology',
+      category: undefined,
+      users: [],
       categoryArticles: [{
         _id: '1',
         title: 'abc',

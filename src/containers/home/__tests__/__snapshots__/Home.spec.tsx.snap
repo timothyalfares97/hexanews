@@ -31,254 +31,11 @@ exports[`Home renders Home component 1`] = `
     >
       <div
         className="MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37"
-      >
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/technology"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            TECHNOLOGY
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/science"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            SCIENCE
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/art"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            ART
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/design"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            DESIGN
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/culture"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            CULTURE
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/photography"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            PHOTOGRAPHY
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/leadership"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            LEADERSHIP
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/math"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            MATH
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/economy"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            ECONOMY
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/category/music"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            MUSIC
-          </a>
-        </span>
-        <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <a
-            href="/categories"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333",
-                "marginLeft": 24,
-                "textDecoration": "none",
-              }
-            }
-          >
-            MORE
-          </a>
-        </span>
-      </div>
+      />
     </header>
   </div>
   <div
-    className="MuiGrid-container-65 MuiGrid-spacing-xs-24-89"
+    className="MuiGrid-container-40 MuiGrid-spacing-xs-24-64"
     style={
       Object {
         "paddingTop": "2%",
@@ -286,7 +43,7 @@ exports[`Home renders Home component 1`] = `
     }
   />
   <hr
-    className="MuiDivider-root-162"
+    className="MuiDivider-root-137"
     style={
       Object {
         "marginRight": 18,
@@ -295,10 +52,10 @@ exports[`Home renders Home component 1`] = `
     }
   />
   <div
-    className="MuiGrid-container-65 MuiGrid-spacing-xs-24-89"
+    className="MuiGrid-container-40 MuiGrid-spacing-xs-24-64"
   >
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-8-129"
+      className="MuiGrid-item-41 MuiGrid-grid-xs-12-80 MuiGrid-grid-md-8-104"
       style={
         Object {
           "marginRight": 24,
@@ -306,10 +63,10 @@ exports[`Home renders Home component 1`] = `
       }
     />
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-3-124"
+      className="MuiGrid-item-41 MuiGrid-grid-xs-12-80 MuiGrid-grid-md-3-99"
     >
       <h2
-        className="MuiTypography-root-40 MuiTypography-title-46"
+        className="MuiTypography-root-141 MuiTypography-title-147"
         style={
           Object {
             "fontWeight": "bold",
@@ -321,7 +78,7 @@ exports[`Home renders Home component 1`] = `
         Top story of Hexanews
       </h2>
       <hr
-        className="MuiDivider-root-162"
+        className="MuiDivider-root-137"
         style={
           Object {
             "marginLeft": 24,

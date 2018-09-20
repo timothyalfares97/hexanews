@@ -12,7 +12,6 @@ import Profile from '../containers/profile/Profile'
 import ArticleDetail from '../containers/articleDetail/ArticleDetail'
 import SearchArticle from '../containers/searchArticle/SearchArticle'
 import CreateArticle from '../containers/createArticle/CreateArticle'
-import Categories from '../containers/categories/Categories'
 import Category from '../containers/category/Category'
 import Account from '../containers/account/Account'
 import NotFound from '../containers/notFound/NotFound'
@@ -31,7 +30,6 @@ class Routes extends React.Component<Props> {
         <Route exact={true} path='/' component={Home}/>
         <Route path='/articleDetail/:articleId' component={ArticleDetail}/>
         <Route path='/searchArticle' component={SearchArticle}/>
-        <Route path='/categories' component={Categories}/>
         <Route path='/category/:category' component={Category}/>
         <PrivateRoute isLoggedIn={isLoggedIn} path='/profile' component={Profile} />
         <PrivateRoute isLoggedIn={isLoggedIn} path='/account' component={Account}/>

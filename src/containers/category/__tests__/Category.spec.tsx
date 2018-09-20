@@ -27,6 +27,11 @@ const mockUser = {
   name: 'user'
 }
 
+const mockCategory = {
+  title: 'tech',
+  description: 'test',
+}
+
 describe('Category', () => {
 
   it('renders Category component', () => {
@@ -34,7 +39,8 @@ describe('Category', () => {
       <BrowserRouter>
         <Category
           categoryArticles={mockArticles}
-          categoryTitle='technology'
+          category={mockCategory}
+          categories={[mockCategory]}
           dispatch={jest.fn()}
           users={[mockUser]}
         />

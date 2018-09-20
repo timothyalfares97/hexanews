@@ -8,11 +8,12 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { map } from 'lodash'
 
+import { Category } from '../../domain/model/Category'
 import * as Config from '../../constants/config'
 import styles from './styles'
-import categories from './mockCategories'
 
 type Props = {
+  categories: Category[]
 }
 
 class CategoryHeader extends React.Component<Props> {
@@ -22,11 +23,11 @@ class CategoryHeader extends React.Component<Props> {
   }
 
   renderCategoriesList = () => (
-    map(categories, (item) => {
-      const link = item === 'more' ? Config.HEADER_LINK.categories : Config.HEADER_LINK.category(item)
+    map(this.props.categories, (category: Category) => {
+      const link = Config.HEADER_LINK.category(category.title)
       return (
-        <Typography key={item} variant='button' color='primary' style={styles.flex}>
-          <Link to={link} style={styles.category}>{item.toUpperCase()}</Link>
+        <Typography key={category.title} variant='button' color='primary' style={styles.flex}>
+          <Link to={link} style={styles.category}>{category.title.toUpperCase()}</Link>
         </Typography>
       )
     })

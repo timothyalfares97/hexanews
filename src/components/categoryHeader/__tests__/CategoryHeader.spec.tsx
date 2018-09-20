@@ -13,6 +13,7 @@ describe('Category Header', () => {
     const component = renderer.create(
       <BrowserRouter>
         <CategoryHeader
+          categories={[]}
         />
       </BrowserRouter>
     )

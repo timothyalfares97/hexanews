@@ -8,6 +8,8 @@ const API_ENDPOINT = `http://${ip.address()}:4000`
 
 export const USER_ENDPOINT = `${API_ENDPOINT}/users`
 
+export const CATEGORY_ENDPOINT = `${API_ENDPOINT}/categories`
+
 const AUTH_ENDPOINT = `${API_ENDPOINT}/auth`
 
 export const LOGIN_ENDPOINT = `${AUTH_ENDPOINT}/login`

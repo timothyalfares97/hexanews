@@ -80,9 +80,10 @@ export class Home extends React.Component<Props> {
   }
 
   public render() {
+    const { categories } = this.props
     return (
       <div style={styles.container}>
-        <CategoryHeader />
+        <CategoryHeader categories={categories}/>
         <Grid container spacing={24} style={styles.gridContainer}>
           {this.renderFeaturedArticles()}
         </Grid>

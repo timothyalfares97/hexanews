@@ -38,18 +38,26 @@ export class Category extends React.Component<Props> {
   }
 
   public render() {
-    const { categoryTitle } = this.props
+    const { category, categories } = this.props
     return (
       <div style={styles.container}>
-        <CategoryHeader />
-        <Grid container style={{ flexDirection: 'column', marginLeft: '2%', marginTop: '2%' }}>
+        <CategoryHeader categories={categories}/>
+        <Grid container style={styles.categoryContainer as any}>
           <Typography
             component='h1'
             gutterBottom
             variant='headline'
             style={styles.h1 as any}
           >
-            {startCase(categoryTitle)}
+            {startCase(category.title)}
+          </Typography>
+          <Typography
+            component='h1'
+            gutterBottom
+            variant='subheading'
+            style={styles.h1 as any}
+          >
+            {category.description}
           </Typography>
         </Grid>
         <Grid container spacing={24}>

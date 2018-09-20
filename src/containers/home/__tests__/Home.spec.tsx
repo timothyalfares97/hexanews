@@ -23,6 +23,7 @@ describe('Home', () => {
       <BrowserRouter>
         <Home
           articles={[]}
+          categories={[]}
           dispatch={jest.fn()}
           users={[mockUser]}
         />
