@@ -155,7 +155,7 @@ exports[`Header renders Header 1`] = `
                 }
               }
             >
-              Sign in
+              Sign In
             </span>
           </h2>
           <button
