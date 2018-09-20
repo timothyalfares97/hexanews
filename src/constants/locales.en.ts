@@ -101,6 +101,11 @@ const changePasswordForm = {
   isPasswordMatch: 'Confirm new password must match new password',
 }
 
+const header = {
+  signIn: 'Sign In',
+  profile: 'Profile',
+}
+
 const home = {
   topStory: 'Top story of Hexanews'
 }
@@ -127,6 +132,7 @@ export default {
   createArticle,
   footerCard,
   forgotPasswordForm,
+  header,
   home,
   loginForm,
   profile,

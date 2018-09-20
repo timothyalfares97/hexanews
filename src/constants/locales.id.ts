@@ -101,6 +101,11 @@ const changePasswordForm = {
   isPasswordMatch: 'Konfirmasi kata sandi harus sesuai dengan kata sandi terbaru anda',
 }
 
+const header = {
+  signIn: 'Masuk',
+  profile: 'Profil',
+}
+
 const home = {
   topStory: 'Article terpopuler Hexanews'
 }
@@ -127,6 +132,7 @@ export default {
   createArticle,
   footerCard,
   forgotPasswordForm,
+  header,
   home,
   loginForm,
   profile,
