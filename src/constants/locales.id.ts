@@ -124,6 +124,12 @@ const searchArticle = {
   noArticlesFound: `Kami tidak bisa menemukan artikel.`,
 }
 
+const notFound = {
+  errorLabel: '404',
+  noPage: 'Halaman tidak ditemukan.',
+  homeLabel: 'Kembali ke beranda',
+}
+
 export default {
   account,
   articleDetail,
@@ -135,6 +141,7 @@ export default {
   header,
   home,
   loginForm,
+  notFound,
   profile,
   profileCard,
   profileForm,

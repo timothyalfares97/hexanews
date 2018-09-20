@@ -124,6 +124,12 @@ const searchArticle = {
   noArticlesFound: `We couldn't find any articles.`,
 }
 
+const notFound = {
+  errorLabel: '404',
+  noPage: 'There is no page here.',
+  homeLabel: 'Back to home',
+}
+
 export default {
   account,
   articleDetail,
@@ -135,6 +141,7 @@ export default {
   header,
   home,
   loginForm,
+  notFound,
   profile,
   profileCard,
   profileForm,
