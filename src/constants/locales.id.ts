@@ -34,16 +34,28 @@ const loginForm = {
   noAccountLabel: 'Belum memiliki Akun? ',
   registerHereLabel: 'Daftar di sini',
   cancelButton: 'Batal',
-  submitButton: 'Kirim',
+  submitButton: 'Masuk',
 }
 
 const registerForm = {
-  dialogTitle: 'Register',
-  dialogDescription: 'Register to access your personalized homepage. Please enter your email address and password.',
-  haveAccountLabel: 'Have an account? ',
-  loginHereLabel: 'Login here',
-  cancelButton: 'Cancel',
-  submitButton: 'Register',
+  dialogTitle: 'Daftar',
+  dialogDescription: 'Daftar untuk mengakses beranda personil anda. Masukkan alamat email dan kata sandi anda.',
+  emailAddress: 'Alamat Email',
+  enterEmail: 'Masukkan email',
+  enterValidEmail: 'Masukkan email yang benar',
+  password: 'Kata Sandi',
+  enterPassword: 'Masukkan kata sandi',
+  passwordRequirement: 'Kata sandi harus diantara 6-20 huruf dan tidak mengandung huruf spesial',
+  name: 'Nama',
+  enterName: 'Masukkan nama',
+  minName: 'Nama harus lebih dari 3 huruf',
+  maxName: 'Nama tidak boleh lebih dari 50 huruf',
+  alphabeticName: 'Nama hanya bisa terdiri dari huruf alfabet',
+  maxDescription: 'Deskripsi tidak boleh lebih dari 100 huruf',
+  haveAccountLabel: 'Sudah memiliki Akun? ',
+  loginHereLabel: 'Masuk di sini',
+  cancelButton: 'Batal',
+  submitButton: 'Daftar',
 }
 
 const categories = {
