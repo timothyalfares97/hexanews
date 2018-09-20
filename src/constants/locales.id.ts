@@ -11,24 +11,30 @@ const profileCard = {
 }
 
 const forgotPasswordForm = {
-  dialogTitle: 'Lupa Password',
+  dialogTitle: 'Lupa Kata Sandi',
   dialogDescription: 'Masukkan email kamu di sini, kami akan kirimkan konfirmasi untuk menyetel kata sandi anda.',
   backLogin: 'Kembali ke Masuk',
   cancelButton: 'Batal',
   submitButton: 'Kirim',
   emailAddress: 'Alamat Email',
   enterEmail: 'Masukkan email',
-  enterValidEmail: 'Masukkan email yg benar',
+  enterValidEmail: 'Masukkan email yang benar',
 }
 
 const loginForm = {
-  dialogTitle: 'Sign In',
-  dialogDescription: 'Login to access your personalized homepage. Please enter your email address and password.',
-  forgotPasswordLabel: 'Forgot Password? ',
-  noAccountLabel: 'Have no account? ',
-  registerHereLabel: 'Register here',
-  cancelButton: 'Cancel',
-  submitButton: 'Sign In',
+  dialogTitle: 'Masuk',
+  dialogDescription: 'Masuk untuk mengakses beranda personil anda. Masukkan alamat email dan kata sandi anda.',
+  emailAddress: 'Alamat Email',
+  enterEmail: 'Masukkan email',
+  enterValidEmail: 'Masukkan email yang benar',
+  password: 'Kata Sandi',
+  enterPassword: 'Masukkan kata sandi',
+  passwordRequirement: 'Kata sandi harus diantara 6-20 huruf dan tidak mengandung huruf spesial',
+  forgotPasswordLabel: 'Lupa Kata Sandi? ',
+  noAccountLabel: 'Belum memiliki Akun? ',
+  registerHereLabel: 'Daftar di sini',
+  cancelButton: 'Batal',
+  submitButton: 'Kirim',
 }
 
 const registerForm = {

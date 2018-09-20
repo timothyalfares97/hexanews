@@ -14,7 +14,7 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 
 import * as actions from './actions'
 import styles from './styles'
-import { loginFormString } from '../../constants/string'
+import i18n from '../../i18n'
 
 export type Props = {
   dispatch: Dispatch<any>,
@@ -71,14 +71,14 @@ class LoginForm extends React.Component<Props, ComponentState> {
           instantValidate={false}
         >
           <DialogTitle>
-            {loginFormString.dialogTitle}
+            {i18n.t('loginForm.dialogTitle')}
           </DialogTitle>
           <DialogContent>
             <DialogContentText style={styles.descriptionContainer}>
-              {loginFormString.dialogDescription}
+              {i18n.t('loginForm.dialogDescription')}
             </DialogContentText>
             <TextValidator
-              label='Email Address'
+              label={i18n.t('loginForm.emailAddress')}
               onChange={(event: any) => this.setState({ email: event.target.value })}
               name='loginEmail'
               style={styles.descriptionContainer}
@@ -88,10 +88,10 @@ class LoginForm extends React.Component<Props, ComponentState> {
               value={email}
               helperText=' '
               validators={['required', 'isEmail']}
-              errorMessages={['Please enter email', 'Please enter a valid email']}
+              errorMessages={[i18n.t('loginForm.enterEmail'), i18n.t('loginForm.enterValidEmail')]}
             />
             <TextValidator
-              label='Password'
+              label={i18n.t('loginForm.password')}
               onChange={(event: any) => this.setState({ password: event.target.value })}
               name='loginPassword'
               margin='dense'
@@ -100,8 +100,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
               value={password}
               helperText=' '
               validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
-              errorMessages={['Please enter password',
-                'Password length must be between 6-20 characters and contains no special character']}
+              errorMessages={[i18n.t('loginForm.enterPassword'), i18n.t('loginForm.passwordRequirement')]}
             />
             <DialogContentText>
               <span style={styles.errorLoginLabel}>
@@ -113,29 +112,29 @@ class LoginForm extends React.Component<Props, ComponentState> {
                 onClick={onChangeForgotPassword}
                 style={styles.footerLink}
               >
-                {loginFormString.forgotPasswordLabel}
+                {i18n.t('loginForm.forgotPasswordLabel')}
               </span>
             </DialogContentText>
             <DialogContentText style={styles.footerContainer}>
-              {loginFormString.noAccountLabel}
+              {i18n.t('loginForm.noAccountLabel')}
               <span
                 onClick={onChangeAuthenticationState}
                 style={styles.footerLink}
               >
-                {loginFormString.registerHereLabel}
+                {i18n.t('loginForm.registerHereLabel')}
               </span>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleCloseDialog} color='primary'>
-              {loginFormString.cancelButton}
+              {i18n.t('loginForm.cancelButton')}
             </Button>
             <Button
               color='primary'
               disabled={this.disableSignInButton()}
               type='submit'
             >
-              {isLoadingLogin ? <CircularProgress size={22} /> : loginFormString.submitButton}
+              {isLoadingLogin ? <CircularProgress size={22} /> : i18n.t('loginForm.submitButton')}
             </Button>
           </DialogActions>
         </ValidatorForm>

@@ -24,6 +24,12 @@ const forgotPasswordForm = {
 const loginForm = {
   dialogTitle: 'Sign In',
   dialogDescription: 'Login to access your personalized homepage. Please enter your email address and password.',
+  emailAddress: 'Email Address',
+  enterEmail: 'Please enter email',
+  enterValidEmail: 'Please enter a valid email',
+  password: 'Password',
+  enterPassword: 'Please enter password',
+  passwordRequirement: 'Password length must be between 6-20 characters and contains no special character',
   forgotPasswordLabel: 'Forgot Password? ',
   noAccountLabel: 'Have no account? ',
   registerHereLabel: 'Register here',
