@@ -93,6 +93,11 @@ const articleDetail = {
   deleteArticle: 'Delete article'
 }
 
+const searchArticle = {
+  search: 'Search Hexanews',
+  noArticlesFound: `We couldn't find any articles.`,
+}
+
 export default {
   account,
   articleDetail,
@@ -107,4 +112,5 @@ export default {
   profileCard,
   profileForm,
   registerForm,
+  searchArticle,
 }

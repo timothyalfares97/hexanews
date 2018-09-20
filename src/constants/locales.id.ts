@@ -93,6 +93,11 @@ const articleDetail = {
   deleteArticle: 'Hapus artikel'
 }
 
+const searchArticle = {
+  search: 'Cari Hexanews',
+  noArticlesFound: `Kami tidak bisa menemukan artikel.`,
+}
+
 export default {
   account,
   articleDetail,
@@ -107,4 +112,5 @@ export default {
   profileCard,
   profileForm,
   registerForm,
+  searchArticle
 }

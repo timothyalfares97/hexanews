@@ -15,11 +15,13 @@ import { isEmpty, map, filter, find, head, startCase } from 'lodash'
 import * as moment from 'moment'
 import { CardMedia } from '@material-ui/core'
 
+import { Article } from '../../domain/model/Article'
+import { DATE_FORMAT } from '../../constants/config'
+import { User } from '../../domain/model/User'
+import i18n from '../../i18n'
 import placeholder from '../../assets/placeholder.png'
 import selector, { StateProps } from './selector'
 import styles from './styles'
-import { Article } from '../../domain/model/Article'
-import { User } from '../../domain/model/User'
 import Utils from '../../utils'
 
 export type Props = StateProps
@@ -58,7 +60,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
     if (isEmpty(filteredArticles)) {
       return (
         <div>
-          <p>There is no articles found</p>
+          <p>{i18n.t('searchArticle.noArticlesFound')}</p>
         </div>
       )
     }
@@ -74,7 +76,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
           <CardHeader
             avatar={this.renderAvatar(authorName)}
             title={authorName}
-            subheader={moment(article.createdAt).format('DD MMMM YYYY')}
+            subheader={moment(article.createdAt).format(DATE_FORMAT)}
           />
           <CardMedia
             style={styles.media}
@@ -103,7 +105,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
           <Grid md={6} xs={10}>
             <TextField
               id='query'
-              label='Search'
+              label={i18n.t('searchArticle.search')}
               value={query}
               onChange={this.handleQueryChange}
               style={styles.textField}
