@@ -3,7 +3,7 @@
  */
 
 const footerCard = {
-  relatedRead: 'Related reads'
+  relatedRead: 'Bacaan terkait'
 }
 
 const profileCard = {

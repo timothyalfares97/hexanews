@@ -2,10 +2,6 @@
  * Constant string file for the application
  */
 
-export const footerCardString = {
-  relatedRead: 'Related reads'
-}
-
 export const forgetPasswordFormString = {
   dialogTitle: 'Forgot Password',
   dialogDescription: 'Put your email here, we will send a confirmation to reset your password',
