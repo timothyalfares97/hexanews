@@ -75,10 +75,12 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
     const { email, currentPassword, newPassword } = this.state
 
     await dispatch(actions.changePassword(email, currentPassword, newPassword))
+
+    this.setState({ currentPassword: '', newPassword: '', confirmNewPassword: '' })
   }
 
   public render() {
-    const { isChangingPassword } = this.props
+    const { isChangingPassword, changePasswordError } = this.props
     const { currentPassword, newPassword, confirmNewPassword } = this.state
     return (
       <div style={styles.sectionContainer}>
@@ -131,6 +133,14 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
             errorMessages={[i18n.t('changePasswordForm.enterConfirmNewPassword'),
               i18n.t('changePasswordForm.passwordRequirement'), i18n.t('changePasswordForm.isPasswordMatch')]}
           />
+          <Typography
+            variant='body1'
+            component='h2'
+            color='textPrimary'
+            style={styles.errorChangeLabel}
+          >
+            {changePasswordError}
+          </Typography>
           <Button
             variant='outlined'
             size='small'

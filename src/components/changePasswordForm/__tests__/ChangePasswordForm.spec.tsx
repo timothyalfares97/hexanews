@@ -24,6 +24,7 @@ describe('Change Password Form', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isChangingPassword={false}
+        changePasswordError='test'
       />
     )
     let tree = component.toJSON()
@@ -36,6 +37,7 @@ describe('Change Password Form', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isChangingPassword={true}
+        changePasswordError='test'
       />
     )
     let tree = component.toJSON()
@@ -48,6 +50,7 @@ describe('Change Password Form', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isChangingPassword={true}
+        changePasswordError='test'
       />
     )
 
@@ -76,6 +79,7 @@ describe('Change Password Form', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isChangingPassword={true}
+        changePasswordError='test'
       />
     )
 
@@ -104,6 +108,7 @@ describe('Change Password Form', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isChangingPassword={true}
+        changePasswordError='test'
       />
     )
 
@@ -133,6 +138,7 @@ describe('Change Password Form', () => {
         user={mockUser}
         dispatch={dispatch}
         isChangingPassword={true}
+        changePasswordError='test'
       />
     )
 

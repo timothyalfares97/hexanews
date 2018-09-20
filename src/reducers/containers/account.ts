@@ -18,24 +18,10 @@ export const isEditingUser = (state: boolean = false, action: any) => {
   }
 }
 
-export const isChangingPassword = (state: boolean = false, action: any) => {
-  switch (action.type) {
-    case ActionTypes.CHANGE_PASSWORD_REQUESTED:
-      return true
-    case ActionTypes.CHANGE_PASSWORD_SUCCESS:
-    case ActionTypes.CHANGE_PASSWORD_FAILED:
-      return false
-    default:
-      return state
-  }
-}
-
 export type AccountContainer = {
-  isEditingUser: boolean,
-  isChangingPassword: boolean
+  isEditingUser: boolean
 }
 
 export default combineReducers<AccountContainer>({
-  isEditingUser,
-  isChangingPassword
+  isEditingUser
 })
