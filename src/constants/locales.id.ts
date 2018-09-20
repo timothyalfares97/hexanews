@@ -10,12 +10,15 @@ const profileCard = {
   memberSince: 'Member Hexanews sejak'
 }
 
-const forgetPasswordForm = {
-  dialogTitle: 'Forgot Password',
-  dialogDescription: 'Put your email here, we will send a confirmation to reset your password',
-  backLogin: 'Back to login',
-  cancelButton: 'Cancel',
-  submitButton: 'Submit',
+const forgotPasswordForm = {
+  dialogTitle: 'Lupa Password',
+  dialogDescription: 'Masukkan email kamu di sini, kami akan kirimkan konfirmasi untuk menyetel kata sandi anda.',
+  backLogin: 'Kembali ke Masuk',
+  cancelButton: 'Batal',
+  submitButton: 'Kirim',
+  emailAddress: 'Alamat Email',
+  enterEmail: 'Masukkan email',
+  enterValidEmail: 'Masukkan email yg benar',
 }
 
 const loginForm = {
@@ -61,7 +64,7 @@ const profileForm = {
   email: 'Email',
   name: 'Nama',
   description: 'Deskripsi',
-  enterName: 'Please enter name',
+  enterName: 'Masukkan nama',
   minName: 'Nama harus lebih dari 3 huruf',
   maxName: 'Nama tidak boleh lebih dari 50 huruf',
   alphabeticName: 'Nama hanya bisa terdiri dari huruf alfabet',
@@ -105,7 +108,7 @@ export default {
   changePasswordForm,
   createArticle,
   footerCard,
-  forgetPasswordForm,
+  forgotPasswordForm,
   home,
   loginForm,
   profile,

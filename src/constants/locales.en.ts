@@ -10,12 +10,15 @@ const profileCard = {
   memberSince: 'Hexanews member since'
 }
 
-const forgetPasswordForm = {
+const forgotPasswordForm = {
   dialogTitle: 'Forgot Password',
   dialogDescription: 'Put your email here, we will send a confirmation to reset your password',
   backLogin: 'Back to login',
   cancelButton: 'Cancel',
   submitButton: 'Submit',
+  emailAddress: 'Email Address',
+  enterEmail: 'Please enter email',
+  enterValidEmail: 'Please enter a valid email',
 }
 
 const loginForm = {
@@ -105,7 +108,7 @@ export default {
   changePasswordForm,
   createArticle,
   footerCard,
-  forgetPasswordForm,
+  forgotPasswordForm,
   home,
   loginForm,
   profile,

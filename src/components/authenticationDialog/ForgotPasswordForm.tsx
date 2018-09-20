@@ -10,8 +10,8 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 
-import { forgetPasswordFormString } from '../../constants/string'
 import styles from './styles'
+import i18n from '../../i18n'
 
 export type Props = {
   handleCloseDialog: () => void
@@ -51,14 +51,14 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
           instantValidate={false}
         >
           <DialogTitle>
-            {forgetPasswordFormString.dialogTitle}
+            {i18n.t('forgotPasswordForm.dialogTitle')}
           </DialogTitle>
           <DialogContent>
             <DialogContentText style={styles.descriptionContainer}>
-              {forgetPasswordFormString.dialogDescription}
+              {i18n.t('forgotPasswordForm.dialogDescription')}
             </DialogContentText>
             <TextValidator
-              label='Email Address'
+              label={i18n.t('forgotPasswordForm.emailAddress')}
               onChange={(event: any) => this.setState({ email: event.target.value })}
               name='forgotPasswordEmail'
               style={styles.descriptionContainer}
@@ -68,20 +68,20 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
               value={email}
               helperText=' '
               validators={['required', 'isEmail']}
-              errorMessages={['Please enter email', 'Please enter a valid email']}
+              errorMessages={[i18n.t('forgotPasswordForm.enterEmail'), i18n.t('forgotPasswordForm.enterValidEmail')]}
             />
             <DialogContentText style={styles.footerContainer}>
               <span
                 onClick={onChangeAuthenticationState}
                 style={styles.footerLink}
               >
-                {forgetPasswordFormString.backLogin}
+                {i18n.t('forgotPasswordForm.backLogin')}
               </span>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleCloseDialog} color='primary'>
-              {forgetPasswordFormString.cancelButton}
+              {i18n.t('forgotPasswordForm.cancelButton')}
             </Button>
             <Button
               onClick={this.onForgotPassword}
@@ -89,7 +89,7 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
               disabled={this.disableSubmitButton()}
               type='submit'
             >
-              {forgetPasswordFormString.submitButton}
+              {i18n.t('forgotPasswordForm.submitButton')}
             </Button>
           </DialogActions>
         </ValidatorForm>

@@ -2,14 +2,6 @@
  * Constant string file for the application
  */
 
-export const forgetPasswordFormString = {
-  dialogTitle: 'Forgot Password',
-  dialogDescription: 'Put your email here, we will send a confirmation to reset your password',
-  backLogin: 'Back to login',
-  cancelButton: 'Cancel',
-  submitButton: 'Submit',
-}
-
 export const loginFormString = {
   dialogTitle: 'Sign In',
   dialogDescription: 'Login to access your personalized homepage. Please enter your email address and password.',
