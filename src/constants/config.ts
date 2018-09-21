@@ -36,7 +36,7 @@ export const TEXT_EDITOR = {
     toolbar: [
       [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
       [{size: []}],
-      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+      ['bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block'],
       [{'list': 'ordered'}, {'list': 'bullet'},
       {'indent': '-1'}, {'indent': '+1'}],
       ['link', 'image'],
@@ -48,7 +48,7 @@ export const TEXT_EDITOR = {
   },
   formats: [
     'header', 'font', 'size',
-    'bold', 'italic', 'underline', 'strike', 'blockquote',
+    'bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block',
     'list', 'bullet', 'indent',
     'link', 'image'
   ],
