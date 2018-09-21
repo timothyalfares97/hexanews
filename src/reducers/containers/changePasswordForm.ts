@@ -31,8 +31,8 @@ export const isChangingPassword = (state: boolean = false, action: any) => {
   }
 }
 
-export type ChangePasswordFormContainer = {
-  changePasswordError: string,
+export interface ChangePasswordFormContainer {
+  changePasswordError: string
   isChangingPassword: boolean
 }
 

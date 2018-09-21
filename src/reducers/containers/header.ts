@@ -45,7 +45,7 @@ export const loginError = (state: string = '', action: any) => {
   }
 }
 
-export type HeaderContainer = {
+export interface HeaderContainer {
   isLoadingRegister: boolean,
   isLoadingLogin: boolean,
   loginError: string,

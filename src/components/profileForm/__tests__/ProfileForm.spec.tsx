@@ -24,6 +24,7 @@ describe('Profile Form', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isEditingUser={false}
+        editUserError=''
       />
     )
     let tree = component.toJSON()
@@ -36,6 +37,7 @@ describe('Profile Form', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isEditingUser={true}
+        editUserError=''
       />
     )
     let tree = component.toJSON()
@@ -48,6 +50,7 @@ describe('Profile Form', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isEditingUser={true}
+        editUserError=''
       />
     )
 
@@ -76,6 +79,7 @@ describe('Profile Form', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isEditingUser={true}
+        editUserError=''
       />
     )
 
@@ -105,6 +109,7 @@ describe('Profile Form', () => {
         user={mockUser}
         dispatch={dispatch}
         isEditingUser={true}
+        editUserError=''
       />
     )
 

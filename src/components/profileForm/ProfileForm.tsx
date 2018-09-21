@@ -65,7 +65,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const { isEditingUser } = this.props
+    const { isEditingUser, editUserError } = this.props
     const { email, name, description } = this.state
     return (
       <div style={styles.sectionContainer}>
@@ -117,6 +117,14 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             validators={['maxStringLength:100']}
             errorMessages={[i18n.t('profileForm.maxDescription')]}
           />
+          <Typography
+            variant='body1'
+            component='h2'
+            color='textPrimary'
+            style={styles.errorChangeLabel}
+          >
+            {editUserError}
+          </Typography>
           <Button
             variant='outlined'
             size='small'

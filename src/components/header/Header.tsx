@@ -38,9 +38,10 @@ export class Header extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)
-    const language = localStorage.getItem('language')
+    const localLanguage = localStorage.getItem('language')
+    const currentLanguage = localLanguage !== null ? localLanguage : 'en'
     this.state = {
-      language: language ? language : '',
+      language: currentLanguage,
       showDialog: false,
     }
   }

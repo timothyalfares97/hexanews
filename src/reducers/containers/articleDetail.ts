@@ -19,8 +19,8 @@ export const isDeletingArticle = (state: boolean = false, action: any) => {
   }
 }
 
-export type ArticleDetailContainer = {
-  isDeletingArticle: boolean,
+export interface ArticleDetailContainer {
+  isDeletingArticle: boolean
 }
 
 export default combineReducers<ArticleDetailContainer>({

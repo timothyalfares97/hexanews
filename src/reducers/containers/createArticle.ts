@@ -19,7 +19,7 @@ export const isCreatingArticle = (state: boolean = false, action: any) => {
   }
 }
 
-export type CreateArticleContainer = {
+export interface CreateArticleContainer {
   isCreatingArticle: boolean,
 }
 

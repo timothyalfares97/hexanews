@@ -12,4 +12,7 @@ export default {
   button: {
     marginTop: 10,
   },
+  errorChangeLabel: {
+    color: '#E53935',
+  },
 }

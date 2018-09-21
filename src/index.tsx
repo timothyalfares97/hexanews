@@ -53,7 +53,7 @@ export default class Hexanews extends React.Component {
     }
 
     const localLanguage = localStorage.getItem('language')
-    const currentLanguage = localLanguage ? localLanguage : 'en'
+    const currentLanguage = localLanguage !== null ? localLanguage : 'en'
     i18n.changeLanguage(currentLanguage)
 
     this.setState({ isLoadingServer: false })
