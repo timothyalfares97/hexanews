@@ -70,8 +70,19 @@ const createArticle = {
   draft: 'Draft',
   title: 'Title',
   category: 'Category',
+  required: 'Required',
   descriptionPlaceholder: 'Tell your story in here...',
   createArticleSuccess: 'You have created article successfully'
+}
+
+const editArticle = {
+  cancelButton: 'Cancel',
+  saveButton: 'Save',
+  editing: 'Editing',
+  title: 'Title',
+  category: 'Category',
+  required: 'Required',
+  descriptionPlaceholder: 'Tell your story in here...'
 }
 
 const account = {
@@ -143,6 +154,7 @@ export default {
   categories,
   changePasswordForm,
   createArticle,
+  editArticle,
   footerCard,
   forgotPasswordForm,
   header,

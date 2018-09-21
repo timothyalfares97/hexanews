@@ -141,7 +141,7 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
                 <MenuItem value='economy'>Economy</MenuItem>
                 <MenuItem value='music'>Music</MenuItem>
               </Select>
-              <FormHelperText>Required</FormHelperText>
+              <FormHelperText>{i18n.t('createArticle.required')}</FormHelperText>
             </FormControl>
             <ReactQuill
               value={description}

@@ -70,6 +70,17 @@ const createArticle = {
   draft: 'Draf',
   title: 'Judul',
   category: 'Kategori',
+  required: 'Dibutuhkan',
+  descriptionPlaceholder: 'Ceritakan kisah anda di sini...',
+}
+
+const editArticle = {
+  cancelButton: 'Batal',
+  saveButton: 'Simpan',
+  editing: 'Menyunting',
+  title: 'Judul',
+  category: 'Kategori',
+  required: 'Dibutuhkan',
   descriptionPlaceholder: 'Ceritakan kisah anda di sini...',
   createArticleSuccess: 'Kamu telah berhasil membuat artikel baru'
 }
@@ -143,6 +154,7 @@ export default {
   categories,
   changePasswordForm,
   createArticle,
+  editArticle,
   footerCard,
   forgotPasswordForm,
   header,
