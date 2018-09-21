@@ -13,7 +13,6 @@ import * as moment from 'moment'
 
 import { Article } from '../../domain/model/Article'
 import { DATE_FORMAT } from '../../constants/config'
-import * as Config from '../../constants/config'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import Utils from '../../utils'
@@ -33,7 +32,7 @@ const ArticleCard: React.StatelessComponent<Props> = ({
   return (
     <div id={`article-${article.title}`}
       style={styles.root}
-      onClick={() => dispatch(push(`${Config.HEADER_LINK.articleDetail}/${article._id}`))}
+      onClick={() => dispatch(push(`../articleDetail/${article._id}`))}
     >
       <Card style={styles.card}>
         <CardMedia
