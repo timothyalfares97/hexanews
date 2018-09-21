@@ -133,6 +133,7 @@ const profile = {
 
 const articleDetail = {
   authorDeleted: 'Penulis telah dihapus',
+  editArticle: 'Sunting artikel',
   deleteArticle: 'Hapus artikel',
   deleteArticleSuccess: 'You have successfully delete the article'
 }

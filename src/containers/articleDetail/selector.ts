@@ -8,11 +8,13 @@ import { User } from '../../domain/model/User'
 export interface StateProps {
   articles: Article[]
   authorName: string
+  user: User,
   users: User[]
   userArticle: Article
   isUserArticle: boolean
   footerArticles: Article[]
   isDeletingArticle: boolean
+  isEditingArticle: boolean
 }
 
 const articles = (state: State) => state.entities.articles
@@ -47,13 +49,19 @@ const footerArticles = createSelector(
   }
 )
 
+const user = (state: State) => state.entities.user
+
 const isDeletingArticle = (state: State) => state.containers.articleDetail.isDeletingArticle
+
+const isEditingArticle = (state: State) => state.containers.articleDetail.isEditingArticle
 
 export default createStructuredSelector({
   articles,
+  user,
   users,
   userArticle,
   isUserArticle,
   footerArticles,
   isDeletingArticle,
+  isEditingArticle,
 })

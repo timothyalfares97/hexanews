@@ -19,10 +19,25 @@ export const isDeletingArticle = (state: boolean = false, action: any) => {
   }
 }
 
+export const isEditingArticle = (state: boolean = false, action: any) => {
+  switch (action.type) {
+    case ActionTypes.EDIT_ARTICLE_REQUESTED:
+      return true
+    case ActionTypes.EDIT_ARTICLE_SUCCESS:
+    case ActionTypes.EDIT_ARTICLE_FAILED:
+    case ActionTypes.LOGOUT:
+      return false
+    default:
+      return state
+  }
+}
+
 export interface ArticleDetailContainer {
-  isDeletingArticle: boolean
+  isDeletingArticle: boolean,
+  isEditingArticle: boolean,
 }
 
 export default combineReducers<ArticleDetailContainer>({
-  isDeletingArticle
+  isDeletingArticle,
+  isEditingArticle
 })

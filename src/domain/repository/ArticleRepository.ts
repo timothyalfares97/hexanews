@@ -23,6 +23,18 @@ export default {
     return response
   },
 
+  edit: async (id: string, edittedArticle: Article) => {
+
+    const response = await axios.put(`${Config.ARTICLE_ENDPOINT}/${id}`, {
+      title: edittedArticle.title,
+      description: edittedArticle.description,
+      authorId: edittedArticle.authorId,
+      category: edittedArticle.category,
+    }, Config.HEADER)
+
+    return response
+  },
+
   delete: async (id: string): Promise<any> => {
 
     const response = await axios.delete(`${Config.ARTICLE_ENDPOINT}/${id}`, Config.HEADER)

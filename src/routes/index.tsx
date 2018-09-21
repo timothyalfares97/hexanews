@@ -12,6 +12,7 @@ import Profile from '../containers/profile/Profile'
 import ArticleDetail from '../containers/articleDetail/ArticleDetail'
 import SearchArticle from '../containers/searchArticle/SearchArticle'
 import CreateArticle from '../containers/createArticle/CreateArticle'
+import EditArticle from '../containers/articleDetail/EditArticle'
 import Category from '../containers/category/Category'
 import Account from '../containers/account/Account'
 import NotFound from '../containers/notFound/NotFound'
@@ -34,6 +35,7 @@ class Routes extends React.Component<Props> {
         <PrivateRoute isLoggedIn={isLoggedIn} path='/profile' component={Profile} />
         <PrivateRoute isLoggedIn={isLoggedIn} path='/account' component={Account}/>
         <PrivateRoute isLoggedIn={isLoggedIn} path='/createArticle' component={CreateArticle}/>
+        <PrivateRoute isLoggedIn={isLoggedIn} path='/editArticle/:articleId' component={EditArticle}/>
         <Route component={NotFound} />
       </Switch>
     )

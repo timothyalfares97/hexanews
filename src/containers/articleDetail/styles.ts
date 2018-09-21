@@ -21,6 +21,7 @@ export default {
     paddingBottom: '5%'
   },
   contentContainer: {
+    width: '100%',
     marginBottom: '2%',
   },
   description: {
@@ -44,5 +45,31 @@ export default {
   },
   profileName: {
     marginTop: 12,
-  }
+  },
+
+  profile: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  textField: {
+    width: '100%',
+  },
+  bottomButtonContainer: {
+    marginTop: '17%'
+  },
+  button: {
+    marginTop: 30,
+    marginRight: 10,
+  },
+  title: {
+    marginTop: 12,
+  },
+  descTextField: {
+    marginTop: 32,
+    height: 300,
+  },
+  categoryTextField: {
+    width: '100%',
+    marginTop: 24,
+  },
 }

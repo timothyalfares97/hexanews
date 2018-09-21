@@ -133,6 +133,7 @@ const profile = {
 
 const articleDetail = {
   authorDeleted: 'Author is deleted',
+  editArticle: 'Edit article',
   deleteArticle: 'Delete article',
   deleteArticleSuccess: 'You have successfully delete the article'
 }

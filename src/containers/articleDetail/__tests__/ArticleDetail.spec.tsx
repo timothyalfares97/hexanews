@@ -32,9 +32,11 @@ describe('Article Detail', () => {
       <ArticleDetail
         authorName='test'
         articles={[mockArticle]}
+        user={mockUser}
         users={[mockUser]}
         userArticle={mockArticle}
         isDeletingArticle={false}
+        isEditingArticle={false}
         isUserArticle={true}
         footerArticles={[mockArticle]}
         dispatch={jest.fn()}
@@ -48,9 +50,11 @@ describe('Article Detail', () => {
     const component = renderer.create(
       <ArticleDetail
         articles={[mockArticle]}
+        user={mockUser}
         users={[mockUser]}
         userArticle={mockArticle}
         isDeletingArticle={true}
+        isEditingArticle={false}
         isUserArticle={true}
         footerArticles={[mockArticle]}
         authorName='test'
@@ -68,9 +72,11 @@ describe('Article Detail', () => {
     const component = (
       <ArticleDetail
         articles={[mockArticle]}
+        user={mockUser}
         users={[mockUser]}
         userArticle={articleWithoutId}
         isDeletingArticle={false}
+        isEditingArticle={false}
         isUserArticle={true}
         footerArticles={[mockArticle]}
         authorName='test'

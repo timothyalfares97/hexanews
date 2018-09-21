@@ -16,6 +16,7 @@ import { map, find, head, startCase } from 'lodash'
 import { Dispatch } from 'redux'
 import { push } from 'connected-react-router'
 import { connect } from 'react-redux'
+import { push } from 'connected-react-router'
 
 import { DATE_FORMAT } from '../../constants/config'
 import { NotFound } from '../notFound/NotFound'
@@ -49,7 +50,7 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
   }
 
   renderArticle = () => {
-    const { users, userArticle, isUserArticle, isDeletingArticle } = this.props
+    const { dispatch, users, userArticle, isUserArticle, isDeletingArticle } = this.props
     if (!!userArticle) {
       const authorId = userArticle.authorId
       const author = find(users, (user: User) => user._id === authorId)
@@ -76,6 +77,17 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
               </Typography>
             </div>
             <div style={styles.buttonContainer}>
+              {isUserArticle &&
+                <Button
+                  variant='outlined'
+                  size='small'
+                  component='button'
+                  style={{ alignSelf: 'center', marginRight: 10 }}
+                  onClick={() => dispatch(push(`../editArticle/${userArticle._id}`))}
+                >
+                  {i18n.t('articleDetail.editArticle')}
+                </Button>
+              }
               {isUserArticle &&
                 <Button
                   variant='outlined'

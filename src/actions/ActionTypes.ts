@@ -38,6 +38,10 @@ export enum ActionTypes {
   DELETE_ARTICLE_SUCCESS = 'hexanews/article/DELETE_ARTICLE_SUCCESS',
   DELETE_ARTICLE_FAILED = 'hexanews/article/DELETE_ARTICLE_FAILED',
 
+  EDIT_ARTICLE_REQUESTED = 'hexanews/article/EDIT_ARTICLE_REQUESTED',
+  EDIT_ARTICLE_SUCCESS = 'hexanews/article/EDIT_ARTICLE_SUCCESS',
+  EDIT_ARTICLE_FAILED = 'hexanews/article/EDIT_ARTICLE_FAILED',
+
   // shared
   LOGOUT = 'hexanews/shared/LOGOUT',
 }
