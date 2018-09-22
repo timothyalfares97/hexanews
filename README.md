@@ -46,27 +46,27 @@ $ npm run start
 
 ## Project structure
 
-The boilerplate structure and files are the same as this repo minus the *bin* folder, everything else is exactly the same.
+Here is the project structure that we have within the application with a brief description of it.
 
 ```
 Hexanews
 |
 ├── /src
-│   ├── /actions where actionTypes and reusable actions live
-│   ├── /assets where static images live
-│   ├── /components where reusable components live
-│   ├── /containers where each screen components live
-│   ├── /domain where model, repository, and service live
-│   ├── /reducers where each redux state variable live
-│   ├── /routes where each routes of application live
-│   ├── /utils where reusable function live
-│   ├── i18n.ts internationalisation config file
-│   ├── index.css index basic styling
-├── /typings where the custom typings file live
-├── package.json the whole configuration file with every dependency and script
-├── tsconfig.json typescript config file
-├── tslint.json typescript linter configuration file
-└── README.md this file
+│   ├── /actions   where actionTypes and reusable actions live
+│   ├── /assets   where static images live
+│   ├── /components   where reusable components live
+│   ├── /containers   where each screen components live
+│   ├── /domain   where model, repository, and service live
+│   ├── /reducers   where each redux state variable live
+│   ├── /routes   where each routes of application live
+│   ├── /utils   where reusable function live
+│   ├── i18n.ts   internationalisation config file
+│   ├── index.css   index basic styling
+├── /typings   where the custom typings file live
+├── package.json   the whole configuration file with every dependency and script
+├── tsconfig.json   typescript config file
+├── tslint.json   typescript linter configuration file
+└── README.md   this file
 ```
 
 ## Tests
