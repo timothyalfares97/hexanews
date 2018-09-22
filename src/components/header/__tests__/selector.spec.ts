@@ -1,3 +1,7 @@
+/**
+ * Unit tests for checking the selector of header components
+ */
+
 import rootReducer, { State }  from '../../../reducers'
 import selector from '../selector'
 
