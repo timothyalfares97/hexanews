@@ -69,6 +69,7 @@ const createArticle = {
   title: 'Title',
   category: 'Category',
   descriptionPlaceholder: 'Tell your story in here...',
+  createArticleSuccess: 'You have created article successfully'
 }
 
 const account = {

@@ -26,6 +26,7 @@ import styles from './styles'
 import selector, { StateProps } from './selector'
 import { TEXT_EDITOR } from '../../constants/config'
 import i18n from '../../i18n'
+import SuccessSnackbar from '../../components/successSnackbar/SuccessSnackbar'
 
 export type Props = {
   dispatch: Dispatch<any>
@@ -35,6 +36,7 @@ export interface ComponentState {
   category: string
   description: string
   title: string
+  isSnackbarOpen: boolean
 }
 
 export class CreateArticle extends React.Component<Props, ComponentState> {
@@ -45,6 +47,7 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
       category: '',
       description: '',
       title: '',
+      isSnackbarOpen: false,
     }
   }
 
@@ -65,6 +68,10 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
     return (category === '' || description === '' || title === '')
   }
 
+  handleClose = () => {
+    this.setState({ isSnackbarOpen: false })
+  }
+
   onCreateArticle = async () => {
     const { dispatch } = this.props
     const { title, category, description } = this.state
@@ -72,11 +79,18 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
 
     const newArticle = { title, category, description, authorId }
     await dispatch(actions.createArticle(newArticle))
+
+    const { createArticleError } = this.props
+
+    if (createArticleError === '') {
+      this.setState({ isSnackbarOpen: true, category: '', description: '', title: '' })
+      setTimeout(() => dispatch(push('/profile')), 750)
+    }
   }
 
   public render() {
-    const { dispatch, user, isCreatingArticle } = this.props
-    const { title, category, description } = this.state
+    const { dispatch, user, isCreatingArticle, createArticleError } = this.props
+    const { title, category, description, isSnackbarOpen } = this.state
     const initials = head(startCase(user.name))
     return (
       <div style={styles.container}>
@@ -138,6 +152,14 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
               theme={TEXT_EDITOR.theme}
               style={styles.descTextField}
             />
+            <Typography
+              variant='body1'
+              component='h2'
+              color='textPrimary'
+              style={styles.errorCreateLabel}
+            >
+              {createArticleError}
+            </Typography>
           </Grid>
           <Grid item md={3} xs={1} />
         </Grid>
@@ -165,6 +187,11 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
           </Grid>
           <Grid item md={3} xs={1} />
         </Grid>
+        <SuccessSnackbar
+          isSnackbarOpen={isSnackbarOpen}
+          message={i18n.t('createArticle.createArticleSuccess')}
+          handleClose={this.handleClose}
+        />
       </div>
     )
   }

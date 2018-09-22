@@ -20,13 +20,15 @@ describe('Create Article selector', () => {
       containers: {
         ...initialState.containers,
         createArticle: {
-          isCreatingArticle: true
+          isCreatingArticle: true,
+          createArticleError: 'error'
         }
       },
     }
 
     expect(selector(state)).toMatchObject({
       isCreatingArticle: true,
+      createArticleError: 'error',
     })
   })
 })

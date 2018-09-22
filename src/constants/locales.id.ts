@@ -69,6 +69,7 @@ const createArticle = {
   title: 'Judul',
   category: 'Kategori',
   descriptionPlaceholder: 'Ceritakan kisah anda di sini...',
+  createArticleSuccess: 'Kamu telah berhasil membuat artikel baru'
 }
 
 const account = {

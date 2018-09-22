@@ -43,4 +43,7 @@ export default {
   buttonContainer: {
     marginTop: '17%'
   },
+  errorCreateLabel: {
+    color: '#E53935',
+  },
 }

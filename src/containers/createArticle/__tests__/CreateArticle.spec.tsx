@@ -24,6 +24,7 @@ describe('Create Article', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={false}
+        createArticleError=''
       />
     )
     let tree = component.toJSON()
@@ -36,6 +37,7 @@ describe('Create Article', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={true}
+        createArticleError=''
       />
     )
     let tree = component.toJSON()
@@ -48,6 +50,7 @@ describe('Create Article', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={true}
+        createArticleError=''
       />
     )
 
@@ -76,6 +79,7 @@ describe('Create Article', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={true}
+        createArticleError=''
       />
     )
 
@@ -104,6 +108,7 @@ describe('Create Article', () => {
         user={mockUser}
         dispatch={jest.fn()}
         isCreatingArticle={true}
+        createArticleError=''
       />
     )
 
@@ -129,6 +134,7 @@ describe('Create Article', () => {
         user={mockUser}
         dispatch={dispatch}
         isCreatingArticle={true}
+        createArticleError=''
       />
     )
 
@@ -148,6 +154,7 @@ describe('Create Article', () => {
         user={mockUser}
         dispatch={dispatch}
         isCreatingArticle={true}
+        createArticleError=''
       />
     )
     const layout = shallow(component)
