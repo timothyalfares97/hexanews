@@ -12,10 +12,15 @@ export const changePassword = (email: string, currentPassword: string, newPasswo
     dispatch({ type: ActionTypes.CHANGE_PASSWORD_REQUESTED })
     try {
       const response = await AuthenticationService.changePassword(email, currentPassword, newPassword)
-      if (response.data.code === 'SUCCESS') {
-        dispatch({ type: ActionTypes.CHANGE_PASSWORD_SUCCESS })
-      } else {
-        throw response.data.message
+      switch (response.data.code) {
+        case 'SUCCESS':
+          dispatch({ type: ActionTypes.CHANGE_PASSWORD_SUCCESS })
+          break
+        case 'JWTERROR':
+          window.location.reload()
+          throw response.data.message
+        default:
+          throw response.data.message
       }
     } catch (error) {
       dispatch({ type: ActionTypes.CHANGE_PASSWORD_FAILED, error: error })

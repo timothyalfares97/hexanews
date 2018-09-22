@@ -1,6 +1,7 @@
 /**
  * Service domain for the authentication.
  */
+
 import axios from 'axios'
 import * as Config from '../../constants/config'
 
@@ -19,11 +20,12 @@ export default {
 
   changePassword: (email: string, currentPassword: string, newPassword: string): Promise<any> => {
 
+    const header = { headers: { 'token': localStorage.getItem('token') } }
     const response = axios.post(Config.CHANGE_PASSWORD_ENDPOINT, {
       email: email,
       password: currentPassword,
       newPassword: newPassword,
-    }, Config.HEADER)
+    }, header)
 
     return response
 

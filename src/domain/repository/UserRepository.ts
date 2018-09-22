@@ -34,13 +34,14 @@ export default {
     return response
   },
 
-  edit: async (id: string, edittedUser: User) => {
+  edit: async (edittedUser: User) => {
 
-    const response = await axios.put(`${Config.USER_ENDPOINT}/${id}`, {
+    const header = { headers: { 'token': localStorage.getItem('token') } }
+    const response = await axios.put(`${Config.USER_ENDPOINT}/${edittedUser._id}`, {
       email: edittedUser.email,
       name: edittedUser.name,
       description: edittedUser.description,
-    }, Config.HEADER)
+    }, header)
 
     return response
   },
