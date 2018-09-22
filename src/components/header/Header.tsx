@@ -23,6 +23,7 @@ import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
 import i18n from '../../i18n'
 import selector, { StateProps } from './selector'
 import styles from './styles'
+import SuccessSnackbar from '../successSnackbar/SuccessSnackbar'
 
 export type Props = {
   dispatch: Dispatch<any>,
@@ -32,6 +33,7 @@ export type Props = {
 export interface ComponentState {
   language: string
   showDialog: boolean
+  isLogoutSnackbarOpen: boolean
 }
 
 export class Header extends React.Component<Props, ComponentState> {
@@ -43,6 +45,7 @@ export class Header extends React.Component<Props, ComponentState> {
     this.state = {
       language: currentLanguage,
       showDialog: false,
+      isLogoutSnackbarOpen: false
     }
   }
 
@@ -56,6 +59,8 @@ export class Header extends React.Component<Props, ComponentState> {
   onLogoutClick = async () => {
     const { dispatch } = this.props
     await dispatch(actions.logout())
+
+    this.setState({ isLogoutSnackbarOpen: true })
   }
 
   handleShowDialog = () => {
@@ -66,8 +71,12 @@ export class Header extends React.Component<Props, ComponentState> {
     this.setState({ showDialog: false })
   }
 
+  handleCloseLogoutSnackbar = () => {
+    this.setState({ isLogoutSnackbarOpen: false })
+  }
+
   public render() {
-    const { showDialog, language } = this.state
+    const { showDialog, language, isLogoutSnackbarOpen } = this.state
     const { isLoggedIn, isLoadingServer } = this.props
     return (
       <div style={styles.root}>
@@ -138,7 +147,7 @@ export class Header extends React.Component<Props, ComponentState> {
                       aria-label='Logout'
                       onClick={this.onLogoutClick}
                     >
-                      <ExitIcon />
+                      <ExitIcon style={styles.exitIcon} />
                     </IconButton>
                   }
                 </div>
@@ -149,6 +158,11 @@ export class Header extends React.Component<Props, ComponentState> {
         <AuthenticationDialog
           showDialog={showDialog}
           handleCloseDialog={this.handleCloseDialog}
+        />
+        <SuccessSnackbar
+          isSnackbarOpen={isLogoutSnackbarOpen}
+          message={i18n.t('header.logoutSuccess')}
+          handleClose={this.handleCloseLogoutSnackbar}
         />
       </div>
     )

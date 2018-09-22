@@ -61,5 +61,8 @@ export default {
   },
   titleTypography: {
     textAlign: 'center',
+  },
+  exitIcon: {
+    color: 'rgb(51, 51, 51)',
   }
 }

@@ -107,6 +107,7 @@ const changePasswordForm = {
 const header = {
   signIn: 'Sign In',
   profile: 'Profile',
+  logoutSuccess: 'You have logout successfully'
 }
 
 const home = {

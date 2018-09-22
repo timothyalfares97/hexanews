@@ -107,6 +107,7 @@ const changePasswordForm = {
 const header = {
   signIn: 'Masuk',
   profile: 'Profil',
+  logoutSuccess: 'Kamu telah berhasil keluar dari aplikasi'
 }
 
 const home = {
