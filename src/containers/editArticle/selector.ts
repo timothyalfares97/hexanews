@@ -32,7 +32,7 @@ const categories = (state: State) => state.entities.categories
 
 const user = (state: State) => state.entities.user
 
-const isEditingArticle = (state: State) => state.containers.articleDetail.isEditingArticle
+const isEditingArticle = (state: State) => state.containers.editArticle.isEditingArticle
 
 export default createStructuredSelector({
   categories,

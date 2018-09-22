@@ -20,7 +20,6 @@ describe('Article Detail selector', () => {
       userArticle: undefined,
       isUserArticle: false,
       isDeletingArticle: false,
-      isEditingArticle: false,
     })
   })
 
@@ -32,7 +31,6 @@ describe('Article Detail selector', () => {
         ...initialState.containers,
         articleDetail: {
           isDeletingArticle: true,
-          isEditingArticle: false,
         }
       },
       entities: {
