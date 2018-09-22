@@ -4,23 +4,29 @@ import * as Enzyme from 'enzyme'
 import { shallow } from 'enzyme'
 import * as Adapter from 'enzyme-adapter-react-16'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import configureStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
 
+import rootReducer from '../../../reducers'
 import { Header, Props, ComponentState } from '../Header'
+
+const mockStore = configureStore([thunk])
 
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('Header', () => {
   it('renders Header', () => {
+    const store = mockStore(rootReducer(undefined as any, { type: '' }))
     const component = renderer.create(
       <BrowserRouter>
-        <Header
-          dispatch={jest.fn()}
-          isLoadingServer={false}
-          isLoadingLogin={false}
-          isLoadingRegister={false}
-          isLoggedIn={false}
-          loginError=''
-        />
+        <Provider store={store}>
+          <Header
+            dispatch={jest.fn()}
+            isLoadingServer={false}
+            isLoggedIn={false}
+          />
+        </Provider>
       </BrowserRouter>
     )
     let tree = component.toJSON()
@@ -28,16 +34,16 @@ describe('Header', () => {
   })
 
   it('renders Header with isLoggedIn true', () => {
+    const store = mockStore(rootReducer(undefined as any, { type: '' }))
     const component = renderer.create(
       <BrowserRouter>
-        <Header
-          dispatch={jest.fn()}
-          isLoadingServer={false}
-          isLoadingLogin={false}
-          isLoadingRegister={false}
-          isLoggedIn={true}
-          loginError=''
-        />
+        <Provider store={store}>
+          <Header
+            dispatch={jest.fn()}
+            isLoadingServer={false}
+            isLoggedIn={false}
+          />
+        </Provider>
       </BrowserRouter>
     )
     let tree = component.toJSON()
@@ -50,10 +56,7 @@ describe('Header', () => {
       <Header
         dispatch={dispatch}
         isLoadingServer={false}
-        isLoadingLogin={false}
-        isLoadingRegister={false}
         isLoggedIn={false}
-        loginError=''
       />
     )
 
@@ -82,10 +85,7 @@ describe('Header', () => {
       <Header
         dispatch={dispatch}
         isLoadingServer={false}
-        isLoadingLogin={false}
-        isLoadingRegister={false}
         isLoggedIn={false}
-        loginError=''
       />
     )
 

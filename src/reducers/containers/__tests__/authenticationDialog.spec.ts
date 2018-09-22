@@ -1,4 +1,4 @@
-import { isLoadingLogin, isLoadingRegister, loginError } from '../header'
+import { isLoadingLogin, isLoadingRegister, loginError } from '../authenticationDialog'
 import { ActionTypes } from '../../../actions/ActionTypes'
 
 describe('Header Reducer', () => {

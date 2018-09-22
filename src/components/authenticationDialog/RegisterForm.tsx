@@ -18,10 +18,11 @@ import styles from './styles'
 import i18n from '../../i18n'
 
 export type Props = {
-  dispatch: Dispatch<any>
+  dispatch: Dispatch<any>,
   isLoadingRegister: boolean,
-  handleCloseDialog: () => void
-  onChangeAuthenticationState: () => void
+  registerError: string,
+  handleCloseDialog: () => void,
+  onChangeAuthenticationState: () => void,
 }
 
 export interface ComponentState {
@@ -51,11 +52,17 @@ class RegisterForm extends React.Component<Props, ComponentState> {
     const { dispatch, onChangeAuthenticationState } = this.props
 
     const capitalizedName = startCase(name)
-    await dispatch(actions.registerUser(email, password, capitalizedName, onChangeAuthenticationState))
+    await dispatch(actions.registerUser(email, password, capitalizedName))
+
+    const { registerError } = this.props
+
+    if (registerError === '') {
+      onChangeAuthenticationState()
+    }
   }
 
   public render() {
-    const { handleCloseDialog, onChangeAuthenticationState, isLoadingRegister } = this.props
+    const { handleCloseDialog, onChangeAuthenticationState, isLoadingRegister, registerError } = this.props
     const { email, password, name } = this.state
     return (
       <div>
@@ -112,6 +119,11 @@ class RegisterForm extends React.Component<Props, ComponentState> {
               i18n.t('registerForm.maxName'),
               i18n.t('registerForm.alphabeticName')]}
             />
+            <DialogContentText>
+              <span style={styles.errorLoginLabel}>
+                {registerError}
+              </span>
+            </DialogContentText>
             <DialogContentText style={styles.footerContainer}>
               {i18n.t('registerForm.haveAccountLabel')}
               <span

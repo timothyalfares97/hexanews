@@ -100,13 +100,7 @@ exports[`Header renders Header 1`] = `
                 role="button"
                 tabIndex={0}
               >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "&#8203;",
-                    }
-                  }
-                />
+                EN
               </div>
               <input
                 autoComplete={undefined}
@@ -119,7 +113,7 @@ exports[`Header renders Header 1`] = `
                 placeholder={undefined}
                 rows={undefined}
                 type="hidden"
-                value=""
+                value="en"
               />
               <svg
                 aria-hidden="true"
@@ -322,13 +316,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
                 role="button"
                 tabIndex={0}
               >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "&#8203;",
-                    }
-                  }
-                />
+                EN
               </div>
               <input
                 autoComplete={undefined}
@@ -341,7 +329,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
                 placeholder={undefined}
                 rows={undefined}
                 type="hidden"
-                value=""
+                value="en"
               />
               <svg
                 aria-hidden="true"
@@ -365,20 +353,20 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
               }
             }
           >
-            <a
-              href="/profile"
+            <span
               onClick={[Function]}
               style={
                 Object {
                   "alignSelf": "center",
                   "color": "#333",
-                  "marginRight": 32,
+                  "cursor": "pointer",
+                  "marginRight": 24,
                   "textDecoration": "none",
                 }
               }
             >
-              Profile
-            </a>
+              Sign In
+            </span>
           </h2>
           <button
             aria-label="Search"
@@ -432,110 +420,6 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
                   />
                 </svg>
               </a>
-            </span>
-            <span
-              className="MuiTouchRipple-root-103"
-            />
-          </button>
-          <button
-            aria-label="Create"
-            className="MuiButtonBase-root-100 MuiIconButton-root-94"
-            disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            style={
-              Object {
-                "marginLeft": -12,
-                "marginRight": 20,
-              }
-            }
-            tabIndex="0"
-            type="button"
-          >
-            <span
-              className="MuiIconButton-label-99"
-            >
-              <a
-                href="/createArticle"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "color": "#333",
-                    "textDecoration": "none",
-                  }
-                }
-              >
-                <svg
-                  aria-hidden="true"
-                  className="MuiSvgIcon-root-83"
-                  color={undefined}
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                  />
-                  <path
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  />
-                </svg>
-              </a>
-            </span>
-            <span
-              className="MuiTouchRipple-root-103"
-            />
-          </button>
-          <button
-            aria-label="Logout"
-            className="MuiButtonBase-root-100 MuiIconButton-root-94"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            style={
-              Object {
-                "marginLeft": -12,
-                "marginRight": 20,
-              }
-            }
-            tabIndex="0"
-            type="button"
-          >
-            <span
-              className="MuiIconButton-label-99"
-            >
-              <svg
-                aria-hidden="true"
-                className="MuiSvgIcon-root-83"
-                color={undefined}
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path
-                  d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
             </span>
             <span
               className="MuiTouchRipple-root-103"

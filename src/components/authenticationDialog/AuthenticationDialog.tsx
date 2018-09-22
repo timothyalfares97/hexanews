@@ -5,25 +5,25 @@
 import * as React from 'react'
 import Dialog from '@material-ui/core/Dialog'
 import { Dispatch } from 'redux'
+import { connect } from 'react-redux'
+import { translate } from 'react-i18next'
 
 import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
 import ForgotPasswordForm from './ForgotPasswordForm'
+import selector, { StateProps } from './selector'
 
 export type Props = {
-  dispatch: Dispatch<any>
-  showDialog: boolean
-  isLoadingRegister: boolean
-  isLoadingLogin: boolean
-  handleCloseDialog: () => void
-  loginError: string
-}
+  dispatch: Dispatch<any>,
+  showDialog: boolean,
+  handleCloseDialog: () => void,
+} & StateProps
 
 export interface ComponentState {
   authenticationState: string
 }
 
-class AuthenticationDialog extends React.Component<Props, ComponentState> {
+export class AuthenticationDialog extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)
@@ -38,7 +38,7 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
 
   renderAuthenticationForm = () => {
     const { authenticationState } = this.state
-    const { handleCloseDialog, dispatch, isLoadingLogin, isLoadingRegister, loginError } = this.props
+    const { handleCloseDialog, dispatch, isLoadingLogin, isLoadingRegister, loginError, registerError } = this.props
 
     switch (authenticationState) {
       case 'login':
@@ -57,6 +57,7 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
           <RegisterForm
             dispatch={dispatch}
             isLoadingRegister={isLoadingRegister}
+            registerError={registerError}
             onChangeAuthenticationState={() => this.onChangeAuthenticationState('login')}
             handleCloseDialog={handleCloseDialog}
           />
@@ -83,4 +84,6 @@ class AuthenticationDialog extends React.Component<Props, ComponentState> {
   }
 }
 
-export default AuthenticationDialog
+const ConnectedAuthenticationDialog = connect(selector)(AuthenticationDialog)
+
+export default translate('translations')(ConnectedAuthenticationDialog)

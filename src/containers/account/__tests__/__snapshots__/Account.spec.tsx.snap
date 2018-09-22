@@ -180,6 +180,16 @@ exports[`Account renders Account 1`] = `
              
           </p>
         </div>
+        <h2
+          className="MuiTypography-root-98 MuiTypography-body1-107 MuiTypography-colorTextPrimary-120"
+          style={
+            Object {
+              "color": "#E53935",
+            }
+          }
+        >
+          
+        </h2>
         <button
           className="MuiButtonBase-root-185 MuiButtonBase-disabled-186 MuiButton-root-159 MuiButton-text-161 MuiButton-outlined-167 MuiButton-sizeSmall-182 MuiButton-disabled-179"
           disabled={true}
@@ -376,6 +386,16 @@ exports[`Account renders Account 1`] = `
              
           </p>
         </div>
+        <h2
+          className="MuiTypography-root-98 MuiTypography-body1-107 MuiTypography-colorTextPrimary-120"
+          style={
+            Object {
+              "color": "#E53935",
+            }
+          }
+        >
+          
+        </h2>
         <button
           className="MuiButtonBase-root-185 MuiButtonBase-disabled-186 MuiButton-root-159 MuiButton-text-161 MuiButton-outlined-167 MuiButton-sizeSmall-182 MuiButton-disabled-179"
           disabled={true}

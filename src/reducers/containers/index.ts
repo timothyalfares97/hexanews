@@ -4,7 +4,7 @@
 
 import { combineReducers } from 'redux'
 
-import header, { HeaderContainer } from './header'
+import authenticationDialog, { AuthenticationDialogContainer } from './authenticationDialog'
 import createArticle, { CreateArticleContainer } from './createArticle'
 import articleDetail, { ArticleDetailContainer } from './articleDetail'
 import changePasswordForm, { ChangePasswordFormContainer } from './changePasswordForm'
@@ -15,13 +15,13 @@ export interface Containers {
   changePasswordForm: ChangePasswordFormContainer
   createArticle: CreateArticleContainer
   profileForm: ProfileFormContainer
-  header: HeaderContainer
+  authenticationDialog: AuthenticationDialogContainer
 }
 
 export default combineReducers<Containers>({
   articleDetail,
+  authenticationDialog,
   changePasswordForm,
   createArticle,
-  header,
   profileForm,
 })

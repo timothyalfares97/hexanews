@@ -15,10 +15,10 @@ import SearchIcon from '@material-ui/icons/Search'
 import ExitIcon from '@material-ui/icons/ExitToApp'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
+import { translate } from 'react-i18next'
 
 import * as actions from './actions'
 import * as Config from '../../constants/config'
-import { translate } from 'react-i18next'
 import AuthenticationDialog from '../authenticationDialog/AuthenticationDialog'
 import i18n from '../../i18n'
 import selector, { StateProps } from './selector'
@@ -68,7 +68,7 @@ export class Header extends React.Component<Props, ComponentState> {
 
   public render() {
     const { showDialog, language } = this.state
-    const { dispatch, isLoadingLogin, isLoadingRegister, isLoggedIn, loginError, isLoadingServer } = this.props
+    const { isLoggedIn, isLoadingServer } = this.props
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
@@ -147,12 +147,8 @@ export class Header extends React.Component<Props, ComponentState> {
           </Toolbar>
         </AppBar>
         <AuthenticationDialog
-          dispatch={dispatch}
           showDialog={showDialog}
           handleCloseDialog={this.handleCloseDialog}
-          isLoadingRegister={isLoadingRegister}
-          isLoadingLogin={isLoadingLogin}
-          loginError={loginError}
         />
       </div>
     )

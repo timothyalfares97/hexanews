@@ -4,7 +4,7 @@ import * as Enzyme from 'enzyme'
 import { shallow } from 'enzyme'
 import * as Adapter from 'enzyme-adapter-react-16'
 
-import AuthenticationDialog, { ComponentState, Props } from '../AuthenticationDialog'
+import { AuthenticationDialog, ComponentState, Props } from '../AuthenticationDialog'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -13,11 +13,12 @@ describe('Authentication Dialog', () => {
     const component = renderer.create(
       <AuthenticationDialog
         dispatch={jest.fn()}
+        handleCloseDialog={jest.fn()}
+        showDialog={false}
         isLoadingLogin={false}
         isLoadingRegister={false}
         loginError=''
-        handleCloseDialog={jest.fn()}
-        showDialog={false}
+        registerError=''
       />
     )
     let tree = component.toJSON()
@@ -28,11 +29,12 @@ describe('Authentication Dialog', () => {
     const component = renderer.create(
       <AuthenticationDialog
         dispatch={jest.fn()}
+        handleCloseDialog={jest.fn()}
+        showDialog={false}
         isLoadingLogin={false}
         isLoadingRegister={false}
         loginError=''
-        handleCloseDialog={jest.fn()}
-        showDialog={false}
+        registerError=''
       />
     )
     component.root.instance.setState({ authenticationState: 'register' })
@@ -44,11 +46,12 @@ describe('Authentication Dialog', () => {
     const component = renderer.create(
       <AuthenticationDialog
         dispatch={jest.fn()}
+        handleCloseDialog={jest.fn()}
+        showDialog={false}
         isLoadingLogin={false}
         isLoadingRegister={false}
         loginError=''
-        handleCloseDialog={jest.fn()}
-        showDialog={false}
+        registerError=''
       />
     )
     component.root.instance.setState({ authenticationState: '' })
@@ -60,11 +63,12 @@ describe('Authentication Dialog', () => {
     const component = renderer.create(
       <AuthenticationDialog
         dispatch={jest.fn()}
+        handleCloseDialog={jest.fn()}
+        showDialog={false}
         isLoadingLogin={false}
         isLoadingRegister={false}
         loginError=''
-        handleCloseDialog={jest.fn()}
-        showDialog={false}
+        registerError=''
       />
     )
     component.root.instance.setState({ authenticationState: 'forgotPassword' })
@@ -76,11 +80,12 @@ describe('Authentication Dialog', () => {
     const component = (
       <AuthenticationDialog
         dispatch={jest.fn()}
+        handleCloseDialog={jest.fn()}
+        showDialog={false}
         isLoadingLogin={false}
         isLoadingRegister={false}
         loginError=''
-        handleCloseDialog={jest.fn()}
-        showDialog={false}
+        registerError=''
       />
     )
 

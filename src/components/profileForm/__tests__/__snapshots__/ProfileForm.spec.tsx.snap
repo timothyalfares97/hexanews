@@ -160,6 +160,16 @@ exports[`Profile Form renders Profile Form 1`] = `
          
       </p>
     </div>
+    <h2
+      className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextPrimary-23"
+      style={
+        Object {
+          "color": "#E53935",
+        }
+      }
+    >
+      
+    </h2>
     <button
       className="MuiButtonBase-root-88 MuiButton-root-62 MuiButton-text-64 MuiButton-outlined-70 MuiButton-sizeSmall-85"
       disabled={false}
@@ -354,6 +364,16 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
          
       </p>
     </div>
+    <h2
+      className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextPrimary-23"
+      style={
+        Object {
+          "color": "#E53935",
+        }
+      }
+    >
+      
+    </h2>
     <button
       className="MuiButtonBase-root-88 MuiButton-root-62 MuiButton-text-64 MuiButton-outlined-70 MuiButton-sizeSmall-85"
       disabled={false}

@@ -16,6 +16,7 @@ describe('Register Form', () => {
         onChangeAuthenticationState={jest.fn()}
         isLoadingRegister={false}
         handleCloseDialog={jest.fn()}
+        registerError=''
       />
     )
     let tree = component.toJSON()
@@ -30,6 +31,7 @@ describe('Register Form', () => {
         onChangeAuthenticationState={jest.fn()}
         isLoadingRegister={false}
         handleCloseDialog={jest.fn()}
+        registerError=''
       />
     )
 

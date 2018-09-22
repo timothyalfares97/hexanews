@@ -163,6 +163,19 @@ exports[`Register Form renders Register Form 1`] = `
       </div>
       <p
         className="MuiTypography-root-2 MuiTypography-subheading-9 MuiDialogContentText-root-28"
+      >
+        <span
+          style={
+            Object {
+              "color": "#E53935",
+            }
+          }
+        >
+          
+        </span>
+      </p>
+      <p
+        className="MuiTypography-root-2 MuiTypography-subheading-9 MuiDialogContentText-root-28"
         style={
           Object {
             "marginTop": 8,

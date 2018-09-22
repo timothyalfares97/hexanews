@@ -45,14 +45,29 @@ export const loginError = (state: string = '', action: any) => {
   }
 }
 
-export interface HeaderContainer {
+export const registerError = (state: string = '', action: any) => {
+  switch (action.type) {
+    case ActionTypes.REGISTER_USER_FAILED:
+      return action.error
+    case ActionTypes.REGISTER_USER_REQUESTED:
+    case ActionTypes.REGISTER_USER_SUCCESS:
+    case ActionTypes.LOGOUT:
+      return ''
+    default:
+      return state
+  }
+}
+
+export interface AuthenticationDialogContainer {
   isLoadingRegister: boolean,
   isLoadingLogin: boolean,
   loginError: string,
+  registerError: string,
 }
 
-export default combineReducers<HeaderContainer>({
+export default combineReducers<AuthenticationDialogContainer>({
   isLoadingRegister,
   isLoadingLogin,
   loginError,
+  registerError,
 })
