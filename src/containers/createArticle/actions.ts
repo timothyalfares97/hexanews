@@ -12,10 +12,15 @@ export const createArticle = (article: Article) => (dispatch: Dispatch<any>) => 
   dispatch({ type: ActionTypes.CREATE_ARTICLE_REQUESTED })
   try {
     const response = await ArticleRepository.create(article)
-    if (response.data.code === 'SUCCESS') {
-      dispatch({ type: ActionTypes.CREATE_ARTICLE_SUCCESS, article: response.data.message })
-    } else {
-      throw response.data.message
+    switch (response.data.code) {
+      case 'SUCCESS':
+        dispatch({ type: ActionTypes.CREATE_ARTICLE_SUCCESS, article: response.data.message })
+        break
+      case 'JWTERROR':
+        window.location.reload()
+        throw response.data.message
+      default:
+        throw response.data.message
     }
   } catch (error) {
     dispatch({ type: ActionTypes.CREATE_ARTICLE_FAILED, error: error })

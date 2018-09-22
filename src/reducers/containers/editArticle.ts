@@ -19,10 +19,25 @@ export const isEditingArticle = (state: boolean = false, action: any) => {
   }
 }
 
+export const editArticleError = (state: string = '', action: any) => {
+  switch (action.type) {
+    case ActionTypes.EDIT_ARTICLE_FAILED:
+      return action.error
+    case ActionTypes.EDIT_ARTICLE_REQUESTED:
+    case ActionTypes.EDIT_ARTICLE_SUCCESS:
+    case ActionTypes.LOGOUT:
+      return ''
+    default:
+      return state
+  }
+}
+
 export interface EditArticleContainer {
-  isEditingArticle: boolean,
+  isEditingArticle: boolean
+  editArticleError: string
 }
 
 export default combineReducers<EditArticleContainer>({
-  isEditingArticle
+  isEditingArticle,
+  editArticleError
 })

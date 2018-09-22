@@ -33,6 +33,7 @@ describe('Edit Article', () => {
         userArticle={mockArticle}
         isUserArticle={false}
         isEditingArticle={false}
+        editArticleError=''
       />
     )
     let tree = component.toJSON()

@@ -41,6 +41,9 @@ export default {
     marginTop: 24,
   },
   buttonContainer: {
-    marginTop: '17%'
+    marginTop: '5%'
   },
+  errorEditLabel: {
+    color: '#E53935',
+  }
 }

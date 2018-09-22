@@ -10,6 +10,7 @@ export interface StateProps {
   userArticle: Article
   isUserArticle: boolean
   isEditingArticle: boolean
+  editArticleError: string
 }
 
 const userArticle = createSelector(
@@ -26,6 +27,8 @@ const isUserArticle = createSelector(
   }
 )
 
+const editArticleError = (state: State) => state.containers.editArticle.editArticleError
+
 const user = (state: State) => state.entities.user
 
 const isEditingArticle = (state: State) => state.containers.editArticle.isEditingArticle
@@ -35,4 +38,5 @@ export default createStructuredSelector({
   userArticle,
   isUserArticle,
   isEditingArticle,
+  editArticleError,
 })

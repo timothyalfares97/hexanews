@@ -11,10 +11,15 @@ export const deleteArticle = (id: string) => (dispatch: Dispatch<any>) => (async
   dispatch({ type: ActionTypes.DELETE_ARTICLE_REQUESTED })
   try {
     const response = await ArticleRepository.delete(id)
-    if (response.data.code === 'SUCCESS') {
-      dispatch({ type: ActionTypes.DELETE_ARTICLE_SUCCESS, id: id })
-    } else {
-      throw response.data.message
+    switch (response.data.code) {
+      case 'SUCCESS':
+        dispatch({ type: ActionTypes.DELETE_ARTICLE_SUCCESS, id: id })
+        break
+      case 'JWTERROR':
+        window.location.reload()
+        throw response.data.message
+      default:
+        throw response.data.message
     }
   } catch (error) {
     dispatch({ type: ActionTypes.DELETE_ARTICLE_FAILED })

@@ -28,7 +28,8 @@ describe('Edit Article selector', () => {
       containers: {
         ...initialState.containers,
         editArticle: {
-          isEditingArticle: true
+          isEditingArticle: true,
+          editArticleError: 'asdf'
         }
       },
     }
@@ -43,6 +44,7 @@ describe('Edit Article selector', () => {
 
     expect(selector(state, props)).toMatchObject({
       isEditingArticle: true,
+      editArticleError: 'asdf'
     })
   })
 })

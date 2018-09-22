@@ -11,10 +11,12 @@ export const registerUser = (email: string, password: string, name: string) => (
   dispatch({ type: ActionTypes.REGISTER_USER_REQUESTED })
   try {
     const response = await UserRepository.create(email, password, name)
-    if (response.data.code === 'SUCCESS') {
-      dispatch({ type: ActionTypes.REGISTER_USER_SUCCESS })
-    } else {
-      throw response.data.message
+    switch (response.data.code) {
+      case 'SUCCESS':
+        dispatch({ type: ActionTypes.REGISTER_USER_SUCCESS })
+        break
+      default:
+        throw response.data.message
     }
   } catch (error) {
     dispatch({ type: ActionTypes.REGISTER_USER_FAILED, error: error })
@@ -25,13 +27,15 @@ export const loginUser = (email: string, password: string) => (dispatch: Dispatc
   dispatch({ type: ActionTypes.LOGIN_USER_REQUESTED })
   try {
     const response = await AuthenticationService.login(email, password)
-    if (!!response.data.token) {
-      localStorage.setItem('token', response.data.token)
-      localStorage.setItem('id', response.data.id)
-      const user = await UserRepository.get(response.data.id)
-      dispatch({ type: ActionTypes.LOGIN_USER_SUCCESS, user: user.data.message})
-    } else {
-      throw response.data.message
+    switch (response.data.code) {
+      case 'SUCCESS':
+        localStorage.setItem('token', response.data.token)
+        localStorage.setItem('id', response.data.id)
+        const user = await UserRepository.get(response.data.id)
+        dispatch({ type: ActionTypes.LOGIN_USER_SUCCESS, user: user.data.message})
+        break
+      default:
+        throw response.data.message
     }
   } catch (error) {
     dispatch({ type: ActionTypes.LOGIN_USER_FAILED, error: error })

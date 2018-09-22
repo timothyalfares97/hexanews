@@ -11,7 +11,8 @@ export default {
 
   create: async (article: Article): Promise<any> => {
 
-    const response = await axios.post(Config.ARTICLE_ENDPOINT, article, Config.HEADER)
+    const header = { headers: { 'token': localStorage.getItem('token') } }
+    const response = await axios.post(Config.ARTICLE_ENDPOINT, article, header)
 
     return response
   },
@@ -23,21 +24,23 @@ export default {
     return response
   },
 
-  edit: async (id: string, edittedArticle: Article) => {
+  edit: async (edittedArticle: Article) => {
 
-    const response = await axios.put(`${Config.ARTICLE_ENDPOINT}/${id}`, {
+    const header = { headers: { 'token': localStorage.getItem('token') } }
+    const response = await axios.put(`${Config.ARTICLE_ENDPOINT}/${edittedArticle._id}`, {
       title: edittedArticle.title,
       description: edittedArticle.description,
       authorId: edittedArticle.authorId,
       category: edittedArticle.category,
-    }, Config.HEADER)
+    }, header)
 
     return response
   },
 
   delete: async (id: string): Promise<any> => {
 
-    const response = await axios.delete(`${Config.ARTICLE_ENDPOINT}/${id}`, Config.HEADER)
+    const header = { headers: { 'token': localStorage.getItem('token') } }
+    const response = await axios.delete(`${Config.ARTICLE_ENDPOINT}/${id}`, header)
 
     return response
   },

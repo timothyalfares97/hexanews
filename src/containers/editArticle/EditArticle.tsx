@@ -80,19 +80,25 @@ export class EditArticle extends React.Component<Props, ComponentState> {
     const articleId = userArticle._id
     const authorId = localStorage.getItem('id') || ''
 
-    const edittedArticle = { title, category, description, authorId }
+    const edittedArticle = { _id: articleId, title, category, description, authorId }
 
     if (!!articleId) {
-      await dispatch(actions.editArticle(articleId, edittedArticle))
+      await dispatch(actions.editArticle(edittedArticle))
+    }
+
+    const { editArticleError } = this.props
+
+    if (editArticleError === '') {
       this.setState({ isEditSnackbarOpen: true })
       setTimeout(() => dispatch(push('/profile')), 500)
     }
   }
 
   public render() {
-    const { dispatch, user, isUserArticle, isEditingArticle } = this.props
+    const { dispatch, user, isUserArticle, isEditingArticle, editArticleError } = this.props
     const { title, category, description, isEditSnackbarOpen } = this.state
     const initials = head(startCase(user.name))
+
     if (!isUserArticle) {
       return (
         <NotFound
@@ -167,6 +173,14 @@ export class EditArticle extends React.Component<Props, ComponentState> {
         <Grid container style={styles.buttonContainer}>
           <Grid item md={3} xs={1} />
           <Grid item md={6} xs={10} >
+            <Typography
+              variant='body1'
+              component='h2'
+              color='textPrimary'
+              style={styles.errorEditLabel}
+            >
+              {editArticleError}
+            </Typography>
             <Button
               variant='outlined'
               component='button'

@@ -202,6 +202,25 @@ exports[`Create Article renders Create Article 1`] = `
           Required
         </p>
       </div>
+    </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+  </div>
+  <div
+    className="MuiGrid-container-1"
+    style={
+      Object {
+        "marginTop": "5%",
+      }
+    }
+  >
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
+    >
       <h2
         className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextPrimary-123"
         style={
@@ -212,25 +231,6 @@ exports[`Create Article renders Create Article 1`] = `
       >
         
       </h2>
-    </div>
-    <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
-    />
-  </div>
-  <div
-    className="MuiGrid-container-1"
-    style={
-      Object {
-        "marginTop": "17%",
-      }
-    }
-  >
-    <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
-    />
-    <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
-    >
       <button
         className="MuiButtonBase-root-204 MuiButtonBase-disabled-205 MuiButton-root-178 MuiButton-text-180 MuiButton-outlined-186 MuiButton-disabled-198"
         disabled={true}
@@ -503,6 +503,25 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
           Required
         </p>
       </div>
+    </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+  </div>
+  <div
+    className="MuiGrid-container-1"
+    style={
+      Object {
+        "marginTop": "5%",
+      }
+    }
+  >
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+    />
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
+    >
       <h2
         className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextPrimary-123"
         style={
@@ -513,25 +532,6 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
       >
         
       </h2>
-    </div>
-    <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
-    />
-  </div>
-  <div
-    className="MuiGrid-container-1"
-    style={
-      Object {
-        "marginTop": "17%",
-      }
-    }
-  >
-    <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
-    />
-    <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
-    >
       <button
         className="MuiButtonBase-root-204 MuiButtonBase-disabled-205 MuiButton-root-178 MuiButton-text-180 MuiButton-outlined-186 MuiButton-disabled-198"
         disabled={true}

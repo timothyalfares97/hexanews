@@ -152,6 +152,12 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
               theme={TEXT_EDITOR.theme}
               style={styles.descTextField}
             />
+          </Grid>
+          <Grid item md={3} xs={1} />
+        </Grid>
+        <Grid container style={styles.buttonContainer}>
+          <Grid item md={3} xs={1} />
+          <Grid item md={6} xs={10} >
             <Typography
               variant='body1'
               component='h2'
@@ -160,12 +166,6 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
             >
               {createArticleError}
             </Typography>
-          </Grid>
-          <Grid item md={3} xs={1} />
-        </Grid>
-        <Grid container style={styles.buttonContainer}>
-          <Grid item md={3} xs={1} />
-          <Grid item md={6} xs={10} >
             <Button
               variant='outlined'
               component='button'
