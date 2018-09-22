@@ -87,7 +87,8 @@ const profileForm = {
   maxName: 'Name field requires a maximum of 50 characters',
   alphabeticName: 'Name can only contain alphabetical characters',
   maxDescription: 'Description field requires a maximum of 100 characters',
-  editUserSuccess: 'Edit user is successful',
+  editUserSuccess: 'You have successfully update the user',
+  changePasswordSuccess: 'You have successfully change the password',
 }
 
 const changePasswordForm = {

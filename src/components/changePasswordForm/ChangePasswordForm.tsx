@@ -16,6 +16,7 @@ import { User } from '../../domain/model/User'
 import selector, { StateProps } from './selector'
 import styles from './styles'
 import i18n from '../../i18n'
+import SuccessSnackbar from '../successSnackbar/SuccessSnackbar'
 
 export type Props = {
   user: User,
@@ -24,10 +25,11 @@ export type Props = {
 } & StateProps
 
 export interface ComponentState {
-  email: string,
-  currentPassword: string,
-  newPassword: string,
-  confirmNewPassword: string,
+  email: string
+  currentPassword: string
+  newPassword: string
+  confirmNewPassword: string
+  isSnackbarOpen: boolean
 }
 
 export class ChangePasswordForm extends React.Component<Props, ComponentState> {
@@ -40,6 +42,7 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
       currentPassword: '',
       newPassword: '',
       confirmNewPassword: '',
+      isSnackbarOpen: false,
     }
   }
 
@@ -77,11 +80,21 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
     await dispatch(actions.changePassword(email, currentPassword, newPassword))
 
     this.setState({ currentPassword: '', newPassword: '', confirmNewPassword: '' })
+
+    const { changePasswordError } = this.props
+
+    if (changePasswordError === '') {
+      this.setState({ isSnackbarOpen: true })
+    }
+  }
+
+  handleClose = () => {
+    this.setState({ isSnackbarOpen: false })
   }
 
   public render() {
     const { isChangingPassword, changePasswordError } = this.props
-    const { currentPassword, newPassword, confirmNewPassword } = this.state
+    const { currentPassword, newPassword, confirmNewPassword, isSnackbarOpen } = this.state
     return (
       <div style={styles.sectionContainer}>
         <ValidatorForm
@@ -151,6 +164,11 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
           >
             {isChangingPassword ? <CircularProgress size={22} /> : i18n.t('changePasswordForm.changePassword')}
           </Button>
+          <SuccessSnackbar
+            isSnackbarOpen={isSnackbarOpen}
+            message={i18n.t('profileForm.changePasswordSuccess')}
+            handleClose={this.handleClose}
+          />
         </ValidatorForm>
       </div>
     )
