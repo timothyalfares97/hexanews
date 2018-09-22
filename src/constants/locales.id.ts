@@ -35,6 +35,7 @@ const loginForm = {
   registerHereLabel: 'Daftar di sini',
   cancelButton: 'Batal',
   submitButton: 'Masuk',
+  loginSuccess: 'Kamu telah berhasil masuk ke dalam aplikasi'
 }
 
 const registerForm = {
@@ -56,6 +57,7 @@ const registerForm = {
   loginHereLabel: 'Masuk di sini',
   cancelButton: 'Batal',
   submitButton: 'Daftar',
+  registerSuccess: 'Kamu telah berhasil daftar ke dalam aplikasi, masuk ke aplikasi dengan detail anda'
 }
 
 const categories = {

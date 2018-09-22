@@ -399,7 +399,7 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
         className="MuiButton-label-63"
       >
         <div
-          className="MuiCircularProgress-root-98 MuiCircularProgress-colorPrimary-101 MuiCircularProgress-indeterminate-100"
+          className="MuiCircularProgress-root-105 MuiCircularProgress-colorPrimary-108 MuiCircularProgress-indeterminate-107"
           role="progressbar"
           style={
             Object {
@@ -409,11 +409,11 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
           }
         >
           <svg
-            className="MuiCircularProgress-svg-103"
+            className="MuiCircularProgress-svg-110"
             viewBox="22 22 44 44"
           >
             <circle
-              className="MuiCircularProgress-circle-104 MuiCircularProgress-circleIndeterminate-106"
+              className="MuiCircularProgress-circle-111 MuiCircularProgress-circleIndeterminate-113"
               cx={44}
               cy={44}
               fill="none"

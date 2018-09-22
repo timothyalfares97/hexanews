@@ -17,6 +17,7 @@ describe('Login Form', () => {
         onChangeAuthenticationState={jest.fn()}
         isLoadingLogin={false}
         loginError=''
+        handleOpenLoginSnackbar={jest.fn()}
         handleCloseDialog={jest.fn()}
       />
     )
@@ -33,6 +34,7 @@ describe('Login Form', () => {
         onChangeAuthenticationState={jest.fn()}
         isLoadingLogin={false}
         loginError=''
+        handleOpenLoginSnackbar={jest.fn()}
         handleCloseDialog={jest.fn()}
       />
     )

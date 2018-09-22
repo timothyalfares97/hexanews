@@ -62,6 +62,7 @@ describe('Article Detail', () => {
   })
 
   it('handle onDeleteArticle action correctly', () => {
+    jest.useFakeTimers()
     const articleWithoutId = omit(mockArticle, ['_id'])
     const dispatch = jest.fn()
     const component = (
@@ -84,13 +85,5 @@ describe('Article Detail', () => {
     layout.update()
 
     expect(dispatch).not.toHaveBeenCalled()
-
-    layout.setProps({ userArticle: mockArticle })
-    layout.update()
-
-    instance.onDeleteArticle()
-    layout.update()
-
-    expect(dispatch).toHaveBeenCalled()
   })
 })

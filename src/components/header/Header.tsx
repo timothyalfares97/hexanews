@@ -34,6 +34,8 @@ export interface ComponentState {
   language: string
   showDialog: boolean
   isLogoutSnackbarOpen: boolean
+  isLoginSnackbarOpen: boolean
+  isRegisterSnackbarOpen: boolean
 }
 
 export class Header extends React.Component<Props, ComponentState> {
@@ -45,7 +47,9 @@ export class Header extends React.Component<Props, ComponentState> {
     this.state = {
       language: currentLanguage,
       showDialog: false,
-      isLogoutSnackbarOpen: false
+      isLogoutSnackbarOpen: false,
+      isLoginSnackbarOpen: false,
+      isRegisterSnackbarOpen: false,
     }
   }
 
@@ -75,8 +79,24 @@ export class Header extends React.Component<Props, ComponentState> {
     this.setState({ isLogoutSnackbarOpen: false })
   }
 
-  public render() {
-    const { showDialog, language, isLogoutSnackbarOpen } = this.state
+  handleOpenLoginSnackbar = () => {
+    this.setState({ isLoginSnackbarOpen: true })
+  }
+
+  handleCloseLoginSnackbar = () => {
+    this.setState({ isLoginSnackbarOpen: false })
+  }
+
+  handleOpenRegisterSnackbar = () => {
+    this.setState({ isRegisterSnackbarOpen: true })
+  }
+
+  handleCloseRegisterSnackbar = () => {
+    this.setState({ isRegisterSnackbarOpen: false })
+  }
+
+  render() {
+    const { showDialog, language, isLogoutSnackbarOpen, isLoginSnackbarOpen, isRegisterSnackbarOpen } = this.state
     const { isLoggedIn, isLoadingServer } = this.props
     return (
       <div style={styles.root}>
@@ -158,11 +178,28 @@ export class Header extends React.Component<Props, ComponentState> {
         <AuthenticationDialog
           showDialog={showDialog}
           handleCloseDialog={this.handleCloseDialog}
+          handleOpenLoginSnackbar={this.handleOpenLoginSnackbar}
+          handleOpenRegisterSnackbar={this.handleOpenRegisterSnackbar}
         />
         <SuccessSnackbar
           isSnackbarOpen={isLogoutSnackbarOpen}
           message={i18n.t('header.logoutSuccess')}
           handleClose={this.handleCloseLogoutSnackbar}
+        />
+        <SuccessSnackbar
+          isSnackbarOpen={isLoginSnackbarOpen}
+          message={i18n.t('loginForm.loginSuccess')}
+          handleClose={this.handleCloseLoginSnackbar}
+        />
+        <SuccessSnackbar
+          isSnackbarOpen={isLoginSnackbarOpen}
+          message={i18n.t('loginForm.loginSuccess')}
+          handleClose={this.handleCloseLoginSnackbar}
+        />
+        <SuccessSnackbar
+          isSnackbarOpen={isRegisterSnackbarOpen}
+          message={i18n.t('registerForm.registerSuccess')}
+          handleClose={this.handleCloseRegisterSnackbar}
         />
       </div>
     )

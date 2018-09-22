@@ -17,10 +17,13 @@ export type Props = {
   dispatch: Dispatch<any>,
   showDialog: boolean,
   handleCloseDialog: () => void,
+  handleOpenLoginSnackbar: () => void,
+  handleOpenRegisterSnackbar: () => void,
 } & StateProps
 
 export interface ComponentState {
   authenticationState: string
+  isLoginSnackbarOpen: boolean
 }
 
 export class AuthenticationDialog extends React.Component<Props, ComponentState> {
@@ -28,7 +31,8 @@ export class AuthenticationDialog extends React.Component<Props, ComponentState>
   constructor(props: Props) {
     super(props)
     this.state = {
-      authenticationState: 'login'
+      authenticationState: 'login',
+      isLoginSnackbarOpen: false,
     }
   }
 
@@ -38,7 +42,16 @@ export class AuthenticationDialog extends React.Component<Props, ComponentState>
 
   renderAuthenticationForm = () => {
     const { authenticationState } = this.state
-    const { handleCloseDialog, dispatch, isLoadingLogin, isLoadingRegister, loginError, registerError } = this.props
+    const {
+      handleCloseDialog,
+      dispatch,
+      isLoadingLogin,
+      isLoadingRegister,
+      loginError,
+      registerError,
+      handleOpenLoginSnackbar,
+      handleOpenRegisterSnackbar
+    } = this.props
 
     switch (authenticationState) {
       case 'login':
@@ -50,6 +63,7 @@ export class AuthenticationDialog extends React.Component<Props, ComponentState>
             onChangeAuthenticationState={() => this.onChangeAuthenticationState('register')}
             handleCloseDialog={handleCloseDialog}
             loginError={loginError}
+            handleOpenLoginSnackbar={handleOpenLoginSnackbar}
           />
         )
       case 'register':
@@ -60,6 +74,7 @@ export class AuthenticationDialog extends React.Component<Props, ComponentState>
             registerError={registerError}
             onChangeAuthenticationState={() => this.onChangeAuthenticationState('login')}
             handleCloseDialog={handleCloseDialog}
+            handleOpenRegisterSnackbar={handleOpenRegisterSnackbar}
           />
         )
       case 'forgotPassword':

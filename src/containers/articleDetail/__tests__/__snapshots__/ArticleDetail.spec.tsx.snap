@@ -357,7 +357,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
                 className="MuiButton-label-127"
               >
                 <div
-                  className="MuiCircularProgress-root-197 MuiCircularProgress-colorPrimary-200 MuiCircularProgress-indeterminate-199"
+                  className="MuiCircularProgress-root-204 MuiCircularProgress-colorPrimary-207 MuiCircularProgress-indeterminate-206"
                   role="progressbar"
                   style={
                     Object {
@@ -367,11 +367,11 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
                   }
                 >
                   <svg
-                    className="MuiCircularProgress-svg-202"
+                    className="MuiCircularProgress-svg-209"
                     viewBox="22 22 44 44"
                   >
                     <circle
-                      className="MuiCircularProgress-circle-203 MuiCircularProgress-circleIndeterminate-205"
+                      className="MuiCircularProgress-circle-210 MuiCircularProgress-circleIndeterminate-212"
                       cx={44}
                       cy={44}
                       fill="none"

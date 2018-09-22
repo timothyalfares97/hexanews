@@ -202,6 +202,16 @@ exports[`Create Article renders Create Article 1`] = `
           Required
         </p>
       </div>
+      <h2
+        className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextPrimary-123"
+        style={
+          Object {
+            "color": "#E53935",
+          }
+        }
+      >
+        
+      </h2>
     </div>
     <div
       className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
@@ -493,6 +503,16 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
           Required
         </p>
       </div>
+      <h2
+        className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextPrimary-123"
+        style={
+          Object {
+            "color": "#E53935",
+          }
+        }
+      >
+        
+      </h2>
     </div>
     <div
       className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
@@ -539,7 +559,7 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
           className="MuiButton-label-179"
         >
           <div
-            className="MuiCircularProgress-root-214 MuiCircularProgress-colorPrimary-217 MuiCircularProgress-indeterminate-216"
+            className="MuiCircularProgress-root-221 MuiCircularProgress-colorPrimary-224 MuiCircularProgress-indeterminate-223"
             role="progressbar"
             style={
               Object {
@@ -549,11 +569,11 @@ exports[`Create Article renders Create Article with isCreatingArticle as true 1`
             }
           >
             <svg
-              className="MuiCircularProgress-svg-219"
+              className="MuiCircularProgress-svg-226"
               viewBox="22 22 44 44"
             >
               <circle
-                className="MuiCircularProgress-circle-220 MuiCircularProgress-circleIndeterminate-222"
+                className="MuiCircularProgress-circle-227 MuiCircularProgress-circleIndeterminate-229"
                 cx={44}
                 cy={44}
                 fill="none"

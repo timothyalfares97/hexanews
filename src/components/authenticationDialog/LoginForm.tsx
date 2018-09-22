@@ -22,6 +22,7 @@ export type Props = {
   handleCloseDialog: () => void,
   onChangeForgotPassword: () => void,
   onChangeAuthenticationState: () => void,
+  handleOpenLoginSnackbar: () => void,
   loginError: string,
 }
 
@@ -47,7 +48,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
 
   onLogin = async () => {
     const { email, password } = this.state
-    const { dispatch, handleCloseDialog } = this.props
+    const { dispatch, handleCloseDialog, handleOpenLoginSnackbar } = this.props
 
     await dispatch(actions.loginUser(email, password))
 
@@ -57,6 +58,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
 
     if (loginError === '') {
       handleCloseDialog()
+      handleOpenLoginSnackbar()
     }
   }
 

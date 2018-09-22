@@ -22,6 +22,7 @@ export type Props = {
   isLoadingRegister: boolean,
   registerError: string,
   handleCloseDialog: () => void,
+  handleOpenRegisterSnackbar: () => void,
   onChangeAuthenticationState: () => void,
 }
 
@@ -49,15 +50,18 @@ class RegisterForm extends React.Component<Props, ComponentState> {
 
   onRegister = async () => {
     const { email, password, name } = this.state
-    const { dispatch, onChangeAuthenticationState } = this.props
+    const { dispatch, onChangeAuthenticationState, handleOpenRegisterSnackbar } = this.props
 
     const capitalizedName = startCase(name)
     await dispatch(actions.registerUser(email, password, capitalizedName))
 
     const { registerError } = this.props
 
+    this.setState({ email: '', password: '', name: '' })
+
     if (registerError === '') {
       onChangeAuthenticationState()
+      handleOpenRegisterSnackbar()
     }
   }
 

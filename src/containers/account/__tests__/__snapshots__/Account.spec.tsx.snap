@@ -220,7 +220,7 @@ exports[`Account renders Account 1`] = `
       </form>
     </div>
     <hr
-      className="MuiDivider-root-188"
+      className="MuiDivider-root-195"
       style={
         Object {
           "marginTop": 50,

@@ -16,6 +16,7 @@ describe('Register Form', () => {
         onChangeAuthenticationState={jest.fn()}
         isLoadingRegister={false}
         handleCloseDialog={jest.fn()}
+        handleOpenRegisterSnackbar={jest.fn()}
         registerError=''
       />
     )
@@ -31,6 +32,7 @@ describe('Register Form', () => {
         onChangeAuthenticationState={jest.fn()}
         isLoadingRegister={false}
         handleCloseDialog={jest.fn()}
+        handleOpenRegisterSnackbar={jest.fn()}
         registerError=''
       />
     )

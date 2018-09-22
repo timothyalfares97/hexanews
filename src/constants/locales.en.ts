@@ -35,6 +35,7 @@ const loginForm = {
   registerHereLabel: 'Register here',
   cancelButton: 'Cancel',
   submitButton: 'Sign In',
+  loginSuccess: 'You have successfully login to the app'
 }
 
 const registerForm = {
@@ -56,6 +57,7 @@ const registerForm = {
   loginHereLabel: 'Login here',
   cancelButton: 'Cancel',
   submitButton: 'Register',
+  registerSuccess: 'You have successfully register to the app, please login with it'
 }
 
 const categories = {
