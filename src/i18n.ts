@@ -1,3 +1,7 @@
+/**
+ * Internationalisation class containing the config for our instance.
+ */
+
 import * as i18n from 'i18next'
 import * as Backend from 'i18next-xhr-backend'
 import { reactI18nextModule } from 'react-i18next'

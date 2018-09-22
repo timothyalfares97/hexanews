@@ -1,11 +1,17 @@
 /**
- * Redux reducer for profileForm.
+ * Redux reducers for profileForm container state in the application.
  */
 
 import { combineReducers } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 
+/**
+ * editUserError state that will be changed based on actions in the application
+ * @param state a collection of the current state of editUserError
+ * @param action The trigger to mutate the editUserError in the Redux
+ * @return payload containing the editUserError
+ */
 export const editUserError = (state: string = '', action: any) => {
   switch (action.type) {
     case ActionTypes.EDIT_USER_FAILED:
@@ -19,6 +25,12 @@ export const editUserError = (state: string = '', action: any) => {
   }
 }
 
+/**
+ * isEditingUser state that will be changed based on actions in the application
+ * @param state a collection of the current state of isEditingUser
+ * @param action The trigger to mutate the isEditingUser in the Redux
+ * @return payload containing the isEditingUser
+ */
 export const isEditingUser = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.EDIT_USER_REQUESTED:

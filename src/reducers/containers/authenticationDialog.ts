@@ -1,11 +1,17 @@
 /**
- * Redux reducer for the header.
+ * Redux reducers for authenticationDialog container state in the application.
  */
 
 import { combineReducers } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 
+/**
+ * isLoadingRegister state that will be changed based on actions in the application
+ * @param state a collection of the current state of isLoadingRegister
+ * @param action The trigger to mutate the isLoadingRegister in the Redux
+ * @return payload containing the isLoadingRegister
+ */
 export const isLoadingRegister = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.REGISTER_USER_REQUESTED:
@@ -19,6 +25,12 @@ export const isLoadingRegister = (state: boolean = false, action: any) => {
   }
 }
 
+/**
+ * isLoadingLogin state that will be changed based on actions in the application
+ * @param state a collection of the current state of isLoadingLogin
+ * @param action The trigger to mutate the isLoadingLogin in the Redux
+ * @return payload containing the isLoadingLogin
+ */
 export const isLoadingLogin = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.LOGIN_USER_REQUESTED:
@@ -32,6 +44,12 @@ export const isLoadingLogin = (state: boolean = false, action: any) => {
   }
 }
 
+/**
+ * loginError state that will be changed based on actions in the application
+ * @param state a collection of the current state of loginError
+ * @param action The trigger to mutate the loginError in the Redux
+ * @return payload containing the loginError
+ */
 export const loginError = (state: string = '', action: any) => {
   switch (action.type) {
     case ActionTypes.LOGIN_USER_FAILED:
@@ -45,6 +63,12 @@ export const loginError = (state: string = '', action: any) => {
   }
 }
 
+/**
+ * registerError state that will be changed based on actions in the application
+ * @param state a collection of the current state of registerError
+ * @param action The trigger to mutate the registerError in the Redux
+ * @return payload containing the registerError
+ */
 export const registerError = (state: string = '', action: any) => {
   switch (action.type) {
     case ActionTypes.REGISTER_USER_FAILED:

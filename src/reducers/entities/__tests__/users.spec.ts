@@ -1,3 +1,7 @@
+/**
+ * Unit tests for checking the behavior of users based on relevant actions
+ */
+
 import users from '../users'
 import { ActionTypes } from '../../../actions/ActionTypes'
 import { User } from '../../../domain/model/User'

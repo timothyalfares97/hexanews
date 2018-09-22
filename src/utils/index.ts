@@ -4,6 +4,10 @@
 
 import { Article } from '../domain/model/Article'
 
+/**
+ * Function to get the first image tag in the article to be used as a featured image
+ * @param article the article that want to be checked if there is any available image
+ */
 const getFeaturedImage = (article: Article) => {
   const openTagImageIndex = article.description.search('<img')
   const remainingDescription = article.description.substr(openTagImageIndex)

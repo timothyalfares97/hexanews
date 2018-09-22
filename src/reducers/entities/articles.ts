@@ -1,5 +1,5 @@
 /**
- * Redux reducer for the articles.
+ * Redux reducers for articles state in the application.
  */
 
 import { filter, map } from 'lodash'
@@ -7,6 +7,12 @@ import { filter, map } from 'lodash'
 import { ActionTypes } from '../../actions/ActionTypes'
 import { Article } from '../../domain/model/Article'
 
+/**
+ * Articles state that will be changed based on actions in the application
+ * @param state a collection of the current state of articles
+ * @param action The trigger to mutate the articles in the Redux
+ * @return payload containing the articles
+ */
 const articles = (state: Article[] = [], action: any = {}) => {
   switch (action.type) {
     case ActionTypes.GET_ARTICLES:

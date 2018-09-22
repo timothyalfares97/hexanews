@@ -1,7 +1,11 @@
+/**
+ * Unit tests for checking the behavior of authenticationDialog container based on relevant actions
+ */
+
 import { isLoadingLogin, isLoadingRegister, loginError } from '../authenticationDialog'
 import { ActionTypes } from '../../../actions/ActionTypes'
 
-describe('Header Reducer', () => {
+describe('Authentication Dialog Reducer', () => {
   it('Default state and isLoadingLogin action', () => {
     const isLoadingLoginState = false
     expect(isLoadingLogin(isLoadingLoginState, {})).toBe(false)

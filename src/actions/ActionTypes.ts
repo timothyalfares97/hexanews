@@ -1,5 +1,5 @@
 /**
- * All ActionTypes that required to be used for Redux actions.
+ * All ActionTypes that required to be used for Redux actions
  */
 
 export enum ActionTypes {

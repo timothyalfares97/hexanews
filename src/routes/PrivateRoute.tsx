@@ -11,6 +11,9 @@ type Props = {
   component: React.ComponentType<any>,
 }
 
+/**
+ * Render route only when the user is logged in. Otherwise redirect to home screen.
+ */
 const PrivateRoute: React.StatelessComponent<Props> = ({
   isLoggedIn,
   path,

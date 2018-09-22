@@ -1,3 +1,7 @@
+/**
+ * Unit tests for checking the behavior of isLoggedIn based on relevant actions
+ */
+
 import isLoggedIn from '../isLoggedIn'
 import { ActionTypes } from '../../actions/ActionTypes'
 

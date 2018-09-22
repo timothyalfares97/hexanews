@@ -1,5 +1,5 @@
 /**
- * Actions for rehydrate all required application data (e.g. users, articles, categories data) .
+ * Actions for rehydrate all required application data (e.g. users, articles, categories data)
  */
 
 import { Store } from 'redux'

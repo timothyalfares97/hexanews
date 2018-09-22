@@ -1,5 +1,5 @@
 /**
- * Entry point for our locales file.
+ * Entry point for our locales file
  */
 
 import LocalesEN from './locales.en'

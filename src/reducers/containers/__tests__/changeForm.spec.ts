@@ -1,7 +1,11 @@
+/**
+ * Unit tests for checking the behavior of changeForm container based on relevant actions
+ */
+
 import { isChangingPassword } from '../changePasswordForm'
 import { ActionTypes } from '../../../actions/ActionTypes'
 
-describe('Account Reducer', () => {
+describe('Change form Reducer', () => {
   it('Default state and isChangingPassword action', () => {
     const isChangingPasswordState = false
     expect(isChangingPassword(isChangingPasswordState, {})).toBe(false)

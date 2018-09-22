@@ -1,5 +1,5 @@
 /**
- * Redux reducer for the user.
+ * Redux reducers for current user state in the application.
  */
 
 import { ActionTypes } from '../../actions/ActionTypes'
@@ -13,6 +13,12 @@ const initialUser = {
   createdAt: '',
 }
 
+/**
+ * User state that will be changed based on actions in the application
+ * @param state the current user state in the application
+ * @param action The trigger to mutate the current user in the Redux
+ * @return payload containing the user
+ */
 const user = (state: User = initialUser, action: any = {}) => {
   switch (action.type) {
     case ActionTypes.GET_USER:

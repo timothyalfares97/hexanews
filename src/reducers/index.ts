@@ -1,5 +1,5 @@
 /**
- * Redux reducer for the main application.
+ * Redux reducers entry point for Hexanews application.
  */
 
 import { combineReducers } from 'redux'

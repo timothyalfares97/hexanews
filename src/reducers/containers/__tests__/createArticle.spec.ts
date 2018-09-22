@@ -1,3 +1,7 @@
+/**
+ * Unit tests for checking the behavior of createArticle container based on relevant actions
+ */
+
 import { isCreatingArticle } from '../createArticle'
 import { ActionTypes } from '../../../actions/ActionTypes'
 

@@ -1,6 +1,7 @@
 /**
- * Redux configuration store.
+ * Configuration file for redux store
  */
+
 import thunk from 'redux-thunk'
 import { applyMiddleware, createStore } from 'redux'
 import { createLogger } from 'redux-logger'

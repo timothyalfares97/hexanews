@@ -1,3 +1,7 @@
+/**
+ * Unit tests for checking the behavior of articles based on relevant actions
+ */
+
 import articles from '../articles'
 import { ActionTypes } from '../../../actions/ActionTypes'
 import { Article } from '../../../domain/model/Article'

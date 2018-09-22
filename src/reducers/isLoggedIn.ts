@@ -1,5 +1,5 @@
 /**
- * Redux reducer for the articles.
+ * Redux reducers for login state in the application.
  */
 
 import { ActionTypes } from '../actions/ActionTypes'

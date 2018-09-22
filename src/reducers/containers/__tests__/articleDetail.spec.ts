@@ -1,3 +1,7 @@
+/**
+ * Unit tests for checking the behavior of articleDetail container based on relevant actions
+ */
+
 import { isDeletingArticle } from '../articleDetail'
 import { ActionTypes } from '../../../actions/ActionTypes'
 

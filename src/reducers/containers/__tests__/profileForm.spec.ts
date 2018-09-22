@@ -1,3 +1,7 @@
+/**
+ * Unit tests for checking the behavior of profileForm container based on relevant actions
+ */
+
 import { isEditingUser } from '../profileForm'
 import { ActionTypes } from '../../../actions/ActionTypes'
 

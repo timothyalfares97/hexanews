@@ -1,5 +1,5 @@
 /**
- * Redux reducer for the containers index.
+ * Redux reducer entry point for the containers.
  */
 
 import { combineReducers } from 'redux'

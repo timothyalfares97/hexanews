@@ -1,3 +1,7 @@
+/**
+ * Selector for routes to get the login status
+ */
+
 import { createStructuredSelector } from 'reselect'
 
 import { State } from '../reducers'

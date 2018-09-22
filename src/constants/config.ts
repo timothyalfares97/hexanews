@@ -1,5 +1,5 @@
 /**
- * All constants variable that related to the application configuration.
+ * All constants variable that related to the application configuration
  */
 
 import * as ip from 'ip'

@@ -1,6 +1,7 @@
 /**
- * Redux reducer for the user.
+ * Redux reducers entry point for entities.
  */
+
 import { combineReducers } from 'redux'
 
 import user, { UserEntity } from './user'

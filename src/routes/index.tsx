@@ -24,6 +24,10 @@ type Props = {
 } & StateProps
 
 class Routes extends React.Component<Props> {
+
+  /**
+   * Render the main routes of application
+   */
   public render() {
     const { isLoggedIn } = this.props
     return (
@@ -42,4 +46,6 @@ class Routes extends React.Component<Props> {
   }
 }
 
-export default withRouter(connect(selector)(Routes) as any)
+const ConnectedRoutes = connect(selector)(Routes)
+
+export default withRouter(ConnectedRoutes as any)

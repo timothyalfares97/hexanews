@@ -1,5 +1,5 @@
 /**
- * Entry point for the main application.
+ * Entry point class for Hexanews application.
  */
 
 import * as React from 'react'
@@ -30,6 +30,9 @@ export default class Hexanews extends React.Component {
     isLoadingServer: true
   }
 
+  /**
+   * Setup our application before it displayed to user
+   */
   async componentWillMount() {
 
     await rehydrateState(this.store)
@@ -37,6 +40,9 @@ export default class Hexanews extends React.Component {
     this.setState({ isLoadingServer: false })
   }
 
+  /**
+   * Render the main container based on the loading state
+   */
   renderMainContainer = () => (
     this.state.isLoadingServer ?
       <div style={styles.progressContainer}>
@@ -45,6 +51,9 @@ export default class Hexanews extends React.Component {
       <Routes />
   )
 
+  /**
+   * Render Hexanews application components
+   */
   render() {
     const { isLoadingServer } = this.state
     return (
