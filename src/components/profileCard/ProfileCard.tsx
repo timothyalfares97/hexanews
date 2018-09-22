@@ -1,6 +1,7 @@
 /**
- * Display profile card component.
+ * The ProfileCard Component for displaying profile detail in account container
  */
+
 import * as React from 'react'
 import * as moment from 'moment'
 import Card from '@material-ui/core/Card'
@@ -11,6 +12,9 @@ import { DATE_FORMAT } from '../../constants/config'
 import i18n from '../../i18n'
 import styles from './styles'
 
+/**
+ * All props required by the components
+ */
 type Props = {
   name: string,
   description: string,
@@ -18,6 +22,9 @@ type Props = {
   createdAt: string
 }
 
+/**
+ * Render the ProfileCard component
+ */
 const ProfileCard: React.StatelessComponent<Props> = ({
   name,
   description,

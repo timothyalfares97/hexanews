@@ -1,5 +1,5 @@
 /**
- * Display article row component.
+ * The ArticleRow Component for displaying all common article
  */
 
 import * as React from 'react'
@@ -17,12 +17,18 @@ import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import Utils from '../../utils'
 
+/**
+ * All props required by the components
+ */
 type Props = {
   article: Article,
   authorName: string,
   dispatch: Dispatch<any>,
 }
 
+/**
+ * Render ArticleRow component
+ */
 const ArticleRow: React.StatelessComponent<Props> = ({
   article,
   authorName,

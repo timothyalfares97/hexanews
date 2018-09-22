@@ -1,5 +1,5 @@
 /**
- * Display success snackbar row component.
+ * The SuccessSnackBar Component for displaying snackbar every successful response
  */
 
 import * as React from 'react'
@@ -9,12 +9,18 @@ import SnackbarContent from '@material-ui/core/SnackbarContent'
 
 import styles from './styles'
 
+/**
+ * All props required by the components
+ */
 type Props = {
   isSnackbarOpen: boolean,
   message: string,
   handleClose: () => any,
 }
 
+/**
+ * Render the SuccessSnackbar component
+ */
 const SuccessSnackbar: React.StatelessComponent<Props> = ({
   isSnackbarOpen,
   message,

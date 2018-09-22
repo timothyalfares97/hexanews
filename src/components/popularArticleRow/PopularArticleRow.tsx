@@ -1,5 +1,5 @@
 /**
- * Display popular article row component.
+ * The PopularArticleRow Component for displaying popular article in home container
  */
 
 import * as React from 'react'
@@ -10,12 +10,18 @@ import { push } from 'connected-react-router'
 import styles from './styles'
 import { Article } from '../../domain/model/Article'
 
+/**
+ * All props required by the components
+ */
 type Props = {
   article: Article,
   authorName: string,
   dispatch: Dispatch<any>,
 }
 
+/**
+ * Render the PopularArticleRow component
+ */
 const PopularArticleRow: React.StatelessComponent<Props> = ({
   article,
   authorName,

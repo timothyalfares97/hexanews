@@ -1,5 +1,5 @@
 /**
- * Display footer card component.
+ * The FooterCard Component for displaying related read article in articleDetail container
  */
 
 import * as React from 'react'
@@ -20,12 +20,18 @@ import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import Utils from '../../utils'
 
+/**
+ * All props required by the components
+ */
 type Props = {
   authorName: string,
   dispatch: Dispatch<any>,
   article: Article,
 }
 
+/**
+ * Render the Footer Card component
+ */
 const FooterCard: React.StatelessComponent<Props> = ({
   article,
   authorName,

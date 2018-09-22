@@ -1,6 +1,7 @@
 /**
  * Style file for category header component.
  */
+
 export default {
   flex: {
     flexGrow: 1,
