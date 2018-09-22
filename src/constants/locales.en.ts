@@ -82,7 +82,8 @@ const editArticle = {
   title: 'Title',
   category: 'Category',
   required: 'Required',
-  descriptionPlaceholder: 'Tell your story in here...'
+  descriptionPlaceholder: 'Tell your story in here...',
+  editArticleSuccess: 'You have successfully edit your article'
 }
 
 const account = {

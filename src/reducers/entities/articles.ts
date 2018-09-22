@@ -2,7 +2,7 @@
  * Redux reducer for the articles.
  */
 
-import { filter } from 'lodash'
+import { filter, map } from 'lodash'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 import { Article } from '../../domain/model/Article'
@@ -15,6 +15,13 @@ const articles = (state: Article[] = [], action: any = {}) => {
       return [...state, action.article]
     case ActionTypes.DELETE_ARTICLE_SUCCESS:
       return filter(state, (article) => article._id !== action.id)
+    case ActionTypes.EDIT_ARTICLE_SUCCESS:
+      return map(state, (article) => {
+        if (article._id === action.article._id) {
+          return action.article
+        }
+        return article
+      })
     default:
       return state
   }

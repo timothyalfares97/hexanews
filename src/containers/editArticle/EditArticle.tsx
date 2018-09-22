@@ -27,6 +27,7 @@ import { TEXT_EDITOR } from '../../constants/config'
 import i18n from '../../i18n'
 import selector, { StateProps } from './selector'
 import styles from './styles'
+import SuccessSnackbar from '../../components/successSnackbar/SuccessSnackbar'
 
 type Props = {
   dispatch: Dispatch<any>
@@ -36,6 +37,7 @@ interface ComponentState {
   category: string
   description: string
   title: string
+  isEditSnackbarOpen: boolean
 }
 
 class EditArticle extends React.Component<Props, ComponentState> {
@@ -47,6 +49,7 @@ class EditArticle extends React.Component<Props, ComponentState> {
       category: userArticle.category ? userArticle.category : '',
       description: userArticle.description,
       title: userArticle.title,
+      isEditSnackbarOpen: false,
     }
   }
 
@@ -67,6 +70,10 @@ class EditArticle extends React.Component<Props, ComponentState> {
     return (category === '' || description === '' || title === '')
   }
 
+  handleEditClose = () => {
+    this.setState({ isEditSnackbarOpen: false })
+  }
+
   onEditArticle = async () => {
     const { dispatch, userArticle } = this.props
     const { title, category, description } = this.state
@@ -77,12 +84,14 @@ class EditArticle extends React.Component<Props, ComponentState> {
 
     if (!!articleId) {
       await dispatch(actions.editArticle(articleId, edittedArticle))
+      this.setState({ isEditSnackbarOpen: true })
+      setTimeout(() => dispatch(push('/profile')), 500)
     }
   }
 
   public render() {
     const { dispatch, user, isUserArticle, isEditingArticle } = this.props
-    const { title, category, description } = this.state
+    const { title, category, description, isEditSnackbarOpen } = this.state
     const initials = head(startCase(user.name))
     if (!isUserArticle) {
       return (
@@ -179,6 +188,11 @@ class EditArticle extends React.Component<Props, ComponentState> {
           </Grid>
           <Grid item md={3} xs={1} />
         </Grid>
+        <SuccessSnackbar
+          isSnackbarOpen={isEditSnackbarOpen}
+          message={i18n.t('editArticle.editArticleSuccess')}
+          handleClose={this.handleEditClose}
+        />
       </div>
     )
     }

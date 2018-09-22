@@ -3,7 +3,6 @@
  */
 
 import { Dispatch } from 'redux'
-import { push } from 'connected-react-router'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 import { Article } from '../../domain/model/Article'
@@ -14,8 +13,7 @@ export const editArticle = (id: string, edittedArticle: Article) => (dispatch: D
   try {
     const response = await ArticleRepository.edit(id, edittedArticle)
     if (response.data.code === 'SUCCESS') {
-      dispatch({ type: ActionTypes.EDIT_ARTICLE_SUCCESS, article: response.data })
-      dispatch(push('/profile'))
+      dispatch({ type: ActionTypes.EDIT_ARTICLE_SUCCESS, article: response.data.message })
     } else {
       throw response.data.message
     }
