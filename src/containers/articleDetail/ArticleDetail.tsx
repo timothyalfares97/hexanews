@@ -85,7 +85,7 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
                   style={{ alignSelf: 'center', marginRight: 10 }}
                   onClick={() => dispatch(push(`../editArticle/${userArticle._id}`))}
                 >
-                  {i18n.t('articleDetail.edit')}
+                  {i18n.t('articleDetail.editArticle')}
                 </Button>
               }
               {isUserArticle &&
@@ -96,7 +96,7 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
                   style={{ alignSelf: 'center' }}
                   onClick={this.onDeleteArticle}
                 >
-                  {isDeletingArticle ? <CircularProgress size={22} /> : i18n.t('articleDetail.delete')}
+                  {isDeletingArticle ? <CircularProgress size={22} /> : i18n.t('articleDetail.deleteArticle')}
                 </Button>
               }
             </div>
