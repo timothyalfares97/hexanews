@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Edit Article renders Edit Article 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": "17%",
+      "textAlign": "center",
+    }
+  }
+>
+  <h1
+    className="MuiTypography-root-1 MuiTypography-display1-5 MuiTypography-colorTextPrimary-23"
+    style={
+      Object {
+        "fontSize": 128,
+      }
+    }
+  >
+    404
+  </h1>
+  <h1
+    className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextPrimary-23"
+    style={
+      Object {
+        "fontSize": 32,
+        "marginBottom": 24,
+      }
+    }
+  >
+    There is no page here.
+  </h1>
+  <button
+    className="MuiButtonBase-root-52 MuiButton-root-26 MuiButton-text-28 MuiButton-outlined-34 MuiButton-sizeLarge-50"
+    disabled={false}
+    id="backHomeButton"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="button"
+  >
+    <span
+      className="MuiButton-label-27"
+    >
+      Back to home
+    </span>
+    <span
+      className="MuiTouchRipple-root-55"
+    />
+  </button>
+</div>
+`;

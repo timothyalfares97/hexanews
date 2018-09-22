@@ -23,6 +23,7 @@ exports[`Article Detail renders Article Detail 1`] = `
         style={
           Object {
             "marginBottom": "2%",
+            "width": "100%",
           }
         }
       >
@@ -82,6 +83,38 @@ exports[`Article Detail renders Article Detail 1`] = `
               }
             }
           >
+            <button
+              className="MuiButtonBase-root-152 MuiButton-root-126 MuiButton-text-128 MuiButton-outlined-134 MuiButton-sizeSmall-149"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "marginRight": 10,
+                }
+              }
+              tabIndex="0"
+              type="button"
+            >
+              <span
+                className="MuiButton-label-127"
+              >
+                Edit article
+              </span>
+              <span
+                className="MuiTouchRipple-root-155"
+              />
+            </button>
             <button
               className="MuiButtonBase-root-152 MuiButton-root-126 MuiButton-text-128 MuiButton-outlined-134 MuiButton-sizeSmall-149"
               disabled={false}
@@ -272,6 +305,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
         style={
           Object {
             "marginBottom": "2%",
+            "width": "100%",
           }
         }
       >
@@ -331,6 +365,38 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
               }
             }
           >
+            <button
+              className="MuiButtonBase-root-152 MuiButton-root-126 MuiButton-text-128 MuiButton-outlined-134 MuiButton-sizeSmall-149"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "marginRight": 10,
+                }
+              }
+              tabIndex="0"
+              type="button"
+            >
+              <span
+                className="MuiButton-label-127"
+              >
+                Edit article
+              </span>
+              <span
+                className="MuiTouchRipple-root-155"
+              />
+            </button>
             <button
               className="MuiButtonBase-root-152 MuiButton-root-126 MuiButton-text-128 MuiButton-outlined-134 MuiButton-sizeSmall-149"
               disabled={false}

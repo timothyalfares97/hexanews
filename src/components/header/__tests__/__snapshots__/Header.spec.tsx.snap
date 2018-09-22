@@ -157,6 +157,7 @@ exports[`Header renders Header 1`] = `
             className="MuiButtonBase-root-100 MuiIconButton-root-94"
             disabled={false}
             onBlur={[Function]}
+            onClick={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -178,32 +179,26 @@ exports[`Header renders Header 1`] = `
             <span
               className="MuiIconButton-label-99"
             >
-              <a
-                href="/searchArticle"
-                onClick={[Function]}
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-83"
+                color={undefined}
+                focusable="false"
                 style={
                   Object {
-                    "color": "#333",
-                    "textDecoration": "none",
+                    "color": "rgb(51, 51, 51)",
                   }
                 }
+                viewBox="0 0 24 24"
               >
-                <svg
-                  aria-hidden="true"
-                  className="MuiSvgIcon-root-83"
-                  color={undefined}
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                  />
-                  <path
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  />
-                </svg>
-              </a>
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
             </span>
             <span
               className="MuiTouchRipple-root-103"
@@ -373,6 +368,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
             className="MuiButtonBase-root-100 MuiIconButton-root-94"
             disabled={false}
             onBlur={[Function]}
+            onClick={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -394,32 +390,26 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
             <span
               className="MuiIconButton-label-99"
             >
-              <a
-                href="/searchArticle"
-                onClick={[Function]}
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-83"
+                color={undefined}
+                focusable="false"
                 style={
                   Object {
-                    "color": "#333",
-                    "textDecoration": "none",
+                    "color": "rgb(51, 51, 51)",
                   }
                 }
+                viewBox="0 0 24 24"
               >
-                <svg
-                  aria-hidden="true"
-                  className="MuiSvgIcon-root-83"
-                  color={undefined}
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                  />
-                  <path
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  />
-                </svg>
-              </a>
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
             </span>
             <span
               className="MuiTouchRipple-root-103"

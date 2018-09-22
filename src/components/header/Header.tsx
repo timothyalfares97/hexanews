@@ -16,6 +16,7 @@ import ExitIcon from '@material-ui/icons/ExitToApp'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { translate } from 'react-i18next'
+import { push } from 'connected-react-router'
 
 import * as actions from './actions'
 import * as Config from '../../constants/config'
@@ -97,7 +98,7 @@ export class Header extends React.Component<Props, ComponentState> {
 
   render() {
     const { showDialog, language, isLogoutSnackbarOpen, isLoginSnackbarOpen, isRegisterSnackbarOpen } = this.state
-    const { isLoggedIn, isLoadingServer } = this.props
+    const { isLoggedIn, isLoadingServer, dispatch } = this.props
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
@@ -120,7 +121,7 @@ export class Header extends React.Component<Props, ComponentState> {
                     onChange={this.handleLanguageChange}
                     name='language'
                     displayEmpty
-                    style={{ marginRight: 16, marginTop: 8 }}
+                    style={styles.languageSelection}
                     disableUnderline
                   >
                     <MenuItem value='en'>EN</MenuItem>
@@ -148,16 +149,18 @@ export class Header extends React.Component<Props, ComponentState> {
                     style={styles.menuButton}
                     color='default'
                     aria-label='Search'
+                    onClick={() => dispatch(push(Config.HEADER_LINK.searchArticle))}
                   >
-                    <Link to={Config.HEADER_LINK.searchArticle} style={styles.createLink}><SearchIcon /></Link>
+                    <SearchIcon style={styles.blackIcon}/>
                   </IconButton>
                   {isLoggedIn &&
                     <IconButton
                       style={styles.menuButton}
                       color='default'
                       aria-label='Create'
+                      onClick={() => dispatch(push(Config.HEADER_LINK.createArticle))}
                     >
-                      <Link to={Config.HEADER_LINK.createArticle} style={styles.createLink}><CreateIcon /></Link>
+                      <CreateIcon style={styles.blackIcon} />
                     </IconButton>
                   }
                   {isLoggedIn &&
@@ -167,7 +170,7 @@ export class Header extends React.Component<Props, ComponentState> {
                       aria-label='Logout'
                       onClick={this.onLogoutClick}
                     >
-                      <ExitIcon style={styles.exitIcon} />
+                      <ExitIcon style={styles.blackIcon} />
                     </IconButton>
                   }
                 </div>

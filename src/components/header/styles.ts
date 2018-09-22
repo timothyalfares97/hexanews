@@ -62,7 +62,11 @@ export default {
   titleTypography: {
     textAlign: 'center',
   },
-  exitIcon: {
+  blackIcon: {
     color: 'rgb(51, 51, 51)',
-  }
+  },
+  languageSelection: {
+    marginRight: 16,
+    marginTop: 8,
+  },
 }

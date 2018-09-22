@@ -1,0 +1,41 @@
+import * as React from 'react'
+import * as renderer from 'react-test-renderer'
+import * as Enzyme from 'enzyme'
+import * as Adapter from 'enzyme-adapter-react-16'
+
+import { EditArticle } from '../EditArticle'
+
+jest.mock('react-quill')
+Enzyme.configure({ adapter: new Adapter() })
+
+const mockUser = {
+  _id: '1',
+  createdAt: 'created',
+  description: 'desc',
+  email: 'user@email.com',
+  name: 'user'
+}
+
+const mockArticle = {
+  _id: '2',
+  title: 'def',
+  description: 'tester',
+  category: 'tester',
+  authorId: 'tester',
+}
+
+describe('Edit Article', () => {
+  it('renders Edit Article', () => {
+    const component = renderer.create(
+      <EditArticle
+        user={mockUser}
+        dispatch={jest.fn()}
+        userArticle={mockArticle}
+        isUserArticle={false}
+        isEditingArticle={false}
+      />
+    )
+    let tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})

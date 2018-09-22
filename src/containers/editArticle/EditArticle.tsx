@@ -40,7 +40,7 @@ interface ComponentState {
   isEditSnackbarOpen: boolean
 }
 
-class EditArticle extends React.Component<Props, ComponentState> {
+export class EditArticle extends React.Component<Props, ComponentState> {
 
   constructor(props: Props) {
     super(props)
