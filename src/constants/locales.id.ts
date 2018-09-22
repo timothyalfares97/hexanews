@@ -87,6 +87,7 @@ const profileForm = {
   maxName: 'Nama tidak boleh lebih dari 50 huruf',
   alphabeticName: 'Nama hanya bisa terdiri dari huruf alfabet',
   maxDescription: 'Deskripsi tidak boleh lebih dari 100 huruf',
+  editUserSuccess: 'User telah berhasil diperbarui',
 }
 
 const changePasswordForm = {

@@ -17,6 +17,7 @@ import { User } from '../../domain/model/User'
 import selector, { StateProps } from './selector'
 import styles from './styles'
 import i18n from '../../i18n'
+import SuccessSnackbar from '../successSnackbar/SuccessSnackbar'
 
 export type Props = {
   user: User,
@@ -25,9 +26,10 @@ export type Props = {
 } & StateProps
 
 export interface ComponentState {
-  email: string,
-  name: string,
-  description: string,
+  email: string
+  name: string
+  description: string
+  isSnackbarOpen: boolean
 }
 
 export class ProfileForm extends React.Component<Props, ComponentState> {
@@ -39,6 +41,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
       email: user.email,
       name: user.name,
       description: user.description ? user.description : '',
+      isSnackbarOpen: false
     }
   }
 
@@ -62,11 +65,21 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
 
     const edittedUser = { _id, email, name, description }
     await dispatch(actions.editUser(edittedUser))
+
+    const { editUserError } = this.props
+
+    if (editUserError === '') {
+      this.setState({ isSnackbarOpen: true })
+    }
+  }
+
+  handleClose = () => {
+    this.setState({ isSnackbarOpen: false })
   }
 
   public render() {
     const { isEditingUser, editUserError } = this.props
-    const { email, name, description } = this.state
+    const { email, name, description, isSnackbarOpen } = this.state
     return (
       <div style={styles.sectionContainer}>
         <ValidatorForm
@@ -135,6 +148,11 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
           >
             {isEditingUser ? <CircularProgress size={22} /> : i18n.t('profileForm.saveButton')}
           </Button>
+          <SuccessSnackbar
+            isSnackbarOpen={isSnackbarOpen}
+            message={i18n.t('profileForm.editUserSuccess')}
+            handleClose={this.handleClose}
+          />
         </ValidatorForm>
       </div>
     )
