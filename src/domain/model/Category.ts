@@ -1,5 +1,5 @@
 /**
- * Model for the category.
+ * Model for category object in our application.
  */
 
 export type Category = {

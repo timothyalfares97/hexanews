@@ -1,5 +1,5 @@
 /**
- * Model for the user.
+ * Model for User object for our application.
  */
 
 export type User = {

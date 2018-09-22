@@ -1,5 +1,5 @@
 /**
- * Model for the article.
+ * Model for Article object in the application.
  */
 
 export type Article = {
