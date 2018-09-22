@@ -14,7 +14,6 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import { translate } from 'react-i18next'
 import { map, find, head, startCase } from 'lodash'
 import { Dispatch } from 'redux'
-import { push } from 'connected-react-router'
 import { connect } from 'react-redux'
 import { push } from 'connected-react-router'
 
