@@ -1,5 +1,5 @@
 /**
- * Display Profile Form component for user to edit their profile
+ * The ProfileForm Component for editting user in account container
  */
 
 import * as React from 'react'
@@ -19,12 +19,18 @@ import styles from './styles'
 import i18n from '../../i18n'
 import SuccessSnackbar from '../successSnackbar/SuccessSnackbar'
 
+/**
+ * All props required by the components
+ */
 export type Props = {
   user: User,
   dispatch: Dispatch<any>,
   isEditingUser: boolean,
 } & StateProps
 
+/**
+ * All state required by the components
+ */
 export interface ComponentState {
   email: string
   name: string
@@ -34,6 +40,10 @@ export interface ComponentState {
 
 export class ProfileForm extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Profile form and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     const { user } = this.props
@@ -45,19 +55,33 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function that handle onChange text in name textfield
+   * @param event contain the name value from textField
+   */
   handleNameChange = (event: any) => {
     this.setState({ name: event.target.value })
   }
 
+  /**
+   * Function that handle onChange text in description textfield
+   * @param event contain the description value from textField
+   */
   handleDescriptionChange = (event: any) => {
     this.setState({ description: event.target.value })
   }
 
+  /**
+   * Function that disable saveProfile button when name is empty
+   */
   disableSaveProfileButton = () => {
     const { name } = this.state
     return (name === '')
   }
 
+  /**
+   * Function that call editUser action to save the user profile
+   */
   onSaveProfile = async () => {
     const { dispatch } = this.props
     const { email, name, description } = this.state
@@ -73,10 +97,16 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function to close snackbar after editUser success
+   */
   handleClose = () => {
     this.setState({ isSnackbarOpen: false })
   }
 
+  /**
+   * Render Profile form component
+   */
   public render() {
     const { isEditingUser, editUserError } = this.props
     const { email, name, description, isSnackbarOpen } = this.state

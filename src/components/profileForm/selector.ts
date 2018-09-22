@@ -1,3 +1,7 @@
+/**
+ * Selector file that will grab all required value from redux store.
+ */
+
 import { createStructuredSelector } from 'reselect'
 
 import { State } from '../../reducers'
