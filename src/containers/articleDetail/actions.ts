@@ -3,7 +3,6 @@
  */
 
 import { Dispatch } from 'redux'
-import { push } from 'connected-react-router'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 import ArticleRepository from '../../domain/repository/ArticleRepository'
@@ -14,7 +13,6 @@ export const deleteArticle = (id: string) => (dispatch: Dispatch<any>) => (async
     const response = await ArticleRepository.delete(id)
     if (response.data.code === 'SUCCESS') {
       dispatch({ type: ActionTypes.DELETE_ARTICLE_SUCCESS, id: id })
-      dispatch(push('/profile'))
     } else {
       throw response.data.message
     }

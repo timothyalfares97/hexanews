@@ -14,6 +14,7 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import { translate } from 'react-i18next'
 import { map, find, head, startCase } from 'lodash'
 import { Dispatch } from 'redux'
+import { push } from 'connected-react-router'
 import { connect } from 'react-redux'
 
 import { DATE_FORMAT } from '../../constants/config'
@@ -24,12 +25,28 @@ import FooterCard from '../../components/footerCard/FooterCard'
 import i18n from '../../i18n'
 import selector, { StateProps } from './selector'
 import styles from './styles'
+import SuccessSnackbar from '../../components/successSnackbar/SuccessSnackbar'
 
 type Props = {
   dispatch: Dispatch<any>
 } & StateProps
 
-export class ArticleDetail extends React.Component<Props> {
+interface ComponentState {
+  isDeleteSnackbarOpen: boolean
+}
+
+export class ArticleDetail extends React.Component<Props, ComponentState> {
+
+  constructor(props: Props) {
+    super(props)
+    this.state = {
+      isDeleteSnackbarOpen: false,
+    }
+  }
+
+  handleDeleteClose = () => {
+    this.setState({ isDeleteSnackbarOpen: false })
+  }
 
   renderArticle = () => {
     const { users, userArticle, isUserArticle, isDeletingArticle } = this.props
@@ -108,12 +125,18 @@ export class ArticleDetail extends React.Component<Props> {
     const { dispatch, userArticle } = this.props
     const articleId = userArticle._id
     if (!!articleId) {
-      await dispatch(actions.deleteArticle(articleId))
+      this.setState({ isDeleteSnackbarOpen: true })
+      setTimeout(async () => {
+        await dispatch(actions.deleteArticle(articleId))
+        dispatch(push('/profile'))
+      }, 500)
     }
   }
 
   public render() {
     const { dispatch, userArticle } = this.props
+    const { isDeleteSnackbarOpen } = this.state
+
     if (!userArticle) {
       return (
         <NotFound
@@ -135,6 +158,11 @@ export class ArticleDetail extends React.Component<Props> {
           </Grid>
         </Grid>
         <Grid item md={2} xs={1} />
+        <SuccessSnackbar
+          isSnackbarOpen={isDeleteSnackbarOpen}
+          message={i18n.t('articleDetail.deleteArticleSuccess')}
+          handleClose={this.handleDeleteClose}
+        />
       </Grid>
     )
   }

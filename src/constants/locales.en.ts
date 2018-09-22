@@ -120,7 +120,8 @@ const profile = {
 
 const articleDetail = {
   authorDeleted: 'Author is deleted',
-  deleteArticle: 'Delete article'
+  deleteArticle: 'Delete article',
+  deleteArticleSuccess: 'You have successfully delete the article'
 }
 
 const searchArticle = {
