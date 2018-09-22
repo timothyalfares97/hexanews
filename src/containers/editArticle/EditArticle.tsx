@@ -16,16 +16,17 @@ import { translate } from 'react-i18next'
 import Select from '@material-ui/core/Select'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { Dispatch } from 'redux'
-import { push } from 'connected-react-router'
 import { connect } from 'react-redux'
+import { push } from 'connected-react-router'
 import { head, startCase } from 'lodash'
 const ReactQuill = require('react-quill')
 
 import * as actions from './actions'
-import styles from './styles'
-import selector, { StateProps } from './selector'
+import { NotFound } from '../notFound/NotFound'
 import { TEXT_EDITOR } from '../../constants/config'
 import i18n from '../../i18n'
+import selector, { StateProps } from './selector'
+import styles from './styles'
 
 type Props = {
   dispatch: Dispatch<any>
@@ -61,7 +62,7 @@ class EditArticle extends React.Component<Props, ComponentState> {
     this.setState({ description: html })
   }
 
-  disablePublishButton() {
+  disableSaveButton() {
     const { category, description, title } = this.state
     return (category === '' || description === '' || title === '')
   }
@@ -80,9 +81,17 @@ class EditArticle extends React.Component<Props, ComponentState> {
   }
 
   public render() {
-    const { dispatch, user, isEditingArticle } = this.props
+    const { dispatch, user, isUserArticle, isEditingArticle } = this.props
     const { title, category, description } = this.state
     const initials = head(startCase(user.name))
+    if (!isUserArticle) {
+      return (
+        <NotFound
+          dispatch={dispatch}
+        />
+      )
+    }
+
     return (
       <div style={styles.container}>
         <Grid container>
@@ -146,14 +155,14 @@ class EditArticle extends React.Component<Props, ComponentState> {
           </Grid>
           <Grid item md={3} xs={1} />
         </Grid>
-        <Grid container style={styles.bottomButtonContainer}>
+        <Grid container style={styles.buttonContainer}>
           <Grid item md={3} xs={1} />
           <Grid item md={6} xs={10} >
             <Button
               variant='outlined'
               component='button'
               style={styles.button}
-              disabled={this.disablePublishButton()}
+              disabled={this.disableSaveButton()}
               onClick={this.onEditArticle}
             >
               {isEditingArticle ? <CircularProgress size={22} /> : i18n.t('editArticle.saveButton')}
