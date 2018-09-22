@@ -9,7 +9,7 @@ export default {
 
   login: (email: string, password: string): Promise<any> => {
 
-    const response = axios.post(Config.LOGIN_ENDPOINT, {
+    const response = axios.post(Config.ENDPOINT.login, {
       email: email,
       password: password,
     })
@@ -21,7 +21,7 @@ export default {
   changePassword: (email: string, currentPassword: string, newPassword: string): Promise<any> => {
 
     const header = { headers: { 'token': localStorage.getItem('token') } }
-    const response = axios.post(Config.CHANGE_PASSWORD_ENDPOINT, {
+    const response = axios.post(Config.ENDPOINT.changePassword, {
       email: email,
       password: currentPassword,
       newPassword: newPassword,

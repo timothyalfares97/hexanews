@@ -1,5 +1,5 @@
 /**
- * Constant locales en file for the application
+ * Constant for english language in the application
  */
 
 const footerCard = {

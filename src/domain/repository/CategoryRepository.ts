@@ -10,7 +10,7 @@ export default {
 
   getAll: async (): Promise<any> => {
 
-    const response = await axios.get(Config.CATEGORY_ENDPOINT)
+    const response = await axios.get(Config.ENDPOINT.category)
 
     return response
   },

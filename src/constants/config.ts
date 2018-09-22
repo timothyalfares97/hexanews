@@ -1,23 +1,21 @@
 /**
- * Constants for configuration.
+ * All constants variable that related to the application configuration.
  */
 
 import * as ip from 'ip'
 
-const API_ENDPOINT = `http://${ip.address()}:4000`
+// Config for all available back-end endpoint link
+const API = `http://${ip.address()}:4000`
 
-export const USER_ENDPOINT = `${API_ENDPOINT}/users`
+export const ENDPOINT = {
+  user: `${API}/users`,
+  category: `${API}/categories`,
+  login: `${API}/auth/login`,
+  changePassword: `${API}/auth/changePassword`,
+  article: `${API}/articles`
+}
 
-export const CATEGORY_ENDPOINT = `${API_ENDPOINT}/categories`
-
-const AUTH_ENDPOINT = `${API_ENDPOINT}/auth`
-
-export const LOGIN_ENDPOINT = `${AUTH_ENDPOINT}/login`
-
-export const CHANGE_PASSWORD_ENDPOINT = `${AUTH_ENDPOINT}/changePassword`
-
-export const ARTICLE_ENDPOINT = `${API_ENDPOINT}/articles`
-
+// Config for all application route
 export const HEADER_LINK = {
   articleDetail: (articleId: string) => `/articleDetail/${articleId}`,
   categories: '/categories',
@@ -27,8 +25,10 @@ export const HEADER_LINK = {
   searchArticle: '/searchArticle',
 }
 
+// Config for our official date format
 export const DATE_FORMAT = 'D MMMM YYYY'
 
+// Config for our text editor in the application
 export const TEXT_EDITOR = {
   modules: {
     toolbar: [

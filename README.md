@@ -16,7 +16,7 @@ below.
     v8.11.3
 
     $ npm --version
-    1.3.21
+    v5.6.0
 
 ## How to install
 ```

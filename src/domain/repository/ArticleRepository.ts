@@ -12,14 +12,14 @@ export default {
   create: async (article: Article): Promise<any> => {
 
     const header = { headers: { 'token': localStorage.getItem('token') } }
-    const response = await axios.post(Config.ARTICLE_ENDPOINT, article, header)
+    const response = await axios.post(Config.ENDPOINT.article, article, header)
 
     return response
   },
 
   getAll: async (): Promise<any> => {
 
-    const response = await axios.get(Config.ARTICLE_ENDPOINT)
+    const response = await axios.get(Config.ENDPOINT.article)
 
     return response
   },
@@ -27,7 +27,7 @@ export default {
   edit: async (edittedArticle: Article) => {
 
     const header = { headers: { 'token': localStorage.getItem('token') } }
-    const response = await axios.put(`${Config.ARTICLE_ENDPOINT}/${edittedArticle._id}`, {
+    const response = await axios.put(`${Config.ENDPOINT.article}/${edittedArticle._id}`, {
       title: edittedArticle.title,
       description: edittedArticle.description,
       authorId: edittedArticle.authorId,
@@ -40,7 +40,7 @@ export default {
   delete: async (id: string): Promise<any> => {
 
     const header = { headers: { 'token': localStorage.getItem('token') } }
-    const response = await axios.delete(`${Config.ARTICLE_ENDPOINT}/${id}`, header)
+    const response = await axios.delete(`${Config.ENDPOINT.article}/${id}`, header)
 
     return response
   },

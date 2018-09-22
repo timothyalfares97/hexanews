@@ -11,7 +11,7 @@ export default {
 
   create: async (email: string, password: string, name: string): Promise<any> => {
 
-    const response = await axios.post(Config.USER_ENDPOINT, {
+    const response = await axios.post(Config.ENDPOINT.user, {
       email: email,
       password: password,
       name: name,
@@ -22,14 +22,14 @@ export default {
 
   get: async (id: string) => {
 
-    const response = await axios.get(`${Config.USER_ENDPOINT}/${id}`)
+    const response = await axios.get(`${Config.ENDPOINT.user}/${id}`)
 
     return response
   },
 
   getAll: async (): Promise<any> => {
 
-    const response = await axios.get(Config.USER_ENDPOINT)
+    const response = await axios.get(Config.ENDPOINT.user)
 
     return response
   },
@@ -37,7 +37,7 @@ export default {
   edit: async (edittedUser: User) => {
 
     const header = { headers: { 'token': localStorage.getItem('token') } }
-    const response = await axios.put(`${Config.USER_ENDPOINT}/${edittedUser._id}`, {
+    const response = await axios.put(`${Config.ENDPOINT.user}/${edittedUser._id}`, {
       email: edittedUser.email,
       name: edittedUser.name,
       description: edittedUser.description,
