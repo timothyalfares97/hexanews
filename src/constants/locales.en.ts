@@ -12,13 +12,14 @@ const profileCard = {
 
 const forgotPasswordForm = {
   dialogTitle: 'Forgot Password',
-  dialogDescription: 'Put your email here, we will send a confirmation to reset your password',
+  dialogDescription: 'Put your email here, we will send a confirmation to reset your password.',
   backLogin: 'Back to login',
   cancelButton: 'Cancel',
   submitButton: 'Submit',
   emailAddress: 'Email Address',
   enterEmail: 'Please enter email',
   enterValidEmail: 'Please enter a valid email',
+  forgotPasswordSuccess: 'You have successfully reset your password. Please check your email'
 }
 
 const loginForm = {

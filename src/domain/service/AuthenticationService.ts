@@ -25,6 +25,21 @@ export default {
   },
 
   /**
+   * Function that request the server to reset a user password
+   * @param email the user's email that want to reset the password
+   * @returns {Promise<any>}
+   */
+  resetPassword: (email: string): Promise<any> => {
+
+    const response = axios.post(Config.ENDPOINT.resetPassword, {
+      email: email,
+    })
+
+    return response
+
+  },
+
+  /**
    * Function that request the server to change the user password
    * @param email the user's email that want to change the password
    * @param currentPassword the user's current password that will be checked based on the email

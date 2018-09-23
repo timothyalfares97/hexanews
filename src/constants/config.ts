@@ -11,6 +11,7 @@ export const ENDPOINT = {
   user: `${API}/users`,
   category: `${API}/categories`,
   login: `${API}/auth/login`,
+  resetPassword: `${API}/auth/resetPassword`,
   changePassword: `${API}/auth/changePassword`,
   article: `${API}/articles`
 }

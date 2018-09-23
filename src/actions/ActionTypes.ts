@@ -21,6 +21,11 @@ export enum ActionTypes {
   LOGIN_USER_SUCCESS = 'hexanews/user/LOGIN_USER_SUCCESS',
   LOGIN_USER_FAILED = 'hexanews/user/LOGIN_USER_FAILED',
 
+  // ActionTypes for reset password
+  RESET_PASSWORD_REQUESTED = 'hexanews/user/RESET_PASSWORD_REQUESTED',
+  RESET_PASSWORD_SUCCESS = 'hexanews/user/RESET_PASSWORD_SUCCESS',
+  RESET_PASSWORD_FAILED = 'hexanews/user/RESET_PASSWORD_FAILED',
+
   // ActionTypes for edit user
   EDIT_USER_REQUESTED = 'hexanews/user/EDIT_USER_REQUESTED',
   EDIT_USER_SUCCESS = 'hexanews/user/EDIT_USER_SUCCESS',

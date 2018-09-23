@@ -15,8 +15,10 @@ describe('Authentication Dialog selector', () => {
     expect(selector(state)).toMatchObject({
       isLoadingRegister: false,
       isLoadingLogin: false,
+      isLoadingForgotPassword: false,
       loginError: '',
       registerError: '',
+      forgotPasswordError: '',
     })
   })
 
@@ -29,8 +31,10 @@ describe('Authentication Dialog selector', () => {
         authenticationDialog: {
           isLoadingLogin: true,
           isLoadingRegister: true,
+          isLoadingForgotPassword: false,
           loginError: 'asdf',
           registerError: 'qwer',
+          forgotPasswordError: 'zxcv',
         }
       },
       isLoggedIn: true,
@@ -39,8 +43,10 @@ describe('Authentication Dialog selector', () => {
     expect(selector(state)).toMatchObject({
       isLoadingRegister: true,
       isLoadingLogin: true,
+      isLoadingForgotPassword: true,
       loginError: 'asdf',
       registerError: 'qwer',
+      forgotPasswordError: 'zxcv',
     })
   })
 })

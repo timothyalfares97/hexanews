@@ -19,6 +19,7 @@ const forgotPasswordForm = {
   emailAddress: 'Alamat Email',
   enterEmail: 'Masukkan email',
   enterValidEmail: 'Masukkan email yang benar',
+  forgotPasswordSuccess: 'Kamu telah berhasil menyetel kata sandi anda. Harap periksa email anda'
 }
 
 const loginForm = {

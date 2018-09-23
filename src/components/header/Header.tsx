@@ -43,6 +43,7 @@ export interface ComponentState {
   isLogoutSnackbarOpen: boolean
   isLoginSnackbarOpen: boolean
   isRegisterSnackbarOpen: boolean
+  isForgotPasswordSnackbarOpen: boolean
 }
 
 export class Header extends React.Component<Props, ComponentState> {
@@ -61,6 +62,7 @@ export class Header extends React.Component<Props, ComponentState> {
       isLogoutSnackbarOpen: false,
       isLoginSnackbarOpen: false,
       isRegisterSnackbarOpen: false,
+      isForgotPasswordSnackbarOpen: false,
     }
   }
 
@@ -135,16 +137,30 @@ export class Header extends React.Component<Props, ComponentState> {
   }
 
   /**
+   * Function to open forgot password snackbar
+   */
+  handleOpenForgotPasswordSnackbar = () => {
+    this.setState({ isForgotPasswordSnackbarOpen: true })
+  }
+
+  /**
+   * Function to close forgot password snackbar
+   */
+  handleCloseForgotPasswordSnackbar = () => {
+    this.setState({ isForgotPasswordSnackbarOpen: false })
+  }
+
+  /**
    * Render Header component
    */
   render() {
-    const { showDialog, language, isLogoutSnackbarOpen, isLoginSnackbarOpen, isRegisterSnackbarOpen } = this.state
+    const { showDialog, language, isLogoutSnackbarOpen, isLoginSnackbarOpen, isRegisterSnackbarOpen, isForgotPasswordSnackbarOpen } = this.state
     const { isLoggedIn, isLoadingServer, dispatch } = this.props
     return (
       <div style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
           <Toolbar>
-            <div style={styles.leftContainer}/>
+            <div style={styles.leftContainer} />
             <div style={styles.titleContainer}>
               <Typography
                 variant='display1'
@@ -192,7 +208,7 @@ export class Header extends React.Component<Props, ComponentState> {
                     aria-label='Search'
                     onClick={() => dispatch(push(Config.HEADER_LINK.searchArticle))}
                   >
-                    <SearchIcon style={styles.blackIcon}/>
+                    <SearchIcon style={styles.blackIcon} />
                   </IconButton>
                   {isLoggedIn &&
                     <IconButton
@@ -224,6 +240,7 @@ export class Header extends React.Component<Props, ComponentState> {
           handleCloseDialog={this.handleCloseDialog}
           handleOpenLoginSnackbar={this.handleOpenLoginSnackbar}
           handleOpenRegisterSnackbar={this.handleOpenRegisterSnackbar}
+          handleOpenForgotPasswordSnackbar={this.handleOpenForgotPasswordSnackbar}
         />
         <SuccessSnackbar
           isSnackbarOpen={isLogoutSnackbarOpen}
@@ -244,6 +261,11 @@ export class Header extends React.Component<Props, ComponentState> {
           isSnackbarOpen={isRegisterSnackbarOpen}
           message={i18n.t('registerForm.registerSuccess')}
           handleClose={this.handleCloseRegisterSnackbar}
+        />
+        <SuccessSnackbar
+          isSnackbarOpen={isForgotPasswordSnackbarOpen}
+          message={i18n.t('forgotPasswordForm.forgotPasswordSuccess')}
+          handleClose={this.handleCloseForgotPasswordSnackbar}
         />
       </div>
     )

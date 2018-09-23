@@ -15,7 +15,11 @@ describe('Forgot Password Form', () => {
   it('renders Forgot Password Form', () => {
     const component = renderer.create(
       <ForgotPasswordForm
+        dispatch={jest.fn()}
         onChangeAuthenticationState={jest.fn()}
+        isLoadingForgotPassword={false}
+        forgotPasswordError=''
+        handleOpenForgotPasswordSnackbar={jest.fn()}
         handleCloseDialog={jest.fn()}
       />
     )

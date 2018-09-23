@@ -22,6 +22,7 @@ export type Props = {
   handleCloseDialog: () => void,
   handleOpenLoginSnackbar: () => void,
   handleOpenRegisterSnackbar: () => void,
+  handleOpenForgotPasswordSnackbar: () => void,
 } & StateProps
 
 /**
@@ -64,10 +65,13 @@ export class AuthenticationDialog extends React.Component<Props, ComponentState>
       dispatch,
       isLoadingLogin,
       isLoadingRegister,
+      isLoadingForgotPassword,
       loginError,
       registerError,
+      forgotPasswordError,
       handleOpenLoginSnackbar,
-      handleOpenRegisterSnackbar
+      handleOpenRegisterSnackbar,
+      handleOpenForgotPasswordSnackbar
     } = this.props
 
     switch (authenticationState) {
@@ -97,8 +101,12 @@ export class AuthenticationDialog extends React.Component<Props, ComponentState>
       case 'forgotPassword':
         return (
           <ForgotPasswordForm
+            dispatch={dispatch}
+            isLoadingForgotPassword={isLoadingForgotPassword}
+            forgotPasswordError={forgotPasswordError}
             onChangeAuthenticationState={() => this.onChangeAuthenticationState('login')}
             handleCloseDialog={handleCloseDialog}
+            handleOpenForgotPasswordSnackbar={handleOpenForgotPasswordSnackbar}
           />
         )
       default:

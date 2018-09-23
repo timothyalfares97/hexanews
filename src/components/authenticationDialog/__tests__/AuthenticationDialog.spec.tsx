@@ -20,11 +20,14 @@ describe('Authentication Dialog', () => {
         handleCloseDialog={jest.fn()}
         handleOpenLoginSnackbar={jest.fn()}
         handleOpenRegisterSnackbar={jest.fn()}
+        handleOpenForgotPasswordSnackbar={jest.fn()}
         showDialog={false}
         isLoadingLogin={false}
         isLoadingRegister={false}
+        isLoadingForgotPassword={false}
         loginError=''
         registerError=''
+        forgotPasswordError=''
       />
     )
     let tree = component.toJSON()
@@ -39,10 +42,13 @@ describe('Authentication Dialog', () => {
         showDialog={false}
         handleOpenLoginSnackbar={jest.fn()}
         handleOpenRegisterSnackbar={jest.fn()}
+        handleOpenForgotPasswordSnackbar={jest.fn()}
         isLoadingLogin={false}
         isLoadingRegister={false}
+        isLoadingForgotPassword={false}
         loginError=''
         registerError=''
+        forgotPasswordError=''
       />
     )
     component.root.instance.setState({ authenticationState: 'register' })
@@ -58,10 +64,13 @@ describe('Authentication Dialog', () => {
         showDialog={false}
         handleOpenLoginSnackbar={jest.fn()}
         handleOpenRegisterSnackbar={jest.fn()}
+        handleOpenForgotPasswordSnackbar={jest.fn()}
         isLoadingLogin={false}
         isLoadingRegister={false}
+        isLoadingForgotPassword={false}
         loginError=''
         registerError=''
+        forgotPasswordError=''
       />
     )
     component.root.instance.setState({ authenticationState: '' })
@@ -77,10 +86,13 @@ describe('Authentication Dialog', () => {
         showDialog={false}
         handleOpenLoginSnackbar={jest.fn()}
         handleOpenRegisterSnackbar={jest.fn()}
+        handleOpenForgotPasswordSnackbar={jest.fn()}
         isLoadingLogin={false}
         isLoadingRegister={false}
+        isLoadingForgotPassword={false}
         loginError=''
         registerError=''
+        forgotPasswordError=''
       />
     )
     component.root.instance.setState({ authenticationState: 'forgotPassword' })
@@ -96,10 +108,13 @@ describe('Authentication Dialog', () => {
         showDialog={false}
         handleOpenLoginSnackbar={jest.fn()}
         handleOpenRegisterSnackbar={jest.fn()}
+        handleOpenForgotPasswordSnackbar={jest.fn()}
         isLoadingLogin={false}
         isLoadingRegister={false}
+        isLoadingForgotPassword={false}
         loginError=''
         registerError=''
+        forgotPasswordError=''
       />
     )
 

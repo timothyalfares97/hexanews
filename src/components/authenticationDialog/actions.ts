@@ -53,3 +53,23 @@ export const loginUser = (email: string, password: string) => (dispatch: Dispatc
     dispatch({ type: ActionTypes.LOGIN_USER_FAILED, error: error })
   }
 })()
+
+/**
+ * Reset password action that connecting to server and manage the state data from it
+ * @param email the email that want to reset the password
+ */
+export const resetPassword = (email: string) => (dispatch: Dispatch<any>) => (async () => {
+  dispatch({ type: ActionTypes.RESET_PASSWORD_REQUESTED })
+  try {
+    const response = await AuthenticationService.resetPassword(email)
+    switch (response.data.code) {
+      case 'SUCCESS':
+        dispatch({ type: ActionTypes.RESET_PASSWORD_SUCCESS })
+        break
+      default:
+        throw response.data.message
+    }
+  } catch (error) {
+    dispatch({ type: ActionTypes.RESET_PASSWORD_FAILED, error: error })
+  }
+})()

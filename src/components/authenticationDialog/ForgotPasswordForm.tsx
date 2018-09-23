@@ -3,13 +3,16 @@
  */
 
 import * as React from 'react'
+import { Dispatch } from 'redux'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import Button from '@material-ui/core/Button'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 
+import * as actions from './actions'
 import styles from './styles'
 import i18n from '../../i18n'
 
@@ -17,8 +20,12 @@ import i18n from '../../i18n'
  * All props required by the components
  */
 export type Props = {
+  dispatch: Dispatch<any>,
+  isLoadingForgotPassword: boolean,
   handleCloseDialog: () => void
-  onChangeAuthenticationState: () => void
+  onChangeAuthenticationState: () => void,
+  handleOpenForgotPasswordSnackbar: () => void,
+  forgotPasswordError: string,
 }
 
 /**
@@ -50,18 +57,30 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
   }
 
   /**
-   * Function to call forgotPassword implementation action
+   * Function to call reset password action and open success snackbar if success
    */
   onForgotPassword = async () => {
-    await null
+    const { email } = this.state
+    const { dispatch, handleCloseDialog, handleOpenForgotPasswordSnackbar } = this.props
+
+    await dispatch(actions.resetPassword(email))
+
+    const { forgotPasswordError } = this.props
+
+    this.setState({ email: '' })
+
+    if (forgotPasswordError === '') {
+      handleCloseDialog()
+      handleOpenForgotPasswordSnackbar()
+    }
   }
 
   /**
    * Render Forgot Password form component
    */
   public render() {
+    const { handleCloseDialog, onChangeAuthenticationState, isLoadingForgotPassword, forgotPasswordError } = this.props
     const { email } = this.state
-    const { handleCloseDialog, onChangeAuthenticationState } = this.props
     return (
       <div>
         <ValidatorForm
@@ -89,6 +108,11 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
               validators={['required', 'isEmail']}
               errorMessages={[i18n.t('forgotPasswordForm.enterEmail'), i18n.t('forgotPasswordForm.enterValidEmail')]}
             />
+            <DialogContentText>
+              <span style={styles.errorLoginLabel}>
+                {forgotPasswordError}
+              </span>
+            </DialogContentText>
             <DialogContentText style={styles.footerContainer}>
               <span
                 onClick={onChangeAuthenticationState}
@@ -108,7 +132,7 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
               disabled={this.disableSubmitButton()}
               type='submit'
             >
-              {i18n.t('forgotPasswordForm.submitButton')}
+              {isLoadingForgotPassword ? <CircularProgress size={22} /> : i18n.t('forgotPasswordForm.submitButton')}
             </Button>
           </DialogActions>
         </ValidatorForm>
