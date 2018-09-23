@@ -1,10 +1,10 @@
 # Hexanews
-Hexanews is an online publishing platform web application for people who want to read and create a content for everyone. In this project, the main technologies are TypeScript, React, Redux. You need to run our separate server [Hexanews-service](https://github.com/dotaemon99/hexanews-service) in here to start the application.
+Hexanews is an online publishing platform web application for people who want to read and create a content for everyone. In this project, the main technologies are TypeScript, React, Redux. You need to run our separate server in here [Hexanews-service](https://github.com/dotaemon99/hexanews-service) to start the application.
 
 ## Requirements
 
-For development, you will only need Node.js installed on your environement.
-And please use the appropriate [VisualStudioCode](https://code.visualstudio.com/) for your Editor (not mandatory).
+For development, you will only need Node.js installed on your environment.
+And please use the appropriate [Visual Studio Code](https://code.visualstudio.com/) for your Editor (not mandatory).
 
 ### Node
 
@@ -44,7 +44,7 @@ $ npm run start
 - Put all function arguments on the same line as the function name. If they exceed the column limit, the arguments must be line-wrapped for readibility
 - Use Javadoc comment for every class, function and method
 
-## Project structure
+## Project Structure
 
 Here is the project structure that we have within the application with a brief description of it.
 
@@ -75,13 +75,13 @@ The testing environment is written in Jest and Enzyme.
 
 All unit tests files are live under /__tests__ file.
 
-Here is how to run the current test
+Here is how to run the current test.
 ```
 $ npm run test -- -u --coverage --silent
 ```
 
 
-## Languages & tools
+## Languages & Tools
 
 ### TypeScript
 
