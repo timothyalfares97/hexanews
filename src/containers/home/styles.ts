@@ -1,5 +1,5 @@
 /**
- * Style file for home containers
+ * Style file for Home container
  */
 
 export default {

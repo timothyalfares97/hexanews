@@ -1,5 +1,5 @@
 /**
- * Home container for displaying all articles and featured articles
+ * Display home container for displaying all articles and featured articles
  */
 
 import * as React from 'react'
@@ -20,12 +20,18 @@ import selector, { StateProps } from './selector'
 import { User } from '../../domain/model/User'
 import i18n from '../../i18n'
 
+/**
+ * All props required by the container
+ */
 type Props = {
   dispatch: Dispatch<any>
 } & StateProps
 
 export class Home extends React.Component<Props> {
 
+  /**
+   * Render all articles
+   */
   renderAllArticles = () => {
     const { articles, dispatch, users } = this.props
     const orderedArticles = orderBy(articles, ['createdAt'], ['desc'])
@@ -43,6 +49,9 @@ export class Home extends React.Component<Props> {
     })
   }
 
+  /**
+   * Render featured articles
+   */
   renderFeaturedArticles = () => {
     const { articles, dispatch, users } = this.props
     const featuredArticles = filter(articles, ['isFeatured', true])
@@ -62,6 +71,9 @@ export class Home extends React.Component<Props> {
     })
   }
 
+  /**
+   * Render the top popular articles
+   */
   renderPopularArticles = () => {
     const { articles, dispatch, users } = this.props
     const sortedPopularArticles = orderBy(articles, ['views'], ['desc'])
@@ -80,6 +92,9 @@ export class Home extends React.Component<Props> {
     })
   }
 
+  /**
+   * Render Home container
+   */
   public render() {
     const { categories } = this.props
     return (
