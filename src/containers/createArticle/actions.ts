@@ -8,6 +8,15 @@ import { ActionTypes } from '../../actions/ActionTypes'
 import ArticleRepository from '../../domain/repository/ArticleRepository'
 import { Article } from '../../domain/model/Article'
 
+/**
+ * Delete article action that connecting to server and manage the state data from it
+ * @param id the article id to be deleted
+ */
+
+ /**
+  * Create article action that connecting to server and manage the state data from it
+  * @param article the newly created article
+  */
 export const createArticle = (article: Article) => (dispatch: Dispatch<any>) => (async () => {
   dispatch({ type: ActionTypes.CREATE_ARTICLE_REQUESTED })
   try {

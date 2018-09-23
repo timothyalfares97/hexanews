@@ -1,5 +1,5 @@
 /**
- * Style file for createArticle containers
+ * Style file for Create Article container
  */
 
 export default {

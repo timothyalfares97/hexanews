@@ -1,5 +1,5 @@
 /**
- * Create Article containers for users to create article
+ * Display create article container for creating article
  */
 
 import * as React from 'react'
@@ -28,10 +28,16 @@ import { TEXT_EDITOR } from '../../constants/config'
 import i18n from '../../i18n'
 import SuccessSnackbar from '../../components/successSnackbar/SuccessSnackbar'
 
+/**
+ * All props required by the container
+ */
 export type Props = {
   dispatch: Dispatch<any>
 } & StateProps
 
+/**
+ * All state required by the container
+ */
 export interface ComponentState {
   category: string
   description: string
@@ -41,6 +47,10 @@ export interface ComponentState {
 
 export class CreateArticle extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Create Article container and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -51,27 +61,48 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function that handle onChange text in category selector
+   * @param event contain the current category value from selector
+   */
   handleCategoryChange = (event: any) => {
     this.setState({ category: event.target.value })
   }
 
+  /**
+   * Function that handle onChange text in title textfield
+   * @param event contain the title value from textField
+   */
   handleTitleChange = (event: any) => {
     this.setState({ title: event.target.value })
   }
 
+  /**
+   * Function that handle onChange text in description text editor
+   * @param html contain the description value from text editor
+   */
   handleDescriptionChange = (html: any) => {
     this.setState({ description: html })
   }
 
+  /**
+   * Function that disable publish button when either category, decsription or title is empty
+   */
   disablePublishButton() {
     const { category, description, title } = this.state
     return (category === '' || description === '' || title === '')
   }
 
+  /**
+   * Function to close snackbar after createArticle success
+   */
   handleClose = () => {
     this.setState({ isSnackbarOpen: false })
   }
 
+  /**
+   * Function that call createArticle action to create new article
+   */
   onCreateArticle = async () => {
     const { dispatch } = this.props
     const { title, category, description } = this.state
@@ -88,6 +119,9 @@ export class CreateArticle extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Render Create Article container
+   */
   public render() {
     const { dispatch, user, isCreatingArticle, createArticleError } = this.props
     const { title, category, description, isSnackbarOpen } = this.state
