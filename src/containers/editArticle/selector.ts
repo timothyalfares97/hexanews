@@ -1,3 +1,7 @@
+/**
+ * Selector that fetches data from redux store and maps it as props for Edit Article container
+ */
+
 import { createStructuredSelector, createSelector } from 'reselect'
 import { find } from 'lodash'
 

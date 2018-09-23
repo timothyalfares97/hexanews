@@ -1,5 +1,5 @@
 /**
- * Style file for editArticle containers
+ * Style file for Edit Article container
  */
 
 export default {

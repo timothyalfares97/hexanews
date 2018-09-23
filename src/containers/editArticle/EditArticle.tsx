@@ -1,5 +1,5 @@
 /**
- * Edit Article container for users to edit their article
+ * Display edit article container for editing article
  */
 
 import * as React from 'react'
@@ -29,10 +29,16 @@ import selector, { StateProps } from './selector'
 import styles from './styles'
 import SuccessSnackbar from '../../components/successSnackbar/SuccessSnackbar'
 
+/**
+ * All props required by the container
+ */
 type Props = {
   dispatch: Dispatch<any>
 } & StateProps
 
+/**
+ * All state required by the container
+ */
 interface ComponentState {
   category: string
   description: string
@@ -42,6 +48,10 @@ interface ComponentState {
 
 export class EditArticle extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Edit Article container and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     const { userArticle } = this.props
@@ -53,27 +63,48 @@ export class EditArticle extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function that handle onChange text in category selector
+   * @param event contain the current category value from selector
+   */
   handleCategoryChange = (event: any) => {
     this.setState({ category: event.target.value })
   }
 
+  /**
+   * Function that handle onChange text in title textfield
+   * @param event contain the title value from textField
+   */
   handleTitleChange = (event: any) => {
     this.setState({ title: event.target.value })
   }
 
+  /**
+   * Function that handle onChange text in description text editor
+   * @param html contain the description value from text editor
+   */
   handleDescriptionChange = (html: any) => {
     this.setState({ description: html })
   }
 
+  /**
+   * Function that disable save button when either category, decsription or title is empty
+   */
   disableSaveButton() {
     const { category, description, title } = this.state
     return (category === '' || description === '' || title === '')
   }
 
+  /**
+   * Function to close snackbar after editArticle success
+   */
   handleEditClose = () => {
     this.setState({ isEditSnackbarOpen: false })
   }
 
+  /**
+   * Function that call editArticle action to edit article
+   */
   onEditArticle = async () => {
     const { dispatch, userArticle } = this.props
     const { title, category, description } = this.state
@@ -94,6 +125,9 @@ export class EditArticle extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Render Edit Article container
+   */
   public render() {
     const { dispatch, user, isUserArticle, isEditingArticle, editArticleError } = this.props
     const { title, category, description, isEditSnackbarOpen } = this.state
@@ -209,7 +243,7 @@ export class EditArticle extends React.Component<Props, ComponentState> {
         />
       </div>
     )
-    }
+  }
 
 }
 

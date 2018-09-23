@@ -1,3 +1,7 @@
+/**
+ * Unit tests for checking the behavior of selector for Edit Article
+ */
+
 import rootReducer, { State }  from '../../../reducers'
 import selector from '../selector'
 
