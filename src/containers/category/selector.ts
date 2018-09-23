@@ -1,3 +1,7 @@
+/**
+ * Selector that fetches data from redux store and maps it as props for Category container
+ */
+
 import { createStructuredSelector, createSelector } from 'reselect'
 import { filter, find } from 'lodash'
 

@@ -1,5 +1,5 @@
 /**
- * Style file for category containers
+ * Style file for Category container
  */
 
 export default {

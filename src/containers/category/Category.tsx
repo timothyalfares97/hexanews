@@ -1,5 +1,5 @@
 /**
- * Display All article that contain in certain category screen
+ * Display all articles that are contained in certain category screen
  */
 
 import * as React from 'react'
@@ -15,12 +15,18 @@ import styles from './styles'
 import selector, { StateProps } from './selector'
 import { User } from '../../domain/model/User'
 
+/**
+ * All props required by the container
+ */
 type Props = StateProps & {
   dispatch: Dispatch<any>
 }
 
 export class Category extends React.Component<Props> {
 
+  /**
+   * Render the articles in the category
+   */
   renderCategoryArticles = () => {
     const { categoryArticles, dispatch, users } = this.props
     return map(categoryArticles, (article) => {
@@ -37,6 +43,9 @@ export class Category extends React.Component<Props> {
     })
   }
 
+  /**
+   * Render Category container
+   */
   public render() {
     const { category, categories } = this.props
     return (
