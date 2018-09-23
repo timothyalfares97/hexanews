@@ -85,7 +85,7 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
       <div>
         <ValidatorForm
           ref='forgotPasswordForm'
-          onSubmit={() => this.onForgotPassword()}
+          onSubmit={this.onForgotPassword}
           instantValidate={false}
         >
           <DialogTitle>
@@ -127,7 +127,6 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
               {i18n.t('forgotPasswordForm.cancelButton')}
             </Button>
             <Button
-              onClick={this.onForgotPassword}
               color='primary'
               disabled={this.disableSubmitButton()}
               type='submit'
