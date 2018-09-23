@@ -1,5 +1,5 @@
 /**
- * Not Found container contains the 404 page error for unknown route
+ * Display Not Found container which contains the 404 page error for unknown route
  */
 
 import * as React from 'react'
@@ -12,12 +12,18 @@ import { push } from 'connected-react-router'
 import i18n from '../../i18n'
 import styles from './styles'
 
+/**
+ * All props required by the container
+ */
 type Props = {
   dispatch: Dispatch<any>
 }
 
 export class NotFound extends React.Component<Props> {
 
+  /**
+   * Render NotFound container
+   */
   public render() {
     const { dispatch } = this.props
     return (

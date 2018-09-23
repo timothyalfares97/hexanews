@@ -1,3 +1,7 @@
+/**
+ * Unit tests for checking the behavior of Home container
+ */
+
 import * as React from 'react'
 import * as renderer from 'react-test-renderer'
 import * as Enzyme from 'enzyme'

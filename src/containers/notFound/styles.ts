@@ -1,5 +1,5 @@
 /**
- * Style file for not found container
+ * Style file for Not Found container
  */
 
 export default {
