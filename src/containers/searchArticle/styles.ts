@@ -1,5 +1,5 @@
 /**
- * Style file for searchArticle containers
+ * Style file for Search Article container
  */
 
 export default {

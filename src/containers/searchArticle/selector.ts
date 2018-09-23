@@ -1,3 +1,7 @@
+/**
+ * Selector that fetches data from redux store and maps it as props for Search Article container
+ */
+
 import { createStructuredSelector } from 'reselect'
 
 import { State } from '../../reducers'

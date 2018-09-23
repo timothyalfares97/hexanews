@@ -1,5 +1,5 @@
 /**
- * Search Article Container for user to search any articles based on keyword
+ * Display search article container for searching any articles based on the query
  */
 
 import * as React from 'react'
@@ -25,14 +25,24 @@ import selector, { StateProps } from './selector'
 import styles from './styles'
 import Utils from '../../utils'
 
+/**
+ * All props required by the container
+ */
 export type Props = StateProps
 
+/**
+ * All state required by the container
+ */
 export interface ComponentState {
   query: string
 }
 
 export class SearchArticle extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Search Article container and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -40,21 +50,35 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function that get the filtered articles from the query entered
+   */
   getFilteredArticles = () => {
     const { articles } = this.props
     const query = this.state.query.trim().toLowerCase()
     return filter(articles, (article: any) => article.title.toLowerCase().indexOf(query) !== -1)
   }
 
+  /**
+   * Function that handle onChange text in query textfield
+   * @param event contain the query value from textField
+   */
   handleQueryChange = (event: any) => {
     this.setState({ query: event.target.value })
   }
 
+  /**
+   * Function that render an avatar of the author's initals
+   * @param authorName the name of the author
+   */
   renderAvatar = (authorName: string) => {
     const initials = head(startCase(authorName))
     return <Avatar style={styles.avatar}>{initials}</Avatar>
   }
 
+  /**
+   * Function that render all the filtered articles
+   */
   renderArticles = (filteredArticles: Article[]) => {
     const { users } = this.props
 
@@ -96,6 +120,9 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
     })
   }
 
+  /**
+   * Render Search Article container
+   */
   public render() {
     const query = this.state.query
     const filteredArticles = this.getFilteredArticles()
