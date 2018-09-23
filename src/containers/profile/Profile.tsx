@@ -1,8 +1,8 @@
 /**
- * Profile container contains all description of current user
+ * Display profile container thath contains all the description of current user
  */
 
-import * as React from 'react'
+ import * as React from 'react'
 import * as moment from 'moment'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
@@ -30,6 +30,9 @@ import Utils from '../../utils'
 import { DATE_FORMAT, HEADER_LINK } from '../../constants/config'
 import i18n from '../../i18n'
 
+/**
+ * All props required by the container
+ */
 type Props = {
   user: User,
   dispatch: Dispatch<any>
@@ -37,11 +40,18 @@ type Props = {
 
 export class Profile extends React.Component<Props> {
 
+  /**
+   * Function that render an avatar of the author's initals
+   * @param authorName the name of the author
+   */
   renderAvatar = (authorName: string) => {
     const initials = head(startCase(authorName))
     return <Avatar style={styles.avatar}>{initials}</Avatar>
   }
 
+  /**
+   * Function that render all the user articles
+   */
   renderUserArticles = () => {
     const { userArticles, dispatch, user } = this.props
     return map(userArticles, (article: Article) => {
@@ -78,6 +88,9 @@ export class Profile extends React.Component<Props> {
     })
   }
 
+  /**
+   * Render Profile container
+   */
   public render() {
     const { dispatch, user } = this.props
     return (

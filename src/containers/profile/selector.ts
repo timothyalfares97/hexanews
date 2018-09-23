@@ -1,3 +1,7 @@
+/**
+ * Selector that fetches data from redux store and maps it as props for Profile container
+ */
+
 import { createStructuredSelector, createSelector } from 'reselect'
 import { filter } from 'lodash'
 

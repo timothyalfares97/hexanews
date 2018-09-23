@@ -1,5 +1,5 @@
 /**
- * Style file for profile containers
+ * Style file for Profile container
  */
 
 export default {
