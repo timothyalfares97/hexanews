@@ -1,5 +1,5 @@
 /**
- * Account page container for user to edit their profile
+ * Display account page container for user to edit their profile
  */
 
 import * as React from 'react'
@@ -14,11 +14,17 @@ import ProfileForm from '../../components/profileForm/ProfileForm'
 import styles from './styles'
 import i18n from '../../i18n'
 
+/**
+ * All props required by the container
+ */
 type Props = {
 }
 
 export class Account extends React.Component<Props> {
 
+  /**
+   * Render the account page container
+   */
   public render() {
     return (
       <Grid container style={styles.container}>

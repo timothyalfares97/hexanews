@@ -1,5 +1,5 @@
 /**
- * Display Article Detail screen containing the article description
+ * Display article detail container containing the article description
  */
 
 import * as React from 'react'
@@ -27,16 +27,26 @@ import selector, { StateProps } from './selector'
 import styles from './styles'
 import SuccessSnackbar from '../../components/successSnackbar/SuccessSnackbar'
 
+/**
+ * All props required by the container
+ */
 type Props = {
   dispatch: Dispatch<any>
 } & StateProps
 
+/**
+ * All state required by the container
+ */
 interface ComponentState {
   isDeleteSnackbarOpen: boolean
 }
 
 export class ArticleDetail extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Article Detail container and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -44,10 +54,16 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function to close snackbar after delete article success
+   */
   handleDeleteClose = () => {
     this.setState({ isDeleteSnackbarOpen: false })
   }
 
+  /**
+   * Render the article description
+   */
   renderArticle = () => {
     const { dispatch, users, userArticle, isUserArticle, isDeletingArticle } = this.props
     if (!!userArticle) {
@@ -114,6 +130,9 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
     return
   }
 
+  /**
+   * Render footer cards for related articles
+   */
   renderFooterCards = () => {
     const { dispatch, footerArticles, users } = this.props
     return map(footerArticles, (article) => {
@@ -132,6 +151,9 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
     })
   }
 
+  /**
+   * Function that call deleteArticle action to delete the article
+   */
   onDeleteArticle = async () => {
     const { dispatch, userArticle } = this.props
     const articleId = userArticle._id
@@ -144,6 +166,9 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Render Article Detail container
+   */
   public render() {
     const { dispatch, userArticle } = this.props
     const { isDeleteSnackbarOpen } = this.state

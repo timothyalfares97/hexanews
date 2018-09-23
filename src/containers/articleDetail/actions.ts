@@ -7,6 +7,10 @@ import { Dispatch } from 'redux'
 import { ActionTypes } from '../../actions/ActionTypes'
 import ArticleRepository from '../../domain/repository/ArticleRepository'
 
+/**
+ * Delete article action that connecting to server and manage the state data from it
+ * @param id the article id to be deleted
+ */
 export const deleteArticle = (id: string) => (dispatch: Dispatch<any>) => (async () => {
   dispatch({ type: ActionTypes.DELETE_ARTICLE_REQUESTED })
   try {
