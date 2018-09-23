@@ -7,6 +7,12 @@ import { Dispatch } from 'redux'
 import { ActionTypes } from '../../actions/ActionTypes'
 import AuthenticationService from '../../domain/service/AuthenticationService'
 
+/**
+ * Change password action that connecting to server and manage the state data from it
+ * @param email the email of the current user
+ * @param currentPassword the current password of the user
+ * @param newPassword the new password of the user
+ */
 export const changePassword = (email: string, currentPassword: string, newPassword: string) =>
   (dispatch: Dispatch<any>) => (async () => {
     dispatch({ type: ActionTypes.CHANGE_PASSWORD_REQUESTED })

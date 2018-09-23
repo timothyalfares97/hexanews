@@ -1,5 +1,5 @@
 /**
- * Display Change Password Form component for user to change their password
+ * The ChangePassword Component for change password user in account container
  */
 
 import * as React from 'react'
@@ -18,12 +18,18 @@ import styles from './styles'
 import i18n from '../../i18n'
 import SuccessSnackbar from '../successSnackbar/SuccessSnackbar'
 
+/**
+ * All props required by the components
+ */
 export type Props = {
   user: User,
   dispatch: Dispatch<any>,
   isChangingPassword: boolean,
 } & StateProps
 
+/**
+ * All state required by the components
+ */
 export interface ComponentState {
   email: string
   currentPassword: string
@@ -34,6 +40,10 @@ export interface ComponentState {
 
 export class ChangePasswordForm extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Change Password form and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     const { user } = this.props
@@ -46,6 +56,10 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Component lifecycle that invoked when the component has rendered
+   * Used for adding a customer validation rule to the component
+   */
   componentDidMount() {
     // Custom rule validation to confirm new password matches
     ValidatorForm.addValidationRule('isNewPasswordMatch', (value: any) => {
@@ -56,23 +70,41 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
     })
   }
 
+  /**
+   * Function that handle onChange text in currentPassword textfield
+   * @param event contain the current password value from textField
+   */
   handleCurrentPasswordChange = (event: any) => {
     this.setState({ currentPassword: event.target.value })
   }
 
+  /**
+   * Function that handle onChange text in newPassword textfield
+   * @param event contain the newPassword value from textField
+   */
   handleNewPasswordChange = (event: any) => {
     this.setState({ newPassword: event.target.value })
   }
 
+  /**
+   * Function that handle onChange text in confirmNewPassword textfield
+   * @param event contain the confirmNewPassword value from textField
+   */
   handleConfirmNewPasswordChange = (event: any) => {
     this.setState({ confirmNewPassword: event.target.value })
   }
 
+  /**
+   * Function that disable changePassword button when all password is empty
+   */
   disableChangePasswordButton() {
     const { currentPassword, newPassword, confirmNewPassword } = this.state
     return (currentPassword === '' || newPassword === '' || confirmNewPassword === '')
   }
 
+  /**
+   * Function that call changePassword action to change the user password
+   */
   onChangePassword = async () => {
     const { dispatch } = this.props
     const { email, currentPassword, newPassword } = this.state
@@ -88,10 +120,16 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function to close snackbar after change password success
+   */
   handleClose = () => {
     this.setState({ isSnackbarOpen: false })
   }
 
+  /**
+   * Render Change Password form component
+   */
   public render() {
     const { isChangingPassword, changePasswordError } = this.props
     const { currentPassword, newPassword, confirmNewPassword, isSnackbarOpen } = this.state

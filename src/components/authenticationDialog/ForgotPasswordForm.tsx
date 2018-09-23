@@ -1,5 +1,5 @@
 /**
- * Display forgot password form component.
+ * The Forgot Password Form Component for user who forgot their password
  */
 
 import * as React from 'react'
@@ -13,17 +13,27 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import styles from './styles'
 import i18n from '../../i18n'
 
+/**
+ * All props required by the components
+ */
 export type Props = {
   handleCloseDialog: () => void
   onChangeAuthenticationState: () => void
 }
 
+/**
+ * All state required by the components
+ */
 export interface ComponentState {
   email: string
 }
 
 class ForgotPasswordForm extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Forgot Password form and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -31,15 +41,24 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function to disable submit button when email is empty
+   */
   disableSubmitButton() {
     const { email } = this.state
     return (email === '')
   }
 
+  /**
+   * Function to call forgotPassword implementation action
+   */
   onForgotPassword = async () => {
     await null
   }
 
+  /**
+   * Render Forgot Password form component
+   */
   public render() {
     const { email } = this.state
     const { handleCloseDialog, onChangeAuthenticationState } = this.props

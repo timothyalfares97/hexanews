@@ -1,5 +1,5 @@
 /**
- * Display header component.
+ * The Header Component that will be displayed in the top of application
  */
 
 import * as React from 'react'
@@ -26,11 +26,17 @@ import selector, { StateProps } from './selector'
 import styles from './styles'
 import SuccessSnackbar from '../successSnackbar/SuccessSnackbar'
 
+/**
+ * All props required by the components
+ */
 export type Props = {
   dispatch: Dispatch<any>,
   isLoadingServer: boolean,
 } & StateProps
 
+/**
+ * All state required by the components
+ */
 export interface ComponentState {
   language: string
   showDialog: boolean
@@ -41,6 +47,10 @@ export interface ComponentState {
 
 export class Header extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Header and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     const localLanguage = localStorage.getItem('language')
@@ -54,6 +64,10 @@ export class Header extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function that handle onChangeSelection language and put into localStorage
+   * @param event contain the language value from textField
+   */
   handleLanguageChange = (event: any) => {
     this.setState({ language: event.target.value }, () => {
       i18n.changeLanguage(event.target.value)
@@ -61,6 +75,9 @@ export class Header extends React.Component<Props, ComponentState> {
     })
   }
 
+  /**
+   * Function that will dispatch an action to logout the current user1
+   */
   onLogoutClick = async () => {
     const { dispatch } = this.props
     await dispatch(actions.logout())
@@ -68,34 +85,58 @@ export class Header extends React.Component<Props, ComponentState> {
     this.setState({ isLogoutSnackbarOpen: true })
   }
 
+  /**
+   * Function to show authentication dialog
+   */
   handleShowDialog = () => {
     this.setState({ showDialog: true })
   }
 
+  /**
+   * Function to close authentication dialog
+   */
   handleCloseDialog = () => {
     this.setState({ showDialog: false })
   }
 
+  /**
+   * Function to close logout snackbar
+   */
   handleCloseLogoutSnackbar = () => {
     this.setState({ isLogoutSnackbarOpen: false })
   }
 
+  /**
+   * Function to open login snackbar
+   */
   handleOpenLoginSnackbar = () => {
     this.setState({ isLoginSnackbarOpen: true })
   }
 
+  /**
+   * Function to close login snackbar
+   */
   handleCloseLoginSnackbar = () => {
     this.setState({ isLoginSnackbarOpen: false })
   }
 
+  /**
+   * Function to open register snackbar
+   */
   handleOpenRegisterSnackbar = () => {
     this.setState({ isRegisterSnackbarOpen: true })
   }
 
+  /**
+   * Function to close register snackbar
+   */
   handleCloseRegisterSnackbar = () => {
     this.setState({ isRegisterSnackbarOpen: false })
   }
 
+  /**
+   * Render Header component
+   */
   render() {
     const { showDialog, language, isLogoutSnackbarOpen, isLoginSnackbarOpen, isRegisterSnackbarOpen } = this.state
     const { isLoggedIn, isLoadingServer, dispatch } = this.props

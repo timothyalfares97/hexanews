@@ -1,5 +1,5 @@
 /**
- * Display login form component.
+ * The Login Form Component for user to login in header container
  */
 
 import * as React from 'react'
@@ -16,6 +16,9 @@ import * as actions from './actions'
 import styles from './styles'
 import i18n from '../../i18n'
 
+/**
+ * All props required by the components
+ */
 export type Props = {
   dispatch: Dispatch<any>,
   isLoadingLogin: boolean,
@@ -26,6 +29,9 @@ export type Props = {
   loginError: string,
 }
 
+/**
+ * All state required by the components
+ */
 export interface ComponentState {
   email: string
   password: string
@@ -33,6 +39,10 @@ export interface ComponentState {
 
 class LoginForm extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Login form and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -41,11 +51,17 @@ class LoginForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function to disable sign in button if email or password are empty
+   */
   disableSignInButton() {
     const { email, password } = this.state
     return (email === '' || password === '')
   }
 
+  /**
+   * Function that call login action and open success snackbar if success
+   */
   onLogin = async () => {
     const { email, password } = this.state
     const { dispatch, handleCloseDialog, handleOpenLoginSnackbar } = this.props
@@ -62,6 +78,9 @@ class LoginForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Render Login form component
+   */
   render() {
     const { handleCloseDialog, onChangeAuthenticationState, onChangeForgotPassword, isLoadingLogin, loginError } = this.props
     const { email, password } = this.state

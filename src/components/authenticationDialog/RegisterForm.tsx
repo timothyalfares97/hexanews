@@ -1,5 +1,5 @@
 /**
- * Display register form component.
+ * The Register Form Component for user to register in header container
  */
 
 import * as React from 'react'
@@ -17,6 +17,9 @@ import * as actions from './actions'
 import styles from './styles'
 import i18n from '../../i18n'
 
+/**
+ * All props required by the components
+ */
 export type Props = {
   dispatch: Dispatch<any>,
   isLoadingRegister: boolean,
@@ -26,6 +29,9 @@ export type Props = {
   onChangeAuthenticationState: () => void,
 }
 
+/**
+ * All state required by the components
+ */
 export interface ComponentState {
   email: string
   password: string
@@ -34,6 +40,10 @@ export interface ComponentState {
 
 class RegisterForm extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for register form and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -43,11 +53,17 @@ class RegisterForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Function to disable submit button if email or password or name are empty
+   */
   disableSubmitButton() {
     const { email, password, name } = this.state
     return (email === '' || password === '' || name === '')
   }
 
+  /**
+   * Function that call register action and open success snackbar if success
+   */
   onRegister = async () => {
     const { email, password, name } = this.state
     const { dispatch, onChangeAuthenticationState, handleOpenRegisterSnackbar } = this.props
@@ -65,6 +81,9 @@ class RegisterForm extends React.Component<Props, ComponentState> {
     }
   }
 
+  /**
+   * Render Login form component
+   */
   public render() {
     const { handleCloseDialog, onChangeAuthenticationState, isLoadingRegister, registerError } = this.props
     const { email, password, name } = this.state

@@ -1,5 +1,5 @@
 /**
- * Display authentication dialog component.
+ * The Authentication Dialog Component for loggin user in header container
  */
 
 import * as React from 'react'
@@ -13,6 +13,9 @@ import RegisterForm from './RegisterForm'
 import ForgotPasswordForm from './ForgotPasswordForm'
 import selector, { StateProps } from './selector'
 
+/**
+ * All props required by the components
+ */
 export type Props = {
   dispatch: Dispatch<any>,
   showDialog: boolean,
@@ -21,6 +24,9 @@ export type Props = {
   handleOpenRegisterSnackbar: () => void,
 } & StateProps
 
+/**
+ * All state required by the components
+ */
 export interface ComponentState {
   authenticationState: string
   isLoginSnackbarOpen: boolean
@@ -28,6 +34,10 @@ export interface ComponentState {
 
 export class AuthenticationDialog extends React.Component<Props, ComponentState> {
 
+  /**
+   * Main constructor for Authentication Dialog form and initialize state
+   * @param props props required in the components
+   */
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -36,10 +46,17 @@ export class AuthenticationDialog extends React.Component<Props, ComponentState>
     }
   }
 
+  /**
+   * Function that handle onChange authentication state
+   * @param value contain the authentication state value
+   */
   onChangeAuthenticationState = (value: string) => {
     this.setState({ authenticationState: value })
   }
 
+  /**
+   * Function that will render form based on the current authentication state
+   */
   renderAuthenticationForm = () => {
     const { authenticationState } = this.state
     const {
@@ -89,6 +106,9 @@ export class AuthenticationDialog extends React.Component<Props, ComponentState>
     }
   }
 
+  /**
+   * Render Authentication Dialog form component
+   */
   render() {
     const { showDialog } = this.props
     return (
