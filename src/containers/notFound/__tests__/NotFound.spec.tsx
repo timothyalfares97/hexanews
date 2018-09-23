@@ -1,5 +1,5 @@
 /**
- * Unit tests for checking the behavior of Home container
+ * Unit tests for checking the behavior of NotFound container
  */
 
 import * as React from 'react'

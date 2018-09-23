@@ -25,7 +25,7 @@ type Props = StateProps & {
 export class Category extends React.Component<Props> {
 
   /**
-   * Render the articles in the category
+   * Function that render the articles in the category
    */
   renderCategoryArticles = () => {
     const { categoryArticles, dispatch, users } = this.props

@@ -30,7 +30,7 @@ type Props = {
 export class Home extends React.Component<Props> {
 
   /**
-   * Render all articles
+   * Function that render all articles
    */
   renderAllArticles = () => {
     const { articles, dispatch, users } = this.props
@@ -50,7 +50,7 @@ export class Home extends React.Component<Props> {
   }
 
   /**
-   * Render featured articles
+   * Function that render featured articles
    */
   renderFeaturedArticles = () => {
     const { articles, dispatch, users } = this.props
@@ -72,7 +72,7 @@ export class Home extends React.Component<Props> {
   }
 
   /**
-   * Render the top popular articles
+   * Function that render the top popular articles
    */
   renderPopularArticles = () => {
     const { articles, dispatch, users } = this.props

@@ -62,7 +62,7 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
   }
 
   /**
-   * Render the article description
+   * Function that render the article description
    */
   renderArticle = () => {
     const { dispatch, users, userArticle, isUserArticle, isDeletingArticle } = this.props
@@ -131,7 +131,7 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
   }
 
   /**
-   * Render footer cards for related articles
+   * Function that render footer cards for related articles
    */
   renderFooterCards = () => {
     const { dispatch, footerArticles, users } = this.props
