@@ -164,26 +164,25 @@ export class Header extends React.Component<Props, ComponentState> {
     } = this.state
     return [
       <SuccessSnackbar
+        key='logoutSnackbar'
         isSnackbarOpen={isLogoutSnackbarOpen}
         message={i18n.t('header.logoutSuccess')}
         handleClose={this.handleCloseLogoutSnackbar}
       />,
       <SuccessSnackbar
+        key='loginSnackbar'
         isSnackbarOpen={isLoginSnackbarOpen}
         message={i18n.t('loginForm.loginSuccess')}
         handleClose={this.handleCloseLoginSnackbar}
       />,
       <SuccessSnackbar
-        isSnackbarOpen={isLoginSnackbarOpen}
-        message={i18n.t('loginForm.loginSuccess')}
-        handleClose={this.handleCloseLoginSnackbar}
-      />,
-      <SuccessSnackbar
+        key='registerSnackbar'
         isSnackbarOpen={isRegisterSnackbarOpen}
         message={i18n.t('registerForm.registerSuccess')}
         handleClose={this.handleCloseRegisterSnackbar}
       />,
       <SuccessSnackbar
+        key='forgotPasswordSnackbar'
         isSnackbarOpen={isForgotPasswordSnackbarOpen}
         message={i18n.t('forgotPasswordForm.forgotPasswordSuccess')}
         handleClose={this.handleCloseForgotPasswordSnackbar}

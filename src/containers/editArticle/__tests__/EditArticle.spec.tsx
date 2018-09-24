@@ -28,6 +28,11 @@ const mockArticle = {
   authorId: 'tester',
 }
 
+const mockCategory = {
+  title: 'tech',
+  description: 'test',
+}
+
 describe('Edit Article', () => {
   it('renders Edit Article', () => {
     const component = renderer.create(
@@ -35,6 +40,7 @@ describe('Edit Article', () => {
         user={mockUser}
         dispatch={jest.fn()}
         userArticle={mockArticle}
+        categories={[mockCategory]}
         isUserArticle={false}
         isEditingArticle={false}
         editArticleError=''

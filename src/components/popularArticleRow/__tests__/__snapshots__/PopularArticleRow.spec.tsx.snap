@@ -2,6 +2,7 @@
 
 exports[`Popular Article Row renders Popular Article Row 1`] = `
 <div
+  className=""
   onClick={[Function]}
   style={
     Object {
@@ -11,17 +12,17 @@ exports[`Popular Article Row renders Popular Article Row 1`] = `
   }
 >
   <p
-    className="MuiTypography-root-1 MuiTypography-body1-10"
+    className="MuiTypography-root-98 MuiTypography-body1-107"
     style={
       Object {
-        "fontWeight": " bold",
+        "fontWeight": "bold",
       }
     }
   >
     def
   </p>
   <p
-    className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextSecondary-24"
+    className="MuiTypography-root-98 MuiTypography-body1-107 MuiTypography-colorTextSecondary-121"
     style={
       Object {
         "marginTop": 4,

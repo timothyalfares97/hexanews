@@ -6,6 +6,7 @@ import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 import { Article } from '../../domain/model/Article'
+import { RESPONSE_CODE } from '../../constants/config'
 import ArticleRepository from '../../domain/repository/ArticleRepository'
 
 /**
@@ -17,10 +18,10 @@ export const editArticle = (edittedArticle: Article) => (dispatch: Dispatch<any>
   try {
     const response = await ArticleRepository.edit(edittedArticle)
     switch (response.data.code) {
-      case 'SUCCESS':
+      case RESPONSE_CODE.success:
         dispatch({ type: ActionTypes.EDIT_ARTICLE_SUCCESS, article: response.data.message })
         break
-      case 'JWTERROR':
+      case RESPONSE_CODE.jwtError:
         window.location.reload()
         throw response.data.message
       default:

@@ -2,6 +2,7 @@
 
 exports[`Not Found renders Not Found component 1`] = `
 <div
+  className=""
   style={
     Object {
       "marginTop": "17%",
@@ -10,7 +11,7 @@ exports[`Not Found renders Not Found component 1`] = `
   }
 >
   <h1
-    className="MuiTypography-root-1 MuiTypography-display1-5 MuiTypography-colorTextPrimary-23"
+    className="MuiTypography-root-98 MuiTypography-display1-102 MuiTypography-colorTextPrimary-120"
     style={
       Object {
         "fontSize": 128,
@@ -20,7 +21,7 @@ exports[`Not Found renders Not Found component 1`] = `
     404
   </h1>
   <h1
-    className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextPrimary-23"
+    className="MuiTypography-root-98 MuiTypography-body1-107 MuiTypography-colorTextPrimary-120"
     style={
       Object {
         "fontSize": 32,
@@ -31,7 +32,7 @@ exports[`Not Found renders Not Found component 1`] = `
     There is no page here.
   </h1>
   <button
-    className="MuiButtonBase-root-52 MuiButton-root-26 MuiButton-text-28 MuiButton-outlined-34 MuiButton-sizeLarge-50"
+    className="MuiButtonBase-root-149 MuiButton-root-123 MuiButton-text-125 MuiButton-outlined-131 MuiButton-sizeLarge-147"
     disabled={false}
     id="backHomeButton"
     onBlur={[Function]}
@@ -49,12 +50,12 @@ exports[`Not Found renders Not Found component 1`] = `
     type="button"
   >
     <span
-      className="MuiButton-label-27"
+      className="MuiButton-label-124"
     >
       Back to home
     </span>
     <span
-      className="MuiTouchRipple-root-55"
+      className="MuiTouchRipple-root-152"
     />
   </button>
 </div>

@@ -5,11 +5,13 @@
 import { createStructuredSelector, createSelector } from 'reselect'
 import { find } from 'lodash'
 
-import { State } from '../../reducers'
 import { Article } from '../../domain/model/Article'
+import { Category } from '../../domain/model/Category'
+import { State } from '../../reducers'
 import { User } from '../../domain/model/User'
 
 export interface StateProps {
+  categories: Category[]
   user: User
   userArticle: Article
   isUserArticle: boolean
@@ -31,6 +33,8 @@ const isUserArticle = createSelector(
   }
 )
 
+const categories = (state: State) => state.entities.categories
+
 const editArticleError = (state: State) => state.containers.editArticle.editArticleError
 
 const user = (state: State) => state.entities.user
@@ -38,6 +42,7 @@ const user = (state: State) => state.entities.user
 const isEditingArticle = (state: State) => state.containers.editArticle.isEditingArticle
 
 export default createStructuredSelector({
+  categories,
   user,
   userArticle,
   isUserArticle,

@@ -2,6 +2,7 @@
 
 exports[`Article Row renders Article row 1`] = `
 <div
+  className=""
   onClick={[Function]}
   style={
     Object {
@@ -11,7 +12,7 @@ exports[`Article Row renders Article row 1`] = `
   }
 >
   <div
-    className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+    className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
     style={
       Object {
         "boxShadow": "0px 0.5px 0px 0px rgba(0, 0, 0, 0.2)",
@@ -20,6 +21,7 @@ exports[`Article Row renders Article row 1`] = `
     }
   >
     <div
+      className=""
       style={
         Object {
           "display": "flex",
@@ -29,7 +31,7 @@ exports[`Article Row renders Article row 1`] = `
       }
     >
       <div
-        className="MuiCardContent-root-29"
+        className="MuiCardContent-root-126"
         style={
           Object {
             "flex": "1 0 auto",
@@ -37,7 +39,7 @@ exports[`Article Row renders Article row 1`] = `
         }
       >
         <h2
-          className="MuiTypography-root-30 MuiTypography-title-36"
+          className="MuiTypography-root-127 MuiTypography-title-133"
           style={
             Object {
               "fontWeight": "bold",
@@ -48,12 +50,12 @@ exports[`Article Row renders Article row 1`] = `
           def
         </h2>
         <p
-          className="MuiTypography-root-30 MuiTypography-body1-39"
+          className="MuiTypography-root-127 MuiTypography-body1-136"
         >
           tester
         </p>
         <p
-          className="MuiTypography-root-30 MuiTypography-body1-39"
+          className="MuiTypography-root-127 MuiTypography-body1-136"
           style={
             Object {
               "marginTop": 28,
@@ -63,18 +65,19 @@ exports[`Article Row renders Article row 1`] = `
           tim
         </p>
         <p
-          className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-53"
+          className="MuiTypography-root-127 MuiTypography-body1-136 MuiTypography-colorTextSecondary-150"
           style={
             Object {
               "marginTop": 2,
             }
           }
         >
-          23 September 2018
+          25 September 2018
         </p>
       </div>
     </div>
     <div
+      className=""
       style={
         Object {
           "display": "flex",
@@ -84,7 +87,7 @@ exports[`Article Row renders Article row 1`] = `
       }
     >
       <div
-        className="MuiCardMedia-root-55"
+        className="MuiCardMedia-root-152"
         src={undefined}
         style={
           Object {

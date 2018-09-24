@@ -24,7 +24,9 @@ exports[`Profile renders Profile 1`] = `
         }
       }
     >
-      <div>
+      <div
+        className=""
+      >
         <div
           className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
           style={
@@ -35,6 +37,7 @@ exports[`Profile renders Profile 1`] = `
           }
         >
           <div
+            className=""
             style={
               Object {
                 "display": "flex",
@@ -60,6 +63,7 @@ exports[`Profile renders Profile 1`] = `
                 className="MuiTypography-root-127 MuiTypography-body1-136"
                 style={
                   Object {
+                    "marginLeft": 4,
                     "marginTop": 4,
                   }
                 }
@@ -81,6 +85,7 @@ exports[`Profile renders Profile 1`] = `
             </div>
           </div>
           <div
+            className=""
             style={
               Object {
                 "alignItems": "center",
@@ -90,8 +95,8 @@ exports[`Profile renders Profile 1`] = `
               }
             }
           >
-            <img
-              alt="avatar"
+            <div
+              className="MuiCardMedia-root-152"
               src={undefined}
               style={
                 Object {
@@ -105,7 +110,7 @@ exports[`Profile renders Profile 1`] = `
         </div>
       </div>
       <button
-        className="MuiButtonBase-root-178 MuiButton-root-152 MuiButton-text-154 MuiButton-outlined-160 MuiButton-sizeSmall-175"
+        className="MuiButtonBase-root-180 MuiButton-root-154 MuiButton-text-156 MuiButton-outlined-162 MuiButton-sizeSmall-177"
         disabled={false}
         id="accountButton"
         onBlur={[Function]}
@@ -128,16 +133,16 @@ exports[`Profile renders Profile 1`] = `
         type="button"
       >
         <span
-          className="MuiButton-label-153"
+          className="MuiButton-label-155"
         >
           My Account
         </span>
         <span
-          className="MuiTouchRipple-root-181"
+          className="MuiTouchRipple-root-183"
         />
       </button>
       <hr
-        className="MuiDivider-root-188"
+        className="MuiDivider-root-190"
         style={
           Object {
             "marginTop": 20,
@@ -172,13 +177,13 @@ exports[`Profile renders Profile 1`] = `
         }
       >
         <div
-          className="MuiCardHeader-root-192"
+          className="MuiCardHeader-root-194"
         >
           <div
-            className="MuiCardHeader-avatar-193"
+            className="MuiCardHeader-avatar-195"
           >
             <div
-              className="MuiAvatar-root-198 MuiAvatar-colorDefault-199"
+              className="MuiAvatar-root-200 MuiAvatar-colorDefault-201"
               style={
                 Object {
                   "alignSelf": "center",
@@ -192,22 +197,22 @@ exports[`Profile renders Profile 1`] = `
             </div>
           </div>
           <div
-            className="MuiCardHeader-content-195"
+            className="MuiCardHeader-content-197"
           >
             <span
-              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-196"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-198"
             >
               user
             </span>
             <span
-              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-197"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-199"
             >
-              23 September 2018
+              25 September 2018
             </span>
           </div>
         </div>
         <div
-          className="MuiCardMedia-root-201"
+          className="MuiCardMedia-root-152"
           src={undefined}
           style={
             Object {
@@ -244,13 +249,13 @@ exports[`Profile renders Profile 1`] = `
         }
       >
         <div
-          className="MuiCardHeader-root-192"
+          className="MuiCardHeader-root-194"
         >
           <div
-            className="MuiCardHeader-avatar-193"
+            className="MuiCardHeader-avatar-195"
           >
             <div
-              className="MuiAvatar-root-198 MuiAvatar-colorDefault-199"
+              className="MuiAvatar-root-200 MuiAvatar-colorDefault-201"
               style={
                 Object {
                   "alignSelf": "center",
@@ -264,22 +269,22 @@ exports[`Profile renders Profile 1`] = `
             </div>
           </div>
           <div
-            className="MuiCardHeader-content-195"
+            className="MuiCardHeader-content-197"
           >
             <span
-              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-196"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-198"
             >
               user
             </span>
             <span
-              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-197"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-199"
             >
-              23 September 2018
+              25 September 2018
             </span>
           </div>
         </div>
         <div
-          className="MuiCardMedia-root-201"
+          className="MuiCardMedia-root-152"
           src={undefined}
           style={
             Object {
@@ -335,7 +340,9 @@ exports[`Profile renders Profile without description 1`] = `
         }
       }
     >
-      <div>
+      <div
+        className=""
+      >
         <div
           className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
           style={
@@ -346,6 +353,7 @@ exports[`Profile renders Profile without description 1`] = `
           }
         >
           <div
+            className=""
             style={
               Object {
                 "display": "flex",
@@ -371,6 +379,7 @@ exports[`Profile renders Profile without description 1`] = `
                 className="MuiTypography-root-127 MuiTypography-body1-136"
                 style={
                   Object {
+                    "marginLeft": 4,
                     "marginTop": 4,
                   }
                 }
@@ -392,6 +401,7 @@ exports[`Profile renders Profile without description 1`] = `
             </div>
           </div>
           <div
+            className=""
             style={
               Object {
                 "alignItems": "center",
@@ -401,8 +411,8 @@ exports[`Profile renders Profile without description 1`] = `
               }
             }
           >
-            <img
-              alt="avatar"
+            <div
+              className="MuiCardMedia-root-152"
               src={undefined}
               style={
                 Object {
@@ -416,7 +426,7 @@ exports[`Profile renders Profile without description 1`] = `
         </div>
       </div>
       <button
-        className="MuiButtonBase-root-178 MuiButton-root-152 MuiButton-text-154 MuiButton-outlined-160 MuiButton-sizeSmall-175"
+        className="MuiButtonBase-root-180 MuiButton-root-154 MuiButton-text-156 MuiButton-outlined-162 MuiButton-sizeSmall-177"
         disabled={false}
         id="accountButton"
         onBlur={[Function]}
@@ -439,16 +449,16 @@ exports[`Profile renders Profile without description 1`] = `
         type="button"
       >
         <span
-          className="MuiButton-label-153"
+          className="MuiButton-label-155"
         >
           My Account
         </span>
         <span
-          className="MuiTouchRipple-root-181"
+          className="MuiTouchRipple-root-183"
         />
       </button>
       <hr
-        className="MuiDivider-root-188"
+        className="MuiDivider-root-190"
         style={
           Object {
             "marginTop": 20,
@@ -483,13 +493,13 @@ exports[`Profile renders Profile without description 1`] = `
         }
       >
         <div
-          className="MuiCardHeader-root-192"
+          className="MuiCardHeader-root-194"
         >
           <div
-            className="MuiCardHeader-avatar-193"
+            className="MuiCardHeader-avatar-195"
           >
             <div
-              className="MuiAvatar-root-198 MuiAvatar-colorDefault-199"
+              className="MuiAvatar-root-200 MuiAvatar-colorDefault-201"
               style={
                 Object {
                   "alignSelf": "center",
@@ -503,22 +513,22 @@ exports[`Profile renders Profile without description 1`] = `
             </div>
           </div>
           <div
-            className="MuiCardHeader-content-195"
+            className="MuiCardHeader-content-197"
           >
             <span
-              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-196"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-198"
             >
               user
             </span>
             <span
-              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-197"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-199"
             >
-              23 September 2018
+              25 September 2018
             </span>
           </div>
         </div>
         <div
-          className="MuiCardMedia-root-201"
+          className="MuiCardMedia-root-152"
           src={undefined}
           style={
             Object {
@@ -555,13 +565,13 @@ exports[`Profile renders Profile without description 1`] = `
         }
       >
         <div
-          className="MuiCardHeader-root-192"
+          className="MuiCardHeader-root-194"
         >
           <div
-            className="MuiCardHeader-avatar-193"
+            className="MuiCardHeader-avatar-195"
           >
             <div
-              className="MuiAvatar-root-198 MuiAvatar-colorDefault-199"
+              className="MuiAvatar-root-200 MuiAvatar-colorDefault-201"
               style={
                 Object {
                   "alignSelf": "center",
@@ -575,22 +585,22 @@ exports[`Profile renders Profile without description 1`] = `
             </div>
           </div>
           <div
-            className="MuiCardHeader-content-195"
+            className="MuiCardHeader-content-197"
           >
             <span
-              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-196"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-198"
             >
               user
             </span>
             <span
-              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-197"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-199"
             >
-              23 September 2018
+              25 September 2018
             </span>
           </div>
         </div>
         <div
-          className="MuiCardMedia-root-201"
+          className="MuiCardMedia-root-152"
           src={undefined}
           style={
             Object {

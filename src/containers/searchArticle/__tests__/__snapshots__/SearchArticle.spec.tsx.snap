@@ -2,6 +2,7 @@
 
 exports[`Search Article renders Search Articles with two articles 1`] = `
 <div
+  className=""
   style={
     Object {
       "marginTop": "4%",
@@ -80,7 +81,7 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
       }
     >
       <div
-        className="MuiPaper-root-128 MuiPaper-elevation1-131 MuiPaper-rounded-129 MuiCard-root-127"
+        className="MuiPaper-root-153 MuiPaper-elevation1-156 MuiPaper-rounded-154 MuiCard-root-152"
         style={
           Object {
             "boxShadow": "0 1px 4px rgba(0, 0, 0, 0.2)",
@@ -89,13 +90,13 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
         }
       >
         <div
-          className="MuiCardHeader-root-155"
+          className="MuiCardHeader-root-180"
         >
           <div
-            className="MuiCardHeader-avatar-156"
+            className="MuiCardHeader-avatar-181"
           >
             <div
-              className="MuiAvatar-root-161"
+              className="MuiAvatar-root-186"
               style={
                 Object {
                   "alignSelf": "center",
@@ -107,17 +108,17 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
             />
           </div>
           <div
-            className="MuiCardHeader-content-158"
+            className="MuiCardHeader-content-183"
           >
             <span
-              className="MuiTypography-root-164 MuiTypography-body2-172 MuiCardHeader-title-159"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-184"
             >
               
             </span>
             <span
-              className="MuiTypography-root-164 MuiTypography-body2-172 MuiTypography-colorTextSecondary-187 MuiCardHeader-subheader-160"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-185"
             >
-              23 September 2018
+              25 September 2018
             </span>
           </div>
         </div>
@@ -135,19 +136,19 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
           className="MuiCardContent-root-191"
         >
           <h2
-            className="MuiTypography-root-164 MuiTypography-headline-169 MuiTypography-gutterBottom-181"
+            className="MuiTypography-root-127 MuiTypography-headline-132 MuiTypography-gutterBottom-144"
           >
             abc
           </h2>
           <p
-            className="MuiTypography-root-164 MuiTypography-body1-173"
+            className="MuiTypography-root-127 MuiTypography-body1-136"
           >
             test
           </p>
         </div>
       </div>
       <div
-        className="MuiPaper-root-128 MuiPaper-elevation1-131 MuiPaper-rounded-129 MuiCard-root-127"
+        className="MuiPaper-root-153 MuiPaper-elevation1-156 MuiPaper-rounded-154 MuiCard-root-152"
         style={
           Object {
             "boxShadow": "0 1px 4px rgba(0, 0, 0, 0.2)",
@@ -156,13 +157,13 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
         }
       >
         <div
-          className="MuiCardHeader-root-155"
+          className="MuiCardHeader-root-180"
         >
           <div
-            className="MuiCardHeader-avatar-156"
+            className="MuiCardHeader-avatar-181"
           >
             <div
-              className="MuiAvatar-root-161"
+              className="MuiAvatar-root-186"
               style={
                 Object {
                   "alignSelf": "center",
@@ -174,17 +175,17 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
             />
           </div>
           <div
-            className="MuiCardHeader-content-158"
+            className="MuiCardHeader-content-183"
           >
             <span
-              className="MuiTypography-root-164 MuiTypography-body2-172 MuiCardHeader-title-159"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiCardHeader-title-184"
             >
               
             </span>
             <span
-              className="MuiTypography-root-164 MuiTypography-body2-172 MuiTypography-colorTextSecondary-187 MuiCardHeader-subheader-160"
+              className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-185"
             >
-              23 September 2018
+              25 September 2018
             </span>
           </div>
         </div>
@@ -202,12 +203,12 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
           className="MuiCardContent-root-191"
         >
           <h2
-            className="MuiTypography-root-164 MuiTypography-headline-169 MuiTypography-gutterBottom-181"
+            className="MuiTypography-root-127 MuiTypography-headline-132 MuiTypography-gutterBottom-144"
           >
             def
           </h2>
           <p
-            className="MuiTypography-root-164 MuiTypography-body1-173"
+            className="MuiTypography-root-127 MuiTypography-body1-136"
           >
             tester
           </p>
@@ -223,6 +224,7 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
 
 exports[`Search Article renders Search Articles with zero articles 1`] = `
 <div
+  className=""
   style={
     Object {
       "marginTop": "4%",
@@ -300,10 +302,19 @@ exports[`Search Article renders Search Articles with zero articles 1`] = `
         }
       }
     >
-      <div>
-        <p>
+      <div
+        className=""
+        style={
+          Object {
+            "marginTop": "5%",
+          }
+        }
+      >
+        <h3
+          className="MuiTypography-root-127 MuiTypography-subheading-134"
+        >
           We couldn't find any articles.
-        </p>
+        </h3>
       </div>
     </div>
     <div

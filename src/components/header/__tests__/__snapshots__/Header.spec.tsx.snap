@@ -2,6 +2,7 @@
 
 exports[`Header renders Header 1`] = `
 <div
+  className=""
   style={
     Object {
       "flexGrow": 1,
@@ -9,7 +10,7 @@ exports[`Header renders Header 1`] = `
   }
 >
   <header
-    className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-7"
+    className="MuiPaper-root-106 MuiPaper-elevation4-112 MuiAppBar-root-98 MuiAppBar-positionStatic-102 MuiAppBar-colorPrimary-104"
     style={
       Object {
         "backgroundColor": "white",
@@ -19,9 +20,10 @@ exports[`Header renders Header 1`] = `
     }
   >
     <div
-      className="MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37"
+      className="MuiToolbar-root-133 MuiToolbar-regular-135 MuiToolbar-gutters-134"
     >
       <div
+        className=""
         style={
           Object {
             "flex": 1,
@@ -29,6 +31,7 @@ exports[`Header renders Header 1`] = `
         }
       />
       <div
+        className=""
         style={
           Object {
             "flex": 1,
@@ -36,7 +39,7 @@ exports[`Header renders Header 1`] = `
         }
       >
         <h1
-          className="MuiTypography-root-40 MuiTypography-display1-44 MuiTypography-colorInherit-59"
+          className="MuiTypography-root-137 MuiTypography-display1-141 MuiTypography-colorInherit-156"
           style={
             Object {
               "textAlign": "center",
@@ -59,6 +62,7 @@ exports[`Header renders Header 1`] = `
         </h1>
       </div>
       <div
+        className=""
         style={
           Object {
             "display": "flex",
@@ -68,6 +72,7 @@ exports[`Header renders Header 1`] = `
         }
       >
         <div
+          className=""
           style={
             Object {
               "display": "flex",
@@ -77,7 +82,7 @@ exports[`Header renders Header 1`] = `
           }
         >
           <div
-            className="MuiInput-root-70"
+            className="MuiInput-root-167"
             style={
               Object {
                 "marginRight": 16,
@@ -86,13 +91,13 @@ exports[`Header renders Header 1`] = `
             }
           >
             <div
-              className="MuiSelect-root-65"
+              className="MuiSelect-root-162"
             >
               <div
                 aria-haspopup="true"
                 aria-owns={null}
                 aria-pressed="false"
-                className="MuiSelect-select-66 MuiSelect-selectMenu-67 MuiInput-input-78"
+                className="MuiSelect-select-163 MuiSelect-selectMenu-164 MuiInput-input-175"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -117,7 +122,7 @@ exports[`Header renders Header 1`] = `
               />
               <svg
                 aria-hidden="true"
-                className="MuiSvgIcon-root-83 MuiSelect-icon-69"
+                className="MuiSvgIcon-root-180 MuiSelect-icon-166"
                 color={undefined}
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -129,7 +134,7 @@ exports[`Header renders Header 1`] = `
             </div>
           </div>
           <h2
-            className="MuiTypography-root-40 MuiTypography-title-46 MuiTypography-colorInherit-59"
+            className="MuiTypography-root-137 MuiTypography-title-143 MuiTypography-colorInherit-156"
             style={
               Object {
                 "alignSelf": "center",
@@ -154,7 +159,7 @@ exports[`Header renders Header 1`] = `
           </h2>
           <button
             aria-label="Search"
-            className="MuiButtonBase-root-100 MuiIconButton-root-94"
+            className="MuiButtonBase-root-197 MuiIconButton-root-191"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -177,11 +182,11 @@ exports[`Header renders Header 1`] = `
             type="button"
           >
             <span
-              className="MuiIconButton-label-99"
+              className="MuiIconButton-label-196"
             >
               <svg
                 aria-hidden="true"
-                className="MuiSvgIcon-root-83"
+                className="MuiSvgIcon-root-180"
                 color={undefined}
                 focusable="false"
                 style={
@@ -201,7 +206,7 @@ exports[`Header renders Header 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root-103"
+              className="MuiTouchRipple-root-200"
             />
           </button>
         </div>
@@ -213,6 +218,7 @@ exports[`Header renders Header 1`] = `
 
 exports[`Header renders Header with isLoggedIn true 1`] = `
 <div
+  className=""
   style={
     Object {
       "flexGrow": 1,
@@ -220,7 +226,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
   }
 >
   <header
-    className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-7"
+    className="MuiPaper-root-106 MuiPaper-elevation4-112 MuiAppBar-root-98 MuiAppBar-positionStatic-102 MuiAppBar-colorPrimary-104"
     style={
       Object {
         "backgroundColor": "white",
@@ -230,9 +236,10 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
     }
   >
     <div
-      className="MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37"
+      className="MuiToolbar-root-133 MuiToolbar-regular-135 MuiToolbar-gutters-134"
     >
       <div
+        className=""
         style={
           Object {
             "flex": 1,
@@ -240,6 +247,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
         }
       />
       <div
+        className=""
         style={
           Object {
             "flex": 1,
@@ -247,7 +255,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
         }
       >
         <h1
-          className="MuiTypography-root-40 MuiTypography-display1-44 MuiTypography-colorInherit-59"
+          className="MuiTypography-root-137 MuiTypography-display1-141 MuiTypography-colorInherit-156"
           style={
             Object {
               "textAlign": "center",
@@ -270,6 +278,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
         </h1>
       </div>
       <div
+        className=""
         style={
           Object {
             "display": "flex",
@@ -279,6 +288,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
         }
       >
         <div
+          className=""
           style={
             Object {
               "display": "flex",
@@ -288,7 +298,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
           }
         >
           <div
-            className="MuiInput-root-70"
+            className="MuiInput-root-167"
             style={
               Object {
                 "marginRight": 16,
@@ -297,13 +307,13 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
             }
           >
             <div
-              className="MuiSelect-root-65"
+              className="MuiSelect-root-162"
             >
               <div
                 aria-haspopup="true"
                 aria-owns={null}
                 aria-pressed="false"
-                className="MuiSelect-select-66 MuiSelect-selectMenu-67 MuiInput-input-78"
+                className="MuiSelect-select-163 MuiSelect-selectMenu-164 MuiInput-input-175"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -328,7 +338,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
               />
               <svg
                 aria-hidden="true"
-                className="MuiSvgIcon-root-83 MuiSelect-icon-69"
+                className="MuiSvgIcon-root-180 MuiSelect-icon-166"
                 color={undefined}
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -340,7 +350,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
             </div>
           </div>
           <h2
-            className="MuiTypography-root-40 MuiTypography-title-46 MuiTypography-colorInherit-59"
+            className="MuiTypography-root-137 MuiTypography-title-143 MuiTypography-colorInherit-156"
             style={
               Object {
                 "alignSelf": "center",
@@ -365,7 +375,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
           </h2>
           <button
             aria-label="Search"
-            className="MuiButtonBase-root-100 MuiIconButton-root-94"
+            className="MuiButtonBase-root-197 MuiIconButton-root-191"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -388,11 +398,11 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
             type="button"
           >
             <span
-              className="MuiIconButton-label-99"
+              className="MuiIconButton-label-196"
             >
               <svg
                 aria-hidden="true"
-                className="MuiSvgIcon-root-83"
+                className="MuiSvgIcon-root-180"
                 color={undefined}
                 focusable="false"
                 style={
@@ -412,7 +422,7 @@ exports[`Header renders Header with isLoggedIn true 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root-103"
+              className="MuiTouchRipple-root-200"
             />
           </button>
         </div>

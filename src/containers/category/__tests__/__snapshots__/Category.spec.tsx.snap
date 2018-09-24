@@ -2,6 +2,7 @@
 
 exports[`Category renders Category component 1`] = `
 <div
+  className=""
   style={
     Object {
       "padding": "5%",
@@ -11,6 +12,7 @@ exports[`Category renders Category component 1`] = `
   }
 >
   <div
+    className=""
     style={
       Object {
         "flexGrow": 1,
@@ -19,7 +21,7 @@ exports[`Category renders Category component 1`] = `
     }
   >
     <header
-      className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-7"
+      className="MuiPaper-root-106 MuiPaper-elevation4-112 MuiAppBar-root-98 MuiAppBar-positionStatic-102 MuiAppBar-colorPrimary-104"
       style={
         Object {
           "alignItems": "center",
@@ -30,10 +32,10 @@ exports[`Category renders Category component 1`] = `
       }
     >
       <div
-        className="MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37"
+        className="MuiToolbar-root-133 MuiToolbar-regular-135 MuiToolbar-gutters-134"
       >
         <span
-          className="MuiTypography-root-40 MuiTypography-button-51 MuiTypography-colorPrimary-60"
+          className="MuiTypography-root-137 MuiTypography-button-148 MuiTypography-colorPrimary-157"
           style={
             Object {
               "flexGrow": 1,
@@ -58,7 +60,7 @@ exports[`Category renders Category component 1`] = `
     </header>
   </div>
   <div
-    className="MuiGrid-container-65"
+    className="MuiGrid-container-1"
     style={
       Object {
         "flexDirection": "column",
@@ -68,7 +70,7 @@ exports[`Category renders Category component 1`] = `
     }
   >
     <h1
-      className="MuiTypography-root-40 MuiTypography-headline-45 MuiTypography-gutterBottom-57"
+      className="MuiTypography-root-137 MuiTypography-headline-142 MuiTypography-gutterBottom-154"
       style={
         Object {
           "fontWeight": "bold",
@@ -78,7 +80,7 @@ exports[`Category renders Category component 1`] = `
       Tech
     </h1>
     <h1
-      className="MuiTypography-root-40 MuiTypography-subheading-47 MuiTypography-gutterBottom-57"
+      className="MuiTypography-root-137 MuiTypography-subheading-144 MuiTypography-gutterBottom-154"
       style={
         Object {
           "fontWeight": "bold",
@@ -89,10 +91,10 @@ exports[`Category renders Category component 1`] = `
     </h1>
   </div>
   <div
-    className="MuiGrid-container-65 MuiGrid-spacing-xs-24-89"
+    className="MuiGrid-container-1 MuiGrid-spacing-xs-24-25"
   >
     <div
-      className="MuiGrid-item-66 MuiGrid-grid-xs-12-105 MuiGrid-grid-md-8-129"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-md-9-66"
       style={
         Object {
           "marginRight": 2,
@@ -100,6 +102,7 @@ exports[`Category renders Category component 1`] = `
       }
     >
       <div
+        className=""
         onClick={[Function]}
         style={
           Object {
@@ -109,7 +112,7 @@ exports[`Category renders Category component 1`] = `
         }
       >
         <div
-          className="MuiPaper-root-9 MuiPaper-elevation1-12 MuiPaper-rounded-10 MuiCard-root-162"
+          className="MuiPaper-root-106 MuiPaper-elevation1-109 MuiPaper-rounded-107 MuiCard-root-162"
           style={
             Object {
               "boxShadow": "0px 0.5px 0px 0px rgba(0, 0, 0, 0.2)",
@@ -118,6 +121,7 @@ exports[`Category renders Category component 1`] = `
           }
         >
           <div
+            className=""
             style={
               Object {
                 "display": "flex",
@@ -135,7 +139,7 @@ exports[`Category renders Category component 1`] = `
               }
             >
               <h2
-                className="MuiTypography-root-40 MuiTypography-title-46"
+                className="MuiTypography-root-137 MuiTypography-title-143"
                 style={
                   Object {
                     "fontWeight": "bold",
@@ -146,12 +150,12 @@ exports[`Category renders Category component 1`] = `
                 abc
               </h2>
               <p
-                className="MuiTypography-root-40 MuiTypography-body1-49"
+                className="MuiTypography-root-137 MuiTypography-body1-146"
               >
                 test
               </p>
               <p
-                className="MuiTypography-root-40 MuiTypography-body1-49"
+                className="MuiTypography-root-137 MuiTypography-body1-146"
                 style={
                   Object {
                     "marginTop": 28,
@@ -161,18 +165,19 @@ exports[`Category renders Category component 1`] = `
                 
               </p>
               <p
-                className="MuiTypography-root-40 MuiTypography-body1-49 MuiTypography-colorTextSecondary-63"
+                className="MuiTypography-root-137 MuiTypography-body1-146 MuiTypography-colorTextSecondary-160"
                 style={
                   Object {
                     "marginTop": 2,
                   }
                 }
               >
-                23 September 2018
+                25 September 2018
               </p>
             </div>
           </div>
           <div
+            className=""
             style={
               Object {
                 "display": "flex",

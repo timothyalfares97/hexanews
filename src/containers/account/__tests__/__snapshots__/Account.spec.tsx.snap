@@ -22,6 +22,7 @@ exports[`Account renders Account 1`] = `
       My Account
     </h1>
     <div
+      className=""
       style={
         Object {
           "marginTop": 24,
@@ -228,6 +229,7 @@ exports[`Account renders Account 1`] = `
       }
     />
     <div
+      className=""
       style={
         Object {
           "marginTop": 24,

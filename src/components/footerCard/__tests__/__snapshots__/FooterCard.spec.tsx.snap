@@ -2,6 +2,7 @@
 
 exports[`Footer Card renders Footer Card 1`] = `
 <div
+  className=""
   id="footer-2"
   onClick={[Function]}
   style={
@@ -12,7 +13,7 @@ exports[`Footer Card renders Footer Card 1`] = `
   }
 >
   <div
-    className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+    className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
     style={
       Object {
         "boxShadow": "0px 0.25px 0.35px 0.35px rgba(0, 0, 0, 0.1)",
@@ -21,7 +22,7 @@ exports[`Footer Card renders Footer Card 1`] = `
     }
   >
     <div
-      className="MuiCardMedia-root-29"
+      className="MuiCardMedia-root-126"
       src={undefined}
       style={
         Object {
@@ -31,7 +32,7 @@ exports[`Footer Card renders Footer Card 1`] = `
       }
     />
     <div
-      className="MuiCardContent-root-31"
+      className="MuiCardContent-root-128"
       style={
         Object {
           "paddingRight": "2%",
@@ -39,16 +40,17 @@ exports[`Footer Card renders Footer Card 1`] = `
       }
     >
       <h2
-        className="MuiTypography-root-32 MuiTypography-caption-42 MuiTypography-gutterBottom-49"
+        className="MuiTypography-root-129 MuiTypography-caption-139 MuiTypography-gutterBottom-146"
       >
         Related reads
       </h2>
       <h2
-        className="MuiTypography-root-32 MuiTypography-subheading-39 MuiTypography-gutterBottom-49"
+        className="MuiTypography-root-129 MuiTypography-subheading-136 MuiTypography-gutterBottom-146"
       >
         def
       </h2>
       <div
+        className=""
         style={
           Object {
             "display": "flex",
@@ -57,7 +59,7 @@ exports[`Footer Card renders Footer Card 1`] = `
         }
       >
         <div
-          className="MuiAvatar-root-57 MuiAvatar-colorDefault-58"
+          className="MuiAvatar-root-154 MuiAvatar-colorDefault-155"
           style={
             Object {
               "alignSelf": "center",
@@ -70,6 +72,7 @@ exports[`Footer Card renders Footer Card 1`] = `
           T
         </div>
         <div
+          className=""
           style={
             Object {
               "display": "flex",
@@ -79,7 +82,7 @@ exports[`Footer Card renders Footer Card 1`] = `
           }
         >
           <p
-            className="MuiTypography-root-32 MuiTypography-body1-41"
+            className="MuiTypography-root-129 MuiTypography-body1-138"
             style={
               Object {
                 "marginTop": 6,
@@ -89,14 +92,14 @@ exports[`Footer Card renders Footer Card 1`] = `
             test
           </p>
           <p
-            className="MuiTypography-root-32 MuiTypography-body1-41 MuiTypography-colorTextSecondary-55"
+            className="MuiTypography-root-129 MuiTypography-body1-138 MuiTypography-colorTextSecondary-152"
             style={
               Object {
                 "marginTop": 2,
               }
             }
           >
-            23 September 2018
+            25 September 2018
           </p>
         </div>
       </div>

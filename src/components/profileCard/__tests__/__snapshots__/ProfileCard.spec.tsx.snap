@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Profile Card renders Profile Card 1`] = `
-<div>
+<div
+  className=""
+>
   <div
-    className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+    className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
     style={
       Object {
         "boxShadow": "0px 0px 0px 0px rgba(0, 0, 0, 0.2)",
@@ -12,6 +14,7 @@ exports[`Profile Card renders Profile Card 1`] = `
     }
   >
     <div
+      className=""
       style={
         Object {
           "display": "flex",
@@ -21,7 +24,7 @@ exports[`Profile Card renders Profile Card 1`] = `
       }
     >
       <div
-        className="MuiCardContent-root-29"
+        className="MuiCardContent-root-126"
         style={
           Object {
             "flex": "1 0 auto",
@@ -29,14 +32,15 @@ exports[`Profile Card renders Profile Card 1`] = `
         }
       >
         <h1
-          className="MuiTypography-root-30 MuiTypography-display1-34"
+          className="MuiTypography-root-127 MuiTypography-display1-131"
         >
           test
         </h1>
         <p
-          className="MuiTypography-root-30 MuiTypography-body1-39"
+          className="MuiTypography-root-127 MuiTypography-body1-136"
           style={
             Object {
+              "marginLeft": 4,
               "marginTop": 4,
             }
           }
@@ -44,7 +48,7 @@ exports[`Profile Card renders Profile Card 1`] = `
           desc
         </p>
         <p
-          className="MuiTypography-root-30 MuiTypography-body1-39"
+          className="MuiTypography-root-127 MuiTypography-body1-136"
           style={
             Object {
               "color": "gray",
@@ -58,6 +62,7 @@ exports[`Profile Card renders Profile Card 1`] = `
       </div>
     </div>
     <div
+      className=""
       style={
         Object {
           "alignItems": "center",
@@ -67,11 +72,12 @@ exports[`Profile Card renders Profile Card 1`] = `
         }
       }
     >
-      <img
-        alt="avatar"
-        src="test"
+      <div
+        className="MuiCardMedia-root-152"
+        src={undefined}
         style={
           Object {
+            "backgroundImage": "url(\\"test\\")",
             "borderRadius": "50%",
             "height": 100,
             "width": 100,

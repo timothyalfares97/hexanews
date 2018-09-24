@@ -1,24 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login Form renders Login Form 1`] = `
-<div>
+<div
+  className=""
+>
   <form
     onSubmit={[Function]}
   >
     <div
-      className="MuiDialogTitle-root-1"
+      className="MuiDialogTitle-root-98"
     >
       <h2
-        className="MuiTypography-root-2 MuiTypography-title-8"
+        className="MuiTypography-root-99 MuiTypography-title-105"
       >
         Sign In
       </h2>
     </div>
     <div
-      className="MuiDialogContent-root-27"
+      className="MuiDialogContent-root-124"
     >
       <p
-        className="MuiTypography-root-2 MuiTypography-subheading-9 MuiDialogContentText-root-28"
+        className="MuiTypography-root-99 MuiTypography-subheading-106 MuiDialogContentText-root-125"
         style={
           Object {
             "marginBottom": 8,
@@ -29,7 +31,7 @@ exports[`Login Form renders Login Form 1`] = `
       </p>
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-29 MuiFormControl-marginDense-31 MuiFormControl-fullWidth-32"
+        className="MuiFormControl-root-126 MuiFormControl-marginDense-128 MuiFormControl-fullWidth-129"
         style={
           Object {
             "marginBottom": 8,
@@ -37,20 +39,20 @@ exports[`Login Form renders Login Form 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-38 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37 MuiInputLabel-marginDense-35"
+          className="MuiFormLabel-root-135 MuiInputLabel-root-130 MuiInputLabel-formControl-131 MuiInputLabel-animated-134 MuiInputLabel-marginDense-132"
           data-shrink={false}
           htmlFor={undefined}
         >
           Email Address
         </label>
         <div
-          className="MuiInput-root-45 MuiInput-fullWidth-52 MuiInput-formControl-46 MuiInput-underline-49"
+          className="MuiInput-root-142 MuiInput-fullWidth-149 MuiInput-formControl-143 MuiInput-underline-146"
         >
           <input
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-53 MuiInput-inputType-56 MuiInput-inputMarginDense-54"
+            className="MuiInput-input-150 MuiInput-inputType-153 MuiInput-inputMarginDense-151"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -69,7 +71,7 @@ exports[`Login Form renders Login Form 1`] = `
           />
         </div>
         <p
-          className="MuiFormHelperText-root-58 MuiFormHelperText-marginDense-61"
+          className="MuiFormHelperText-root-155 MuiFormHelperText-marginDense-158"
           id={undefined}
         >
            
@@ -77,23 +79,23 @@ exports[`Login Form renders Login Form 1`] = `
       </div>
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-29 MuiFormControl-marginDense-31 MuiFormControl-fullWidth-32"
+        className="MuiFormControl-root-126 MuiFormControl-marginDense-128 MuiFormControl-fullWidth-129"
       >
         <label
-          className="MuiFormLabel-root-38 MuiInputLabel-root-33 MuiInputLabel-formControl-34 MuiInputLabel-animated-37 MuiInputLabel-marginDense-35"
+          className="MuiFormLabel-root-135 MuiInputLabel-root-130 MuiInputLabel-formControl-131 MuiInputLabel-animated-134 MuiInputLabel-marginDense-132"
           data-shrink={false}
           htmlFor={undefined}
         >
           Password
         </label>
         <div
-          className="MuiInput-root-45 MuiInput-fullWidth-52 MuiInput-formControl-46 MuiInput-underline-49"
+          className="MuiInput-root-142 MuiInput-fullWidth-149 MuiInput-formControl-143 MuiInput-underline-146"
         >
           <input
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-53 MuiInput-inputType-56 MuiInput-inputMarginDense-54"
+            className="MuiInput-input-150 MuiInput-inputType-153 MuiInput-inputMarginDense-151"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -112,16 +114,17 @@ exports[`Login Form renders Login Form 1`] = `
           />
         </div>
         <p
-          className="MuiFormHelperText-root-58 MuiFormHelperText-marginDense-61"
+          className="MuiFormHelperText-root-155 MuiFormHelperText-marginDense-158"
           id={undefined}
         >
            
         </p>
       </div>
       <p
-        className="MuiTypography-root-2 MuiTypography-subheading-9 MuiDialogContentText-root-28"
+        className="MuiTypography-root-99 MuiTypography-subheading-106 MuiDialogContentText-root-125"
       >
-        <span
+        <p
+          className="MuiTypography-root-99 MuiTypography-body1-108"
           style={
             Object {
               "color": "#E53935",
@@ -129,10 +132,10 @@ exports[`Login Form renders Login Form 1`] = `
           }
         >
           
-        </span>
+        </p>
       </p>
       <p
-        className="MuiTypography-root-2 MuiTypography-subheading-9 MuiDialogContentText-root-28"
+        className="MuiTypography-root-99 MuiTypography-subheading-106 MuiDialogContentText-root-125"
         style={
           Object {
             "display": "flex",
@@ -142,7 +145,8 @@ exports[`Login Form renders Login Form 1`] = `
           }
         }
       >
-        <span
+        <p
+          className="MuiTypography-root-99 MuiTypography-body1-108"
           onClick={[MockFunction]}
           style={
             Object {
@@ -152,10 +156,10 @@ exports[`Login Form renders Login Form 1`] = `
           }
         >
           Forgot Password? 
-        </span>
+        </p>
       </p>
       <p
-        className="MuiTypography-root-2 MuiTypography-subheading-9 MuiDialogContentText-root-28"
+        className="MuiTypography-root-99 MuiTypography-subheading-106 MuiDialogContentText-root-125"
         style={
           Object {
             "marginTop": 8,
@@ -177,10 +181,10 @@ exports[`Login Form renders Login Form 1`] = `
       </p>
     </div>
     <div
-      className="MuiDialogActions-root-65"
+      className="MuiDialogActions-root-162"
     >
       <button
-        className="MuiButtonBase-root-93 MuiButton-root-67 MuiButton-text-69 MuiButton-textPrimary-70 MuiButton-flat-72 MuiButton-flatPrimary-73 MuiDialogActions-action-66"
+        className="MuiButtonBase-root-190 MuiButton-root-164 MuiButton-text-166 MuiButton-textPrimary-167 MuiButton-flat-169 MuiButton-flatPrimary-170 MuiDialogActions-action-163"
         disabled={false}
         onBlur={[Function]}
         onClick={[MockFunction]}
@@ -197,16 +201,16 @@ exports[`Login Form renders Login Form 1`] = `
         type="button"
       >
         <span
-          className="MuiButton-label-68"
+          className="MuiButton-label-165"
         >
           Cancel
         </span>
         <span
-          className="MuiTouchRipple-root-96"
+          className="MuiTouchRipple-root-193"
         />
       </button>
       <button
-        className="MuiButtonBase-root-93 MuiButtonBase-disabled-94 MuiButton-root-67 MuiButton-text-69 MuiButton-textPrimary-70 MuiButton-flat-72 MuiButton-flatPrimary-73 MuiButton-disabled-87 MuiDialogActions-action-66"
+        className="MuiButtonBase-root-190 MuiButtonBase-disabled-191 MuiButton-root-164 MuiButton-text-166 MuiButton-textPrimary-167 MuiButton-flat-169 MuiButton-flatPrimary-170 MuiButton-disabled-184 MuiDialogActions-action-163"
         disabled={true}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -222,7 +226,7 @@ exports[`Login Form renders Login Form 1`] = `
         type="submit"
       >
         <span
-          className="MuiButton-label-68"
+          className="MuiButton-label-165"
         >
           Sign In
         </span>

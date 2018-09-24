@@ -21,11 +21,17 @@ const mockUser = {
   name: 'user'
 }
 
+const mockCategory = {
+  title: 'tech',
+  description: 'test',
+}
+
 describe('Create Article', () => {
   it('renders Create Article', () => {
     const component = renderer.create(
       <CreateArticle
         user={mockUser}
+        categories={[mockCategory]}
         dispatch={jest.fn()}
         isCreatingArticle={false}
         createArticleError=''
@@ -39,6 +45,7 @@ describe('Create Article', () => {
     const component = renderer.create(
       <CreateArticle
         user={mockUser}
+        categories={[mockCategory]}
         dispatch={jest.fn()}
         isCreatingArticle={true}
         createArticleError=''
@@ -52,6 +59,7 @@ describe('Create Article', () => {
     const component = (
       <CreateArticle
         user={mockUser}
+        categories={[mockCategory]}
         dispatch={jest.fn()}
         isCreatingArticle={true}
         createArticleError=''
@@ -81,6 +89,7 @@ describe('Create Article', () => {
     const component = (
       <CreateArticle
         user={mockUser}
+        categories={[mockCategory]}
         dispatch={jest.fn()}
         isCreatingArticle={true}
         createArticleError=''
@@ -110,6 +119,7 @@ describe('Create Article', () => {
     const component = (
       <CreateArticle
         user={mockUser}
+        categories={[mockCategory]}
         dispatch={jest.fn()}
         isCreatingArticle={true}
         createArticleError=''
@@ -136,6 +146,7 @@ describe('Create Article', () => {
     const component = (
       <CreateArticle
         user={mockUser}
+        categories={[mockCategory]}
         dispatch={dispatch}
         isCreatingArticle={true}
         createArticleError=''
@@ -156,6 +167,7 @@ describe('Create Article', () => {
     const component = (
       <CreateArticle
         user={mockUser}
+        categories={[mockCategory]}
         dispatch={dispatch}
         isCreatingArticle={true}
         createArticleError=''

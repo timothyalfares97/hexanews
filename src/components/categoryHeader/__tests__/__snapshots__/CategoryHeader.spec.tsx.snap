@@ -2,6 +2,7 @@
 
 exports[`Category Header renders Category Header 1`] = `
 <div
+  className=""
   style={
     Object {
       "flexGrow": 1,
@@ -10,7 +11,7 @@ exports[`Category Header renders Category Header 1`] = `
   }
 >
   <header
-    className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-7"
+    className="MuiPaper-root-106 MuiPaper-elevation4-112 MuiAppBar-root-98 MuiAppBar-positionStatic-102 MuiAppBar-colorPrimary-104"
     style={
       Object {
         "alignItems": "center",
@@ -21,7 +22,7 @@ exports[`Category Header renders Category Header 1`] = `
     }
   >
     <div
-      className="MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37"
+      className="MuiToolbar-root-133 MuiToolbar-regular-135 MuiToolbar-gutters-134"
     />
   </header>
 </div>

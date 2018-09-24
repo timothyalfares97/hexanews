@@ -2,6 +2,7 @@
 
 exports[`Profile Form renders Profile Form 1`] = `
 <div
+  className=""
   style={
     Object {
       "marginTop": 24,
@@ -12,13 +13,13 @@ exports[`Profile Form renders Profile Form 1`] = `
     onSubmit={[Function]}
   >
     <h2
-      className="MuiTypography-root-1 MuiTypography-headline-6 MuiTypography-colorTextPrimary-23 MuiTypography-gutterBottom-18"
+      className="MuiTypography-root-98 MuiTypography-headline-103 MuiTypography-colorTextPrimary-120 MuiTypography-gutterBottom-115"
     >
       Edit Profile
     </h2>
     <div
       aria-describedby="email-helper-text"
-      className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
+      className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
       style={
         Object {
           "width": "100%",
@@ -26,20 +27,20 @@ exports[`Profile Form renders Profile Form 1`] = `
       }
     >
       <label
-        className="MuiFormLabel-root-35 MuiFormLabel-filled-39 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-shrink-33 MuiInputLabel-marginDense-32"
+        className="MuiFormLabel-root-132 MuiFormLabel-filled-136 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-shrink-130 MuiInputLabel-marginDense-129"
         data-shrink={true}
         htmlFor="email"
       >
         Email
       </label>
       <div
-        className="MuiInput-root-42 MuiInput-disabled-45 MuiInput-formControl-43 MuiInput-underline-46"
+        className="MuiInput-root-139 MuiInput-disabled-142 MuiInput-formControl-140 MuiInput-underline-143"
       >
         <input
           aria-invalid={false}
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-50 MuiInput-disabled-45 MuiInput-inputMarginDense-51"
+          className="MuiInput-input-147 MuiInput-disabled-142 MuiInput-inputMarginDense-148"
           defaultValue={undefined}
           disabled={true}
           id="email"
@@ -58,7 +59,7 @@ exports[`Profile Form renders Profile Form 1`] = `
         />
       </div>
       <p
-        className="MuiFormHelperText-root-55 MuiFormHelperText-filled-60 MuiFormHelperText-marginDense-58"
+        className="MuiFormHelperText-root-152 MuiFormHelperText-filled-157 MuiFormHelperText-marginDense-155"
         id="email-helper-text"
       >
          
@@ -66,7 +67,7 @@ exports[`Profile Form renders Profile Form 1`] = `
     </div>
     <div
       aria-describedby={undefined}
-      className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
+      className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
       style={
         Object {
           "width": "100%",
@@ -74,20 +75,20 @@ exports[`Profile Form renders Profile Form 1`] = `
       }
     >
       <label
-        className="MuiFormLabel-root-35 MuiFormLabel-filled-39 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-shrink-33 MuiInputLabel-marginDense-32"
+        className="MuiFormLabel-root-132 MuiFormLabel-filled-136 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-shrink-130 MuiInputLabel-marginDense-129"
         data-shrink={true}
         htmlFor={undefined}
       >
         Name
       </label>
       <div
-        className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
+        className="MuiInput-root-139 MuiInput-formControl-140 MuiInput-underline-143"
       >
         <input
           aria-invalid={false}
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-50 MuiInput-inputMarginDense-51"
+          className="MuiInput-input-147 MuiInput-inputMarginDense-148"
           defaultValue={undefined}
           disabled={false}
           id={undefined}
@@ -106,7 +107,7 @@ exports[`Profile Form renders Profile Form 1`] = `
         />
       </div>
       <p
-        className="MuiFormHelperText-root-55 MuiFormHelperText-filled-60 MuiFormHelperText-marginDense-58"
+        className="MuiFormHelperText-root-152 MuiFormHelperText-filled-157 MuiFormHelperText-marginDense-155"
         id={undefined}
       >
          
@@ -114,7 +115,7 @@ exports[`Profile Form renders Profile Form 1`] = `
     </div>
     <div
       aria-describedby={undefined}
-      className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
+      className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
       style={
         Object {
           "width": "100%",
@@ -122,20 +123,20 @@ exports[`Profile Form renders Profile Form 1`] = `
       }
     >
       <label
-        className="MuiFormLabel-root-35 MuiFormLabel-filled-39 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-shrink-33 MuiInputLabel-marginDense-32"
+        className="MuiFormLabel-root-132 MuiFormLabel-filled-136 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-shrink-130 MuiInputLabel-marginDense-129"
         data-shrink={true}
         htmlFor={undefined}
       >
         Description
       </label>
       <div
-        className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
+        className="MuiInput-root-139 MuiInput-formControl-140 MuiInput-underline-143"
       >
         <input
           aria-invalid={false}
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-50 MuiInput-inputMarginDense-51"
+          className="MuiInput-input-147 MuiInput-inputMarginDense-148"
           defaultValue={undefined}
           disabled={false}
           id={undefined}
@@ -154,14 +155,14 @@ exports[`Profile Form renders Profile Form 1`] = `
         />
       </div>
       <p
-        className="MuiFormHelperText-root-55 MuiFormHelperText-filled-60 MuiFormHelperText-marginDense-58"
+        className="MuiFormHelperText-root-152 MuiFormHelperText-filled-157 MuiFormHelperText-marginDense-155"
         id={undefined}
       >
          
       </p>
     </div>
     <h2
-      className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextPrimary-23"
+      className="MuiTypography-root-98 MuiTypography-body1-107 MuiTypography-colorTextPrimary-120"
       style={
         Object {
           "color": "#E53935",
@@ -171,7 +172,7 @@ exports[`Profile Form renders Profile Form 1`] = `
       
     </h2>
     <button
-      className="MuiButtonBase-root-88 MuiButton-root-62 MuiButton-text-64 MuiButton-outlined-70 MuiButton-sizeSmall-85"
+      className="MuiButtonBase-root-185 MuiButton-root-159 MuiButton-text-161 MuiButton-outlined-167 MuiButton-sizeSmall-182"
       disabled={false}
       onBlur={[Function]}
       onFocus={[Function]}
@@ -192,12 +193,12 @@ exports[`Profile Form renders Profile Form 1`] = `
       type="submit"
     >
       <span
-        className="MuiButton-label-63"
+        className="MuiButton-label-160"
       >
         Save Profile
       </span>
       <span
-        className="MuiTouchRipple-root-91"
+        className="MuiTouchRipple-root-188"
       />
     </button>
   </form>
@@ -206,6 +207,7 @@ exports[`Profile Form renders Profile Form 1`] = `
 
 exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
 <div
+  className=""
   style={
     Object {
       "marginTop": 24,
@@ -216,13 +218,13 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
     onSubmit={[Function]}
   >
     <h2
-      className="MuiTypography-root-1 MuiTypography-headline-6 MuiTypography-colorTextPrimary-23 MuiTypography-gutterBottom-18"
+      className="MuiTypography-root-98 MuiTypography-headline-103 MuiTypography-colorTextPrimary-120 MuiTypography-gutterBottom-115"
     >
       Edit Profile
     </h2>
     <div
       aria-describedby="email-helper-text"
-      className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
+      className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
       style={
         Object {
           "width": "100%",
@@ -230,20 +232,20 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
       }
     >
       <label
-        className="MuiFormLabel-root-35 MuiFormLabel-filled-39 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-shrink-33 MuiInputLabel-marginDense-32"
+        className="MuiFormLabel-root-132 MuiFormLabel-filled-136 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-shrink-130 MuiInputLabel-marginDense-129"
         data-shrink={true}
         htmlFor="email"
       >
         Email
       </label>
       <div
-        className="MuiInput-root-42 MuiInput-disabled-45 MuiInput-formControl-43 MuiInput-underline-46"
+        className="MuiInput-root-139 MuiInput-disabled-142 MuiInput-formControl-140 MuiInput-underline-143"
       >
         <input
           aria-invalid={false}
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-50 MuiInput-disabled-45 MuiInput-inputMarginDense-51"
+          className="MuiInput-input-147 MuiInput-disabled-142 MuiInput-inputMarginDense-148"
           defaultValue={undefined}
           disabled={true}
           id="email"
@@ -262,7 +264,7 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
         />
       </div>
       <p
-        className="MuiFormHelperText-root-55 MuiFormHelperText-filled-60 MuiFormHelperText-marginDense-58"
+        className="MuiFormHelperText-root-152 MuiFormHelperText-filled-157 MuiFormHelperText-marginDense-155"
         id="email-helper-text"
       >
          
@@ -270,7 +272,7 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
     </div>
     <div
       aria-describedby={undefined}
-      className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
+      className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
       style={
         Object {
           "width": "100%",
@@ -278,20 +280,20 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
       }
     >
       <label
-        className="MuiFormLabel-root-35 MuiFormLabel-filled-39 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-shrink-33 MuiInputLabel-marginDense-32"
+        className="MuiFormLabel-root-132 MuiFormLabel-filled-136 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-shrink-130 MuiInputLabel-marginDense-129"
         data-shrink={true}
         htmlFor={undefined}
       >
         Name
       </label>
       <div
-        className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
+        className="MuiInput-root-139 MuiInput-formControl-140 MuiInput-underline-143"
       >
         <input
           aria-invalid={false}
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-50 MuiInput-inputMarginDense-51"
+          className="MuiInput-input-147 MuiInput-inputMarginDense-148"
           defaultValue={undefined}
           disabled={false}
           id={undefined}
@@ -310,7 +312,7 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
         />
       </div>
       <p
-        className="MuiFormHelperText-root-55 MuiFormHelperText-filled-60 MuiFormHelperText-marginDense-58"
+        className="MuiFormHelperText-root-152 MuiFormHelperText-filled-157 MuiFormHelperText-marginDense-155"
         id={undefined}
       >
          
@@ -318,7 +320,7 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
     </div>
     <div
       aria-describedby={undefined}
-      className="MuiFormControl-root-26 MuiFormControl-marginDense-28"
+      className="MuiFormControl-root-123 MuiFormControl-marginDense-125"
       style={
         Object {
           "width": "100%",
@@ -326,20 +328,20 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
       }
     >
       <label
-        className="MuiFormLabel-root-35 MuiFormLabel-filled-39 MuiInputLabel-root-30 MuiInputLabel-formControl-31 MuiInputLabel-animated-34 MuiInputLabel-shrink-33 MuiInputLabel-marginDense-32"
+        className="MuiFormLabel-root-132 MuiFormLabel-filled-136 MuiInputLabel-root-127 MuiInputLabel-formControl-128 MuiInputLabel-animated-131 MuiInputLabel-shrink-130 MuiInputLabel-marginDense-129"
         data-shrink={true}
         htmlFor={undefined}
       >
         Description
       </label>
       <div
-        className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
+        className="MuiInput-root-139 MuiInput-formControl-140 MuiInput-underline-143"
       >
         <input
           aria-invalid={false}
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-50 MuiInput-inputMarginDense-51"
+          className="MuiInput-input-147 MuiInput-inputMarginDense-148"
           defaultValue={undefined}
           disabled={false}
           id={undefined}
@@ -358,14 +360,14 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
         />
       </div>
       <p
-        className="MuiFormHelperText-root-55 MuiFormHelperText-filled-60 MuiFormHelperText-marginDense-58"
+        className="MuiFormHelperText-root-152 MuiFormHelperText-filled-157 MuiFormHelperText-marginDense-155"
         id={undefined}
       >
          
       </p>
     </div>
     <h2
-      className="MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-colorTextPrimary-23"
+      className="MuiTypography-root-98 MuiTypography-body1-107 MuiTypography-colorTextPrimary-120"
       style={
         Object {
           "color": "#E53935",
@@ -375,7 +377,7 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
       
     </h2>
     <button
-      className="MuiButtonBase-root-88 MuiButton-root-62 MuiButton-text-64 MuiButton-outlined-70 MuiButton-sizeSmall-85"
+      className="MuiButtonBase-root-185 MuiButton-root-159 MuiButton-text-161 MuiButton-outlined-167 MuiButton-sizeSmall-182"
       disabled={false}
       onBlur={[Function]}
       onFocus={[Function]}
@@ -396,10 +398,10 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
       type="submit"
     >
       <span
-        className="MuiButton-label-63"
+        className="MuiButton-label-160"
       >
         <div
-          className="MuiCircularProgress-root-105 MuiCircularProgress-colorPrimary-108 MuiCircularProgress-indeterminate-107"
+          className="MuiCircularProgress-root-202 MuiCircularProgress-colorPrimary-205 MuiCircularProgress-indeterminate-204"
           role="progressbar"
           style={
             Object {
@@ -409,11 +411,11 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
           }
         >
           <svg
-            className="MuiCircularProgress-svg-110"
+            className="MuiCircularProgress-svg-207"
             viewBox="22 22 44 44"
           >
             <circle
-              className="MuiCircularProgress-circle-111 MuiCircularProgress-circleIndeterminate-113"
+              className="MuiCircularProgress-circle-208 MuiCircularProgress-circleIndeterminate-210"
               cx={44}
               cy={44}
               fill="none"
@@ -425,7 +427,7 @@ exports[`Profile Form renders Profile Form with isEditingUser as true 1`] = `
         </div>
       </span>
       <span
-        className="MuiTouchRipple-root-91"
+        className="MuiTouchRipple-root-188"
       />
     </button>
   </form>

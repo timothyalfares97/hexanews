@@ -31,7 +31,7 @@ describe('Authentication Dialog selector', () => {
         authenticationDialog: {
           isLoadingLogin: true,
           isLoadingRegister: true,
-          isLoadingForgotPassword: false,
+          isLoadingForgotPassword: true,
           loginError: 'asdf',
           registerError: 'qwer',
           forgotPasswordError: 'zxcv',
