@@ -2,9 +2,13 @@
  * Display search article container for searching any articles based on the query
  */
 
-import * as React from 'react'
+import { CardMedia } from '@material-ui/core'
 import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { isEmpty, map, filter, find, head, startCase } from 'lodash'
 import { translate } from 'react-i18next'
+import * as moment from 'moment'
+import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -12,9 +16,6 @@ import CardHeader from '@material-ui/core/CardHeader'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
-import { isEmpty, map, filter, find, head, startCase } from 'lodash'
-import * as moment from 'moment'
-import { CardMedia } from '@material-ui/core'
 
 import { Article } from '../../domain/model/Article'
 import { DATE_FORMAT } from '../../constants/config'
@@ -28,7 +29,9 @@ import Utils from '../../utils'
 /**
  * All props required by the container
  */
-export type Props = StateProps
+export type Props = {
+  dispatch: Dispatch<any>
+} & StateProps
 
 /**
  * All state required by the container
@@ -84,9 +87,11 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
 
     if (isEmpty(filteredArticles)) {
       return (
-        <div>
-          <p>{i18n.t('searchArticle.noArticlesFound')}</p>
-        </div>
+        <Grid style={styles.emptyArticle}>
+          <Typography variant='subheading'>
+            {i18n.t('searchArticle.noArticlesFound')}
+          </Typography>
+        </Grid>
       )
     }
 
@@ -127,7 +132,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
     const query = this.state.query
     const filteredArticles = this.getFilteredArticles()
     return (
-      <div style={styles.container}>
+      <Grid style={styles.container}>
         <Grid container>
           <Grid md={3} xs={1}/>
           <Grid md={6} xs={10}>
@@ -149,7 +154,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
           </Grid>
           <Grid md={3} xs={1}/>
         </Grid>
-      </div>
+      </Grid>
     )
   }
 }

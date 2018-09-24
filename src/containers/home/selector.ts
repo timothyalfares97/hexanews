@@ -4,10 +4,10 @@
 
 import { createStructuredSelector } from 'reselect'
 
-import { State } from '../../reducers'
 import { Article } from '../../domain/model/Article'
-import { User } from '../../domain/model/User'
 import { Category } from '../../domain/model/Category'
+import { State } from '../../reducers'
+import { User } from '../../domain/model/User'
 
 export interface StateProps {
   articles: Article[]

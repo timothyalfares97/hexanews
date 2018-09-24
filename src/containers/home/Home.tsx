@@ -2,23 +2,23 @@
  * Display home container for displaying all articles and featured articles
  */
 
-import * as React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
-import Grid from '@material-ui/core/Grid'
-import Divider from '@material-ui/core/Divider'
-import { translate } from 'react-i18next'
-import Typography from '@material-ui/core/Typography'
 import { map, orderBy, take, find, filter } from 'lodash'
+import { translate } from 'react-i18next'
+import * as React from 'react'
+import Divider from '@material-ui/core/Divider'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
+import { User } from '../../domain/model/User'
 import ArticleCard from '../../components/articleCard/ArticleCard'
 import ArticleRow from '../../components/articleRow/ArticleRow'
-import PopularArticleRow from '../../components/popularArticleRow/PopularArticleRow'
-import styles from './styles'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
-import selector, { StateProps } from './selector'
-import { User } from '../../domain/model/User'
 import i18n from '../../i18n'
+import PopularArticleRow from '../../components/popularArticleRow/PopularArticleRow'
+import selector, { StateProps } from './selector'
+import styles from './styles'
 
 /**
  * All props required by the container
@@ -98,7 +98,7 @@ export class Home extends React.Component<Props> {
   public render() {
     const { categories } = this.props
     return (
-      <div style={styles.container}>
+      <Grid style={styles.container}>
         <CategoryHeader categories={categories}/>
         <Grid container spacing={24} style={styles.gridContainer}>
           {this.renderFeaturedArticles()}
@@ -117,12 +117,12 @@ export class Home extends React.Component<Props> {
               {i18n.t('home.topStory')}
             </Typography>
             <Divider style={styles.articleDivider} />
-            <div style={styles.popularArticles}>
+            <Grid style={styles.popularArticles}>
               {this.renderPopularArticles()}
-            </div>
+            </Grid>
           </Grid>
         </Grid>
-      </div>
+      </Grid>
     )
   }
 }

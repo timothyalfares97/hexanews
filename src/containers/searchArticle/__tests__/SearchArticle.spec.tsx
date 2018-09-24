@@ -44,6 +44,7 @@ describe('Search Article', () => {
       <SearchArticle
         articles={[]}
         users={[mockUser]}
+        dispatch={jest.fn()}
       />
     )
     let tree = component.toJSON()
@@ -55,6 +56,7 @@ describe('Search Article', () => {
       <SearchArticle
         articles={mockArticles}
         users={[mockUser]}
+        dispatch={jest.fn()}
       />
     )
     let tree = component.toJSON()
@@ -66,6 +68,7 @@ describe('Search Article', () => {
       <SearchArticle
         articles={mockArticles}
         users={[mockUser]}
+        dispatch={jest.fn()}
       />
     )
 
@@ -92,6 +95,7 @@ describe('Search Article', () => {
       <SearchArticle
         articles={mockArticles}
         users={[mockUser]}
+        dispatch={jest.fn()}
       />
     )
 
