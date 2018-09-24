@@ -61,10 +61,6 @@ const registerForm = {
   registerSuccess: 'Kamu telah berhasil daftar ke dalam aplikasi, masuk ke aplikasi dengan detail anda'
 }
 
-const categories = {
-  exploreCategories: 'Lihat berbagai kategori'
-}
-
 const createArticle = {
   cancelButton: 'Batal',
   publishButton: 'Terbitkan',
@@ -150,10 +146,14 @@ const notFound = {
   homeLabel: 'Kembali ke beranda',
 }
 
+const category = {
+  noArticle: 'Tidak ada article di kategori ini'
+}
+
 export default {
   account,
   articleDetail,
-  categories,
+  category,
   changePasswordForm,
   createArticle,
   editArticle,

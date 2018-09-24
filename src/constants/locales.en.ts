@@ -61,10 +61,6 @@ const registerForm = {
   registerSuccess: 'You have successfully register to the app, please login with it'
 }
 
-const categories = {
-  exploreCategories: 'Explore categories'
-}
-
 const createArticle = {
   cancelButton: 'Cancel',
   publishButton: 'Publish',
@@ -151,10 +147,14 @@ const notFound = {
   homeLabel: 'Back to home',
 }
 
+const category = {
+  noArticle: 'No article in this category yet'
+}
+
 export default {
   account,
   articleDetail,
-  categories,
+  category,
   changePasswordForm,
   createArticle,
   editArticle,

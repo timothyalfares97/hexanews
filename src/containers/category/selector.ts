@@ -5,15 +5,15 @@
 import { createStructuredSelector, createSelector } from 'reselect'
 import { filter, find } from 'lodash'
 
-import { State } from '../../reducers'
 import { Article } from '../../domain/model/Article'
-import { User } from '../../domain/model/User'
 import { Category } from '../../domain/model/Category'
+import { State } from '../../reducers'
+import { User } from '../../domain/model/User'
 
 export interface StateProps {
-  categoryArticles: Article[]
-  category: Category
   categories: Category[]
+  category: Category
+  categoryArticles: Article[]
   users: User[]
 }
 
@@ -42,5 +42,6 @@ const users = (state: State) => state.entities.users
 export default createStructuredSelector({
   categoryArticles,
   category,
+  categories,
   users,
 })

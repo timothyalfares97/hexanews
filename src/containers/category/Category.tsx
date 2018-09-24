@@ -2,18 +2,20 @@
  * Display all articles that are contained in certain category screen
  */
 
-import * as React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
-import { map, find, startCase } from 'lodash'
+import { map, find, startCase, isEmpty } from 'lodash'
+import { translate } from 'react-i18next'
+import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
+import { User } from '../../domain/model/User'
 import ArticleRow from '../../components/articleRow/ArticleRow'
 import CategoryHeader from '../../components/categoryHeader/CategoryHeader'
-import styles from './styles'
+import i18n from '../../i18n'
 import selector, { StateProps } from './selector'
-import { User } from '../../domain/model/User'
+import styles from './styles'
 
 /**
  * All props required by the container
@@ -29,6 +31,17 @@ export class Category extends React.Component<Props> {
    */
   renderCategoryArticles = () => {
     const { categoryArticles, dispatch, users } = this.props
+
+    if (isEmpty(categoryArticles)) {
+      return (
+        <Grid style={styles.emptyArticle}>
+          <Typography>
+            {i18n.t('searchArticle.noArticlesFound')}
+          </Typography>
+        </Grid>
+      )
+    }
+
     return map(categoryArticles, (article) => {
       const author = find(users, (user: User) => user._id === article.authorId)
       const authorName = author ? author.name : ''
@@ -49,7 +62,7 @@ export class Category extends React.Component<Props> {
   public render() {
     const { category, categories } = this.props
     return (
-      <div style={styles.container}>
+      <Grid style={styles.container}>
         <CategoryHeader categories={categories}/>
         <Grid container style={styles.categoryContainer as any}>
           <Typography
@@ -70,13 +83,15 @@ export class Category extends React.Component<Props> {
           </Typography>
         </Grid>
         <Grid container spacing={24}>
-          <Grid item xs={12} md={8} style={styles.latestArticleContainer}>
+          <Grid item xs={12} md={9} style={styles.latestArticleContainer}>
             {this.renderCategoryArticles()}
           </Grid>
         </Grid>
-      </div>
+      </Grid>
     )
   }
 }
 
-export default connect(selector)(Category as any)
+const ConnectedCategory = connect(selector)(Category as any)
+
+export default translate('translations')(ConnectedCategory)
