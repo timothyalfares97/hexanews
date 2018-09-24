@@ -20,6 +20,7 @@ export default {
 
   description: {
     marginTop: 4,
+    marginLeft: 4,
   },
 
   avatar: {

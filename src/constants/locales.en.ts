@@ -127,6 +127,7 @@ const home = {
 
 const profile = {
   myAccount: 'My Account',
+  noArticle: 'You do not have any articles here yet'
 }
 
 const articleDetail = {

@@ -126,6 +126,7 @@ const home = {
 
 const profile = {
   myAccount: 'Akun Saya',
+  noArticle: 'Kamu belum mempunyai artikel disini'
 }
 
 const articleDetail = {

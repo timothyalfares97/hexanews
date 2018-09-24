@@ -2,33 +2,33 @@
  * Display profile container thath contains all the description of current user
  */
 
- import * as React from 'react'
+import { CardMedia } from '@material-ui/core'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { map, startCase, head, isEmpty } from 'lodash'
+import { push } from 'connected-react-router'
+import { translate } from 'react-i18next'
 import * as moment from 'moment'
+import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
-import Card from '@material-ui/core/Card'
 import Button from '@material-ui/core/Button'
+import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardHeader from '@material-ui/core/CardHeader'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { CardMedia } from '@material-ui/core'
-import { Dispatch } from 'redux'
-import { connect } from 'react-redux'
-import { push } from 'connected-react-router'
-import { translate } from 'react-i18next'
-import { map, startCase, head } from 'lodash'
 
-import placeholder from '../../assets/placeholder.png'
-import avatarPlaceholder from '../../assets/avatar_placeholder.png'
-import ProfileCard from '../../components/profileCard/ProfileCard'
-import styles from './styles'
-import selector, { StateProps } from './selector'
 import { Article } from '../../domain/model/Article'
-import { User } from '../../domain/model/User'
-import Utils from '../../utils'
 import { DATE_FORMAT, HEADER_LINK } from '../../constants/config'
+import { User } from '../../domain/model/User'
+import avatarPlaceholder from '../../assets/avatar_placeholder.png'
 import i18n from '../../i18n'
+import placeholder from '../../assets/placeholder.png'
+import ProfileCard from '../../components/profileCard/ProfileCard'
+import selector, { StateProps } from './selector'
+import styles from './styles'
+import Utils from '../../utils'
 
 /**
  * All props required by the container
@@ -54,6 +54,17 @@ export class Profile extends React.Component<Props> {
    */
   renderUserArticles = () => {
     const { userArticles, dispatch, user } = this.props
+
+    if (isEmpty(userArticles)) {
+      return (
+        <Grid style={styles.emptyArticle}>
+          <Typography variant='subheading'>
+            {i18n.t('profile.noArticle')}
+          </Typography>
+        </Grid>
+      )
+    }
+
     return map(userArticles, (article: Article) => {
       const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
       const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
@@ -97,7 +108,7 @@ export class Profile extends React.Component<Props> {
       <Grid container style={styles.container as any}>
         <Grid container>
           <Grid item md={3} xs={1} />
-          <Grid item md={6} xs={10} style={{ flexDirection: 'column' }}>
+          <Grid item md={6} xs={10} style={styles.profileCard as any}>
             <ProfileCard
               name={user.name}
               description={user.description ? user.description : ''}

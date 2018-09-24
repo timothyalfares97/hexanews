@@ -36,7 +36,7 @@ export class Category extends React.Component<Props> {
       return (
         <Grid style={styles.emptyArticle}>
           <Typography>
-            {i18n.t('searchArticle.noArticlesFound')}
+            {i18n.t('category.noArticle')}
           </Typography>
         </Grid>
       )
