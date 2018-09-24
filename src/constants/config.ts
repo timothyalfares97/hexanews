@@ -19,6 +19,7 @@ export const ENDPOINT = {
 // Config for all application route
 export const HEADER_LINK = {
   articleDetail: (articleId: string) => `/articleDetail/${articleId}`,
+  articleDetailRow: (articleId: string) => `../articleDetail/${articleId}`,
   categories: '/categories',
   category: (item: string) => `/category/${item}`,
   createArticle: '/createArticle',

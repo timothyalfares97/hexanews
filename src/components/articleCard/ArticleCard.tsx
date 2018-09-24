@@ -2,14 +2,15 @@
  * The ArticleCard Component for displaying featured article
  */
 
-import * as React from 'react'
 import { Dispatch } from 'redux'
+import { Grid } from '@material-ui/core'
 import { push } from 'connected-react-router'
+import * as moment from 'moment'
+import * as React from 'react'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
-import * as moment from 'moment'
 
 import { Article } from '../../domain/model/Article'
 import { DATE_FORMAT } from '../../constants/config'
@@ -36,7 +37,8 @@ const ArticleCard: React.StatelessComponent<Props> = ({
 }) => {
   const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
   return (
-    <div id={`article-${article.title}`}
+    <Grid
+      id={`article-${article.title}`}
       style={styles.root}
       onClick={() => dispatch(push(`../articleDetail/${article._id}`))}
     >
@@ -69,7 +71,7 @@ const ArticleCard: React.StatelessComponent<Props> = ({
           </Typography>
         </CardContent>
       </Card>
-    </div>
+    </Grid>
   )
 }
 
