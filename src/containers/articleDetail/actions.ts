@@ -5,6 +5,7 @@
 import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
+import { RESPONSE_CODE } from '../../constants/config'
 import ArticleRepository from '../../domain/repository/ArticleRepository'
 
 /**
@@ -16,10 +17,10 @@ export const deleteArticle = (id: string) => (dispatch: Dispatch<any>) => (async
   try {
     const response = await ArticleRepository.delete(id)
     switch (response.data.code) {
-      case 'SUCCESS':
+      case RESPONSE_CODE.success:
         dispatch({ type: ActionTypes.DELETE_ARTICLE_SUCCESS, id: id })
         break
-      case 'JWTERROR':
+      case RESPONSE_CODE.jwtError:
         window.location.reload()
         throw response.data.message
       default:

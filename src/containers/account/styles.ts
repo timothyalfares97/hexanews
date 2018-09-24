@@ -7,6 +7,7 @@ export default {
     marginTop: '4%',
     marginBottom: '4%',
   },
+
   sectionDivider: {
     marginTop: 50,
   },

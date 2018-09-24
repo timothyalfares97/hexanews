@@ -2,22 +2,22 @@
  * Display article detail container containing the article description
  */
 
-import * as React from 'react'
-import ReactHtmlParser from 'react-html-parser'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { map, find, head, startCase } from 'lodash'
+import { push } from 'connected-react-router'
+import { translate } from 'react-i18next'
 import * as moment from 'moment'
+import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
-import Divider from '@material-ui/core/Divider'
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import { translate } from 'react-i18next'
-import { map, find, head, startCase } from 'lodash'
-import { Dispatch } from 'redux'
-import { connect } from 'react-redux'
-import { push } from 'connected-react-router'
+import Divider from '@material-ui/core/Divider'
+import Grid from '@material-ui/core/Grid'
+import ReactHtmlParser from 'react-html-parser'
+import Typography from '@material-ui/core/Typography'
 
-import { DATE_FORMAT } from '../../constants/config'
+import { DATE_FORMAT, HEADER_LINK } from '../../constants/config'
 import { NotFound } from '../notFound/NotFound'
 import { User } from '../../domain/model/User'
 import * as actions from './actions'
@@ -72,12 +72,12 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
       const authorName = author ? author.name : i18n.t('articleDetail.authorDeleted')
       const initials = head(startCase(authorName))
       return (
-        <div style={styles.contentContainer}>
-          <div style={styles.profileContainer}>
+        <Grid style={styles.contentContainer}>
+          <Grid style={styles.profileContainer}>
             <Avatar style={styles.avatar}>
               {initials}
             </Avatar>
-            <div style={styles.detailContainer as any}>
+            <Grid style={styles.detailContainer as any}>
               <Typography
                 variant='subheading'
                 style={styles.profileName}
@@ -90,14 +90,14 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
               >
                 {moment(userArticle.createdAt).format(DATE_FORMAT)}
               </Typography>
-            </div>
-            <div style={styles.buttonContainer}>
+            </Grid>
+            <Grid style={styles.buttonContainer}>
               {isUserArticle &&
                 <Button
                   variant='outlined'
                   size='small'
                   component='button'
-                  style={{ alignSelf: 'center', marginRight: 10 }}
+                  style={styles.editArticle}
                   onClick={() => dispatch(push(`../editArticle/${userArticle._id}`))}
                 >
                   {i18n.t('articleDetail.editArticle')}
@@ -108,14 +108,14 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
                   variant='outlined'
                   size='small'
                   component='button'
-                  style={{ alignSelf: 'center' }}
+                  style={styles.deleteArticle}
                   onClick={this.onDeleteArticle}
                 >
                   {isDeletingArticle ? <CircularProgress size={22} /> : i18n.t('articleDetail.deleteArticle')}
                 </Button>
               }
-            </div>
-          </div>
+            </Grid>
+          </Grid>
           <Typography
             variant='display1'
             component='h1'
@@ -124,7 +124,7 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
             {userArticle.title}
           </Typography>
           {ReactHtmlParser(userArticle.description)}
-        </div>
+        </Grid>
       )
     }
     return
@@ -161,7 +161,7 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
       this.setState({ isDeleteSnackbarOpen: true })
       setTimeout(async () => {
         await dispatch(actions.deleteArticle(articleId))
-        dispatch(push('/profile'))
+        dispatch(push(HEADER_LINK.profile))
       }, 500)
     }
   }

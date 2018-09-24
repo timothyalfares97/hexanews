@@ -21,7 +21,9 @@ describe('Account', () => {
     const store = mockStore(rootReducer(undefined as any, { type: '' }))
     const component = renderer.create(
       <Provider store={store}>
-        <Account/>
+        <Account
+          dispatch={jest.fn()}
+        />
       </Provider>
     )
     let tree = component.toJSON()

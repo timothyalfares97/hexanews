@@ -12,11 +12,11 @@ import { User } from '../../domain/model/User'
 export interface StateProps {
   articles: Article[]
   authorName: string
-  users: User[]
-  userArticle: Article
-  isUserArticle: boolean
   footerArticles: Article[]
   isDeletingArticle: boolean
+  isUserArticle: boolean
+  userArticle: Article
+  users: User[]
 }
 
 const articles = (state: State) => state.entities.articles
@@ -55,9 +55,9 @@ const isDeletingArticle = (state: State) => state.containers.articleDetail.isDel
 
 export default createStructuredSelector({
   articles,
-  users,
-  userArticle,
-  isUserArticle,
   footerArticles,
   isDeletingArticle,
+  isUserArticle,
+  userArticle,
+  users,
 })
