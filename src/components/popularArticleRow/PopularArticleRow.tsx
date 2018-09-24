@@ -2,13 +2,15 @@
  * The PopularArticleRow Component for displaying popular article in home container
  */
 
+import { Dispatch } from 'redux'
+import { Grid } from '@material-ui/core'
+import { push } from 'connected-react-router'
 import * as React from 'react'
 import Typography from '@material-ui/core/Typography'
-import { Dispatch } from 'redux'
-import { push } from 'connected-react-router'
 
-import styles from './styles'
+import { HEADER_LINK } from '../../constants/config'
 import { Article } from '../../domain/model/Article'
+import styles from './styles'
 
 /**
  * All props required by the components
@@ -27,11 +29,15 @@ const PopularArticleRow: React.StatelessComponent<Props> = ({
   authorName,
   dispatch,
 }) => {
+  const articleId = article._id ? article._id : ''
   return (
-    <div style={styles.container} onClick={() => dispatch(push(`articleDetail/${article._id}`))}>
+    <Grid
+      style={styles.container}
+      onClick={() => dispatch(push(HEADER_LINK.articleDetail(articleId)))}
+    >
       <Typography
         variant='body1'
-        style={{ fontWeight: ' bold' } as any}
+        style={styles.title as any}
       >
         {article.title}
       </Typography>
@@ -42,7 +48,7 @@ const PopularArticleRow: React.StatelessComponent<Props> = ({
       >
         {authorName}
       </Typography>
-    </div>
+    </Grid>
   )
 }
 

@@ -2,12 +2,13 @@
  * The CategoryHeader Component for displaying all categories in home containers
  */
 
-import * as React from 'react'
+import { Grid } from '@material-ui/core'
 import { Link } from 'react-router-dom'
+import { map } from 'lodash'
+import * as React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import { map } from 'lodash'
 
 import { Category } from '../../domain/model/Category'
 import * as Config from '../../constants/config'
@@ -20,7 +21,7 @@ type Props = {
   categories: Category[]
 }
 
-class CategoryHeader extends React.Component<Props> {
+export default class CategoryHeader extends React.Component<Props> {
 
   /**
    * Main constructor for CategoryHeader
@@ -37,8 +38,15 @@ class CategoryHeader extends React.Component<Props> {
     map(this.props.categories, (category: Category) => {
       const link = Config.HEADER_LINK.category(category.title)
       return (
-        <Typography key={category.title} variant='button' color='primary' style={styles.flex}>
-          <Link to={link} style={styles.category}>{category.title.toUpperCase()}</Link>
+        <Typography
+          key={category.title}
+          variant='button'
+          color='primary'
+          style={styles.flex}
+        >
+          <Link to={link} style={styles.category}>
+            {category.title.toUpperCase()}
+          </Link>
         </Typography>
       )
     })
@@ -49,15 +57,13 @@ class CategoryHeader extends React.Component<Props> {
    */
   public render() {
     return (
-      <div style={styles.root}>
+      <Grid style={styles.root}>
         <AppBar position='static' style={styles.appBar}>
           <Toolbar>
             {this.renderCategoriesList()}
           </Toolbar>
         </AppBar>
-      </div>
+      </Grid>
     )
   }
 }
-
-export default CategoryHeader

@@ -2,11 +2,12 @@
  * The FooterCard Component for displaying related read article in articleDetail container
  */
 
-import * as React from 'react'
-import * as moment from 'moment'
 import { Dispatch } from 'redux'
+import { Grid } from '@material-ui/core'
 import { head, startCase } from 'lodash'
 import { push } from 'connected-react-router'
+import * as moment from 'moment'
+import * as React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -40,7 +41,7 @@ const FooterCard: React.StatelessComponent<Props> = ({
   const initials = head(startCase(authorName))
   const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
   return (
-    <div
+    <Grid
       id={`footer-${article._id}`}
       onClick={() => dispatch(push(`${article._id}`))}
       style={styles.root}
@@ -65,11 +66,11 @@ const FooterCard: React.StatelessComponent<Props> = ({
           >
             {article.title}
           </Typography>
-          <div style={styles.profileContainer}>
+          <Grid style={styles.profileContainer}>
             <Avatar style={styles.avatar}>
               {initials}
             </Avatar>
-            <div style={styles.detailContainer as any}>
+            <Grid style={styles.detailContainer as any}>
               <Typography
                 variant='body1'
                 style={styles.profileName}
@@ -83,11 +84,11 @@ const FooterCard: React.StatelessComponent<Props> = ({
               >
                 {moment(article.createdAt).format(DATE_FORMAT)}
               </Typography>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </CardContent>
       </Card>
-    </div>
+    </Grid>
   )
 }
 

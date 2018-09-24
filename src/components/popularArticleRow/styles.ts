@@ -4,10 +4,15 @@
 
 export default {
   author: {
-    marginTop: 4
+    marginTop: 4,
   },
+
   container: {
     cursor: 'pointer',
-    marginTop: 24
+    marginTop: 24,
+  },
+
+  title: {
+    fontWeight: 'bold',
   },
 }
