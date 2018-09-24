@@ -2,15 +2,15 @@
  * The Authentication Dialog Component for loggin user in header container
  */
 
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { translate } from 'react-i18next'
 import * as React from 'react'
 import Dialog from '@material-ui/core/Dialog'
-import { Dispatch } from 'redux'
-import { connect } from 'react-redux'
-import { translate } from 'react-i18next'
 
+import ForgotPasswordForm from './ForgotPasswordForm'
 import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
-import ForgotPasswordForm from './ForgotPasswordForm'
 import selector, { StateProps } from './selector'
 
 /**
@@ -18,11 +18,11 @@ import selector, { StateProps } from './selector'
  */
 export type Props = {
   dispatch: Dispatch<any>,
-  showDialog: boolean,
   handleCloseDialog: () => void,
+  handleOpenForgotPasswordSnackbar: () => void,
   handleOpenLoginSnackbar: () => void,
   handleOpenRegisterSnackbar: () => void,
-  handleOpenForgotPasswordSnackbar: () => void,
+  showDialog: boolean,
 } & StateProps
 
 /**

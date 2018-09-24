@@ -5,7 +5,7 @@
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { translate } from 'react-i18next'
-import { Typography } from '@material-ui/core'
+import { Typography, Grid } from '@material-ui/core'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import * as React from 'react'
 import Button from '@material-ui/core/Button'
@@ -111,7 +111,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
     const { isEditingUser, editUserError } = this.props
     const { email, name, description, isSnackbarOpen } = this.state
     return (
-      <div style={styles.sectionContainer}>
+      <Grid style={styles.sectionContainer}>
         <ValidatorForm
           ref='saveProFileForm'
           onSubmit={() => this.onSaveProfile()}
@@ -183,7 +183,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             handleClose={this.handleClose}
           />
         </ValidatorForm>
-      </div>
+      </Grid>
     )
   }
 }

@@ -2,10 +2,11 @@
  * The Register Form Component for user to register in header container
  */
 
-import * as React from 'react'
 import { Dispatch } from 'redux'
+import { Grid, Typography } from '@material-ui/core'
 import { startCase } from 'lodash'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
+import * as React from 'react'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import DialogActions from '@material-ui/core/DialogActions'
@@ -14,19 +15,19 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 
 import * as actions from './actions'
-import styles from './styles'
 import i18n from '../../i18n'
+import styles from './styles'
 
 /**
  * All props required by the components
  */
 export type Props = {
   dispatch: Dispatch<any>,
-  isLoadingRegister: boolean,
-  registerError: string,
   handleCloseDialog: () => void,
   handleOpenRegisterSnackbar: () => void,
+  isLoadingRegister: boolean,
   onChangeAuthenticationState: () => void,
+  registerError: string,
 }
 
 /**
@@ -82,13 +83,82 @@ class RegisterForm extends React.Component<Props, ComponentState> {
   }
 
   /**
+   * Function that render register content
+   */
+  renderRegisterContent = () => {
+    const { onChangeAuthenticationState, registerError } = this.props
+    const { email, password, name } = this.state
+    return (
+      <DialogContent>
+        <DialogContentText style={styles.descriptionContainer}>
+          {i18n.t('registerForm.dialogDescription')}
+        </DialogContentText>
+        <TextValidator
+          label={i18n.t('registerForm.emailAddress')}
+          onChange={(event: any) => this.setState({ email: event.target.value })}
+          name='registerEmail'
+          style={styles.descriptionContainer}
+          margin='dense'
+          fullWidth
+          type='email'
+          value={email}
+          helperText=' '
+          validators={['required', 'isEmail']}
+          errorMessages={[i18n.t('registerForm.enterEmail'), i18n.t('registerForm.enterValidEmail')]}
+        />
+        <TextValidator
+          label={i18n.t('registerForm.password')}
+          onChange={(event: any) => this.setState({ password: event.target.value })}
+          name='registerPassword'
+          margin='dense'
+          fullWidth
+          type='password'
+          value={password}
+          helperText=' '
+          validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
+          errorMessages={[i18n.t('registerForm.enterPassword'), i18n.t('registerForm.passwordRequirement')]}
+        />
+        <TextValidator
+          label={i18n.t('registerForm.name')}
+          onChange={(event: any) => this.setState({ name: event.target.value })}
+          name='registerName'
+          margin='dense'
+          fullWidth
+          type='name'
+          value={name}
+          helperText=' '
+          validators={['required', 'minStringLength:3', 'maxStringLength:50',
+            'matchRegexp:^[a-zA-Z\\s]+$']}
+          errorMessages={[i18n.t('registerForm.enterName'),
+          i18n.t('registerForm.minName'),
+          i18n.t('registerForm.maxName'),
+          i18n.t('registerForm.alphabeticName')]}
+        />
+        <DialogContentText>
+          <Typography style={styles.errorLoginLabel}>
+            {registerError}
+          </Typography>
+        </DialogContentText>
+        <DialogContentText style={styles.footerContainer}>
+          {i18n.t('registerForm.haveAccountLabel')}
+          <span
+            onClick={onChangeAuthenticationState}
+            style={styles.footerLink}
+          >
+            {i18n.t('registerForm.loginHereLabel')}
+          </span>
+        </DialogContentText>
+      </DialogContent>
+    )
+  }
+
+  /**
    * Render Login form component
    */
   public render() {
-    const { handleCloseDialog, onChangeAuthenticationState, isLoadingRegister, registerError } = this.props
-    const { email, password, name } = this.state
+    const { handleCloseDialog, isLoadingRegister } = this.props
     return (
-      <div>
+      <Grid>
         <ValidatorForm
           ref='registerForm'
           onSubmit={() => this.onRegister()}
@@ -97,66 +167,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
           <DialogTitle>
             {i18n.t('registerForm.dialogTitle')}
           </DialogTitle>
-          <DialogContent>
-            <DialogContentText style={styles.descriptionContainer}>
-              {i18n.t('registerForm.dialogDescription')}
-            </DialogContentText>
-            <TextValidator
-              label={i18n.t('registerForm.emailAddress')}
-              onChange={(event: any) => this.setState({ email: event.target.value })}
-              name='registerEmail'
-              style={styles.descriptionContainer}
-              margin='dense'
-              fullWidth
-              type='email'
-              value={email}
-              helperText=' '
-              validators={['required', 'isEmail']}
-              errorMessages={[i18n.t('registerForm.enterEmail'), i18n.t('registerForm.enterValidEmail')]}
-            />
-            <TextValidator
-              label={i18n.t('registerForm.password')}
-              onChange={(event: any) => this.setState({ password: event.target.value })}
-              name='registerPassword'
-              margin='dense'
-              fullWidth
-              type='password'
-              value={password}
-              helperText=' '
-              validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
-              errorMessages={[i18n.t('registerForm.enterPassword'), i18n.t('registerForm.passwordRequirement')]}
-            />
-            <TextValidator
-              label={i18n.t('registerForm.name')}
-              onChange={(event: any) => this.setState({ name: event.target.value })}
-              name='registerName'
-              margin='dense'
-              fullWidth
-              type='name'
-              value={name}
-              helperText=' '
-              validators={['required', 'minStringLength:3', 'maxStringLength:50',
-                'matchRegexp:^[a-zA-Z\\s]+$']}
-              errorMessages={[i18n.t('registerForm.enterName'),
-              i18n.t('registerForm.minName'),
-              i18n.t('registerForm.maxName'),
-              i18n.t('registerForm.alphabeticName')]}
-            />
-            <DialogContentText>
-              <span style={styles.errorLoginLabel}>
-                {registerError}
-              </span>
-            </DialogContentText>
-            <DialogContentText style={styles.footerContainer}>
-              {i18n.t('registerForm.haveAccountLabel')}
-              <span
-                onClick={onChangeAuthenticationState}
-                style={styles.footerLink}
-              >
-                {i18n.t('registerForm.loginHereLabel')}
-              </span>
-            </DialogContentText>
-          </DialogContent>
+          {this.renderRegisterContent()}
           <DialogActions>
             <Button onClick={handleCloseDialog} color='primary'>
               {i18n.t('registerForm.cancelButton')}
@@ -170,7 +181,7 @@ class RegisterForm extends React.Component<Props, ComponentState> {
             </Button>
           </DialogActions>
         </ValidatorForm>
-      </div>
+      </Grid>
     )
   }
 }

@@ -5,6 +5,7 @@
 import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
+import { RESPONSE_CODE } from '../../constants/config'
 import UserRepository from '../../domain/repository/UserRepository'
 import AuthenticationService from '../../domain/service/AuthenticationService'
 
@@ -19,7 +20,7 @@ export const registerUser = (email: string, password: string, name: string) => (
   try {
     const response = await UserRepository.create(email, password, name)
     switch (response.data.code) {
-      case 'SUCCESS':
+      case RESPONSE_CODE.success:
         dispatch({ type: ActionTypes.REGISTER_USER_SUCCESS })
         break
       default:
@@ -40,7 +41,7 @@ export const loginUser = (email: string, password: string) => (dispatch: Dispatc
   try {
     const response = await AuthenticationService.login(email, password)
     switch (response.data.code) {
-      case 'SUCCESS':
+      case RESPONSE_CODE.success:
         localStorage.setItem('token', response.data.token)
         localStorage.setItem('id', response.data.id)
         const user = await UserRepository.get(response.data.id)
@@ -63,7 +64,7 @@ export const resetPassword = (email: string) => (dispatch: Dispatch<any>) => (as
   try {
     const response = await AuthenticationService.resetPassword(email)
     switch (response.data.code) {
-      case 'SUCCESS':
+      case RESPONSE_CODE.success:
         dispatch({ type: ActionTypes.RESET_PASSWORD_SUCCESS })
         break
       default:

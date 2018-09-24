@@ -56,3 +56,5 @@ export const RESPONSE_CODE = {
   jwtError: 'JWTERROR',
   error: 'ERROR'
 }
+
+export const HEXANEWS_TITLE = 'Hexanews'

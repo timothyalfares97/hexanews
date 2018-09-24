@@ -2,9 +2,10 @@
  * The Login Form Component for user to login in header container
  */
 
-import * as React from 'react'
 import { Dispatch } from 'redux'
+import { Grid, Typography } from '@material-ui/core'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
+import * as React from 'react'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import DialogActions from '@material-ui/core/DialogActions'
@@ -13,20 +14,20 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 
 import * as actions from './actions'
-import styles from './styles'
 import i18n from '../../i18n'
+import styles from './styles'
 
 /**
  * All props required by the components
  */
 export type Props = {
   dispatch: Dispatch<any>,
-  isLoadingLogin: boolean,
   handleCloseDialog: () => void,
-  onChangeForgotPassword: () => void,
-  onChangeAuthenticationState: () => void,
   handleOpenLoginSnackbar: () => void,
+  isLoadingLogin: boolean,
   loginError: string,
+  onChangeAuthenticationState: () => void,
+  onChangeForgotPassword: () => void,
 }
 
 /**
@@ -37,7 +38,7 @@ export interface ComponentState {
   password: string
 }
 
-class LoginForm extends React.Component<Props, ComponentState> {
+export default class LoginForm extends React.Component<Props, ComponentState> {
 
   /**
    * Main constructor for Login form and initialize state
@@ -79,13 +80,82 @@ class LoginForm extends React.Component<Props, ComponentState> {
   }
 
   /**
+   * Function that will render login content
+   */
+  renderLoginContent = () => {
+    const {
+      onChangeAuthenticationState,
+      onChangeForgotPassword,
+      loginError,
+    } = this.props
+    const { email, password } = this.state
+    return (
+      <DialogContent>
+        <DialogContentText style={styles.descriptionContainer}>
+          {i18n.t('loginForm.dialogDescription')}
+        </DialogContentText>
+        <TextValidator
+          label={i18n.t('loginForm.emailAddress')}
+          onChange={(event: any) => this.setState({ email: event.target.value })}
+          name='loginEmail'
+          style={styles.descriptionContainer}
+          margin='dense'
+          fullWidth
+          type='email'
+          value={email}
+          helperText=' '
+          validators={['required', 'isEmail']}
+          errorMessages={[i18n.t('loginForm.enterEmail'), i18n.t('loginForm.enterValidEmail')]}
+        />
+        <TextValidator
+          label={i18n.t('loginForm.password')}
+          onChange={(event: any) => this.setState({ password: event.target.value })}
+          name='loginPassword'
+          margin='dense'
+          fullWidth
+          type='password'
+          value={password}
+          helperText=' '
+          validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
+          errorMessages={[i18n.t('loginForm.enterPassword'), i18n.t('loginForm.passwordRequirement')]}
+        />
+        <DialogContentText>
+          <Typography style={styles.errorLoginLabel}>
+            {loginError}
+          </Typography>
+        </DialogContentText>
+        <DialogContentText style={styles.forgotPasswordContainer}>
+          <Typography
+            onClick={onChangeForgotPassword}
+            style={styles.footerLink}
+            variant='body1'
+          >
+            {i18n.t('loginForm.forgotPasswordLabel')}
+          </Typography>
+        </DialogContentText>
+        <DialogContentText style={styles.footerContainer}>
+          {i18n.t('loginForm.noAccountLabel')}
+          <span
+            onClick={onChangeAuthenticationState}
+            style={styles.footerLink}
+          >
+            {i18n.t('loginForm.registerHereLabel')}
+          </span>
+        </DialogContentText>
+      </DialogContent>
+    )
+  }
+
+  /**
    * Render Login form component
    */
   render() {
-    const { handleCloseDialog, onChangeAuthenticationState, onChangeForgotPassword, isLoadingLogin, loginError } = this.props
-    const { email, password } = this.state
+    const {
+      handleCloseDialog,
+      isLoadingLogin,
+    } = this.props
     return (
-      <div>
+      <Grid>
         <ValidatorForm
           ref='loginForm'
           onSubmit={() => this.onLogin()}
@@ -94,58 +164,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
           <DialogTitle>
             {i18n.t('loginForm.dialogTitle')}
           </DialogTitle>
-          <DialogContent>
-            <DialogContentText style={styles.descriptionContainer}>
-              {i18n.t('loginForm.dialogDescription')}
-            </DialogContentText>
-            <TextValidator
-              label={i18n.t('loginForm.emailAddress')}
-              onChange={(event: any) => this.setState({ email: event.target.value })}
-              name='loginEmail'
-              style={styles.descriptionContainer}
-              margin='dense'
-              fullWidth
-              type='email'
-              value={email}
-              helperText=' '
-              validators={['required', 'isEmail']}
-              errorMessages={[i18n.t('loginForm.enterEmail'), i18n.t('loginForm.enterValidEmail')]}
-            />
-            <TextValidator
-              label={i18n.t('loginForm.password')}
-              onChange={(event: any) => this.setState({ password: event.target.value })}
-              name='loginPassword'
-              margin='dense'
-              fullWidth
-              type='password'
-              value={password}
-              helperText=' '
-              validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
-              errorMessages={[i18n.t('loginForm.enterPassword'), i18n.t('loginForm.passwordRequirement')]}
-            />
-            <DialogContentText>
-              <span style={styles.errorLoginLabel}>
-                {loginError}
-              </span>
-            </DialogContentText>
-            <DialogContentText style={styles.forgotPasswordContainer}>
-              <span
-                onClick={onChangeForgotPassword}
-                style={styles.footerLink}
-              >
-                {i18n.t('loginForm.forgotPasswordLabel')}
-              </span>
-            </DialogContentText>
-            <DialogContentText style={styles.footerContainer}>
-              {i18n.t('loginForm.noAccountLabel')}
-              <span
-                onClick={onChangeAuthenticationState}
-                style={styles.footerLink}
-              >
-                {i18n.t('loginForm.registerHereLabel')}
-              </span>
-            </DialogContentText>
-          </DialogContent>
+          {this.renderLoginContent()}
           <DialogActions>
             <Button onClick={handleCloseDialog} color='primary'>
               {i18n.t('loginForm.cancelButton')}
@@ -159,9 +178,7 @@ class LoginForm extends React.Component<Props, ComponentState> {
             </Button>
           </DialogActions>
         </ValidatorForm>
-      </div>
+      </Grid>
     )
   }
 }
-
-export default LoginForm

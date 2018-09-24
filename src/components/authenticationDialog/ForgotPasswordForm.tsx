@@ -2,9 +2,10 @@
  * The Forgot Password Form Component for user who forgot their password
  */
 
-import * as React from 'react'
 import { Dispatch } from 'redux'
+import { Grid } from '@material-ui/core'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
+import * as React from 'react'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import DialogActions from '@material-ui/core/DialogActions'
@@ -76,13 +77,53 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
   }
 
   /**
+   * Function to render forgot password content
+   */
+  renderForgotPasswordContent = () => {
+    const { onChangeAuthenticationState, forgotPasswordError } = this.props
+    const { email } = this.state
+    return (
+      <DialogContent>
+        <DialogContentText style={styles.descriptionContainer}>
+          {i18n.t('forgotPasswordForm.dialogDescription')}
+        </DialogContentText>
+        <TextValidator
+          label={i18n.t('forgotPasswordForm.emailAddress')}
+          onChange={(event: any) => this.setState({ email: event.target.value })}
+          name='forgotPasswordEmail'
+          style={styles.descriptionContainer}
+          margin='dense'
+          fullWidth
+          type='email'
+          value={email}
+          helperText=' '
+          validators={['required', 'isEmail']}
+          errorMessages={[i18n.t('forgotPasswordForm.enterEmail'), i18n.t('forgotPasswordForm.enterValidEmail')]}
+        />
+        <DialogContentText>
+          <span style={styles.errorLoginLabel}>
+            {forgotPasswordError}
+          </span>
+        </DialogContentText>
+        <DialogContentText style={styles.footerContainer}>
+          <span
+            onClick={onChangeAuthenticationState}
+            style={styles.footerLink}
+          >
+            {i18n.t('forgotPasswordForm.backLogin')}
+          </span>
+        </DialogContentText>
+      </DialogContent>
+    )
+  }
+
+  /**
    * Render Forgot Password form component
    */
   public render() {
-    const { handleCloseDialog, onChangeAuthenticationState, isLoadingForgotPassword, forgotPasswordError } = this.props
-    const { email } = this.state
+    const { handleCloseDialog, isLoadingForgotPassword } = this.props
     return (
-      <div>
+      <Grid>
         <ValidatorForm
           ref='forgotPasswordForm'
           onSubmit={this.onForgotPassword}
@@ -91,37 +132,7 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
           <DialogTitle>
             {i18n.t('forgotPasswordForm.dialogTitle')}
           </DialogTitle>
-          <DialogContent>
-            <DialogContentText style={styles.descriptionContainer}>
-              {i18n.t('forgotPasswordForm.dialogDescription')}
-            </DialogContentText>
-            <TextValidator
-              label={i18n.t('forgotPasswordForm.emailAddress')}
-              onChange={(event: any) => this.setState({ email: event.target.value })}
-              name='forgotPasswordEmail'
-              style={styles.descriptionContainer}
-              margin='dense'
-              fullWidth
-              type='email'
-              value={email}
-              helperText=' '
-              validators={['required', 'isEmail']}
-              errorMessages={[i18n.t('forgotPasswordForm.enterEmail'), i18n.t('forgotPasswordForm.enterValidEmail')]}
-            />
-            <DialogContentText>
-              <span style={styles.errorLoginLabel}>
-                {forgotPasswordError}
-              </span>
-            </DialogContentText>
-            <DialogContentText style={styles.footerContainer}>
-              <span
-                onClick={onChangeAuthenticationState}
-                style={styles.footerLink}
-              >
-                {i18n.t('forgotPasswordForm.backLogin')}
-              </span>
-            </DialogContentText>
-          </DialogContent>
+          {this.renderForgotPasswordContent()}
           <DialogActions>
             <Button onClick={handleCloseDialog} color='primary'>
               {i18n.t('forgotPasswordForm.cancelButton')}
@@ -135,7 +146,7 @@ class ForgotPasswordForm extends React.Component<Props, ComponentState> {
             </Button>
           </DialogActions>
         </ValidatorForm>
-      </div>
+      </Grid>
     )
   }
 }
