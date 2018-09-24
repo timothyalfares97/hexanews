@@ -2,40 +2,40 @@
  * The ChangePassword Component for change password user in account container
  */
 
-import * as React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
-import { Typography } from '@material-ui/core'
-import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
-import Button from '@material-ui/core/Button'
 import { translate } from 'react-i18next'
+import { Typography, Grid } from '@material-ui/core'
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
+import * as React from 'react'
+import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
-import * as actions from './actions'
 import { User } from '../../domain/model/User'
+import * as actions from './actions'
+import i18n from '../../i18n'
 import selector, { StateProps } from './selector'
 import styles from './styles'
-import i18n from '../../i18n'
 import SuccessSnackbar from '../successSnackbar/SuccessSnackbar'
 
 /**
  * All props required by the components
  */
 export type Props = {
-  user: User,
   dispatch: Dispatch<any>,
   isChangingPassword: boolean,
+  user: User,
 } & StateProps
 
 /**
  * All state required by the components
  */
 export interface ComponentState {
-  email: string
-  currentPassword: string
-  newPassword: string
   confirmNewPassword: string
+  currentPassword: string
+  email: string
   isSnackbarOpen: boolean
+  newPassword: string
 }
 
 export class ChangePasswordForm extends React.Component<Props, ComponentState> {
@@ -48,11 +48,11 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
     super(props)
     const { user } = this.props
     this.state = {
-      email: user.email,
-      currentPassword: '',
-      newPassword: '',
       confirmNewPassword: '',
+      currentPassword: '',
+      email: user.email,
       isSnackbarOpen: false,
+      newPassword: '',
     }
   }
 
@@ -134,7 +134,7 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
     const { isChangingPassword, changePasswordError } = this.props
     const { currentPassword, newPassword, confirmNewPassword, isSnackbarOpen } = this.state
     return (
-      <div style={styles.sectionContainer}>
+      <Grid style={styles.sectionContainer}>
         <ValidatorForm
           ref='changePasswordForm'
           onSubmit={() => this.onChangePassword()}
@@ -208,7 +208,7 @@ export class ChangePasswordForm extends React.Component<Props, ComponentState> {
             handleClose={this.handleClose}
           />
         </ValidatorForm>
-      </div>
+      </Grid>
     )
   }
 }

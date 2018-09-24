@@ -2,40 +2,40 @@
  * The ProfileForm Component for editting user in account container
  */
 
-import * as React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
+import { translate } from 'react-i18next'
 import { Typography } from '@material-ui/core'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
+import * as React from 'react'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import TextField from '@material-ui/core/TextField'
-import { translate } from 'react-i18next'
 
-import * as actions from './actions'
 import { User } from '../../domain/model/User'
+import * as actions from './actions'
+import i18n from '../../i18n'
 import selector, { StateProps } from './selector'
 import styles from './styles'
-import i18n from '../../i18n'
 import SuccessSnackbar from '../successSnackbar/SuccessSnackbar'
 
 /**
  * All props required by the components
  */
 export type Props = {
-  user: User,
   dispatch: Dispatch<any>,
   isEditingUser: boolean,
+  user: User,
 } & StateProps
 
 /**
  * All state required by the components
  */
 export interface ComponentState {
-  email: string
-  name: string
   description: string
+  email: string
   isSnackbarOpen: boolean
+  name: string
 }
 
 export class ProfileForm extends React.Component<Props, ComponentState> {
@@ -48,10 +48,10 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
     super(props)
     const { user } = this.props
     this.state = {
-      email: user.email,
-      name: user.name,
       description: user.description ? user.description : '',
-      isSnackbarOpen: false
+      email: user.email,
+      isSnackbarOpen: false,
+      name: user.name,
     }
   }
 
@@ -142,8 +142,7 @@ export class ProfileForm extends React.Component<Props, ComponentState> {
             margin='dense'
             value={name}
             helperText=' '
-            validators={['required', 'minStringLength:3', 'maxStringLength:50',
-              'matchRegexp:^[a-zA-Z\\s]+$']}
+            validators={['required', 'minStringLength:3', 'maxStringLength:50', 'matchRegexp:^[a-zA-Z\\s]+$']}
             errorMessages={[i18n.t('profileForm.enterName'),
               i18n.t('profileForm.minName'),
               i18n.t('profileForm.maxName'),

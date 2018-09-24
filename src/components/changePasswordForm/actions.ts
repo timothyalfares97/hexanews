@@ -5,6 +5,7 @@
 import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
+import { RESPONSE_CODE } from '../../constants/config'
 import AuthenticationService from '../../domain/service/AuthenticationService'
 
 /**
@@ -19,10 +20,10 @@ export const changePassword = (email: string, currentPassword: string, newPasswo
     try {
       const response = await AuthenticationService.changePassword(email, currentPassword, newPassword)
       switch (response.data.code) {
-        case 'SUCCESS':
+        case RESPONSE_CODE.success:
           dispatch({ type: ActionTypes.CHANGE_PASSWORD_SUCCESS })
           break
-        case 'JWTERROR':
+        case RESPONSE_CODE.jwtError:
           window.location.reload()
           throw response.data.message
         default:
