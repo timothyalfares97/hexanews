@@ -2,8 +2,9 @@
  * The ProfileCard Component for displaying profile detail in account container
  */
 
-import * as React from 'react'
+import { Grid, CardMedia } from '@material-ui/core'
 import * as moment from 'moment'
+import * as React from 'react'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
@@ -16,25 +17,25 @@ import styles from './styles'
  * All props required by the components
  */
 type Props = {
-  name: string,
+  createdAt: string
   description: string,
   image: string,
-  createdAt: string
+  name: string,
 }
 
 /**
  * Render the ProfileCard component
  */
 const ProfileCard: React.StatelessComponent<Props> = ({
-  name,
+  createdAt,
   description,
   image,
-  createdAt,
+  name,
 }) => {
   return (
-    <div>
+    <Grid>
       <Card style={styles.card}>
-        <div style={styles.details as any}>
+        <Grid style={styles.details as any}>
           <CardContent style={styles.content}>
             <Typography
               variant='display1'
@@ -55,16 +56,15 @@ const ProfileCard: React.StatelessComponent<Props> = ({
               {`${i18n.t('profileCard.memberSince')} ${moment(createdAt).format(DATE_FORMAT)}`}
             </Typography>
           </CardContent>
-        </div>
-        <div style={styles.imageContainer}>
-          <img
+        </Grid>
+        <Grid style={styles.imageContainer}>
+          <CardMedia
             style={styles.avatar}
-            src={image}
-            alt='avatar'
+            image={image}
           />
-        </div>
+        </Grid>
       </Card>
-    </div>
+    </Grid>
   )
 }
 
