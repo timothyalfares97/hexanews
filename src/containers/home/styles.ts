@@ -12,7 +12,6 @@ export default {
     padding: '5%',
     paddingTop: '0%',
     paddingLeft: '6%',
-    backgroundColor: 'yellow'
   },
 
   divider: {
