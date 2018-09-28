@@ -23,6 +23,7 @@ import { User } from '../../domain/model/User'
 import * as actions from './actions'
 import FooterCard from '../../components/footerCard/FooterCard'
 import i18n from '../../i18n'
+import ScrollRestoration from './ScrollRestoration'
 import selector, { StateProps } from './selector'
 import styles from './styles'
 import SuccessSnackbar from '../../components/successSnackbar/SuccessSnackbar'
@@ -182,24 +183,26 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
     }
 
     return (
-      <Grid container style={styles.container}>
-        <Grid item md={2} xs={1} />
-        <Grid item md={8} xs={10}>
-          <Grid container>
-            {this.renderArticle()}
+      <ScrollRestoration>
+        <Grid container style={styles.container}>
+          <Grid item md={2} xs={1} />
+          <Grid item md={8} xs={10}>
+            <Grid container>
+              {this.renderArticle()}
+            </Grid>
+            <Divider style={styles.footerDivider} />
+            <Grid container spacing={24}>
+              {this.renderFooterCards()}
+            </Grid>
           </Grid>
-          <Divider style={styles.footerDivider} />
-          <Grid container spacing={24}>
-            {this.renderFooterCards()}
-          </Grid>
+          <Grid item md={2} xs={1} />
+          <SuccessSnackbar
+            isSnackbarOpen={isDeleteSnackbarOpen}
+            message={i18n.t('articleDetail.deleteArticleSuccess')}
+            handleClose={this.handleDeleteClose}
+          />
         </Grid>
-        <Grid item md={2} xs={1} />
-        <SuccessSnackbar
-          isSnackbarOpen={isDeleteSnackbarOpen}
-          message={i18n.t('articleDetail.deleteArticleSuccess')}
-          handleClose={this.handleDeleteClose}
-        />
-      </Grid>
+      </ScrollRestoration>
     )
   }
 }
