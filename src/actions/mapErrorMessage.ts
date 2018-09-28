@@ -5,7 +5,7 @@
 import i18n from '../i18n'
 
 /**
- * Rehydrate articles, users, categories, login, user, and language state as the initial data
+ * Map the error message code that got from the server with internationalisation
  * @param message The error message that got mapped
  */
 export const mapErrorMessage = (message: string) => {

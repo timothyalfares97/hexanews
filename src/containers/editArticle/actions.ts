@@ -6,8 +6,8 @@ import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 import { Article } from '../../domain/model/Article'
+import { handleResponseMessage } from '../../actions/handleResponseMessage'
 import { mapErrorMessage } from '../../actions/mapErrorMessage'
-import { RESPONSE_CODE } from '../../constants/config'
 import ArticleRepository from '../../domain/repository/ArticleRepository'
 
 /**
@@ -18,16 +18,8 @@ export const editArticle = (edittedArticle: Article) => (dispatch: Dispatch<any>
   dispatch({ type: ActionTypes.EDIT_ARTICLE_REQUESTED })
   try {
     const response = await ArticleRepository.edit(edittedArticle)
-    switch (response.data.code) {
-      case RESPONSE_CODE.success:
-        dispatch({ type: ActionTypes.EDIT_ARTICLE_SUCCESS, article: response.data.message })
-        break
-      case RESPONSE_CODE.jwtError:
-        window.location.reload()
-        throw response.data.message
-      default:
-        throw response.data.message
-    }
+    const successAction = () => dispatch({ type: ActionTypes.EDIT_ARTICLE_SUCCESS, article: response.data.message })
+    handleResponseMessage(response, successAction)
   } catch (error) {
     const mappedError = mapErrorMessage(error)
     dispatch({ type: ActionTypes.EDIT_ARTICLE_FAILED, error: mappedError })
