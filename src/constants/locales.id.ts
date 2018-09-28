@@ -151,6 +151,18 @@ const category = {
   noArticle: 'Tidak ada article di kategori ini'
 }
 
+const errorMessage = {
+  invalidPassword: 'Otentikasi gagal, kata sandi anda salah',
+  userNotFound: 'Otentikasi gagal, user tidak ditemukan.',
+  userExisted: 'Email sudah terdaftar. Tolong gunakan email lain',
+  unexpectedError: 'Ada kesalahan yang terjadi di website kami.',
+  sessionExpired: 'Sesi anda telah habis, tolong masuk kembali ke website kami',
+}
+
+const successMessage = {
+  authSuccess: 'Otentikasi berhasil.'
+}
+
 export default {
   account,
   articleDetail,
@@ -158,6 +170,7 @@ export default {
   changePasswordForm,
   createArticle,
   editArticle,
+  errorMessage,
   footerCard,
   forgotPasswordForm,
   header,
@@ -168,5 +181,6 @@ export default {
   profileCard,
   profileForm,
   registerForm,
-  searchArticle
+  searchArticle,
+  successMessage
 }

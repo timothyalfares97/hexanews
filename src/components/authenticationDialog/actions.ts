@@ -5,9 +5,10 @@
 import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
+import { mapErrorMessage } from '../../actions/mapErrorMessage'
 import { RESPONSE_CODE } from '../../constants/config'
-import UserRepository from '../../domain/repository/UserRepository'
 import AuthenticationService from '../../domain/service/AuthenticationService'
+import UserRepository from '../../domain/repository/UserRepository'
 
 /**
  * Register user action that connecting to server and manage the state data from it
@@ -51,7 +52,8 @@ export const loginUser = (email: string, password: string) => (dispatch: Dispatc
         throw response.data.message
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.LOGIN_USER_FAILED, error: error })
+    const mappedError = mapErrorMessage(error)
+    dispatch({ type: ActionTypes.LOGIN_USER_FAILED, error: mappedError })
   }
 })()
 
@@ -71,6 +73,7 @@ export const resetPassword = (email: string) => (dispatch: Dispatch<any>) => (as
         throw response.data.message
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.RESET_PASSWORD_FAILED, error: error })
+    const mappedError = mapErrorMessage(error)
+    dispatch({ type: ActionTypes.RESET_PASSWORD_FAILED, error: mappedError })
   }
 })()

@@ -152,6 +152,18 @@ const category = {
   noArticle: 'No article in this category yet'
 }
 
+const errorMessage = {
+  invalidPassword: 'Authentication failed. Invalid password.',
+  userNotFound: 'Authentication failed. There is no user found.',
+  userExisted: 'Email is already existed. Please use another email',
+  unexpectedError: 'Unexpected error happen in the website.',
+  sessionExpired: 'Session expired, please re-login',
+}
+
+const successMessage = {
+  authSuccess: 'Authentication successful.'
+}
+
 export default {
   account,
   articleDetail,
@@ -159,6 +171,7 @@ export default {
   changePasswordForm,
   createArticle,
   editArticle,
+  errorMessage,
   footerCard,
   forgotPasswordForm,
   header,
@@ -170,4 +183,5 @@ export default {
   profileForm,
   registerForm,
   searchArticle,
+  successMessage,
 }

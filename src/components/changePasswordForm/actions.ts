@@ -5,6 +5,7 @@
 import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
+import { mapErrorMessage } from '../../actions/mapErrorMessage'
 import { RESPONSE_CODE } from '../../constants/config'
 import AuthenticationService from '../../domain/service/AuthenticationService'
 
@@ -30,6 +31,7 @@ export const changePassword = (email: string, currentPassword: string, newPasswo
           throw response.data.message
       }
     } catch (error) {
-      dispatch({ type: ActionTypes.CHANGE_PASSWORD_FAILED, error: error })
+      const mappedError = mapErrorMessage(error)
+      dispatch({ type: ActionTypes.CHANGE_PASSWORD_FAILED, error: mappedError })
     }
   })()
