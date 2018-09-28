@@ -28,7 +28,8 @@ export const registerUser = (email: string, password: string, name: string) => (
         throw response.data.message
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.REGISTER_USER_FAILED, error: error })
+    const mappedError = mapErrorMessage(error)
+    dispatch({ type: ActionTypes.REGISTER_USER_FAILED, error: mappedError })
   }
 })()
 

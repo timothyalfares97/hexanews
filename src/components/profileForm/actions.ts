@@ -8,6 +8,7 @@ import { ActionTypes } from '../../actions/ActionTypes'
 import { RESPONSE_CODE } from '../../constants/config'
 import { User } from '../../domain/model/User'
 import UserRepository from '../../domain/repository/UserRepository'
+import { mapErrorMessage } from '../../actions/mapErrorMessage'
 
 /**
  * Edit user action that connecting to server and manage the state data from it
@@ -28,6 +29,7 @@ export const editUser = (edittedUser: User) => (dispatch: Dispatch<any>) => (asy
         throw response.data.message
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.EDIT_USER_FAILED, error: error })
+    const mappedError = mapErrorMessage(error)
+    dispatch({ type: ActionTypes.EDIT_USER_FAILED, error: mappedError })
   }
 })()
