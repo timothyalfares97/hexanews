@@ -160,10 +160,6 @@ const errorMessage = {
   sessionExpired: 'Session expired, please re-login',
 }
 
-const successMessage = {
-  authSuccess: 'Authentication successful.'
-}
-
 export default {
   account,
   articleDetail,
@@ -183,5 +179,4 @@ export default {
   profileForm,
   registerForm,
   searchArticle,
-  successMessage,
 }

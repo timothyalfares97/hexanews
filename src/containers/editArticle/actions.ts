@@ -6,6 +6,7 @@ import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
 import { Article } from '../../domain/model/Article'
+import { mapErrorMessage } from '../../actions/mapErrorMessage'
 import { RESPONSE_CODE } from '../../constants/config'
 import ArticleRepository from '../../domain/repository/ArticleRepository'
 
@@ -28,6 +29,7 @@ export const editArticle = (edittedArticle: Article) => (dispatch: Dispatch<any>
         throw response.data.message
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.EDIT_ARTICLE_FAILED, error: error })
+    const mappedError = mapErrorMessage(error)
+    dispatch({ type: ActionTypes.EDIT_ARTICLE_FAILED, error: mappedError })
   }
 })()

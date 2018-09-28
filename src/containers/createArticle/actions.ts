@@ -5,9 +5,10 @@
 import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
-import ArticleRepository from '../../domain/repository/ArticleRepository'
 import { Article } from '../../domain/model/Article'
+import { mapErrorMessage } from '../../actions/mapErrorMessage'
 import { RESPONSE_CODE } from '../../constants/config'
+import ArticleRepository from '../../domain/repository/ArticleRepository'
 
  /**
   * Create article action that connecting to server and manage the state data from it
@@ -28,6 +29,7 @@ export const createArticle = (article: Article) => (dispatch: Dispatch<any>) => 
         throw response.data.message
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.CREATE_ARTICLE_FAILED, error: error })
+    const mappedError = mapErrorMessage(error)
+    dispatch({ type: ActionTypes.CREATE_ARTICLE_FAILED, error: mappedError })
   }
 })()

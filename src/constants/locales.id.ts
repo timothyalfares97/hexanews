@@ -69,6 +69,7 @@ const createArticle = {
   category: 'Kategori',
   required: 'Dibutuhkan',
   descriptionPlaceholder: 'Ceritakan kisah anda di sini...',
+  createArticleSuccess: 'Kamu telah berhasil membuat artikel baru'
 }
 
 const editArticle = {
@@ -79,7 +80,7 @@ const editArticle = {
   category: 'Kategori',
   required: 'Dibutuhkan',
   descriptionPlaceholder: 'Ceritakan kisah anda di sini...',
-  createArticleSuccess: 'Kamu telah berhasil membuat artikel baru'
+  editArticleSuccess: 'Kamu telah berhasil menyunting artikelmu'
 }
 
 const account = {
@@ -159,10 +160,6 @@ const errorMessage = {
   sessionExpired: 'Sesi anda telah habis, tolong masuk kembali ke website kami',
 }
 
-const successMessage = {
-  authSuccess: 'Otentikasi berhasil.'
-}
-
 export default {
   account,
   articleDetail,
@@ -182,5 +179,4 @@ export default {
   profileForm,
   registerForm,
   searchArticle,
-  successMessage
 }

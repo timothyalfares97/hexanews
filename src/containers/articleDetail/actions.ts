@@ -5,6 +5,7 @@
 import { Dispatch } from 'redux'
 
 import { ActionTypes } from '../../actions/ActionTypes'
+import { mapErrorMessage } from '../../actions/mapErrorMessage'
 import { RESPONSE_CODE } from '../../constants/config'
 import ArticleRepository from '../../domain/repository/ArticleRepository'
 
@@ -27,6 +28,7 @@ export const deleteArticle = (id: string) => (dispatch: Dispatch<any>) => (async
         throw response.data.message
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.DELETE_ARTICLE_FAILED })
+    const mappedError = mapErrorMessage(error)
+    dispatch({ type: ActionTypes.DELETE_ARTICLE_FAILED, error: mappedError })
   }
 })()
