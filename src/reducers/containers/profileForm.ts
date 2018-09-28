@@ -19,6 +19,7 @@ export const editUserError = (state: string = '', action: any) => {
     case ActionTypes.EDIT_USER_REQUESTED:
     case ActionTypes.EDIT_USER_SUCCESS:
     case ActionTypes.LOGOUT:
+    case ActionTypes.LOCATION_CHANGE:
       return ''
     default:
       return state

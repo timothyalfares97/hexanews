@@ -38,6 +38,7 @@ export const createArticleError = (state: string = '', action: any) => {
     case ActionTypes.CREATE_ARTICLE_REQUESTED:
     case ActionTypes.CREATE_ARTICLE_SUCCESS:
     case ActionTypes.LOGOUT:
+    case ActionTypes.LOCATION_CHANGE:
       return ''
     default:
       return state

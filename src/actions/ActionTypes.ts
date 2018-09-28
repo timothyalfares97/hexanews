@@ -51,6 +51,7 @@ export enum ActionTypes {
   EDIT_ARTICLE_SUCCESS = 'hexanews/article/EDIT_ARTICLE_SUCCESS',
   EDIT_ARTICLE_FAILED = 'hexanews/article/EDIT_ARTICLE_FAILED',
 
-  // ActionTypes for logout application
+  // ActionTypes for shared actions
   LOGOUT = 'hexanews/shared/LOGOUT',
+  LOCATION_CHANGE = '@@router/LOCATION_CHANGE'
 }

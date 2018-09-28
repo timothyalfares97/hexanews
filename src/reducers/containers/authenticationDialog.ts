@@ -76,6 +76,7 @@ export const loginError = (state: string = '', action: any) => {
     case ActionTypes.LOGIN_USER_REQUESTED:
     case ActionTypes.LOGIN_USER_SUCCESS:
     case ActionTypes.LOGOUT:
+    case ActionTypes.LOCATION_CHANGE:
       return ''
     default:
       return state
@@ -95,6 +96,7 @@ export const registerError = (state: string = '', action: any) => {
     case ActionTypes.REGISTER_USER_REQUESTED:
     case ActionTypes.REGISTER_USER_SUCCESS:
     case ActionTypes.LOGOUT:
+    case ActionTypes.LOCATION_CHANGE:
       return ''
     default:
       return state
@@ -114,6 +116,7 @@ export const forgotPasswordError = (state: string = '', action: any) => {
     case ActionTypes.RESET_PASSWORD_REQUESTED:
     case ActionTypes.RESET_PASSWORD_SUCCESS:
     case ActionTypes.LOGOUT:
+    case ActionTypes.LOCATION_CHANGE:
       return ''
     default:
       return state

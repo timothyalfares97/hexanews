@@ -19,6 +19,7 @@ export const changePasswordError = (state: string = '', action: any) => {
     case ActionTypes.CHANGE_PASSWORD_REQUESTED:
     case ActionTypes.CHANGE_PASSWORD_SUCCESS:
     case ActionTypes.LOGOUT:
+    case ActionTypes.LOCATION_CHANGE:
       return ''
     default:
       return state
