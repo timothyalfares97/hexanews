@@ -82,9 +82,11 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
     >
       <div
         className="MuiPaper-root-153 MuiPaper-elevation1-156 MuiPaper-rounded-154 MuiCard-root-152"
+        onClick={[Function]}
         style={
           Object {
             "boxShadow": "0 1px 4px rgba(0, 0, 0, 0.2)",
+            "cursor": "pointer",
             "marginTop": 36,
           }
         }
@@ -149,9 +151,11 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
       </div>
       <div
         className="MuiPaper-root-153 MuiPaper-elevation1-156 MuiPaper-rounded-154 MuiCard-root-152"
+        onClick={[Function]}
         style={
           Object {
             "boxShadow": "0 1px 4px rgba(0, 0, 0, 0.2)",
+            "cursor": "pointer",
             "marginTop": 36,
           }
         }

@@ -6,6 +6,7 @@ import { CardMedia } from '@material-ui/core'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { isEmpty, map, filter, find, head, startCase } from 'lodash'
+import { push } from 'connected-react-router'
 import { translate } from 'react-i18next'
 import * as moment from 'moment'
 import * as React from 'react'
@@ -18,7 +19,7 @@ import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 
 import { Article } from '../../domain/model/Article'
-import { DATE_FORMAT } from '../../constants/config'
+import { DATE_FORMAT, HEADER_LINK } from '../../constants/config'
 import { User } from '../../domain/model/User'
 import i18n from '../../i18n'
 import placeholder from '../../assets/placeholder.png'
@@ -83,7 +84,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
    * Function that render all the filtered articles
    */
   renderArticles = (filteredArticles: Article[]) => {
-    const { users } = this.props
+    const { users, dispatch } = this.props
 
     if (isEmpty(filteredArticles)) {
       return (
@@ -101,8 +102,13 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
       const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
       const sanitizedDescription = article.description.replace(/<(?:.|\n)*?>/gm, '')
       const articleDescription = sanitizedDescription.length > 128 ? `${sanitizedDescription.substring(0, 128)}...` : sanitizedDescription
+      const articleId = article._id ? article._id : ''
       return (
-        <Card style={styles.card} key={article._id}>
+        <Card
+          style={styles.card}
+          key={article._id}
+          onClick={() => dispatch(push(HEADER_LINK.articleDetail(articleId)))}
+        >
           <CardHeader
             avatar={this.renderAvatar(authorName)}
             title={authorName}
