@@ -134,8 +134,8 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
     return (
       <Grid style={styles.container}>
         <Grid container>
-          <Grid md={3} xs={1}/>
-          <Grid md={6} xs={10}>
+          <Grid item md={3} xs={1}/>
+          <Grid item md={6} xs={10}>
             <TextField
               id='query'
               label={i18n.t('searchArticle.search')}
@@ -145,14 +145,14 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
               margin='normal'
             />
           </Grid>
-          <Grid md={3} xs={1}/>
+          <Grid item md={3} xs={1}/>
         </Grid>
         <Grid container spacing={24}>
-          <Grid md={3} xs={1}/>
+          <Grid item md={3} xs={1}/>
           <Grid item md={6} xs={10} style={styles.articleContainer}>
             {this.renderArticles(filteredArticles)}
           </Grid>
-          <Grid md={3} xs={1}/>
+          <Grid item md={3} xs={1}/>
         </Grid>
       </Grid>
     )

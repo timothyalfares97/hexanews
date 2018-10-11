@@ -38,6 +38,8 @@ export const loginUser = (email: string, password: string) => (dispatch: Dispatc
   try {
     const response = await AuthenticationService.login(email, password)
     const successAction = async () => {
+      await localStorage.removeItem('token')
+      await localStorage.removeItem('id')
       localStorage.setItem('token', response.data.token)
       localStorage.setItem('id', response.data.id)
       const user = await UserRepository.get(response.data.id)

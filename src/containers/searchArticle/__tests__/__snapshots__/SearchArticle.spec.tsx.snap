@@ -14,10 +14,10 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
     className="MuiGrid-container-1"
   >
     <div
-      className="MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
     <div
-      className="MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
     >
       <div
         aria-describedby={undefined}
@@ -63,14 +63,14 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
   </div>
   <div
     className="MuiGrid-container-1 MuiGrid-spacing-xs-24-25"
   >
     <div
-      className="MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
     <div
       className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
@@ -216,7 +216,7 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
   </div>
 </div>
@@ -236,10 +236,10 @@ exports[`Search Article renders Search Articles with zero articles 1`] = `
     className="MuiGrid-container-1"
   >
     <div
-      className="MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
     <div
-      className="MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
     >
       <div
         aria-describedby={undefined}
@@ -285,14 +285,14 @@ exports[`Search Article renders Search Articles with zero articles 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
   </div>
   <div
     className="MuiGrid-container-1 MuiGrid-spacing-xs-24-25"
   >
     <div
-      className="MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
     <div
       className="MuiGrid-item-2 MuiGrid-grid-xs-10-39 MuiGrid-grid-md-6-63"
@@ -318,7 +318,7 @@ exports[`Search Article renders Search Articles with zero articles 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 MuiGrid-grid-md-3-60"
     />
   </div>
 </div>

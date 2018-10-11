@@ -18,9 +18,10 @@ const user = (state: State) => state.entities.user
 
 const userArticles = createSelector(
   (state: State) => state.entities.articles,
-  (articles) => {
+  user,
+  (articles, user) => {
     const filterCondition = (article: Article) => {
-      const currentId = localStorage.getItem('id')
+      const currentId = user._id
       return article.authorId === currentId
     }
     return filter(articles, filterCondition)
