@@ -1,5 +1,5 @@
 /**
- * Utillity class containing all reusable functions.
+ * Utility class containing all reusable functions.
  */
 
 import { Article } from '../domain/model/Article'

@@ -9,7 +9,7 @@ import { reactI18nextModule } from 'react-i18next'
 import locales from './constants/locales'
 
 /**
- * Declaration of internationalistaion instance with its configuration for the application
+ * Declaration of internationalisation instance with its configuration for the application
  */
 const instance = i18n
   .use(Backend)

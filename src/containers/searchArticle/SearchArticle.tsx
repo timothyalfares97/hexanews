@@ -82,6 +82,7 @@ export class SearchArticle extends React.Component<Props, ComponentState> {
 
   /**
    * Function that render all the filtered articles
+   * @param filteredArticles filtered articles based on the query entered
    */
   renderArticles = (filteredArticles: Article[]) => {
     const { users, dispatch } = this.props
