@@ -152,12 +152,30 @@ exports[`Article Detail renders Article Detail 1`] = `
             </button>
           </div>
         </div>
-        <h1
-          className="MuiTypography-root-101 MuiTypography-display1-105 MuiTypography-gutterBottom-118"
+        <div
+          className=""
+          style={
+            Object {
+              "wordWrap": "break-word",
+            }
+          }
         >
-          def
-        </h1>
-        tester
+          <h1
+            className="MuiTypography-root-101 MuiTypography-display1-105 MuiTypography-gutterBottom-118"
+          >
+            def
+          </h1>
+        </div>
+        <div
+          className=""
+          style={
+            Object {
+              "wordWrap": "break-word",
+            }
+          }
+        >
+          tester
+        </div>
       </div>
     </div>
     <hr
@@ -465,12 +483,30 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
             </button>
           </div>
         </div>
-        <h1
-          className="MuiTypography-root-101 MuiTypography-display1-105 MuiTypography-gutterBottom-118"
+        <div
+          className=""
+          style={
+            Object {
+              "wordWrap": "break-word",
+            }
+          }
         >
-          def
-        </h1>
-        tester
+          <h1
+            className="MuiTypography-root-101 MuiTypography-display1-105 MuiTypography-gutterBottom-118"
+          >
+            def
+          </h1>
+        </div>
+        <div
+          className=""
+          style={
+            Object {
+              "wordWrap": "break-word",
+            }
+          }
+        >
+          tester
+        </div>
       </div>
     </div>
     <hr

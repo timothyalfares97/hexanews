@@ -117,14 +117,18 @@ export class ArticleDetail extends React.Component<Props, ComponentState> {
               }
             </Grid>
           </Grid>
-          <Typography
-            variant='display1'
-            component='h1'
-            gutterBottom
-          >
-            {userArticle.title}
-          </Typography>
-          {ReactHtmlParser(userArticle.description)}
+          <Grid style={styles.textContainer as any}>
+            <Typography
+              variant='display1'
+              component='h1'
+              gutterBottom
+            >
+              {userArticle.title}
+            </Typography>
+          </Grid>
+          <Grid style={styles.textContainer as any}>
+            {ReactHtmlParser(userArticle.description)}
+          </Grid>
         </Grid>
       )
     }

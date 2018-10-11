@@ -63,4 +63,8 @@ export default {
   deleteArticle: {
     alignSelf: 'center',
   },
+
+  textContainer: {
+    wordWrap: 'break-word'
+  },
 }
