@@ -119,20 +119,16 @@ export default class LoginForm extends React.Component<Props, ComponentState> {
           validators={['required', 'matchRegexp:^[a-zA-Z0-9]{6,20}$']}
           errorMessages={[i18n.t('loginForm.enterPassword'), i18n.t('loginForm.passwordRequirement')]}
         />
-        <DialogContentText>
-          <Typography style={styles.errorLoginLabel}>
-            {loginError}
-          </Typography>
-        </DialogContentText>
-        <DialogContentText style={styles.forgotPasswordContainer}>
-          <Typography
-            onClick={onChangeForgotPassword}
-            style={styles.footerLink}
-            variant='body1'
-          >
-            {i18n.t('loginForm.forgotPasswordLabel')}
-          </Typography>
-        </DialogContentText>
+        <Typography style={styles.errorLoginLabel}>
+          {loginError}
+        </Typography>
+        <Typography
+          onClick={onChangeForgotPassword}
+          style={styles.footerLink}
+          variant='body1'
+        >
+          {i18n.t('loginForm.forgotPasswordLabel')}
+        </Typography>
         <DialogContentText style={styles.footerContainer}>
           {i18n.t('loginForm.noAccountLabel')}
           <span

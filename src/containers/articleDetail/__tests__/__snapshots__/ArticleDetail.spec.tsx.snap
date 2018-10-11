@@ -73,7 +73,7 @@ exports[`Article Detail renders Article Detail 1`] = `
             <p
               className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
             >
-              1 October 2018
+              11 October 2018
             </p>
           </div>
           <div
@@ -273,7 +273,7 @@ exports[`Article Detail renders Article Detail 1`] = `
                       }
                     }
                   >
-                    1 October 2018
+                    11 October 2018
                   </p>
                 </div>
               </div>
@@ -362,7 +362,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
             <p
               className="MuiTypography-root-101 MuiTypography-body1-110 MuiTypography-colorTextSecondary-124"
             >
-              1 October 2018
+              11 October 2018
             </p>
           </div>
           <div
@@ -586,7 +586,7 @@ exports[`Article Detail renders Article Detail with isDeletingArticle to be true
                       }
                     }
                   >
-                    1 October 2018
+                    11 October 2018
                   </p>
                 </div>
               </div>

@@ -164,18 +164,14 @@ exports[`Register Form renders Register Form 1`] = `
         </p>
       </div>
       <p
-        className="MuiTypography-root-99 MuiTypography-subheading-106 MuiDialogContentText-root-125"
-      >
-        <p
-          className="MuiTypography-root-99 MuiTypography-body1-108"
-          style={
-            Object {
-              "color": "#E53935",
-            }
+        className="MuiTypography-root-99 MuiTypography-body1-108"
+        style={
+          Object {
+            "color": "#E53935",
           }
-        >
-          
-        </p>
+        }
+      >
+        
       </p>
       <p
         className="MuiTypography-root-99 MuiTypography-subheading-106 MuiDialogContentText-root-125"

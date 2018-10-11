@@ -134,11 +134,9 @@ class RegisterForm extends React.Component<Props, ComponentState> {
           i18n.t('registerForm.maxName'),
           i18n.t('registerForm.alphabeticName')]}
         />
-        <DialogContentText>
-          <Typography style={styles.errorLoginLabel}>
-            {registerError}
-          </Typography>
-        </DialogContentText>
+        <Typography style={styles.errorLoginLabel}>
+          {registerError}
+        </Typography>
         <DialogContentText style={styles.footerContainer}>
           {i18n.t('registerForm.haveAccountLabel')}
           <span

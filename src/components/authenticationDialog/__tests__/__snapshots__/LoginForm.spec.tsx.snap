@@ -121,42 +121,26 @@ exports[`Login Form renders Login Form 1`] = `
         </p>
       </div>
       <p
-        className="MuiTypography-root-99 MuiTypography-subheading-106 MuiDialogContentText-root-125"
-      >
-        <p
-          className="MuiTypography-root-99 MuiTypography-body1-108"
-          style={
-            Object {
-              "color": "#E53935",
-            }
-          }
-        >
-          
-        </p>
-      </p>
-      <p
-        className="MuiTypography-root-99 MuiTypography-subheading-106 MuiDialogContentText-root-125"
+        className="MuiTypography-root-99 MuiTypography-body1-108"
         style={
           Object {
-            "display": "flex",
-            "justifyContent": "flex-end",
-            "marginBottom": 4,
-            "marginTop": 8,
+            "color": "#E53935",
           }
         }
       >
-        <p
-          className="MuiTypography-root-99 MuiTypography-body1-108"
-          onClick={[MockFunction]}
-          style={
-            Object {
-              "color": "#03a87c",
-              "cursor": "pointer",
-            }
+        
+      </p>
+      <p
+        className="MuiTypography-root-99 MuiTypography-body1-108"
+        onClick={[MockFunction]}
+        style={
+          Object {
+            "color": "#03a87c",
+            "cursor": "pointer",
           }
-        >
-          Forgot Password? 
-        </p>
+        }
+      >
+        Forgot Password? 
       </p>
       <p
         className="MuiTypography-root-99 MuiTypography-subheading-106 MuiDialogContentText-root-125"
