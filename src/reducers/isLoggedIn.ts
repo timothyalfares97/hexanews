@@ -4,6 +4,12 @@
 
 import { ActionTypes } from '../actions/ActionTypes'
 
+/**
+ * isLoggedIn state that will be changed based on actions in the application
+ * @param state a collection of the current state of isLoggedIn
+ * @param action The trigger to mutate the isLoggedIn in the Redux
+ * @return payload containing the isLoggedIn
+ */
 const isLoggedIn = (state: boolean = false, action: any) => {
   switch (action.type) {
     case ActionTypes.GET_LOGIN:

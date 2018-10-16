@@ -5,6 +5,9 @@
 import * as React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 
+/**
+ * All props required by the container
+ */
 type Props = {
   isLoggedIn: boolean,
   path: string,
@@ -19,6 +22,7 @@ const PrivateRoute: React.StatelessComponent<Props> = ({
   path,
   component: Component,
 }) => {
+  // Check if user is not logged in, redirect the user to home.
   if (!isLoggedIn) {
     return <Redirect to='/'/>
   }

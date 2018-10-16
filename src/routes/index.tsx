@@ -19,6 +19,9 @@ import NotFound from '../containers/notFound/NotFound'
 import selector, { StateProps } from './selector'
 import PrivateRoute from './PrivateRoute'
 
+/**
+ * All props required by the container
+ */
 type Props = {
   dispatch: Dispatch<any>
 } & StateProps

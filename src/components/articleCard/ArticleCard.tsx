@@ -13,7 +13,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 
 import { Article } from '../../domain/model/Article'
-import { DATE_FORMAT } from '../../constants/config'
+import { DATE_FORMAT, HEADER_LINK } from '../../constants/config'
 import placeholder from '../../assets/placeholder.png'
 import styles from './styles'
 import Utils from '../../utils'
@@ -36,11 +36,12 @@ const ArticleCard: React.StatelessComponent<Props> = ({
   dispatch,
 }) => {
   const articleImage = Utils.getFeaturedImage(article) ? Utils.getFeaturedImage(article) : placeholder
+  const articleId = article._id ? article._id : ''
   return (
     <Grid
       id={`article-${article.title}`}
       style={styles.root}
-      onClick={() => dispatch(push(`../articleDetail/${article._id}`))}
+      onClick={() => dispatch(push(HEADER_LINK.articleDetailRow(articleId)))}
     >
       <Card style={styles.card}>
         <CardMedia

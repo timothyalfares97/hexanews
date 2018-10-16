@@ -1,5 +1,5 @@
 /**
- * Constant for indonesian language in the application
+ * Constant for all components in indonesian language in the application
  */
 
 const footerCard = {

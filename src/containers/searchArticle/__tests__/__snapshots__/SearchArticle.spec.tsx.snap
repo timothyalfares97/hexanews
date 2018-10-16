@@ -120,7 +120,7 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
             <span
               className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-185"
             >
-              11 October 2018
+              16 October 2018
             </span>
           </div>
         </div>
@@ -189,7 +189,7 @@ exports[`Search Article renders Search Articles with two articles 1`] = `
             <span
               className="MuiTypography-root-127 MuiTypography-body2-135 MuiTypography-colorTextSecondary-150 MuiCardHeader-subheader-185"
             >
-              11 October 2018
+              16 October 2018
             </span>
           </div>
         </div>

@@ -13,6 +13,11 @@ import rootReducer from '../reducers'
 
 const isDebuggingInChrome = !!window.navigator.userAgent
 
+/**
+ * Function to create the initial store state for application
+ * @param initialState the initial state for the store
+ * @param history the navigation variable for the application
+ */
 export default function (initialState = {}, history: History) {
   return createStore(
     connectRouter(history)(rootReducer),

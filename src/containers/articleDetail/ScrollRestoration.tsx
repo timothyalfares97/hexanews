@@ -1,5 +1,5 @@
 /**
- * Handles always scroll to top for the main application.
+ * Handles Article Detail to be always always scrolled to the top of application.
  */
 
 import * as React from 'react'

@@ -4,8 +4,10 @@
 
 import * as ip from 'ip'
 
+// API endpoint that get from the port 4000 and ip based on the current one
 const API = `http://${ip.address()}:4000`
 
+// Config for all endpoint paths
 export const ENDPOINT = {
   user: `${API}/users`,
   category: `${API}/categories`,
@@ -15,6 +17,7 @@ export const ENDPOINT = {
   article: `${API}/articles`
 }
 
+// Config for all header navigation paths
 export const HEADER_LINK = {
   articleDetail: (articleId: string) => `/articleDetail/${articleId}`,
   articleDetailRow: (articleId: string) => `../articleDetail/${articleId}`,
@@ -25,8 +28,10 @@ export const HEADER_LINK = {
   searchArticle: '/searchArticle',
 }
 
+// Config for date format in application
 export const DATE_FORMAT = 'D MMMM YYYY'
 
+// Config for React Quill component
 export const TEXT_EDITOR = {
   modules: {
     toolbar: [
@@ -51,10 +56,12 @@ export const TEXT_EDITOR = {
   theme: 'snow'
 }
 
+// Config for all of the response code
 export const RESPONSE_CODE = {
   success: 'SUCCESS',
   jwtError: 'JWTERROR',
   error: 'ERROR'
 }
 
+// Config for the application title
 export const HEXANEWS_TITLE = 'Hexanews'
